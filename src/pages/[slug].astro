@@ -1,0 +1,30 @@
+---
+interface Frontmatter {
+  title: string;
+  description?: string;
+  slug: string;
+}
+export async function getStaticPaths() {
+  const articles = await Astro.glob<Frontmatter>("../content/articles/*.mdx");
+
+  return articles.map((article) => ({
+    params: {
+      slug: article.frontmatter.slug,
+    },
+    props: {
+      article,
+    },
+  }));
+}
+
+const { Content } = Astro.props.article;
+const { title, description } = Astro.props.article.frontmatter;
+---
+
+<article>
+  <header>
+    <h1>{title}</h1>
+    {description && <p>{description}</p>}
+  </header>
+  <Content />
+</article>

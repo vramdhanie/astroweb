@@ -1,0 +1,542 @@
+---
+title: Deploy multiple firebase sites with Google cloud build
+slug: deploy-multiple-sites-with-cloud-build
+image: ./images/articles/clouds.jpg
+date: 2020-07-17
+author: Vincent Ramdhanie
+level: beginner
+tags: cloud build ci/cd firebase
+---
+
+import Alert from '../../components/alert'
+import { Icon } from 'astro-icon'
+
+In August of 2018 Firebase announced that hosting multiple sites in the same Firebase project was possible.
+This was great news for sites that shared resources.
+I use Google Cloud Build to manage the deployment process of my applications to Firebase.
+So I decided to make use of this new feature and attempted to modify my Cloud Build configuration
+to allow deploying applications to different Firebase hosting sites in the same project.
+
+_This took me an inordinate amount of time and effort to figure out. That might be due to my limited
+understanding of the configuration. I found the existing documentation to be missing some steps.
+So I decided to document my solution here._
+
+In this article I will describe how I set up deploying two different applications to hosting sites in the same Firebase project.
+
+## The applications
+
+I am working on a public facing React application. Additionally,
+I want to create a preview version of the application for the internal team to review changes before they are deployed to the public site.
+There is a second administration application for use by the internal team to administer to the public facing application.
+
+![Architecture](./images/articles/architecture.png)
+
+## Firebase setup
+
+On the Firebase console create a new project by clicking _Add project_ then entering a project name when prompted.
+Or alternativily, if you have an existing project that you wish to use then simply select that project. Follow the
+prompts to complete the process.
+
+If this is the first time you are setting up a Firebase project you should check the official documentation [here](https://firebase.google.com/docs/web/setup) for full details.
+
+Very briefly, the steps to setting up a project are:
+
+### Step 1 Project name
+
+Enter a name for your project and optionally add a project id. We will be using this project id later so making an easy to remember id here would be beneficial.
+
+![Create project](./images/articles/firebase_001.jpg)
+
+### Step 2 Enable Google Analytics
+
+Optionally, enable Google Analytics for the project. This is recommended since you would want to track
+the usage of your application after it is deployed.
+
+![Create project](./images/articles/firebase_002.jpg)
+
+### Step 3 Select Analytics account
+
+![Create project](./images/articles/firebase_003.jpg)
+
+If you enabled Google Analytics in the previous step then you need to either create or select an existing Google Analytics account.
+
+### Step 4 Project creation
+
+Wait a few moments while the project is created.
+
+![Create project](./images/articles/firebase_004.png)
+
+### Step 5 Done
+
+Congratulations! You have a new Firebase project. Click the **Continue** button.
+
+![Create project](./images/articles/firebase_005.jpg)
+
+## Hosting
+
+Setting up hosting on your Firebase project is fairly straightforward. From your dashboard select **Hosting**.
+Then click on the **Get started** button. This starts a wizard that walks through the steps of setting up hosting.
+
+![Hosting](./images/articles/hosting_001.jpg)
+
+### Step 1 Install Firebase CLI
+
+We will use the Firebase CLI to initialize and deploy the application on Firebase. The CLI is available as an `npm` package.
+Since we are learning about the setup you should click the checkbox labelled "Also show me the steps to add the Firebase JavaScript SDK...".
+We are not actually going to use this right now but it would be interesting to see how the SDK is added to a project. Feel free to skip this.
+
+![Hosting](./images/articles/hosting_002.png)
+
+After running the `npm` command to install the Firebase CLI you can check that the installation worked by running
+
+```bash
+firebase --version
+```
+
+### Step 2 Initialise project
+
+The next step involves initializing Firebase in your project.
+
+![Hosting](./images/articles/hosting_003.jpg)
+
+From the root directory of your application run the command:
+
+```bash
+firebase login
+```
+
+If you are not already logged in then you are directed to log in with your Google credentials. Once logged in initialize the project with the command:
+
+```bash
+firebase init
+```
+
+This is a multi step process. First you are asked to decide which Firebase service you wish to initialize. Use the arrow keys to navigate through the list and press the `space` bar to select a feature.
+
+```
+ ◯ Database: Deploy Firebase Realtime Database Rules
+ ◯ Firestore: Deploy rules and create indexes for Firestore
+ ◯ Functions: Configure and deploy Cloud Functions
+❯◉ Hosting: Configure and deploy Firebase Hosting sites
+ ◯ Storage: Deploy Cloud Storage security rules
+ ◯ Emulators: Set up local emulators for Firebase features
+```
+
+While you can select multiple features we are only interested in hosting at this moment. Select hosting and hit `enter`.
+
+Next, you are prompted to select a project.
+
+```
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+but for now we'll just set up a default project.
+
+? Please select an option: (Use arrow keys)
+❯ Use an existing project
+  Create a new project
+  Add Firebase to an existing Google Cloud Platform project
+  Don't set up a default project
+```
+
+As you can see you have the choice of creating a new project or using an existing one. We already created a project so let us use that project.
+Hit `enter` to use an existing project. A list of projects is presented and you can scroll through and select the one you want.
+
+```
+? Select a default Firebase project for this directory:
+  bahaitt (bahaitt)
+  bahaitt-preview (bahaitt-preview)
+  debbie-fe89b (debbie)
+❯ dragon-born (DragonBorn)
+  facebook-for-rabbits (rabbitbook)
+  uber-for-babies (buber)
+  netflix-for-parrots (petflix)
+(Move up and down to reveal more choices)
+```
+
+Navigate to your project and hit `enter`.
+
+Next, we are asked to specify a directory that will contain the files we want to deploy to Firebase. In a React application the files that are built for deployment are placed in a directory named _build_.
+
+```
+=== Hosting Setup
+
+Your public directory is the folder (relative to your project directory) that
+will contain Hosting assets to be uploaded with firebase deploy. If you
+have a build process for your assets, use your build's output directory.
+
+? What do you want to use as your public directory? build
+```
+
+Enter the name of your build output directory and hit `enter`.
+
+Your React application is a single page application. That is, the client only loads a single page at `index.html`
+and your entire application runs from that location. Even if the added a path to the URL of your application
+you will still only want the `index.html` file to load and your router will handle the path. To Configure
+the application as a single page application all paths must be redirected to `index.html`.
+
+```
+? Configure as a single-page app (rewrite all urls to /index.html)? (y/N) Y
+```
+
+Type Y and hit `enter`.
+
+At this point you should see output similar to this:
+
+```
+✔  Wrote build/index.html
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
+✔  Firebase initialization complete!
+```
+
+Note that an `index.html` file was created because the build directory was empty. This file is not important and will be overwritten
+the next time the project is built. If you already have files in the build directory you will probably be prompted to overwrite the files or not. It is safe to not overwrite the files.
+
+Two files were created at the root of your project: _firebase.json_ and _.firebaserc_. The _firebase.json_ file contain project configurations
+for your project such as the rewrite rules and the public directory. The _.firebaserc_ file contain some project specific
+information for use by the firebase CLI internally. Usually the _.firebaserc_ file is added to the _.gitignore_ file list.
+Firebase will also create a hidden directory named _.firebase_ where data internal to the firebase processes are stored. We should also add this directory to _.gitignore_.
+
+Edit the _.gitignore_ file and add the following lines:
+
+```sh
+# firebase
+.firebaserc
+.firebase/
+```
+
+When you are done click **Next** on the Firebase Hosting wizard.
+
+### Step 3 Add Firebase SDK
+
+This is an optional step at this point. If you needed to add the SDK to your project you may follow the steps outlined here.
+This was only included for informational purposes. Feel free to just hit **Skip this step**.
+
+![Hosting](./images/articles/hosting_004.jpg)
+
+### Step 4 Deploy the project
+
+Now that the Firebase hosting has been configured for your project you can deploy it with the Firebase CLI.
+Before you deploy you need to build the project.
+
+```bash
+npm run build
+```
+
+Then run the command:
+
+```bash
+firebase deploy
+```
+
+This process takes a few seconds. You should see output similar to this:
+
+```
+➜  dragon-born git:(master) ✗ firebase deploy
+
+=== Deploying to 'dragon-born'...
+
+i  deploying hosting
+i  hosting[dragon-born]: beginning deploy...
+i  hosting[dragon-born]: found 19 files in build
+✔  hosting[dragon-born]: file upload complete
+i  hosting[dragon-born]: finalizing version...
+✔  hosting[dragon-born]: version finalized
+i  hosting[dragon-born]: releasing new version...
+✔  hosting[dragon-born]: release complete
+
+✔  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/dragon-born/overview
+Hosting URL: https://dragon-born.web.app
+```
+
+Now visit your website at the automatically provisioned domain name. Also, take a look at the Firebase console, it will reflect this deployment.
+
+![Hosting](./images/articles/hosting_005.jpg)
+
+## Google Cloud Build
+
+The next step is to automate this deployment using Google Cloud Build. We can configure the Cloud Build
+to trigger a deployment whenever there is activity on a branch on your Git repository on Github.
+
+Start by visiting the [Google Cloud Build console](https://console.cloud.google.com/) and selecting your project. If Cloud Build was never enabled for your project you will be prompted to enable the Cloud Build API.
+
+![Build](./images/articles/build_001.jpg)
+
+Click the **Enable** button to get started. You will be prompted to enable billing.
+
+After enabling billing go back to the Cloud Build console and click on the **Triggers** page.
+
+![Build](./images/articles/build_002.jpg)
+
+### Connecting your repository
+
+Before we create a trigger we need to connect Cloud Build to the repository and authenticate Cloud Build on Github. To get started click the **Connect repository** button.
+
+![Trigger](./images/articles/trigger_001.jpg)
+
+Select Github on the first screen. Note that in the next step you will have to authenticate against Github and select the repository for your project. Ensure
+that you have your Github credentials handy and that you have created the repository for your project on Github. Click the **Continue** button when ready.
+
+If you have previously authenticated Cloud Build on Github you may see a list of repositories on the page. If your project repository is not on the page
+you can click on the **Edit repositories on Github** link.
+
+![Trigger](./images/articles/trigger_002.png)
+
+This opens a new window on the Github login page. Enter your credentials and you will be taken to the _Settings/Applications_ page on Github.
+On this page you will give Cloud Build access to one or more repsoitories.
+
+![Trigger](./images/articles/trigger_003.jpg)
+
+Ensure that at least your project is selected then click the **Save** button. Back on the Cloud Build console you should then see your project listed.
+Select the project, check the box to indicate you understand that Cloud Build will be accessing your Github project then click the **Connect repository** button.
+On the next page click the **Skip for now** button. We will walk through the process of creating the trigger next.
+
+### Create a Trigger
+
+To get started creating a trigger click the **+ Create trigger** button.
+
+![Trigger](./images/articles/trigger_004.jpg)
+
+Enter a name for the trigger and a short description. The first trigger that we are creating is the production deploy trigger that will deploy anything we push to the master branch. Ensure that the event
+that invokes the trigger is set to _Push to a branch_.
+
+Next, select the Github repository and ensure that the branch is defined by a regular expression. We are trying to select only the master branch here.
+
+![Trigger](./images/articles/trigger_005.jpg)
+
+#### The build configuration file
+
+In the next section select **Cloud Build configuration file (YAML or JSON)**. That is, we are going to create a new configuration file detailing how to deploy the application.
+We are free to name this file whatever we want but we can stick with the default **cloudbuild.yaml**.
+
+![Trigger](./images/articles/trigger_006.jpg)
+
+We need to create this file in the root of the project. Create a new file named **cloudbuild.yaml**. Add the following code to the file.
+
+```yaml
+steps:
+    - name: node
+      entrypoint: yarn
+      args: ['install']
+    - name: node
+      entrypoint: yarn
+      args: ['add', 'firebase-tools']
+    - name: node
+      entrypoint: yarn
+      args: ['build']
+    - name: node
+      entrypoint: './node_modules/.bin/firebase'
+      args: ['deploy', '--project', '$PROJECT_ID', '--token', '$_TOKEN']
+```
+
+This file is fairly straightforward. It defines four steps in the deployment process.
+
+The first step installs the dependencies listed in your _package.json_ file. The second step installs the Firebase-CLI. The third step performs a build and the
+final step runs the same `firebase deploy` command that we did earlier. This final step however is dependant on two variables: `$PROJECT_ID` and `$_TOKEN`.
+
+The `$PROJECT_ID` variable is a built in substitution that is available on the Cloud Build environment. It contains the id of the current project. You can read more about how these variable
+substitutions work on the [documentation](https://cloud.google.com/cloud-build/docs/configuring-builds/substitute-variable-values).
+
+The `$_TOKEN` variable is a custom value that we need to set. It refers to an authentication token that Firebase uses to verify that Cloud Build has access to the Firebase project.
+
+#### Getting an authentication token
+
+To get an authentication token for Cloud Build we go back to the terminal and use the Firebase CLI. In the root of the project run the command:
+
+```bash
+firebase login:ci
+```
+
+This will open your browser and prompt you to login with your Google account. Ensure that you login with the same account that owns the project.
+Once you enter your credentials and login you can close the browser window. The token will be displayed in the terminal.
+
+![Trigger](./images/articles/trigger_007.jpg)
+
+Copy the authentication token provided and return to the Cloud Build page. Under the **Substitution variables** heading click the **Add Variable** button.
+Enter the name `_TOKEN` under Variable and paste the authentication token in the Value box.
+
+![Trigger](./images/articles/trigger_008.jpg)
+
+Finally click the **Create** button. At this point the trigger will be activated if any commits are pushed to the master branch of your repository on Github.
+You can test that by making a small commit and pushing it. On the Cloud Build dashboard you can see the activity of the trigger on the **History** page.
+
+![Trigger](./images/articles/trigger_010.jpg)
+
+Click on the build number link to see the progress of the build. Providing each step is successful you should see output similar to the following screenshot. Additionally the log output would be displayed.
+
+![Trigger](./images/articles/trigger_009.jpg)
+
+At this point we have the project auto deploying to the Firebase hosting site. The next step is to setup an alternative hosting site and deploy the preview version of the site to the alternative site.
+
+## Multiple sites
+
+To support deployment to multiple sites we will have to
+
+-   create the new site on Firebase
+-   modify the _cloudbuild.yaml_ file and the _firebase.json_ file
+-   create a new trigger
+
+### Create new hosting site
+
+On the **Hosting** page of the Firebase console look for the link that says **Add another site**.
+Then add a name for the site and click the **Add site** button.
+
+![Second site](./images/articles/multi_001.png)
+
+### Configuration files
+
+First, we will update the _firebase.json_ file to define the two sites. At the moment the file contains an object with a single property `hosting`.
+The `hosting` property is an object defining the details of teh hosting. We can change that to an array of objects, each one defining a different
+site. Update the _firebase.json_ file like this:
+
+```json
+{
+    "hosting": [
+        {
+            "target": "master",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "preview",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        }
+    ]
+}
+```
+
+For each hosting site we add a property `target`. This value will be used later to specify the site when we deploy. Here, I am using the branch name as the target value
+for convenience. There is a built in `$BRANCH_NAME` variable that is available for any triggered builds. Later we can use this variable to determine whether we are
+building off of the master branch or the preview branch.
+
+Next, let us modify the _cloudbuild.yaml_ file. There are two things we need. First, we need to execute the `firebase target:apply` command
+to select a site, then modify the deploy command to specify a target. The `target:apply` command needs two values: the target we defined in the
+_firebase.json_ file and the site id.
+
+The `target:apply` command can be added just after the _build_ step in the file like this:
+
+```yaml
+- name: node
+  entrypoint: './node_modules/.bin/firebase'
+  args:
+      [
+          'target:apply',
+          '--project',
+          '$PROJECT_ID',
+          '--token',
+          '$_TOKEN',
+          'hosting',
+          '$BRANCH_NAME',
+          '$_SITE_ID',
+      ]
+```
+
+`$BRANCH_NAME` is the provided variable and `$_SITE_ID` will need to be set by us in the trigger.
+
+The second change to this file is the deploy command. We need to add a `hosting` flag to the command specifying the target site.
+Update the deploy command as follows:
+
+```yaml
+- name: node
+  entrypoint: './node_modules/.bin/firebase'
+  args:
+      ['deploy', '--project', '$PROJECT_ID', '--token', '$_TOKEN', '--only', 'hosting:$BRANCH_NAME']
+```
+
+The complete _cloudbuild.yaml_ file will look like this when you are done:
+
+```yaml
+steps:
+    - name: node
+      entrypoint: yarn
+      args: ['install']
+    - name: node
+      entrypoint: yarn
+      args: ['add', 'firebase-tools']
+    - name: node
+      entrypoint: yarn
+      args: ['build']
+    - name: node
+      entrypoint: './node_modules/.bin/firebase'
+      args:
+          [
+              'target:apply',
+              '--project',
+              '$PROJECT_ID',
+              '--token',
+              '$_TOKEN',
+              'hosting',
+              '$BRANCH_NAME',
+              '$_SITE_ID',
+          ]
+    - name: node
+      entrypoint: './node_modules/.bin/firebase'
+      args:
+          [
+              'deploy',
+              '--project',
+              '$PROJECT_ID',
+              '--token',
+              '$_TOKEN',
+              '--only',
+              'hosting:$BRANCH_NAME',
+          ]
+```
+
+### Update trigger
+
+Let us first update the production trigger with the `$_SITE_ID` variable. Go to the Cloud Build console, select the **Triggers** page
+and click the _production-deploy_ trigger name to open the trigger editor. Scroll down and click the **Add Variable** button. Add a variable with the name `_SITE_ID`
+and the value the name of the production site.
+
+![Add variable](./images/articles/multi_002.jpg)
+
+Click the **Save** button when done. To test this you may commit and push to the master branch again.
+
+### Create preview trigger
+
+Now its time to create a new trigger for the preview branch. Let us name this one _preview-deploy_. Since most of the values we need are the same as the previous trigger we
+can simply duplicate the existing trigger and change the necessary values. On the **Triggers** page of the Cloud Build console click on the _more_ icon on the extreme right
+of the production-deploy trigger and select **Duplicate**.
+
+![Duplicate trigger](./images/articles/multi_003.png)
+
+Then clcik on the new trigger name and make the following modifications:
+
+-   Set the name of the trigger to: **preview-deploy**
+-   Set the description to: **Deploy the preview branch to the preview site** or something appropriate
+-   Set the branch regex to: **^preview\$**
+-   Set the `_SITE_ID` variable to the name of your preview site that you created on Firebase.
+
+Click **Save** when done.
+
+To test this new trigger create a preview branch and push it to your Github repository.
+
+## Summary
+
+Hosting multiple sites in the same project has the advantage that all of the sites can access the same resources such as storage or Firestore database.
+The setup is not easy when trying to use Cloud Build. It may be possible to improve the process or even create a better configuration than what was outlined above.
+However, that was what I was able to get working and it works fine.
+
+Future work would include auto generating preview sites for arbitrary pull requests and would it be possible to target a test Firestore or a test storage bucket when its just a test site.
+
+If you have suggestions please feel free to make a comment below.

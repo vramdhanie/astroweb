@@ -1,0 +1,211 @@
+---
+import Title from '../components/title'
+import { Icon } from 'astro-icon'
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <style>
+            html,
+            body {
+                font-family: system-ui;
+                margin: 0;
+            }
+            body {
+                padding: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Uses</h1>
+        </div>
+        <section class="">
+            <div class="explain">
+                Below is a list of tools and environments that I use in my daily work as a software
+                developer, lecturer and technical writer.
+            </div>
+            <div class="attribution">
+                Inspired by Wes Bos'{' '}
+                <a href="https://github.com/wesbos/awesome-uses">Awesome Uses</a> page.
+            </div>
+            <section class="group">
+                <Title title="Code" subtitle="Editors" />
+                <div class="entry">
+                    <h3>Visual Studio Code (VSCode)</h3>
+                    <div class="explanation">
+                        Became my main code editor sometime in mid 2018 taking over from Webstorm.
+                        It feels lightweight, is free, and unlimited extensions are available.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://code.visualstudio.com/"
+                            title="VSCode Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <Icon name="vscode" class="w-6" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <h3>Webstorm</h3>
+                    <div class="explanation">
+                        Webstorm is an excellent IDE. I very reluctantly moved over to VSCode and
+                        still keep it around and use on a few select projects just because it is so
+                        great.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://www.jetbrains.com/webstorm/"
+                            title="Webstorm Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Webstorm
+                        </a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <h3>Android Studio</h3>
+                    <div class="explanation">
+                        Built by the same folks that brought you Webstorm and many other amazing
+                        IDEs.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://developer.android.com/studio"
+                            title="Android Studio Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <Icon name="android" class="w-6" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <h3>Xcode</h3>
+                    <div class="explanation">
+                        Don't use this so much as an editor but rather use many of the tools that
+                        are available with Xcode. Also needed for generating iOS apps from React
+                        Native.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://developer.apple.com/xcode/"
+                            title="Xcode Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <Icon name="apple" class="w-6" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="group">
+                <Title title="Editor" subtitle="Configurations" />
+                <div class="entry">
+                    <h3>Emmet</h3>
+                    <div class="explanation">
+                        An amazing time saving plugin for generating code snippets for HTML and CSS.
+                        Available for most IDEs.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://emmet.io/"
+                            title="Emmet Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Emmet
+                        </a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <h3>Prettier</h3>
+                    <div class="explanation">
+                        Alright, some controversy exist over this, but I have no problem with
+                        prettier formatting my code for me after I set up the rules that I like.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://prettier.io/"
+                            title="Prettier Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Prettier
+                        </a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <h3>ESLint</h3>
+                    <div class="explanation">
+                        Sometimes ESLint and prettier gets into a fight but both are useful so its
+                        worth making them work together.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://eslint.org/"
+                            title="ESlint Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            ESLint
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="group">
+                <Title title="Terminals" subtitle="" />
+                <div class="entry">
+                    <h3>Zsh</h3>
+                    <div class="explanation">
+                        Adopted this after macOS did. Spent years on Bash. There are a few features
+                        of Zsh that I like but so far no impactful difference.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://en.wikipedia.org/wiki/Z_shell"
+                            title="Zsh Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Zsh
+                        </a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <h3>Oh My Zsh</h3>
+                    <div class="explanation">
+                        Pretty decent tool for configuring and managing the Zsh terminal. I may have
+                        used less than 1% of the goodies that it offers so far but I'm happy with
+                        it.
+                    </div>
+                    <div class="link">
+                        <a
+                            href="https://ohmyz.sh/"
+                            title="Oh My Zsh Website"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Oh My Zsh
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>
