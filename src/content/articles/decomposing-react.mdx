@@ -16,52 +16,52 @@ In this article we will take just such a scenario and go through the process ste
 
 This is a very simple React application that fetches some images from the NASA API and allows the user to scroll through the returned images.
 
-![Screenshot](./images/articles/decomposing_react_001.jpg)
+![Screenshot](/images/articles/decomposing_react_001.jpg)
 
 The entire application is written as just one component named App. The full code for this component looks like this:
 
 ```jsx
-import React, { useState } from "react";
-import "./App.css";
-import moment from "moment";
+import React, { useState } from "react"
+import "./App.css"
+import moment from "moment"
 
 const App = () => {
-  const [images, setImages] = useState([]);
-  const [count, setCount] = useState(0);
-  const [image_type, setImageType] = useState("nebula");
-  const [error, setError] = useState("");
-  const [page, setPage] = useState(1);
-  const [currentImage, setCurrentImage] = useState(-1);
+  const [images, setImages] = useState([])
+  const [count, setCount] = useState(0)
+  const [image_type, setImageType] = useState("nebula")
+  const [error, setError] = useState("")
+  const [page, setPage] = useState(1)
+  const [currentImage, setCurrentImage] = useState(-1)
 
   const fetchImages = () => {
-    const url = `https://images-api.nasa.gov/search?q=${image_type}&media_type=image&page=${page}`;
+    const url = `https://images-api.nasa.gov/search?q=${image_type}&media_type=image&page=${page}`
     fetch(url)
-      .then((res) => {
+      .then(res => {
         if (res.ok) {
-          return res.json();
+          return res.json()
         }
-        throw new Error("Problems getting the data.");
+        throw new Error("Problems getting the data.")
       })
       .then(({ collection }) => {
-        console.log(collection);
+        console.log(collection)
         const {
           metadata: { total_hits: count },
           items,
-        } = collection;
+        } = collection
 
-        const images = items.map((item) => {
-          const { center, date_created, description, title } = item.data[0];
-          const { href } = item.links[0];
-          return { center, date_created, description, title, href };
-        });
-        setCount(count);
-        setImages(images);
+        const images = items.map(item => {
+          const { center, date_created, description, title } = item.data[0]
+          const { href } = item.links[0]
+          return { center, date_created, description, title, href }
+        })
+        setCount(count)
+        setImages(images)
         if (count > 0) {
-          setCurrentImage(0);
+          setCurrentImage(0)
         }
       })
-      .catch((error) => setError(error.message));
-  };
+      .catch(error => setError(error.message))
+  }
 
   const imageCard =
     currentImage > -1 ? (
@@ -81,14 +81,14 @@ const App = () => {
       </div>
     ) : (
       ""
-    );
+    )
 
   const controls =
     currentImage > -1 ? (
       <div className="controls">
         <button
           disabled={currentImage < 1}
-          onClick={(e) => setCurrentImage(currentImage - 1)}
+          onClick={e => setCurrentImage(currentImage - 1)}
         >
           &lt;
         </button>
@@ -96,23 +96,21 @@ const App = () => {
           Image {currentImage + 1} of {count}
         </div>
         {currentImage < count ? (
-          <button onClick={(e) => setCurrentImage(currentImage + 1)}>
-            &gt;
-          </button>
+          <button onClick={e => setCurrentImage(currentImage + 1)}>&gt;</button>
         ) : (
           ""
         )}
       </div>
     ) : (
       ""
-    );
+    )
 
-  const artifacts = ["planet", "nebula", "galaxy", "pulsar"];
+  const artifacts = ["planet", "nebula", "galaxy", "pulsar"]
   const options = artifacts.map((a, i) => (
     <option value={a} key={i}>
       {a}
     </option>
-  ));
+  ))
 
   return (
     <div className="App">
@@ -124,7 +122,7 @@ const App = () => {
         <div className="options_form">
           <select
             value={image_type}
-            onChange={(e) => setImageType(e.target.value)}
+            onChange={e => setImageType(e.target.value)}
           >
             {options}
           </select>
@@ -135,10 +133,10 @@ const App = () => {
       <div>{imageCard}</div>
       {controls}
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 As you can see this component is doing quite a lot. That is why we want to decompose it into smaller components. But what are the smaller components and how do we access the data in the component that needs it? We will walk through those steps next.
@@ -151,7 +149,7 @@ Our first step on the this path is to think about which areas of the UI may be r
 
 Here is one option for decomposing this interface.
 
-![Decomposition plan](./images/articles/decomposing_react_002.jpg)
+![Decomposition plan](/images/articles/decomposing_react_002.jpg)
 
 Let us then look at the way we can refactor the code.
 
@@ -167,16 +165,16 @@ const Header = () => {
     <header>
       <h1>NASA Image Explorer</h1>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
 ```
 
 Next, update the App component to import the Header component.
 
 ```javascript
-import Header from "./header";
+import Header from "./header"
 ```
 
 And replace the `<header>` in the JSX with this new component.
@@ -220,7 +218,7 @@ Create a new file in the src folder named `card.js` and create a function compon
 Return the JSX code as above but replace all references to `images[currentImage]. The code for`card.js` should look like this:
 
 ```javascript
-import moment from "moment";
+import moment from "moment"
 
 const Card = ({ image }) => {
   return (
@@ -236,22 +234,22 @@ const Card = ({ image }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
 ```
 
 Next, import Card into App.js and replace the JSX for the card with the component element. Remember to pass the image object as a prop named `image`.
 
 ```javascript
-import Card from "./card";
+import Card from "./card"
 ```
 
 and
 
 ```javascript
-const imageCard = currentImage > -1 ? <Card image={images[cardImage]} /> : "";
+const imageCard = currentImage > -1 ? <Card image={images[cardImage]} /> : ""
 ```
 
 Once again the application should run as before. The full code for this change can be found in the **card_component** branch of [the repo](https://github.com/vramdhanie/nasa_image_explorer/tree/card_component).
@@ -264,7 +262,7 @@ The options component is completely defined in the JSX of the `App` component.
 <div className="options">
   <h3>Select An option:</h3>
   <div className="options_form">
-    <select value={image_type} onChange={(e) => setImageType(e.target.value)}>
+    <select value={image_type} onChange={e => setImageType(e.target.value)}>
       {options}
     </select>
     <button onClick={fetchImages}> Search </button>
@@ -285,41 +283,41 @@ This component should accept the four props specified above.
 
 ```javascript
 const Options = ({ onChange, onClick, error, image_type }) => {
-  const artifacts = ["planet", "nebula", "galaxy", "pulsar"];
+  const artifacts = ["planet", "nebula", "galaxy", "pulsar"]
   const options = artifacts.map((a, i) => (
     <option value={a} key={i}>
       {a}
     </option>
-  ));
+  ))
 
   return (
     <div className="options">
       <h3>Select An option:</h3>
       <div className="options_form">
-        <select value={image_type} onChange={(e) => onChange(e.target.value)}>
+        <select value={image_type} onChange={e => onChange(e.target.value)}>
           {options}
         </select>
         <button onClick={onClick}> Search </button>
         {error ? <div className="error">{error}</div> : ""}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Options;
+export default Options
 ```
 
 In `App.js` this new component can be imported.
 
 ```javascript
-import Options from "./options";
+import Options from "./options"
 ```
 
 And used in the JSX.
 
 ```javascript
 <Options
-  onChange={(imageType) => setImageType(imageType)}
+  onChange={imageType => setImageType(imageType)}
   onClick={fetchImages}
   error={error}
   image_type={image_type}
@@ -338,7 +336,7 @@ The JSX code for this component is all defined in the controls const of App.
 <div className="controls">
   <button
     disabled={currentImage < 1}
-    onClick={(e) => setCurrentImage(currentImage - 1)}
+    onClick={e => setCurrentImage(currentImage - 1)}
   >
     &lt;
   </button>
@@ -346,7 +344,7 @@ The JSX code for this component is all defined in the controls const of App.
     Image {currentImage + 1} of {count}
   </div>
   {currentImage < count ? (
-    <button onClick={(e) => setCurrentImage(currentImage + 1)}>&gt;</button>
+    <button onClick={e => setCurrentImage(currentImage + 1)}>&gt;</button>
   ) : (
     ""
   )}
@@ -363,7 +361,7 @@ const Controls = ({ onClick, currentImage, count }) => {
     <div className="controls">
       <button
         disabled={currentImage < 1}
-        onClick={(e) => onClick(currentImage - 1)}
+        onClick={e => onClick(currentImage - 1)}
       >
         &lt;
       </button>
@@ -371,21 +369,21 @@ const Controls = ({ onClick, currentImage, count }) => {
         Image {currentImage + 1} of {count}
       </div>
       {currentImage < count ? (
-        <button onClick={(e) => onClick(currentImage + 1)}>&gt;</button>
+        <button onClick={e => onClick(currentImage + 1)}>&gt;</button>
       ) : (
         ""
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Controls;
+export default Controls
 ```
 
 Then in the `App.js` file import this new component.
 
 ```javascript
-import Controls from "./controls";
+import Controls from "./controls"
 ```
 
 And replace the original JSX code with this component.
@@ -400,58 +398,58 @@ const controls =
     />
   ) : (
     ""
-  );
+  )
 ```
 
 The final code for `App.js` should now look like this:
 
 ```javascript
-import React, { useState } from "react";
-import "./App.css";
-import Header from "./header";
-import Card from "./card";
-import Options from "./options";
-import Controls from "./controls";
+import React, { useState } from "react"
+import "./App.css"
+import Header from "./header"
+import Card from "./card"
+import Options from "./options"
+import Controls from "./controls"
 
 const App = () => {
-  const [images, setImages] = useState([]);
-  const [count, setCount] = useState(0);
-  const [image_type, setImageType] = useState("nebula");
-  const [error, setError] = useState("");
-  const [page, setPage] = useState(1);
-  const [currentImage, setCurrentImage] = useState(-1);
+  const [images, setImages] = useState([])
+  const [count, setCount] = useState(0)
+  const [image_type, setImageType] = useState("nebula")
+  const [error, setError] = useState("")
+  const [page, setPage] = useState(1)
+  const [currentImage, setCurrentImage] = useState(-1)
 
   const fetchImages = () => {
-    const url = `https://images-api.nasa.gov/search?q=${image_type}&media_type=image&page=${page}`;
+    const url = `https://images-api.nasa.gov/search?q=${image_type}&media_type=image&page=${page}`
     fetch(url)
-      .then((res) => {
+      .then(res => {
         if (res.ok) {
-          return res.json();
+          return res.json()
         }
-        throw new Error("Problems getting the data.");
+        throw new Error("Problems getting the data.")
       })
       .then(({ collection }) => {
         const {
           metadata: { total_hits: count },
           items,
-        } = collection;
+        } = collection
 
-        const images = items.map((item) => {
-          const { center, date_created, description, title } = item.data[0];
-          const { href } = item.links[0];
-          return { center, date_created, description, title, href };
-        });
-        setCount(count);
-        setImages(images);
+        const images = items.map(item => {
+          const { center, date_created, description, title } = item.data[0]
+          const { href } = item.links[0]
+          return { center, date_created, description, title, href }
+        })
+        setCount(count)
+        setImages(images)
         if (count > 0) {
-          setCurrentImage(0);
+          setCurrentImage(0)
         }
       })
-      .catch((error) => setError(error.message));
-  };
+      .catch(error => setError(error.message))
+  }
 
   const imageCard =
-    currentImage > -1 ? <Card image={images[currentImage]} /> : "";
+    currentImage > -1 ? <Card image={images[currentImage]} /> : ""
 
   const controls =
     currentImage > -1 ? (
@@ -462,13 +460,13 @@ const App = () => {
       />
     ) : (
       ""
-    );
+    )
 
   return (
     <div className="App">
       <Header />
       <Options
-        onChange={(imageType) => setImageType(imageType)}
+        onChange={imageType => setImageType(imageType)}
         onClick={fetchImages}
         error={error}
         image_type={image_type}
@@ -476,10 +474,10 @@ const App = () => {
       <div>{imageCard}</div>
       {controls}
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 Notice how much simpler this code has become? As we push functionality to the other components this component becomes simpler. The full code for the app in this state may be found in the **controls_component** branch of [the repo](https://github.com/vramdhanie/nasa_image_explorer/tree/controls_component).
