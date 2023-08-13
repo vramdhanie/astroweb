@@ -7,7 +7,7 @@ steps:
     args: ["add", "firebase-tools"]
   - name: node
     entrypoint: yarn
-    args: ["dist"]
+    args: ["build"]
     env: ["_GOOGLE_ANALYTICS_KEY=$_GOOGLE_ANALYTICS_KEY"]
   - name: node
     entrypoint: "./node_modules/.bin/firebase"
