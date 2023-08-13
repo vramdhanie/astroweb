@@ -13,11 +13,13 @@ const { title } = Astro.props
         <title>{title}</title>
     </head>
     <body class="font-mono">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col">
         <Header />
-        <main>
-            <h1 class="text-4xl font-bold text-center">{title}</h1>
+        <main class="flex-1">
+            <h1 class="text-2xl font-bold text-left">{title}</h1>
             <slot />
         </main>
         <Footer />
+      </div>
     </body>
 </html>
