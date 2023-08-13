@@ -1,7 +1,9 @@
 ---
+import { getCollection } from 'astro:content'
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
 const { title } = Astro.props
+const articles = await getCollection('articles')
 ---
 
 <html lang="en">
@@ -17,7 +19,22 @@ const { title } = Astro.props
         <Header />
         <main class="flex-1">
             <h1 class="text-2xl font-bold text-left">{title}</h1>
-            <slot />
+            <div class="flex">
+              <div class="shrink-1 w-3/4">
+              <slot />
+              </div>
+              <nav class="w-1/4 pl-2 text-right">
+                <ul>
+                  <li><a href="/" class="text-blue-500 underline hover:no-underline hover:text-blue-400">Home</a></li>
+                  <li><a href="/uses"  class="text-blue-500 underline hover:no-underline hover:text-blue-400">Uses</a></li>
+                </ul>
+                <ul>
+                  {articles.map(article => (
+                    <li ><a href={article.slug}  class="text-blue-500 underline hover:no-underline hover:text-blue-400">{article.data.title}</a></li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
         </main>
         <Footer />
       </div>
