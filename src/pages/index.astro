@@ -1,14 +1,10 @@
 ---
+import Page from '../layouts/page.astro'
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    </head>
-    <body class="font-mono">
-        <main class="w-1/2 mx-auto p-8">Coming soon...</main>
-    </body>
-</html>
+<Page title="Vincent Ramdhanie">
+    <div class="w-1/2 mx-auto p-8">
+        A new <a href="https://astro.build" class="underline hover:text-gray-300">Astro</a> site is coming
+        soon...
+    </div>
+</Page>
