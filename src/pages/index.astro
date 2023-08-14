@@ -17,6 +17,7 @@ import { Icon } from 'astro-icon'
             class="text-blue-500 underline hover:text-blue-400 hover:no-underline">here</a
         >.
     </div>
+    <div class="w-full text-center text-gray-200 font-sm my-4">- &#9702; -</div>
     <div class="py-2">
         I am a software engineer. I work at <a
             href="https://lindy.ai"
@@ -24,6 +25,7 @@ import { Icon } from 'astro-icon'
         >. At Lindy we are building a virtual employee. Lindy will change the way we work and live
         in significant ways.
     </div>
+    <div class="w-full text-center text-gray-200 font-sm my-4">- &#9702; -</div>
     <div class="py-2">
         Any hope of contributing to a brighter future for mankind, must rest on the fundamental
         acceptance of the nobility of man.
@@ -36,11 +38,12 @@ import { Icon } from 'astro-icon'
             >
         </Quote>
     </div>
-    <div class="py-2">
+    <div class="w-full text-center text-gray-200 font-sm my-4">- &#9702; -</div>
+    <div class="py-2 max-w-3xl">
         <Title title="2023" subtitle="Reading List" />
-        <ul class="list-none list-inside">
+        <ul class="list-none">
             <li class="flex">
-                <Icon name="check" class="w-12 text-green-400" />
+                <Icon name="check" class="w-12 text-green-400 shrink-0" />
                 <Biblio
                     title="The Three-Body Problem"
                     author="Cixin Liu"
@@ -64,6 +67,15 @@ import { Icon } from 'astro-icon'
                     author="Cixin Liu"
                     year="2016"
                     cover="deaths_end.jpeg"
+                />
+            </li>
+            <li class="flex">
+                <Icon name="check" class="w-12 text-green-400 shrink-0" />
+                <Biblio
+                    title="The Dragons of Eden: Speculations on the Evolution of Human Intelligence"
+                    author="Carl Sagan"
+                    year="1977"
+                    cover="dragons_of_eden.jpeg"
                 />
             </li>
         </ul>
