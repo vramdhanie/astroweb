@@ -1,5 +1,9 @@
 ---
 import Page from '../layouts/page.astro'
+import Quote from '../components/quote'
+import Title from '../components/title'
+import Biblio from '../components/biblio'
+import { Icon } from 'astro-icon'
 ---
 
 <Page title="Vincent Ramdhanie">
@@ -7,8 +11,8 @@ import Page from '../layouts/page.astro'
         I am a <a
             href="https://bahai.org"
             class="text-blue-500 underline hover:text-blue-400 hover:no-underline">Baha'i</a
-        >. Baha'is are working in your neighbourhood to build better communities and develop
-        society. You can read more about the work of the Baha'is <a
+        >. Baha'is are working in your neighbourhood to build better communities and develop an ever
+        advancing society. You can read more about the work of the Baha'is <a
             href="https://www.bahai.org/action"
             class="text-blue-500 underline hover:text-blue-400 hover:no-underline">here</a
         >.
@@ -19,5 +23,49 @@ import Page from '../layouts/page.astro'
             class="text-blue-500 underline hover:text-blue-400 hover:no-underline">Lindy</a
         >. At Lindy we are building a virtual employee. Lindy will change the way we work and live
         in significant ways.
+    </div>
+    <div class="py-2">
+        Any hope of contributing to a brighter future for mankind, must rest on the fundamental
+        acceptance of the nobility of man.
+
+        <Quote author="Baha'u'llah">
+            <span class="font-semibold">O SON OF SPIRIT!</span>
+            <span class="block"
+                >Noble have I created thee, yet thou hast abased thyself. Rise then unto that for
+                which thou wast created.</span
+            >
+        </Quote>
+    </div>
+    <div class="py-2">
+        <Title title="2023" subtitle="Reading List" />
+        <ul class="list-none list-inside">
+            <li class="flex">
+                <Icon name="check" class="w-12 text-green-400" />
+                <Biblio
+                    title="The Three-Body Problem"
+                    author="Cixin Liu"
+                    year="2014"
+                    cover="three_body_problem.jpeg"
+                />
+            </li>
+            <li class="flex">
+                <Icon name="check" class="w-12 text-green-400" />
+                <Biblio
+                    title="The Dark Forest"
+                    author="Cixin Liu"
+                    year="2015"
+                    cover="dark_forest.jpeg"
+                />
+            </li>
+            <li class="flex">
+                <Icon name="check" class="w-12 text-green-400" />
+                <Biblio
+                    title="Death's End"
+                    author="Cixin Liu"
+                    year="2016"
+                    cover="deaths_end.jpeg"
+                />
+            </li>
+        </ul>
     </div>
 </Page>
