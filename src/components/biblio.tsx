@@ -5,7 +5,7 @@ const Biblio = ({
   year,
   cover,
 }: {
-  children?: JSX.Element | JSX.Element[]
+  children?: JSX.Element | JSX.Element[] | string
   author: string
   title: string
   year: string
@@ -17,7 +17,7 @@ const Biblio = ({
         <div className="font-semibold">{title}</div>
         <div className="font-normal">{author}</div>
         <div className="font-normal text-gray-500">{year}</div>
-        <div>{children}</div>
+        <div className="text-gray-500 text-sm">{children}</div>
       </div>
       <div className="w-24 mr-2 shrink-0">
         <img src={"/images/books/" + cover} alt="book cover" />
