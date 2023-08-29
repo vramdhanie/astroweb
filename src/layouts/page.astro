@@ -15,7 +15,7 @@ const articles = await getCollection('articles')
         <title>{title}</title>
     </head>
     <body class="font-mono">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col max-w-screen-xl">
             <Header />
             <main class="flex-1">
                 <h1 class="text-2xl font-bold text-left">{title}</h1>
