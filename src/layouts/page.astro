@@ -15,28 +15,49 @@ const articles = await getCollection('articles')
         <title>{title}</title>
     </head>
     <body class="font-mono">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col">
-        <Header />
-        <main class="flex-1">
-            <h1 class="text-2xl font-bold text-left">{title}</h1>
-            <div class="flex">
-              <div class="shrink-1 w-3/4">
-              <slot />
-              </div>
-              <nav class="w-1/4 pl-2 text-right">
-                <ul>
-                  <li><a href="/" class="text-blue-500 underline hover:no-underline hover:text-blue-400">Home</a></li>
-                  <li><a href="/uses"  class="text-blue-500 underline hover:no-underline hover:text-blue-400">Uses</a></li>
-                </ul>
-                <ul>
-                  {articles.map(article => (
-                    <li ><a href={article.slug}  class="text-blue-500 underline hover:no-underline hover:text-blue-400">{article.data.title}</a></li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-        </main>
-        <Footer />
-      </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col">
+            <Header />
+            <main class="flex-1">
+                <h1 class="text-2xl font-bold text-left">{title}</h1>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+                    <nav class="pl-2 text-right col-span-1 md:order-last">
+                        <ul>
+                            <li>
+                                <a
+                                    href="/"
+                                    class="text-blue-500 underline hover:no-underline hover:text-blue-400"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/uses"
+                                    class="text-blue-500 underline hover:no-underline hover:text-blue-400"
+                                    >Uses</a
+                                >
+                            </li>
+                        </ul>
+                        <ul>
+                            {
+                                articles.map((article) => (
+                                    <li>
+                                        <a
+                                            href={article.slug}
+                                            class="text-blue-500 underline hover:no-underline hover:text-blue-400"
+                                        >
+                                            {article.data.title}
+                                        </a>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </nav>
+                    <div class="col-span-1 md:col-span-4">
+                        <slot />
+                    </div>
+                </div>
+            </main>
+            <Footer />
+        </div>
     </body>
 </html>
