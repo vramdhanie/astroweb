@@ -66,6 +66,57 @@ import { Icon } from 'astro-icon'
     </div>
     <div class="w-full text-center text-gray-200 font-sm my-4">- &#9702; -</div>
     <div class="py-2 w-full max-w-3xl">
+        <Title title="2024" subtitle="Reading List" />
+        <ul class="list-none">
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-gray-300 font-bold"></span>
+                </div>
+                <Biblio
+                    title="How to Expect the Unexpected: The Science of Making Predictions―and the Art of Knowing When Not To"
+                    author="Kit Yates"
+                    year="2023"
+                    cover="expect_the_unexpected.jpeg"
+                >
+                    This book was featured on the Physics World podcast.
+                </Biblio>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-gray-300 font-bold"></span>
+                </div>
+                <Biblio
+                    title="The Math of Life and Death: 7 Mathematical Principles That Shape Our Lives"
+                    author="Kit Yates"
+                    year="2020"
+                    cover="mathematics_of_life_and_death.jpg"
+                />
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-gray-300 font-bold"></span>
+                </div>
+                <Biblio title="Holly" author="Stephen King" year="2023" cover="holly.jpg" />
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-gray-300 font-bold"></span>
+                </div>
+                <Biblio
+                    title="You Like It darker: Stories"
+                    author="Stephen King"
+                    year="2024"
+                    cover="you_like_it_darker.jpg"
+                />
+            </li>
+        </ul>
+    </div>
+    <div class="w-full text-center text-gray-200 font-sm my-4">- &#9702; -</div>
+    <div class="py-2 w-full max-w-3xl">
         <Title title="2023" subtitle="Reading List" />
         <ul class="list-none">
             <li class="flex items-center border-b border-b-gray-100">
@@ -157,8 +208,8 @@ import { Icon } from 'astro-icon'
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
-                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
-                    <span class="text-gray-300 font-bold">75%</span>
+                    <Icon name="check" class="w-8 text-green-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">100%</span>
                 </div>
                 <Biblio
                     title="The Far Side Gallery"
@@ -172,8 +223,8 @@ import { Icon } from 'astro-icon'
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
-                    <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
-                    <span class="text-gray-300 font-bold"></span>
+                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">1%</span>
                 </div>
                 <Biblio
                     title="Collapse: How Societies Choose to Fail or Succeed"
@@ -227,8 +278,8 @@ import { Icon } from 'astro-icon'
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
-                    <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
-                    <span class="text-gray-300 font-bold"></span>
+                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">1%</span>
                 </div>
                 <Biblio
                     title="The Far Side Gallery 2"
@@ -283,6 +334,30 @@ import { Icon } from 'astro-icon'
                     author="Robin Hanson"
                     year="2016"
                     cover="age_of_em.jpeg"
+                />
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">60%</span>
+                </div>
+                <Biblio
+                    title="At the Edge of Time: Exploring the Mysteries of Our Universe’s First Seconds"
+                    author="Dan Hooper"
+                    year="2019"
+                    cover="edge_of_time.jpg"
+                />
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-gray-300 font-bold"></span>
+                </div>
+                <Biblio
+                    title="Sleeping Beauties"
+                    author="Stephen King, Owen King"
+                    year="2017"
+                    cover="sleeping_beauties.jpg"
                 />
             </li>
         </ul>
