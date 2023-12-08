@@ -7,6 +7,10 @@ import { Icon } from 'astro-icon'
 ---
 
 <Page title="Podcasts">
+    <div class="py-2">
+        Some podcasts that I frequently listen to. I've included a short description of each
+        podcast, as well as my personal rating out of 10.
+    </div>
     <div class="py-2 w-full max-w-3xl">
         <Title title="Science" subtitle="Podcasts" />
         <ul class="list-none">
@@ -66,6 +70,64 @@ import { Icon } from 'astro-icon'
                     the nature of time, the origin of the universe, and the search for dark matter.
                     They also talk about the process of science, and how scientists think about the
                     world.
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">8/10</span>
+                </div>
+                <Pod
+                    title="Star Talk radio"
+                    presenters={['Neil deGrasse Tyson']}
+                    yearStarted="2009"
+                    cover="star_talk_radio.webp"
+                    cadence="every few days"
+                    numberOfEpisodes={880}
+                    isActive={true}
+                >
+                    This is an excellent podcast from Neil deGrasse Tyson. He talks about a wide
+                    range of topics, from the origin of life to the nature of dark matter. He also
+                    talks about pop culture and the impact of science on society. The show is a bit
+                    commercial radio in that it never gets a chance to investigate topics as deeply
+                    as I would like but it is funny and does introduce many luminaries in the field.
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="The Infinite Monkey Cage"
+                    presenters={['Brian Cox', 'Robin Ince']}
+                    yearStarted="2009"
+                    cover="infinite_monkey_cage.webp"
+                    cadence="weekly"
+                    numberOfEpisodes={193}
+                    isActive={true}
+                >
+                    Very funny and insightful show about science. Brian Cox and Robin Ince are
+                    joined by a panel of experts to discuss a wide range of topics. The show is
+                    always entertaining and informative.
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">9/10</span>
+                </div>
+                <Pod
+                    title="Science Quickly"
+                    presenters={['Various']}
+                    yearStarted="2009"
+                    cover="science_quickly.webp"
+                    cadence="every few days"
+                    numberOfEpisodes={500}
+                    isActive={true}
+                >
+                    Short snippets about the latest news and happenings in science from Sientific
+                    American.
                 </Pod>
             </li>
         </ul>
