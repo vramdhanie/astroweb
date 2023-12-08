@@ -31,12 +31,20 @@ const articles = await getCollection('articles')
                             </li>
                             <li>
                                 <a
+                                    href="/podcasts"
+                                    class="text-blue-500 underline hover:no-underline hover:text-blue-400"
+                                    >Podcasts</a
+                                >
+                            </li>
+                            <li>
+                                <a
                                     href="/uses"
                                     class="text-blue-500 underline hover:no-underline hover:text-blue-400"
                                     >Uses</a
                                 >
                             </li>
                         </ul>
+                        <div class="w-full text-right text-gray-200 font-sm my-4">- &#9702; -</div>
                         <ul>
                             {
                                 articles.map((article) => (

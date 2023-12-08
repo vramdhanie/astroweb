@@ -1,0 +1,73 @@
+---
+import Page from '../layouts/page.astro'
+import Quote from '../components/quote'
+import Title from '../components/title'
+import Pod from '../components/podcast'
+import { Icon } from 'astro-icon'
+---
+
+<Page title="Podcasts">
+    <div class="py-2 w-full max-w-3xl">
+        <Title title="Science" subtitle="Podcasts" />
+        <ul class="list-none">
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Why This Universe?"
+                    presenters={['Dan Hooper', 'Shalma Wegsman']}
+                    yearStarted="2020"
+                    cover="why_this_universe.png"
+                    cadence="weekly"
+                    numberOfEpisodes={85}
+                    isActive={true}
+                >
+                    Dan and Shalma break down some of the biggest ideas in physics. They talk about
+                    the universe, black holes, quantum mechanics, and more. Always informative,
+                    always entertaining.
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="The State of The Universe"
+                    presenters={['Brendan Drachler']}
+                    yearStarted="2018"
+                    cover="state_of_the_universe.webp"
+                    cadence="every two weeks"
+                    numberOfEpisodes={81}
+                    isActive={true}
+                >
+                    Brandon talks to scientists about their research. He covers a wide range of
+                    topics, from the origin of life to the nature of dark matter. He also talks
+                    about the process of science, and how scientists think about the world.
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Daniel and Jorge Explain the Universe"
+                    presenters={['Daniel Whiteson', 'Jorge Cham']}
+                    yearStarted="2018"
+                    cover="explain_the_universe.webp"
+                    cadence="every few days"
+                    numberOfEpisodes={552}
+                    isActive={true}
+                >
+                    Daniel and Jorge talk about the biggest ideas in physics. They cover topics like
+                    the nature of time, the origin of the universe, and the search for dark matter.
+                    They also talk about the process of science, and how scientists think about the
+                    world.
+                </Pod>
+            </li>
+        </ul>
+    </div>
+</Page>
