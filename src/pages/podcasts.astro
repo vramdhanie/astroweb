@@ -215,6 +215,48 @@ import { Icon } from 'astro-icon'
                     a comedy show featuring stand up comedians and others.
                 </Pod>
             </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Conan O'Brien Needs a Friend"
+                    presenters={["Conan O'Brien", 'Matt Gourley', 'Sona Movsesian']}
+                    yearStarted="2018"
+                    cover="conan.webp"
+                    cadence="weekly"
+                    numberOfEpisodes={234}
+                    isActive={true}
+                >
+                    This wacky but brilliant podcast is laugh out loud funny. Even the
+                    advertisements are funny. Conan has a unique brand of humour that is both self
+                    deprecating and insightful.
+                </Pod>
+            </li>
+        </ul>
+    </div>
+
+    <div class="py-2 w-full max-w-3xl">
+        <Title title="Tech" subtitle="Podcasts" />
+        <ul class="list-none">
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Soft Skills Engineering"
+                    presenters={['Jamison Dance', 'Dave Smith']}
+                    yearStarted="2016"
+                    cover="soft_skills_engineering.webp"
+                    cadence="weekly"
+                    numberOfEpisodes={387}
+                    isActive={true}
+                >
+                    It takes more than great code to be a software engineer.
+                </Pod>
+            </li>
         </ul>
     </div>
 </Page>
