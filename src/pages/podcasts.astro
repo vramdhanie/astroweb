@@ -130,6 +130,91 @@ import { Icon } from 'astro-icon'
                     American.
                 </Pod>
             </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Science In Action"
+                    presenters={['Roland Pease']}
+                    yearStarted="1990"
+                    cover="science_in_action.webp"
+                    cadence="every few days"
+                    numberOfEpisodes={1373}
+                    isActive={true}
+                >
+                    BBC's science podcast. Covers all the science news each week with interviews
+                    from the scientists involved in the research.
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Physics World Weekly"
+                    presenters={[
+                        'Hamish Johnston',
+                        'Margaret Harris',
+                        'Tami Freeman',
+                        'James Dacey',
+                    ]}
+                    yearStarted="2021"
+                    cover="physics_world.jpeg"
+                    cadence="weekly"
+                    numberOfEpisodes={100}
+                    isActive={true}
+                >
+                    Provides insight into the latest physics news. Interviews from scientist and
+                    business of physics. A good way to keep abreast of the latest developments in
+                    the world of Physics.
+                </Pod>
+            </li>
+        </ul>
+    </div>
+
+    <div class="py-2 w-full max-w-3xl">
+        <Title title="Comedy" subtitle="Podcasts" />
+        <ul class="list-none">
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Friday Night Comedy"
+                    presenters={['Various']}
+                    yearStarted="2020"
+                    cover="friday_night_comedy.webp"
+                    cadence="weekly"
+                    numberOfEpisodes={197}
+                    isActive={true}
+                >
+                    Alternates between The Now show with Hugh Dennis and Steve Punt, The News Quiz
+                    and Dead Ringers. Absolute top notch comedy from a wide variety of British
+                    comedians.
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Comedy of The Week"
+                    presenters={['Various']}
+                    yearStarted="2020"
+                    cover="comedy_of_the_week.webp"
+                    cadence="weekly"
+                    numberOfEpisodes={5}
+                    isActive={true}
+                >
+                    Brilliant comedy from the UK. This is a variety show where every week they bring
+                    a comedy show featuring stand up comedians and others.
+                </Pod>
+            </li>
         </ul>
     </div>
 </Page>
