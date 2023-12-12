@@ -2,9 +2,9 @@
 import { getCollection } from 'astro:content'
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
-import parse from 'date-fns/parse'
-import isBefore from 'date-fns/isBefore'
-import isAfter from 'date-fns/isAfter'
+import parse from 'date-fns/parse/index.js'
+import isBefore from 'date-fns/isBefore/index.js'
+import isAfter from 'date-fns/isAfter/index.js'
 const { title } = Astro.props
 const articles = await getCollection('articles')
 ---
