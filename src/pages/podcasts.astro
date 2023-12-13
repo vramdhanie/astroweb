@@ -9,7 +9,9 @@ import { Icon } from 'astro-icon'
 <Page title="Podcasts">
     <div class="py-2">
         Some podcasts that I frequently listen to. I've included a short description of each
-        podcast, as well as my personal rating out of 10.
+        podcast, as well as my personal rating out of 10. This list represents over 6 hours of new
+        content per week. I generally listen at 1.8 speed so it just barely fits in my weekly
+        commute. I am at max podcast capacity.
     </div>
     <div class="text-sm text-slate-400">This list was updated in December 2023.</div>
     <div class="py-2 w-full max-w-3xl">
@@ -251,6 +253,29 @@ import { Icon } from 'astro-icon'
                     deprecating and insightful.
                 </Pod>
             </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Smartless"
+                    presenters={['Jason Bateman', 'Sean Hayes', 'Will Arnett']}
+                    yearStarted="2020"
+                    cover="smartless.webp"
+                    cadence="weekly"
+                    numberOfEpisodes={56}
+                    isActive={true}
+                >
+                    These three presenters invite a differet guest each week and have an in-depth
+                    conversation.
+                    <p class="text-xs text-slate-300 mt-1">
+                        I am listening to a few episodes of this during December 2023 to determine
+                        if it is worth the time. I think this is two different podcasts rolled into
+                        one.
+                    </p>
+                </Pod>
+            </li>
         </ul>
     </div>
 
@@ -337,6 +362,74 @@ import { Icon } from 'astro-icon'
                         if it is worth the time. I think this is two different podcasts rolled into
                         one.
                     </p>
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-orange-300 font-bold text-sm">5/10</span>
+                </div>
+                <Pod
+                    title="Syntax Web Development"
+                    presenters={['Wes Bos', 'Scott Tolinski']}
+                    yearStarted="2017"
+                    cover="syntax.webp"
+                    cadence="every few days"
+                    numberOfEpisodes={704}
+                    isActive={true}
+                >
+                    Discussions about front end technologies. Interviews with experts in the field.
+                    <p class="text-xs text-slate-300 mt-1">
+                        I am listening to a few episodes of this during December 2023 to determine
+                        if it is worth the time. I think this is two different podcasts rolled into
+                        one.
+                    </p>
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-orange-300 font-bold text-sm">5/10</span>
+                </div>
+                <Pod
+                    title="Hard Fork"
+                    presenters={['Kevin Roose', 'Casey Newton']}
+                    yearStarted="2022"
+                    cover="hard_fork.png"
+                    cadence="weekly"
+                    numberOfEpisodes={63}
+                    isActive={true}
+                >
+                    Discussions about the latest happenings around the tech world.
+                    <p class="text-xs text-slate-300 mt-1">
+                        I am listening to a few episodes of this during December 2023 to determine
+                        if it is worth the time. I think this is two different podcasts rolled into
+                        one.
+                    </p>
+                </Pod>
+            </li>
+        </ul>
+    </div>
+
+    <div class="py-2 w-full max-w-3xl">
+        <Title title="Baha'i" subtitle="Podcasts" />
+        <ul class="list-none">
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Baha'i World News Service"
+                    presenters={['Various']}
+                    yearStarted="2017"
+                    cover="bwns.webp"
+                    cadence="occasionally"
+                    numberOfEpisodes={36}
+                    isActive={true}
+                >
+                    Reports on major developments in the Baha'i Worldwide community. Interviews with
+                    persons working oin the field.
                 </Pod>
             </li>
         </ul>

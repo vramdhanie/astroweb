@@ -14,7 +14,7 @@ const Pod = ({
   yearStarted: string
   cover: string
   isActive: boolean
-  cadence: 'daily' | 'every few days' | 'every two weeks' | 'weekly' | 'monthly' | 'quarterly' | 'yearly'
+  cadence: 'daily' | 'every few days' | 'every two weeks' | 'weekly' | 'monthly' | 'quarterly' | 'yearly' | 'occasionally'
   numberOfEpisodes: number
 }) => {
   return (
