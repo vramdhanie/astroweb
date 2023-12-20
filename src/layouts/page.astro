@@ -7,6 +7,7 @@ import isBefore from 'date-fns/isBefore/index.js'
 import isAfter from 'date-fns/isAfter/index.js'
 const { title } = Astro.props
 const articles = await getCollection('articles')
+const books = await getCollection('books')
 ---
 
 <html lang="en">
@@ -48,6 +49,7 @@ const articles = await getCollection('articles')
                             </li>
                         </ul>
                         <div class="w-full text-right text-gray-200 font-sm my-4">- &#9702; -</div>
+                        <h3 class="text-lg font-bold text-right">Articles</h3>
                         <ul>
                             {
                                 articles
@@ -65,6 +67,28 @@ const articles = await getCollection('articles')
                                                 class="text-blue-500 underline hover:no-underline hover:text-blue-400"
                                             >
                                                 {article.data.title}
+                                            </a>
+                                        </li>
+                                    ))
+                            }
+                        </ul>
+                        <div class="w-full text-right text-gray-200 font-sm my-4">- &#9702; -</div>
+                        <h3 class="text-lg font-bold text-right">Reading Lists</h3>
+                        <ul>
+                            {
+                                books
+                                    .sort((a, b) => {
+                                        const d1 = +a.data.year
+                                        const d2 = +b.data.year
+                                        return d1 - d2
+                                    })
+                                    .map((book) => (
+                                        <li class="border-b-1 border-slate-100 border-b-solid py-1">
+                                            <a
+                                                href={`/${book.slug}`}
+                                                class="text-blue-500 underline hover:no-underline hover:text-blue-400"
+                                            >
+                                                {book.data.year}
                                             </a>
                                         </li>
                                     ))
