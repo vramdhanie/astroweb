@@ -269,11 +269,34 @@ import { Icon } from 'astro-icon'
                 >
                     These three presenters invite a differet guest each week and have an in-depth
                     conversation.
-                    <p class="text-xs text-slate-300 mt-1">
+                    <p class="text-xs text-slate-300 mt-1 line-through">
                         I am listening to a few episodes of this during December 2023 to determine
                         if it is worth the time. I think this is two different podcasts rolled into
                         one.
                     </p>
+                    <p class="text-xs text-slate-300 mt-1">
+                        Now that I've listened to a few episodes this is definitely worth the
+                        listen.
+                    </p>
+                </Pod>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="star" class="w-8 text-yellow-400 shrink-0" />
+                    <span class="text-yellow-300 font-bold text-sm">10/10</span>
+                </div>
+                <Pod
+                    title="Working it out"
+                    presenters={['Mike Birbiglia']}
+                    yearStarted="2020"
+                    cover="mike_birbiglia.webp"
+                    cadence="weekly"
+                    numberOfEpisodes={130}
+                    isActive={true}
+                >
+                    Mike Birbiglia is one of my favourite comedians. In this podcast he invites a
+                    different comedian each week and they discuss the process of joke writing. Along
+                    the way they deliver many great jokes.
                 </Pod>
             </li>
         </ul>
@@ -314,9 +337,13 @@ import { Icon } from 'astro-icon'
                     isActive={true}
                 >
                     Technical interviews and news about the software world.
-                    <p class="text-xs text-slate-300 mt-1">
+                    <p class="text-xs text-slate-300 mt-1 line-through">
                         I am listening to a few episodes of this during December 2023 to determine
                         if it is worth the time.
+                    </p>
+                    <p class="text-xs text-slate-300 mt-1">
+                        I've temporarily paused this podcast. Not bad, just too many to listen to at
+                        the moment.
                     </p>
                 </Pod>
             </li>
@@ -336,9 +363,13 @@ import { Icon } from 'astro-icon'
                 >
                     All about deploying software to production. Interviews with persons in devops
                     and infrastructure.
-                    <p class="text-xs text-slate-300 mt-1">
+                    <p class="text-xs text-slate-300 mt-1 line-through">
                         I am listening to a few episodes of this during December 2023 to determine
                         if it is worth the time.
+                    </p>
+                    <p class="text-xs text-slate-300 mt-1">
+                        I've temporarily paused this podcast. Not bad, just too many to listen to at
+                        the moment.
                     </p>
                 </Pod>
             </li>
@@ -357,11 +388,11 @@ import { Icon } from 'astro-icon'
                     isActive={true}
                 >
                     Machine learning fundamentals and interviews with experts in the field.
-                    <p class="text-xs text-slate-300 mt-1">
+                    <p class="text-xs text-slate-300 mt-1 line-through">
                         I am listening to a few episodes of this during December 2023 to determine
-                        if it is worth the time. I think this is two different podcasts rolled into
-                        one.
+                        if it is worth the time.
                     </p>
+                    <p class="text-xs text-slate-300 mt-1">This is definitely not worth it.</p>
                 </Pod>
             </li>
             <li class="flex items-center border-b border-b-gray-100">
@@ -379,10 +410,13 @@ import { Icon } from 'astro-icon'
                     isActive={true}
                 >
                     Discussions about front end technologies. Interviews with experts in the field.
-                    <p class="text-xs text-slate-300 mt-1">
+                    <p class="text-xs text-slate-300 mt-1 line-through">
                         I am listening to a few episodes of this during December 2023 to determine
-                        if it is worth the time. I think this is two different podcasts rolled into
-                        one.
+                        if it is worth the time.
+                    </p>
+                    <p class="text-xs text-slate-300 mt-1">
+                        I've temporarily paused this podcast. Not bad, just too many to listen to at
+                        the moment.
                     </p>
                 </Pod>
             </li>
@@ -401,10 +435,12 @@ import { Icon } from 'astro-icon'
                     isActive={true}
                 >
                     Discussions about the latest happenings around the tech world.
-                    <p class="text-xs text-slate-300 mt-1">
+                    <p class="text-xs text-slate-300 mt-1 line-through">
                         I am listening to a few episodes of this during December 2023 to determine
-                        if it is worth the time. I think this is two different podcasts rolled into
-                        one.
+                        if it is worth the time.
+                    </p>
+                    <p class="text-xs text-slate-300 mt-1">
+                        This one is great. The presenters are quite good. The pace is great.
                     </p>
                 </Pod>
             </li>
