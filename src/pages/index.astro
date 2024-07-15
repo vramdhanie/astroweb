@@ -71,6 +71,42 @@ import { Icon } from 'astro-icon'
         <ul class="list-none">
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
+                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">50%</span>
+                </div>
+                <Biblio
+                    title="The Case Against Reality"
+                    author="Donald Hoffman"
+                    year="2019"
+                    cover="the_case_against_reality.png"
+                />
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">47%</span>
+                </div>
+                <Biblio
+                    title="Accelerate"
+                    author="Nicole Forsgren, Jez Humble, Gene Kim"
+                    year="2018"
+                    cover="accelerate.png"
+                />
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">2%</span>
+                </div>
+                <Biblio
+                    title="The Staff Engineer's Path"
+                    author="Tanya Reilly"
+                    year="2022"
+                    cover="the_staff_engineers_path.png"
+                />
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
                     <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
                     <span class="text-gray-300 font-bold"></span>
                 </div>
@@ -97,10 +133,13 @@ import { Icon } from 'astro-icon'
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
-                    <Icon name="wait" class="w-8 text-yellow-400 shrink-0" />
-                    <span class="text-gray-300 font-bold"></span>
+                    <Icon name="check" class="w-8 text-green-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">100%</span>
                 </div>
-                <Biblio title="Holly" author="Stephen King" year="2023" cover="holly.jpg" />
+                <Biblio title="Holly" author="Stephen King" year="2023" cover="holly.jpg" >
+                    A well written mystery with good old fashioned human monsters. The detective work unfolded smoothly.
+                    Some of the side quests felt forced but overall, did not detract from the story.
+                </Biblio>
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
