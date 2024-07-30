@@ -71,7 +71,7 @@ import { Icon } from 'astro-icon'
         <ul class="list-none">
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
-                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
+                    <Icon name="check" class="w-8 text-green-400 shrink-0" />
                     <span class="text-gray-300 font-bold">50%</span>
                 </div>
                 <Biblio
@@ -79,24 +79,33 @@ import { Icon } from 'astro-icon'
                     author="Donald Hoffman"
                     year="2019"
                     cover="the_case_against_reality.png"
-                />
+                >
+                    This is a well-argued stance on reality and our perception of reality.
+                    The basic concept is that we do not percieve the truth of reality, rather,
+                    we percieve reality in the way that maximises our chance of survival. The argument is that we create a reality when we observe the world.
+                    That reality that we create may not be the objective reality. 
+                </Biblio>
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
-                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
-                    <span class="text-gray-300 font-bold">47%</span>
+                    <Icon name="check" class="w-8 text-green-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">100%</span>
                 </div>
                 <Biblio
                     title="Accelerate"
                     author="Nicole Forsgren, Jez Humble, Gene Kim"
                     year="2018"
                     cover="accelerate.png"
-                />
+                >
+                    Describes the results of several years of research into high functioning teams. The authors,
+                    present several metrics that correlate with high functioning teams and the factors that contribute
+                    to these metrics. It is an excellent case for devops and automation.
+                </Biblio>
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
                     <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
-                    <span class="text-gray-300 font-bold">2%</span>
+                    <span class="text-gray-300 font-bold">10%</span>
                 </div>
                 <Biblio
                     title="The Staff Engineer's Path"
