@@ -21,7 +21,7 @@ import { Icon } from 'astro-icon'
     <div class="py-2">
         I am a senior software engineer. I work at <a
             href="https://sybill.ai"
-            class="text-blue-500 underline hover:text-blue-400 hover:no-underline">Lindy</a
+            class="text-blue-500 underline hover:text-blue-400 hover:no-underline">Sybill</a
         >. At Sybill we are managing the entire deal process from inception to close.
     </div>
     <div class="w-full text-center text-gray-200 font-sm my-4">- &#9702; -</div>
@@ -125,15 +125,29 @@ import { Icon } from 'astro-icon'
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
-                    <Icon name="reading" class="w-8 text-orange-400 shrink-0" />
-                    <span class="text-gray-300 font-bold">10%</span>
+                    <Icon name="check" class="w-8 text-green-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">100%</span>
                 </div>
                 <Biblio
                     title="Project Hail Mary"
                     author="Aandy Weir"
                     year="2021"
                     cover="hail_mary.jpg"
-                />
+                >
+                    A well told science fiction story reminiscent of Heinlein. The main character is
+                    a human who wakes up in a spaceship with no memory of how he got there. He must
+                    figure out how to survive and find out what is going on.
+                </Biblio>
+            </li>
+            <li class="flex items-center border-b border-b-gray-100">
+                <div class="self-start p-4">
+                    <Icon name="check" class="w-8 text-green-400 shrink-0" />
+                    <span class="text-gray-300 font-bold">100%</span>
+                </div>
+                <Biblio title="Artemis" author="Andy Weir" year="2017" cover="artemis.webp">
+                    A thrilling story set on the moon, where a young woman named Jazz Bashara gets
+                    involved in a heist that could change the future of the lunar city, Artemis.
+                </Biblio>
             </li>
             <li class="flex items-center border-b border-b-gray-100">
                 <div class="self-start p-4">
