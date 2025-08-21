@@ -20,7 +20,10 @@ const Biblio = ({
         <div className="text-gray-500 text-sm">{children}</div>
       </div>
       <div className="w-24 mr-2 shrink-0">
-        <img src={"/images/books/" + cover} alt="book cover" />
+        <img 
+          src={cover.startsWith('http') ? cover : "/images/books/" + cover} 
+          alt="book cover" 
+        />
       </div>
     </div>
   )

@@ -9,6 +9,7 @@
         "preview": "astro preview",
         "astro": "astro",
         "update-books": "node scripts/update-books.js",
+        "update-covers": "node scripts/update-covers.js",
         "test-google-books": "node scripts/test-google-books.js"
     },
     "dependencies": {
