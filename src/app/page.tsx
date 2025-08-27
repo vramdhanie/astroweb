@@ -1,9 +1,12 @@
 import Image from "next/image";
-import Quote from "@/components/Quote";
 import Title from "@/components/Title";
 import Link from "next/link";
+import { getHighlightedProjects } from '@/lib/projects';
+import ProjectCard from '@/components/ProjectCard';
 
 export default function Home() {
+  const highlightedProjects = getHighlightedProjects();
+  
   return (
     <>
       <h1 className="text-3xl font-bold tracking-tight text-left mb-8 font-mono border-b pb-2 border-slate-200">Vincent Ramdhanie</h1>
@@ -78,6 +81,35 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Projects Section */}
+      {highlightedProjects.length > 0 && (
+        <>
+          <div className="w-full text-center text-muted-foreground font-sm my-4">- &#9702; -</div>
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold tracking-tight font-mono">Projects</h2>
+              <Link
+                href="/projects"
+                className="text-primary hover:text-primary/80 transition-colors duration-200 text-sm"
+              >
+                View all projects →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {highlightedProjects.slice(0, 4).map((project) => (
+                <ProjectCard 
+                  key={project.slug} 
+                  project={project}
+                  showTechStack={false}
+                  showStats={false}
+                />
+              ))}
+            </div>
+          </section>
+        </>
+      )}
+
       <div className="w-full text-center text-muted-foreground font-sm my-4">- &#9702; -</div>
       <div className="py-2 w-full max-w-3xl not-prose">
         <Title title="Writing & Learning" subtitle="Articles and Reading Lists" />
@@ -96,18 +128,22 @@ export default function Home() {
           </Link>
         </div>
       </div>
+      {/* Quote Section */}
       <div className="w-full text-center text-muted-foreground font-sm my-4">- &#9702; -</div>
       <div className="py-2 prose prose-slate max-w-none prose-p:text-foreground prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
         Any hope of contributing to a brighter future for mankind, rest on the fundamental
         acceptance of the nobility of man.
 
-        <Quote author="Baha'u'llah">
+        <blockquote className="border-l-4 border-primary pl-4 my-4 italic text-foreground">
           <span className="font-semibold">O SON OF SPIRIT!</span>
           <span className="block"
             >Noble have I created thee, yet thou hast abased thyself. Rise then unto that for
             which thou wast created.</span
           >
-        </Quote>
+          <footer className="text-right text-sm text-muted-foreground mt-2">
+            — Baha&apos;u&apos;llah
+          </footer>
+        </blockquote>
       </div>
     </>
   );

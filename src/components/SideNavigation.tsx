@@ -25,6 +25,14 @@ export default function SideNavigation() {
         </li>
         <li>
           <Link
+            href="/projects"
+            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/books"
             className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
           >

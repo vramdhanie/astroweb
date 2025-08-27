@@ -1,0 +1,221 @@
+---
+title: "Monty Hall Simulator"
+slug: "monty-hall"
+description: "CIS220 Sample code that implements a Monty Hall simulator to demonstrate probability theory and statistical analysis"
+abstract: "Java-based probability simulator that demonstrates the Monty Hall problem through statistical analysis and game simulation."
+githubUrl: "https://github.com/vramdhanie/montyhall"
+liveUrl: ""
+techStack: ["Java", "Gradle", "Statistics", "Probability Theory", "Simulation", "NetBeans", "Testing", "Mathematics"]
+highlight: false
+featured: false
+date: "2019-12-01"
+tags: ["java", "statistics", "probability", "simulation", "mathematics", "education", "gradle", "testing"]
+stars: 0
+forks: 0
+language: "Java"
+---
+
+# Monty Hall Simulator
+
+CIS220 Sample code that implements a Monty Hall simulator to demonstrate probability theory and statistical analysis.
+
+## 🎯 The Problem
+
+The Monty Hall problem is a famous probability puzzle based on the game show "Let's Make a Deal." Here's how it works:
+
+Given three doors where a random door contains a prize and the other doors do not:
+1. The player selects a door at random
+2. Another non-winning door is exposed (revealing no prize)
+3. The player has the choice to change their mind or stick with their original choice
+
+**The Question**: Does changing your mind affect the probability of winning?
+
+## 🧮 Probability Theory
+
+### The Counterintuitive Answer
+
+* **Sticking with original choice**: 1/3 probability of winning (33.33%)
+* **Changing your choice**: 2/3 probability of winning (66.67%)
+
+This result often surprises people because it seems like there should be a 50-50 chance after one door is revealed. However, the key insight is that the host's action of revealing a door provides additional information that changes the probability distribution.
+
+### Mathematical Explanation
+
+When you first choose a door:
+- Probability of choosing the correct door: 1/3
+- Probability of choosing an incorrect door: 2/3
+
+If you initially chose incorrectly (2/3 probability), the host must reveal the other incorrect door, leaving only the correct door. Therefore, switching gives you a 2/3 chance of winning.
+
+## 🚀 Features
+
+* **Statistical Simulation**: Run thousands of game rounds to verify theoretical probabilities
+* **Two Strategies**: Compare "stick" vs "switch" strategies
+* **Detailed Analysis**: Track win rates, loss rates, and statistical significance
+* **Educational Value**: Demonstrate probability concepts through practical simulation
+* **Gradle Build System**: Modern Java project structure with dependency management
+
+## 🛠️ Installation and Setup
+
+### Prerequisites
+
+* Java JDK 8 or higher
+* Gradle (latest version recommended)
+
+### Building the Project
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/vramdhanie/montyhall.git
+   cd montyhall
+   ```
+
+2. **Build the project:**
+   ```bash
+   gradle build
+   ```
+
+3. **Run the simulator:**
+   ```bash
+   gradle run
+   ```
+
+## 🏗️ Project Architecture
+
+### Technology Stack
+
+* **Java**: Core programming language for the simulation engine
+* **Gradle**: Build system and dependency management
+* **JUnit**: Testing framework for validation
+* **Statistics**: Mathematical calculations and probability analysis
+
+### Project Structure
+
+```
+montyhall/
+├── src/
+│   └── com/vincentramdhanie/montyhall/
+│       ├── MontyHall.java          # Main simulation logic
+│       ├── Game.java               # Individual game implementation
+│       ├── Player.java             # Player strategy implementation
+│       └── Statistics.java         # Statistical analysis utilities
+├── test/
+│   └── com/vincentramdhanie/montyhall/
+│       └── MontyHallTest.java      # Unit tests
+├── build.gradle                    # Gradle build configuration
+├── gradle.properties               # Gradle settings
+└── README.md                       # Project documentation
+```
+
+## 🎮 How the Simulation Works
+
+### Game Flow
+
+1. **Initialization**: Three doors are set up, one randomly contains a prize
+2. **Player Choice**: Player selects one door at random
+3. **Host Action**: Host reveals one of the remaining doors (always a non-prize door)
+4. **Player Decision**: Player chooses to stick with original choice or switch
+5. **Result**: Outcome is recorded and statistics are updated
+
+### Strategy Comparison
+
+The simulator runs two parallel strategies:
+- **Strategy A**: Always stick with the original choice
+- **Strategy B**: Always switch to the remaining unopened door
+
+### Statistical Analysis
+
+* **Sample Size**: Configurable number of game rounds
+* **Win Rates**: Calculate success percentages for each strategy
+* **Confidence Intervals**: Statistical significance of results
+* **Variance Analysis**: Measure consistency of outcomes
+
+## 📊 Expected Results
+
+### Theoretical Probabilities
+
+* **Stick Strategy**: 33.33% win rate
+* **Switch Strategy**: 66.67% win rate
+
+### Simulation Validation
+
+Running the simulator with a large number of rounds (e.g., 100,000) should produce results very close to these theoretical values, demonstrating the power of statistical simulation in validating mathematical concepts.
+
+## 🔧 Development Features
+
+### Code Quality
+
+* **Object-Oriented Design**: Clean separation of concerns
+* **Unit Testing**: Comprehensive test coverage with JUnit
+* **Documentation**: Clear code comments and documentation
+* **Error Handling**: Robust error handling and validation
+
+### Build System
+
+* **Gradle Integration**: Modern Java build system
+* **Dependency Management**: Automated dependency resolution
+* **Testing Integration**: Automated test execution
+* **Build Automation**: Consistent build process across environments
+
+## 🎓 Educational Value
+
+### Learning Objectives
+
+* **Probability Theory**: Understanding conditional probability
+* **Statistical Simulation**: Using computers to validate mathematical concepts
+* **Critical Thinking**: Questioning intuitive assumptions
+* **Mathematical Proof**: Connecting theory to practical results
+
+### Classroom Applications
+
+* **Statistics Courses**: Demonstrate probability concepts
+* **Computer Science**: Show simulation and testing techniques
+* **Mathematics**: Connect theoretical and applied probability
+* **Psychology**: Explore cognitive biases and intuition
+
+## 🚀 Future Enhancements
+
+### Potential Improvements
+
+* **Web Interface**: Interactive web-based simulation
+* **Visualization**: Charts and graphs of results
+* **Multiple Strategies**: Additional player strategies
+* **Advanced Statistics**: More sophisticated statistical analysis
+* **Real-time Simulation**: Live demonstration of games
+* **Mobile App**: Android/iOS application
+
+### Extensions
+
+* **Different Door Counts**: Explore with 4, 5, or more doors
+* **Host Behavior**: Vary host's door selection strategy
+* **Player Psychology**: Model different decision-making patterns
+* **Historical Analysis**: Track performance over time
+
+## 🤝 Contributing
+
+Contributions are welcome! This project serves as both an educational tool and a demonstration of good Java programming practices.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/vramdhanie/montyhall/blob/master/LICENSE) file for details.
+
+## 👤 Author
+
+**Vincent Ramdhanie**
+
+* GitHub: [@vramdhanie](https://github.com/vramdhanie)
+* Website: [vincentramdhanie.com](https://vincentramdhanie.com)
+
+## 📊 Project Status
+
+This project was originally created for CIS220 coursework and has been updated with modern build tools. It serves as both an educational resource and a demonstration of Java programming skills.
+
+## About
+
+CIS220 Sample code that implements a Monty Hall simulator to demonstrate probability theory and statistical analysis.

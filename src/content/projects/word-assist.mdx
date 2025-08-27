@@ -1,0 +1,268 @@
+---
+title: "Word Assist"
+slug: "word-assist"
+description: "A powerful tool to help solve 5-letter word puzzles like Wordle, Word Finder, or Scrabble challenges"
+abstract: "Interactive word puzzle assistant with drag-and-drop interface, real-time filtering, and comprehensive word list for solving word games."
+githubUrl: "https://github.com/vramdhanie/wordAssist"
+liveUrl: "https://word-assist.vercel.app"
+techStack: ["React", "TypeScript", "Tailwind CSS", "Zustand", "React DnD", "Vercel", "Word Puzzles", "Real-time Filtering"]
+highlight: true
+featured: true
+date: "2024-02-05"
+tags: ["react", "typescript", "word-games", "puzzle", "drag-and-drop", "wordle", "scrabble", "frontend", "vercel"]
+stars: 0
+forks: 0
+language: "TypeScript"
+---
+
+# Word Assist
+
+A powerful tool to help solve 5-letter word puzzles like Wordle, Word Finder, or Scrabble challenges.
+
+## 🚀 Features
+
+* **Smart Word Filtering**: Filter words by included or excluded letters
+* **Position-Specific Letters**: Place letters in exact word positions
+* **Drag and Drop Interface**: Intuitive letter management with React DnD
+* **Responsive Design**: Works seamlessly on mobile and desktop devices
+* **Real-time Filtering**: Instant updates as you modify filter criteria
+* **Comprehensive Word List**: Extensive dictionary for challenging puzzles
+* **Clean, Modern UI**: Beautiful interface built with Tailwind CSS
+
+## 🌐 Live Demo
+
+Try Word Assist live at: [https://word-assist.vercel.app](https://word-assist.vercel.app)
+
+## 🛠️ Installation and Setup
+
+### Prerequisites
+
+* Node.js (v14 or higher)
+* npm, yarn, or pnpm
+
+### Clone and Run Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/vramdhanie/wordAssist.git
+   cd wordAssist
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   # Using npm
+   npm install
+   
+   # Using yarn
+   yarn install
+   
+   # Using pnpm
+   pnpm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   # Using npm
+   npm start
+   
+   # Using yarn
+   yarn start
+   
+   # Using pnpm
+   pnpm start
+   ```
+
+4. **Open your browser and visit:**
+   ```
+   http://localhost:3000
+   ```
+
+### Building for Production
+
+```bash
+# Using npm
+npm run build
+
+# Using yarn
+yarn build
+
+# Using pnpm
+pnpm build
+```
+
+The build files will be located in the `build` directory.
+
+## 🧩 How to Use
+
+### Core Functionality
+
+1. **Include Letters**: Drag letters to the "Include" area to find words containing these letters
+2. **Exclude Letters**: Drag letters to the "Exclude" area to filter out words with these letters
+3. **Position Letters**: Drag letters directly to the word slots to specify exact positions
+4. **Remove Letters**: Click the "X" button on any letter to remove it
+
+### User Experience
+
+* **Real-time Updates**: Word list updates instantly as you modify filters
+* **Visual Feedback**: Clear indicators for included, excluded, and positioned letters
+* **Intuitive Controls**: Easy-to-understand drag and drop interface
+* **Mobile Optimized**: Touch-friendly controls for mobile devices
+
+## 🏗️ Technical Architecture
+
+### Technology Stack
+
+* **React 18**: Modern React with hooks and functional components
+* **TypeScript**: Full type safety and enhanced developer experience
+* **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+* **Zustand**: Lightweight state management for React applications
+* **React DnD**: Drag and drop functionality for letter management
+* **Vercel**: Deployment platform with automatic CI/CD
+
+### Project Structure
+
+```
+wordAssist/
+├── src/
+│   ├── components/        # React components
+│   ├── hooks/            # Custom React hooks
+│   ├── store/            # Zustand state management
+│   ├── types/            # TypeScript type definitions
+│   ├── utils/            # Utility functions
+│   └── App.tsx           # Main application component
+├── public/               # Static assets
+├── .github/workflows/    # GitHub Actions
+├── .storybook/           # Storybook configuration
+├── package.json          # Dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+└── tailwind.config.js    # Tailwind CSS configuration
+```
+
+## 🎯 Word Puzzle Applications
+
+### Wordle Assistant
+* **Green Letters**: Position-specific letters (correct position)
+* **Yellow Letters**: Included letters (wrong position)
+* **Gray Letters**: Excluded letters (not in word)
+* **Real-time Solutions**: Instant word suggestions
+
+### Scrabble Helper
+* **Letter Filtering**: Find words with available letters
+* **Position Optimization**: Strategic letter placement
+* **Word Discovery**: Expand vocabulary with new words
+
+### Word Finder
+* **Pattern Matching**: Find words matching specific patterns
+* **Letter Combinations**: Discover new word possibilities
+* **Learning Tool**: Improve word game skills
+
+## 🎨 User Interface Design
+
+### Design Principles
+
+* **Clean and Minimal**: Focus on functionality without visual clutter
+* **Intuitive Navigation**: Easy-to-understand user interface
+* **Responsive Layout**: Adapts to all screen sizes and orientations
+* **Accessibility**: Keyboard navigation and screen reader support
+* **Visual Hierarchy**: Clear organization of different filter areas
+
+### Component Features
+
+* **Drag and Drop**: Smooth letter movement between areas
+* **Visual Feedback**: Clear indicators for different letter states
+* **Responsive Grid**: Adapts to different screen sizes
+* **Touch Support**: Mobile-optimized interactions
+* **Animation**: Subtle transitions for enhanced UX
+
+## 🚀 Deployment
+
+### Vercel Integration
+
+* **Automatic Deployments**: Deploys on every push to main branch
+* **Global CDN**: Fast loading worldwide
+* **Environment Variables**: Secure configuration management
+* **Performance Monitoring**: Built-in analytics and insights
+
+### GitHub Actions
+
+* **CI/CD Pipeline**: Automated testing and deployment
+* **Code Quality**: ESLint and Prettier enforcement
+* **Build Optimization**: Production-ready builds
+* **Deployment Automation**: Seamless deployment process
+
+## 🔧 Development Features
+
+### TypeScript Benefits
+
+* **Type Safety**: Catch errors at compile time
+* **Better IDE Support**: Enhanced autocomplete and refactoring
+* **Self-Documenting Code**: Clear type annotations
+* **Maintainability**: Easier to refactor and extend
+
+### State Management
+
+* **Zustand**: Lightweight and performant state management
+* **Immutable Updates**: Predictable state changes
+* **DevTools Integration**: Debug state changes easily
+* **Performance**: Minimal re-renders and updates
+
+### Code Quality
+
+* **ESLint**: Code quality and consistency
+* **Prettier**: Automatic code formatting
+* **TypeScript**: Static type checking
+* **Git Hooks**: Pre-commit validation
+
+## 🧪 Testing and Quality Assurance
+
+### Development Tools
+
+* **Storybook**: Component development and testing
+* **Hot Reload**: Instant feedback during development
+* **Error Boundaries**: Graceful error handling
+* **Performance Monitoring**: Track application performance
+
+### User Experience Testing
+
+* **Responsive Design**: Test across different devices
+* **Accessibility**: Screen reader and keyboard navigation
+* **Performance**: Fast loading and smooth interactions
+* **Cross-browser**: Consistent experience across browsers
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/vramdhanie/wordAssist/blob/main/LICENSE) file for details.
+
+## 👤 Author
+
+**Vincent Ramdhanie**
+
+* Website: [vincentramdhanie.com](https://vincentramdhanie.com)
+* GitHub: [@vramdhanie](https://github.com/vramdhanie)
+
+## 📊 Project Status
+
+This project is actively maintained. Feature requests and bug reports are welcome!
+
+## 🎯 Future Enhancements
+
+* **Multiple Word Lengths**: Support for 4, 6, and 7-letter words
+* **Advanced Filters**: Pattern matching and anagram support
+* **Word Definitions**: Dictionary integration for learning
+* **Game Integration**: Direct integration with Wordle and other games
+* **Statistics Tracking**: User performance and word discovery metrics
+* **Social Features**: Share solutions and compete with friends
+
+## About
+
+A simple word assist application for solving word puzzles and improving vocabulary.

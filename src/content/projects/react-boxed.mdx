@@ -1,0 +1,228 @@
+---
+title: "React Boxed Word Puzzle"
+slug: "react-boxed"
+description: "A React-based word puzzle game where players arrange letters to find pairs of words that use all available characters"
+abstract: "Interactive word puzzle game with drag-and-drop interface, efficient Trie-based word searching, and modern React/TypeScript architecture."
+githubUrl: "https://github.com/vramdhanie/react-boxed"
+liveUrl: "https://boxed.vincentramdhanie.com/"
+techStack: ["React", "TypeScript", "Tailwind CSS", "Vite", "React DnD", "Trie Data Structure", "Word Search Algorithm", "GitHub Actions"]
+highlight: true
+featured: true
+date: "2024-01-30"
+tags: ["react", "typescript", "game-development", "puzzle", "algorithms", "drag-and-drop", "word-search", "frontend"]
+stars: 0
+forks: 0
+language: "TypeScript"
+---
+
+# React Boxed Word Puzzle
+
+A React-based word puzzle game where players arrange letters to find pairs of words that use all available characters.
+
+## 🎮 Live Demo
+
+Try the live demo at: [https://boxed.vincentramdhanie.com/](https://boxed.vincentramdhanie.com/)
+
+## ✨ Features
+
+* **Drag and Drop Interface**: Intuitive letter arrangement with React DnD
+* **Efficient Word Searching**: Uses Trie data structure for fast word lookups
+* **Real-time Solution Finding**: Instant feedback on word combinations
+* **Touch-friendly Interface**: Optimized for mobile and desktop devices
+* **Modern UI**: Clean design with Tailwind CSS
+* **TypeScript**: Full type safety and modern JavaScript features
+* **Responsive Design**: Works seamlessly across all device sizes
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Node.js (v14 or higher)
+* pnpm (v6 or higher)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/vramdhanie/react-boxed.git
+   cd react-boxed
+   ```
+
+2. **Install dependencies using pnpm:**
+   ```bash
+   pnpm install
+   ```
+
+## 🛠️ Development
+
+### Running the Development Server
+
+```bash
+pnpm dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Building for Production
+
+Build the application:
+```bash
+pnpm build
+```
+
+Preview the production build:
+```bash
+pnpm preview
+```
+
+## 🏗️ Project Architecture
+
+### Technology Stack
+
+* **React 18**: Modern React with hooks and functional components
+* **TypeScript**: Full type safety and enhanced developer experience
+* **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+* **Vite**: Fast build tool and development server
+* **React DnD**: Drag and drop functionality for letter arrangement
+* **GitHub Actions**: Automated deployment to GitHub Pages
+
+### Project Structure
+
+```
+react-boxed/
+├── src/
+│   ├── components/        # React components
+│   ├── hooks/            # Custom React hooks
+│   ├── utils/            # Utility functions and algorithms
+│   ├── types/            # TypeScript type definitions
+│   └── App.tsx           # Main application component
+├── public/               # Static assets
+├── .github/workflows/    # GitHub Actions deployment
+├── package.json          # Dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+├── vite.config.ts        # Vite build configuration
+└── tailwind.config.js    # Tailwind CSS configuration
+```
+
+## 🧩 Game Mechanics
+
+### How to Play
+
+1. **Letter Arrangement**: Drag and drop letters to arrange them in the game grid
+2. **Word Discovery**: Find pairs of words that use all available characters
+3. **Real-time Feedback**: Get instant validation of word combinations
+4. **Solution Finding**: Use the efficient Trie-based algorithm to discover all possible solutions
+
+### Algorithm Implementation
+
+The game uses a **Trie data structure** for efficient word searching:
+
+* **Fast Lookups**: O(m) time complexity for word searches, where m is word length
+* **Memory Efficient**: Optimized storage of word dictionary
+* **Prefix Matching**: Enables efficient partial word validation
+* **Real-time Performance**: Handles large word lists without lag
+
+### Word Search Features
+
+* **Dictionary Integration**: Comprehensive word list for challenging gameplay
+* **Pattern Matching**: Find words that fit specific letter arrangements
+* **Solution Generation**: Automatically discover all valid word pairs
+* **Performance Optimization**: Efficient algorithms for smooth gameplay
+
+## 🎨 User Interface
+
+### Design Principles
+
+* **Clean and Modern**: Minimalist design focused on gameplay
+* **Intuitive Controls**: Easy-to-understand drag and drop interface
+* **Responsive Layout**: Adapts to different screen sizes and orientations
+* **Accessibility**: Keyboard navigation and screen reader support
+* **Visual Feedback**: Clear indicators for valid and invalid moves
+
+### Component Architecture
+
+* **Modular Design**: Reusable components for maintainability
+* **State Management**: Efficient React state handling with hooks
+* **Event Handling**: Smooth drag and drop interactions
+* **Animation**: Subtle transitions for enhanced user experience
+
+## 🚀 Deployment
+
+### Automated Deployment
+
+This project is configured to automatically deploy to GitHub Pages when changes are pushed to the main branch. The deployment process is handled by GitHub Actions.
+
+### Manual Deployment
+
+1. **Update the base property** in `vite.config.ts` with your repository name:
+   ```typescript
+   export default defineConfig({
+     base: '/react-boxed/',
+     // ... other config
+   });
+   ```
+
+2. **Push your changes** to the main branch:
+   ```bash
+   git push origin main
+   ```
+
+3. **GitHub Action** will automatically build and deploy your site to GitHub Pages
+4. **Your site** will be available at `https://vramdhanie.github.io/react-boxed/`
+
+### Setting up GitHub Pages
+
+1. Go to your repository settings
+2. Navigate to the "Pages" section
+3. Under "Build and deployment", select "GitHub Actions" as the source
+4. Your site will be deployed automatically when you push to the main branch
+
+## 🔧 Development Features
+
+### TypeScript Benefits
+
+* **Type Safety**: Catch errors at compile time
+* **Better IDE Support**: Enhanced autocomplete and refactoring
+* **Documentation**: Self-documenting code with type annotations
+* **Maintainability**: Easier to refactor and extend
+
+### Build Optimization
+
+* **Vite**: Lightning-fast development server and optimized builds
+* **Tree Shaking**: Eliminate unused code for smaller bundles
+* **Code Splitting**: Lazy load components for better performance
+* **Asset Optimization**: Compressed and optimized static assets
+
+### Testing and Quality
+
+* **Type Checking**: Full TypeScript validation
+* **Linting**: ESLint configuration for code quality
+* **Formatting**: Prettier for consistent code style
+* **Git Hooks**: Pre-commit validation
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/vramdhanie/react-boxed/blob/main/LICENSE) file for details.
+
+## 🎯 Future Enhancements
+
+* **Multiplayer Support**: Real-time multiplayer gameplay
+* **Difficulty Levels**: Adjustable challenge levels
+* **Statistics Tracking**: Player performance metrics
+* **Custom Word Lists**: User-defined word collections
+* **Mobile App**: Native mobile application
+* **Social Features**: Leaderboards and achievements
+
+## About
+
+A React-based word puzzle game where players arrange letters to find pairs of words that use all available characters.
