@@ -14,18 +14,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      # Setup Node.js with specific version
+      # Setup pnpm first
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10.15.0'  # Match your package.json packageManager
+      
+      # Setup Node.js with pnpm caching
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.18.0'  # LTS version that supports React 19
           cache: 'pnpm'  # Enable pnpm caching
-      
-      # Setup pnpm
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: '10.15.0'  # Match your package.json packageManager
       
       # Install dependencies and build
       - name: Install dependencies
