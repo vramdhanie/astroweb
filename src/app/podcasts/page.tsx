@@ -1,5 +1,5 @@
-import Title from '../../components/Title';
-import Podcast from '../../components/Podcast';
+import Title from '@/components/Title';
+import Podcast from '@/components/Podcast';
 
 export default function PodcastsPage() {
   return (

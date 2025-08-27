@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Quote from "../components/Quote";
-import Title from "../components/Title";
+import Quote from "@/components/Quote";
+import Title from "@/components/Title";
 import Link from "next/link";
 
 export default function Home() {

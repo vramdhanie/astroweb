@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllArticles } from '../lib/articles';
+import { getAllArticles } from '@/lib/articles';
 
 export default function SideNavigation() {
   const articles = getAllArticles();

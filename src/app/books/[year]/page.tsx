@@ -1,5 +1,5 @@
-import { getBookYearBySlug, getAllBookYearSlugs } from '../../../lib/books';
-import Biblio from '../../../components/Biblio';
+import { getBookYearBySlug, getAllBookYearSlugs } from '@/lib/books';
+import Biblio from '@/components/Biblio';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';

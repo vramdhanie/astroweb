@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { format } from 'date-fns';
-import { ArticleListItem } from '../types/article';
+import { ArticleListItem } from '@/types/article';
 
 interface ArticleCardProps {
   article: ArticleListItem;

@@ -1,10 +1,10 @@
-import { getArticleBySlug, getAllArticleSlugs } from '../../../lib/articles';
+import { getArticleBySlug, getAllArticleSlugs } from '@/lib/articles';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { format } from 'date-fns';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { mdxComponents } from '../../../components/mdx';
+import { mdxComponents } from '@/components/mdx';
 
 // Generate static params for all articles
 export async function generateStaticParams() {

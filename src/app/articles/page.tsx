@@ -1,5 +1,5 @@
-import { getAllArticles, getAllTags, getAllLevels } from '../../lib/articles';
-import ArticleCard from '../../components/ArticleCard';
+import { getAllArticles, getAllTags, getAllLevels } from '@/lib/articles';
+import ArticleCard from '@/components/ArticleCard';
 
 export default function ArticlesPage() {
   const articles = getAllArticles();

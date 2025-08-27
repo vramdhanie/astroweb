@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAllBookYears, getBooksForYear } from '../../lib/books';
+import { getAllBookYears, getBooksForYear } from '@/lib/books';
 
 export default function BooksPage() {
   const years = getAllBookYears();
