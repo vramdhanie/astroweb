@@ -1,7 +1,4 @@
-'use client';
-
 import Image from 'next/image';
-import { useState } from 'react';
 
 interface BiblioProps {
   children?: React.ReactNode;
@@ -11,14 +8,7 @@ interface BiblioProps {
   cover: string;
 }
 
-const Biblio = ({ children, author, title, year, cover }: BiblioProps) => {
-  const [imageError, setImageError] = useState(false);
-
-  
-  const handleImageError = () => {
-    setImageError(true);
-  };
-
+export default function Biblio({ children, author, title, year, cover }: BiblioProps) {
   // Determine the correct image source
   const getImageSrc = () => {
     if (cover.startsWith('http')) {
@@ -41,24 +31,15 @@ const Biblio = ({ children, author, title, year, cover }: BiblioProps) => {
         {children && <div className="text-muted-foreground text-sm">{children}</div>}
       </div>
       <div className="w-24 mr-2 shrink-0">
-        {!imageError ? (
-          <Image 
-            src={imageSrc}
-            alt="book cover"
-            width={96}
-            height={128}
-            className="w-24 h-32 object-contain"
-            onError={handleImageError}
-            unoptimized={cover.startsWith('http')} // Use unoptimized for external images
-          />
-        ) : (
-          <div className="w-24 h-32 bg-muted flex items-center justify-center text-muted-foreground text-xs text-center">
-            Cover<br/>Unavailable
-          </div>
-        )}
+        <Image 
+          src={imageSrc}
+          alt="book cover"
+          width={96}
+          height={128}
+          className="w-24 h-32 object-contain"
+          unoptimized={cover.startsWith('http')} // Use unoptimized for external images
+        />
       </div>
     </div>
   );
-};
-
-export default Biblio;
+}
