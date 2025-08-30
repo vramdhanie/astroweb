@@ -19,7 +19,12 @@ export default function BooksPage() {
       {/* Years Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {years.map((year) => {
-          const bookCount = getBooksForYear(year.year).length;
+          const books = getBooksForYear(year.year);
+          const bookCount = books.length;
+          const readCount = books.filter(book => book.readingStatus === 'READ').length;
+          const readingCount = books.filter(book => book.readingStatus === 'READING').length;
+          const waitCount = books.filter(book => book.readingStatus === 'WAIT').length;
+          
           return (
             <Link 
               key={year._slug} 
@@ -45,9 +50,31 @@ export default function BooksPage() {
                 <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-200">
                   {year.year} Reading List
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm mb-4">
                   {year.description}
                 </p>
+                
+                {/* Reading Statistics */}
+                <div className="flex flex-wrap gap-2 text-xs">
+                  {readingCount > 0 && (
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-800 text-white rounded-full font-medium dark:bg-blue-900/80 dark:text-blue-200">
+                      <span>📖</span>
+                      {readingCount} reading
+                    </span>
+                  )}
+                  {readCount > 0 && (
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-green-800 text-white rounded-full font-medium dark:bg-green-900/80 dark:text-green-200">
+                      <span>✅</span>
+                      {readCount} read
+                    </span>
+                  )}
+                  {waitCount > 0 && (
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-amber-800 text-white rounded-full font-medium dark:bg-amber-900/80 dark:text-amber-200">
+                      <span>📚</span>
+                      {waitCount} waiting
+                    </span>
+                  )}
+                </div>
               </div>
             </Link>
           );

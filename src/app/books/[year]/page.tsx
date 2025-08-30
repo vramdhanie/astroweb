@@ -1,4 +1,4 @@
-import { getBookYearBySlug, getAllBookYearSlugs } from '@/lib/books';
+import { getBookYearBySlug, getAllBookYearSlugs, ReadingStatus } from '@/lib/books';
 import Biblio from '@/components/Biblio';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -43,26 +43,52 @@ export default async function BookYearPage({ params }: PageProps) {
     notFound();
   }
 
-  // Sort books by reading status (READ first, then WAIT)
+  // Sort books by reading status (READING first, then READ, then WAIT, then others)
   const sortedBooks = bookYear.books.sort((a, b) => {
-    if (a.readingStatus === 'READ' && b.readingStatus !== 'READ') return -1;
-    if (a.readingStatus !== 'READ' && b.readingStatus === 'READ') return 1;
-    return 0;
+    // Define priority order: READING > READ > WAIT > others
+    const getPriority = (status: ReadingStatus) => {
+      if (status === 'READING') return 3;
+      if (status === 'READ') return 2;
+      if (status === 'WAIT') return 1;
+      return 0;
+    };
+    
+    const priorityA = getPriority(a.readingStatus);
+    const priorityB = getPriority(b.readingStatus);
+    
+    return priorityB - priorityA; // Higher priority first
   });
 
-  const getStatusIcon = (status: string, progress: string) => {
+  const getStatusIcon = (status: ReadingStatus, progress: string) => {
+    const baseClasses = "self-start p-4 rounded-lg transition-all duration-200 hover:scale-110";
+    
     if (status === 'READ') {
       return (
-        <div className="self-start p-4">
-          <span className="text-2xl">✅</span>
-          <span className="text-foreground font-bold block">{progress}</span>
+        <div className={`${baseClasses} bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800/30`} title="Completed">
+          <span className="text-2xl block mb-1">✅</span>
+          <span className="text-foreground font-bold text-sm">{progress}</span>
+        </div>
+      );
+    } else if (status === 'READING') {
+      return (
+        <div className={`${baseClasses} bg-blue-800 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/30`} title="Currently Reading">
+          <span className="text-2xl block mb-1">📖</span>
+          <span className="text-foreground font-bold text-sm">{progress}</span>
+        </div>
+      );
+    } else if (status === 'WAIT') {
+      return (
+        <div className={`${baseClasses} bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/30`} title="Waiting to Read">
+          <span className="text-2xl block mb-1">📚</span>
+          <span className="text-foreground font-bold text-sm">{progress}</span>
         </div>
       );
     } else {
+      // Empty status or unknown status
       return (
-        <div className="self-start p-4">
-          <span className="text-2xl">⏳</span>
-          <span className="text-foreground font-bold block">{progress}</span>
+        <div className={`${baseClasses} bg-gray-50 dark:bg-gray-950/20 border border-gray-200 dark:border-gray-800/30`} title="No Status Set">
+          <span className="text-2xl block mb-1">❓</span>
+          <span className="text-foreground font-bold text-sm">{progress}</span>
         </div>
       );
     }
@@ -98,6 +124,29 @@ export default async function BookYearPage({ params }: PageProps) {
         </div>
       </div>
       
+      {/* Reading Status Legend */}
+      <div className="mb-6 p-4 bg-muted/30 rounded-lg border border-border">
+        <h3 className="text-sm font-semibold text-foreground mb-3">Reading Status Legend</h3>
+        <div className="flex flex-wrap gap-4 text-sm">
+          <div className="flex items-center gap-2 p-2 bg-blue-800 text-white rounded font-medium dark:bg-blue-900/80 dark:text-blue-200">
+            <span className="text-lg">📖</span>
+            <span>Currently Reading</span>
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-green-800 text-white rounded font-medium dark:bg-green-900/80 dark:text-green-200">
+            <span className="text-lg">✅</span>
+            <span>Completed</span>
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-amber-800 text-white rounded font-medium dark:bg-amber-900/80 dark:text-amber-200">
+            <span className="text-lg">📚</span>
+            <span>Waiting to Read</span>
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-gray-800 text-white rounded font-medium dark:bg-gray-900/80 dark:text-gray-200">
+            <span className="text-lg">❓</span>
+            <span>No Status Set</span>
+          </div>
+        </div>
+      </div>
+
       {sortedBooks.length === 0 ? (
         <div className="text-center py-8">
           <p className="text-muted-foreground">No books found for {bookYear.year}</p>
