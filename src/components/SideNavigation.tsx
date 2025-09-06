@@ -137,6 +137,16 @@ export default function SideNavigation() {
             Fire <span className="text-xs text-muted-foreground">↗</span>
           </a>
         </li>
+        <li className="py-1">
+          <a
+            href="https://flood.vincentramdhanie.com"
+            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Flood <span className="text-xs text-muted-foreground">↗</span>
+          </a>
+        </li>
       </ul>
     </nav>
   );
