@@ -241,10 +241,10 @@
         "cover": "http://books.google.com/books/content?id=pGrwYZpf1ywC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
         "description": "Just after sunset—call it dusk; call it twilight; it’s a time when human life takes on an unnatural cast, when nothing is quite as it appears, when the imagination begins to reach for shadows as th...",
         "yearRead": "2025",
-        "readingStatus": "WAIT",
-        "pagesRead": 0,
+        "readingStatus": "READING",
+        "pagesRead": 269,
         "pageCount": 539,
-        "progressPercentage": "0%"
+        "progressPercentage": "50%"
     },
     {
         "isbn": "9780836220490",
@@ -631,10 +631,10 @@
         "cover": "http://books.google.com/books/content?id=WzA7DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
         "description": "In Jared Diamond’s follow-up to the Pulitzer-Prize winning Guns, Germs and Steel, the author explores how climate change, the population explosion and political discord create the conditions for th...",
         "yearRead": "2025",
-        "readingStatus": "READING",
-        "pagesRead": 360,
+        "readingStatus": "READ",
+        "pagesRead": 608,
         "pageCount": 608,
-        "progressPercentage": "59%"
+        "progressPercentage": "100%"
     },
     {
         "isbn": "9780674011137",

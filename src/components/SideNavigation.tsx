@@ -55,6 +55,14 @@ export default function SideNavigation() {
             Uses
           </Link>
         </li>
+        <li>
+          <Link
+            href="/temperature"
+            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+          >
+            Temperature
+          </Link>
+        </li>
       </ul>
       
       <div className="w-full text-right text-muted-foreground text-sm my-6">― • ―</div>
