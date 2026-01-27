@@ -117,6 +117,9 @@ export default function Home() {
           <Link href="/articles" className="text-primary hover:text-primary/80 underline">
             Technical Articles
           </Link>
+          <Link href="/books/2026" className="text-primary hover:text-primary/80 underline">
+            2026 Reading List
+          </Link>
           <Link href="/books/2025" className="text-primary hover:text-primary/80 underline">
             2025 Reading List
           </Link>

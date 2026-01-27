@@ -998,6 +998,19 @@
         "readingStatus": "READING",
         "pagesRead": 60,
         "pageCount": 432,
-        "progressPercentage": "13.89%"
+        "progressPercentage": "14%"
+    },
+    {
+        "isbn": "9781789957211",
+        "title": "Python: Advanced Guide to Artificial Intelligence",
+        "author": "Giuseppe Bonaccorso, Rajalingappaa Shanmugamani",
+        "year": "2018",
+        "cover": "http://books.google.com/books/content?id=TazgEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+        "description": "A comprehensive Learning Path covering machine learning algorithms, deep learning with TensorFlow and Keras, and advanced AI techniques including computer vision and reinforcement learning.",
+        "yearRead": "",
+        "readingStatus": "READING",
+        "pagesRead": 38,
+        "pageCount": 764,
+        "progressPercentage": "5%"
     }
 ]
