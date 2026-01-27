@@ -64,7 +64,20 @@ export function getBooksForYear(year: string): Book[] {
     const booksDataPath = path.join(process.cwd(), 'src/data/books.json')
     const booksData = JSON.parse(fs.readFileSync(booksDataPath, 'utf8'))
 
-    return booksData.filter((book: Book) => book.yearRead === year)
+    if (year === '2026') {
+        // For 2026: include books that are READ or READING in 2026, plus books without a yearRead
+        return booksData.filter((book: Book) => {
+            const hasNoYearRead = !book.yearRead || book.yearRead === ''
+            const isReadIn2026 = book.yearRead === '2026' && book.readingStatus === 'READ'
+            const isReadingIn2026 = book.yearRead === '2026' && book.readingStatus === 'READING'
+            return isReadIn2026 || isReadingIn2026 || hasNoYearRead
+        })
+    } else {
+        // For other years: only include books that were completed (READ) in that year
+        return booksData.filter((book: Book) => 
+            book.yearRead === year && book.readingStatus === 'READ'
+        )
+    }
 }
 
 // Get a specific book year with its books
