@@ -129,6 +129,9 @@ export default function Home() {
           <Link href="/books/2023" className="text-primary hover:text-primary/80 underline">
             2023 Reading List
           </Link>
+          <Link href="/books/waiting" className="text-primary hover:text-primary/80 underline">
+            Waiting to Read
+          </Link>
         </div>
       </div>
       {/* Quote Section */}

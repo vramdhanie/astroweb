@@ -65,11 +65,13 @@ export function getBooksForYear(year: string): Book[] {
     const booksData = JSON.parse(fs.readFileSync(booksDataPath, 'utf8'))
 
     if (year === '2026') {
-        // For 2026: include all books with yearRead === '2026' (any status), plus books without a yearRead
+        // For 2026: include all books with yearRead === '2026' (any status), plus books without a yearRead that are NOT WAIT status
+        // (WAIT books without yearRead should only appear on the waiting page)
         return booksData.filter((book: Book) => {
             const hasNoYearRead = !book.yearRead || book.yearRead === ''
             const isIn2026 = book.yearRead === '2026'
-            return isIn2026 || hasNoYearRead
+            const isWaitingWithoutYear = hasNoYearRead && book.readingStatus === 'WAIT'
+            return isIn2026 || (hasNoYearRead && !isWaitingWithoutYear)
         })
     } else {
         // For other years: include all books with that yearRead (any status)
@@ -98,4 +100,16 @@ export function getBookYearBySlug(slug: string): BookYearWithBooks | null {
 export function getAllBookYearSlugs(): string[] {
     const years = getAllBookYears()
     return years.map((year) => year._slug)
+}
+
+// Get all books with WAIT status and no yearRead
+export function getWaitingBooks(): Book[] {
+    const booksDataPath = path.join(process.cwd(), 'src/data/books.json')
+    const booksData = JSON.parse(fs.readFileSync(booksDataPath, 'utf8'))
+    
+    return booksData.filter((book: Book) => {
+        const hasNoYearRead = !book.yearRead || book.yearRead === ''
+        const isWaiting = book.readingStatus === 'WAIT'
+        return hasNoYearRead && isWaiting
+    })
 }

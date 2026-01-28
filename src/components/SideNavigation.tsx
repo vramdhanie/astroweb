@@ -87,6 +87,14 @@ export default function SideNavigation() {
       <ul className="space-y-2">
         <li className="py-1">
           <Link
+            href="/books/2026"
+            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
+          >
+            2026
+          </Link>
+        </li>
+        <li className="py-1">
+          <Link
             href="/books/2025"
             className="text-primary hover:underline hover:text-primary/80 transition-colors block"
           >
@@ -107,6 +115,14 @@ export default function SideNavigation() {
             className="text-primary hover:underline hover:text-primary/80 transition-colors block"
           >
             2023
+          </Link>
+        </li>
+        <li className="py-1">
+          <Link
+            href="/books/waiting"
+            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
+          >
+            Waiting
           </Link>
         </li>
       </ul>

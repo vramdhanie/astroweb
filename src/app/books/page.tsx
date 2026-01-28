@@ -16,6 +16,29 @@ export default function BooksPage() {
         </p>
       </div>
 
+      {/* Waiting Books Link */}
+      <div className="mb-8">
+        <Link 
+          href="/books/waiting"
+          className="group block bg-background border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+        >
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-200">
+              Waiting to Read
+            </h3>
+            <p className="text-muted-foreground text-sm mb-4">
+              Books I plan to read but haven&apos;t started yet
+            </p>
+            <div className="flex items-center gap-2 text-xs">
+              <span className="inline-flex items-center gap-1 px-2 py-1 bg-amber-800 text-white rounded-full font-medium dark:bg-amber-900/80 dark:text-amber-200">
+                <span>📚</span>
+                <span>Waiting List</span>
+              </span>
+            </div>
+          </div>
+        </Link>
+      </div>
+
       {/* Years Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {years.map((year) => {
