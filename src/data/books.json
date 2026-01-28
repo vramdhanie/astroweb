@@ -1038,5 +1038,18 @@
         "pagesRead": 0,
         "pageCount": 736,
         "progressPercentage": "0%"
+    },
+    {
+        "isbn": "9780345539786",
+        "title": "Red Rising",
+        "author": "Pierce Brown",
+        "year": "2014",
+        "cover": "https://books.google.com/books/content?id=S47WoAEACAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+        "description": "The first book in Pierce Brown's Red Rising saga, a dystopian science fiction story about Darrow, a lowborn Red who infiltrates the ruling Gold elite to ignite a revolution on Mars.",
+        "yearRead": "",
+        "readingStatus": "WAIT",
+        "pagesRead": 0,
+        "pageCount": 400,
+        "progressPercentage": "0%"
     }
 ]
