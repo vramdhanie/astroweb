@@ -48,7 +48,7 @@ export default function WaitingBooksPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight text-left mb-2 font-mono">Waiting to Read</h1>
         <p className="text-muted-foreground text-lg">
-          Books I plan to read but haven&apos;t started yet. These are books without a specific reading year assigned.
+          Books I plan to read but haven&apos;t started yet.
         </p>
       </div>
       
