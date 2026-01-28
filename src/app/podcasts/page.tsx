@@ -347,6 +347,31 @@ export default function PodcastsPage() {
             <li className="flex items-start space-x-4">
               <div className="flex-shrink-0 p-4">
                 <span className="text-3xl">⭐</span>
+                <span className="text-orange-500 font-bold text-sm block">9/10</span>
+              </div>
+              <Podcast
+                title="Hard Fork"
+                presenters={['Kevin Roose', 'Casey Newton']}
+                yearStarted="2022"
+                cover="hard_fork.png"
+                cadence="weekly"
+                numberOfEpisodes={63}
+                isActive={true}
+              >
+                Discussions about the latest happenings around the tech world.
+                <p className="text-xs text-muted-foreground mt-2 line-through">
+                  I am listening to a few episodes of this during December 2023 to determine
+                  if it is worth the time.
+                </p>
+                <p className="text-xs text-muted-foreground mt-2">
+                  This one is great. The presenters are quite good. The pace is great.
+                </p>
+              </Podcast>
+            </li>
+
+            <li className="flex items-start space-x-4">
+              <div className="flex-shrink-0 p-4">
+                <span className="text-3xl">⭐</span>
                 <span className="text-orange-500 font-bold text-sm block">5/10</span>
               </div>
               <Podcast
@@ -442,31 +467,6 @@ export default function PodcastsPage() {
                 <p className="text-xs text-muted-foreground mt-2">
                   I&apos;ve temporarily paused this podcast. Not bad, just too many to listen to at
                   the moment.
-                </p>
-              </Podcast>
-            </li>
-
-            <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4">
-                <span className="text-3xl">⭐</span>
-                <span className="text-orange-500 font-bold text-sm block">5/10</span>
-              </div>
-              <Podcast
-                title="Hard Fork"
-                presenters={['Kevin Roose', 'Casey Newton']}
-                yearStarted="2022"
-                cover="hard_fork.png"
-                cadence="weekly"
-                numberOfEpisodes={63}
-                isActive={true}
-              >
-                Discussions about the latest happenings around the tech world.
-                <p className="text-xs text-muted-foreground mt-2 line-through">
-                  I am listening to a few episodes of this during December 2023 to determine
-                  if it is worth the time.
-                </p>
-                <p className="text-xs text-muted-foreground mt-2">
-                  This one is great. The presenters are quite good. The pace is great.
                 </p>
               </Podcast>
             </li>
