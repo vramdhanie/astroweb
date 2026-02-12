@@ -1,16 +1,18 @@
 import Link from 'next/link';
 import { getAllArticles } from '@/lib/articles';
+import { ExternalLink } from 'lucide-react';
 
 export default function SideNavigation() {
   const articles = getAllArticles();
-  
+
   return (
-    <nav className="pl-2 text-right col-span-1 md:order-last md:border-l md:border-border md:pl-6">
-      <ul className="space-y-2">
+    <nav className="pr-8 col-span-1 md:order-first">
+      {/* Main Navigation */}
+      <ul className="space-y-1">
         <li>
           <Link
             href="/"
-            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
           >
             Home
           </Link>
@@ -18,7 +20,7 @@ export default function SideNavigation() {
         <li>
           <Link
             href="/articles"
-            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
           >
             Articles
           </Link>
@@ -26,7 +28,7 @@ export default function SideNavigation() {
         <li>
           <Link
             href="/projects"
-            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
           >
             Projects
           </Link>
@@ -34,7 +36,7 @@ export default function SideNavigation() {
         <li>
           <Link
             href="/books"
-            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
           >
             Books
           </Link>
@@ -42,7 +44,7 @@ export default function SideNavigation() {
         <li>
           <Link
             href="/podcasts"
-            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
           >
             Podcasts
           </Link>
@@ -50,7 +52,7 @@ export default function SideNavigation() {
         <li>
           <Link
             href="/uses"
-            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
           >
             Uses
           </Link>
@@ -58,120 +60,127 @@ export default function SideNavigation() {
         <li>
           <Link
             href="/temperature"
-            className="text-primary hover:underline hover:text-primary/80 font-medium transition-colors block py-1"
+            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
           >
             Temperature
           </Link>
         </li>
       </ul>
-      
-      <div className="w-full text-right text-muted-foreground text-sm my-6">― • ―</div>
-      
-      <h3 className="text-lg font-bold text-right font-mono text-foreground mb-3">Recent Articles</h3>
-      <ul className="space-y-2">
-        {articles.slice(0, 5).map((article) => (
-          <li key={article._slug} className="py-1">
+
+      {/* Recent Articles */}
+      <div className="mt-8">
+        <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Recent Articles</h3>
+        <ul className="space-y-1">
+          {articles.slice(0, 5).map((article) => (
+            <li key={article._slug}>
+              <Link
+                href={`/articles/${article._slug}`}
+                className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors text-sm block py-2 px-3 rounded-md hover:bg-[var(--accent)] line-clamp-2"
+              >
+                {article.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Reading Lists */}
+      <div className="mt-8">
+        <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Reading Lists</h3>
+        <ul className="space-y-1">
+          <li>
             <Link
-              href={`/articles/${article._slug}`}
-              className="text-primary hover:underline hover:text-primary/80 transition-colors text-sm block"
+              href="/books/2026"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
             >
-              {article.title}
+              2026
             </Link>
           </li>
-        ))}
-      </ul>
-      
-      <div className="w-full text-right text-muted-foreground text-sm my-6">― • ―</div>
-      
-      <h3 className="text-lg font-bold text-right font-mono text-foreground mb-3">Reading Lists</h3>
-      <ul className="space-y-2">
-        <li className="py-1">
-          <Link
-            href="/books/2026"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-          >
-            2026
-          </Link>
-        </li>
-        <li className="py-1">
-          <Link
-            href="/books/2025"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-          >
-            2025
-          </Link>
-        </li>
-        <li className="py-1">
-          <Link
-            href="/books/2024"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-          >
-            2024
-          </Link>
-        </li>
-        <li className="py-1">
-          <Link
-            href="/books/2023"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-          >
-            2023
-          </Link>
-        </li>
-        <li className="py-1">
-          <Link
-            href="/books/waiting"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-          >
-            Waiting
-          </Link>
-        </li>
-      </ul>
-      
-      <div className="w-full text-right text-muted-foreground text-sm my-6">― • ―</div>
-      
-      <h3 className="text-lg font-bold text-right font-mono text-foreground mb-3">Apps</h3>
-      <ul className="space-y-2">
-        <li className="py-1">
-          <a
-            href="https://words.vincentramdhanie.com"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Word Assist <span className="text-xs text-muted-foreground">↗</span>
-          </a>
-        </li>
-        <li className="py-1">
-          <a
-            href="https://boxed.vincentramdhanie.com"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Boxed <span className="text-xs text-muted-foreground">↗</span>
-          </a>
-        </li>
-        <li className="py-1">
-          <a
-            href="https://fire.vincentramdhanie.com"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Fire <span className="text-xs text-muted-foreground">↗</span>
-          </a>
-        </li>
-        <li className="py-1">
-          <a
-            href="https://flood.vincentramdhanie.com"
-            className="text-primary hover:underline hover:text-primary/80 transition-colors block"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Flood <span className="text-xs text-muted-foreground">↗</span>
-          </a>
-        </li>
-      </ul>
+          <li>
+            <Link
+              href="/books/2025"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
+            >
+              2025
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/books/2024"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
+            >
+              2024
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/books/2023"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
+            >
+              2023
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/books/waiting"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
+            >
+              Waiting
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      {/* Apps */}
+      <div className="mt-8">
+        <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Apps</h3>
+        <ul className="space-y-1">
+          <li>
+            <a
+              href="https://words.vincentramdhanie.com"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Word Assist
+              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://boxed.vincentramdhanie.com"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Boxed
+              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://fire.vincentramdhanie.com"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fire
+              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://flood.vincentramdhanie.com"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Flood
+              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

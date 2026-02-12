@@ -8,11 +8,10 @@ export default function ArticlesPage() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold tracking-tight text-left mb-8 font-mono border-b pb-2 border-slate-200">Articles</h1>
+      <h1 className="text-3xl font-bold tracking-tight text-left mb-8 text-[var(--foreground)]">Articles</h1>
       <div className="mb-8">
-        <p className="text-muted-foreground text-lg max-w-3xl">
-          Explore technical articles covering React, Firebase, AI, and software engineering topics. 
-          Each article is categorized by difficulty level and tagged for easy discovery.
+        <p className="text-[var(--muted-foreground)] max-w-3xl">
+          Technical writing on React, Firebase, AI, and software engineering.
         </p>
       </div>
 

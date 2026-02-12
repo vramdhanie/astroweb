@@ -1,31 +1,32 @@
 import { getWaitingBooks, ReadingStatus } from '@/lib/books';
 import Biblio from '@/components/Biblio';
 import Link from 'next/link';
+import { Clock, HelpCircle } from 'lucide-react';
 
 export default function WaitingBooksPage() {
   const waitingBooks = getWaitingBooks();
 
   // Sort books by title
-  const sortedBooks = waitingBooks.sort((a, b) => 
+  const sortedBooks = waitingBooks.sort((a, b) =>
     a.title.localeCompare(b.title)
   );
 
   const getStatusIcon = (status: ReadingStatus, progress: string) => {
-    const baseClasses = "self-start p-4 rounded-lg transition-all duration-200 hover:scale-110";
-    
+    const baseClasses = "self-start p-3 rounded-lg transition-all duration-200 flex flex-col items-center gap-1 bg-slate-50 dark:bg-slate-800";
+
     if (status === 'WAIT') {
       return (
-        <div className={`${baseClasses} bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/30`} title="Waiting to Read">
-          <span className="text-2xl block mb-1">📚</span>
-          <span className="text-foreground font-bold text-sm">{progress}</span>
+        <div className={`${baseClasses} border-2 border-orange-600 dark:border-orange-500`} title="Waiting to Read">
+          <Clock size={24} className="text-orange-700 dark:text-orange-400" />
+          <span className="text-orange-700 dark:text-orange-400 font-bold text-xs">{progress}</span>
         </div>
       );
     } else {
       // Empty status or unknown status
       return (
-        <div className={`${baseClasses} bg-gray-50 dark:bg-gray-950/20 border border-gray-200 dark:border-gray-800/30`} title="No Status Set">
-          <span className="text-2xl block mb-1">❓</span>
-          <span className="text-foreground font-bold text-sm">{progress}</span>
+        <div className={`${baseClasses} border-2 border-gray-400 dark:border-gray-600`} title="No Status Set">
+          <HelpCircle size={24} className="text-gray-700 dark:text-gray-400" />
+          <span className="text-gray-700 dark:text-gray-400 font-bold text-xs">{progress}</span>
         </div>
       );
     }
@@ -46,18 +47,18 @@ export default function WaitingBooksPage() {
 
       {/* Page header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-left mb-2 font-mono">Waiting to Read</h1>
-        <p className="text-muted-foreground text-lg">
+        <h1 className="text-3xl font-bold tracking-tight text-left mb-2 text-[var(--foreground)]">Waiting to Read</h1>
+        <p className="text-[var(--muted-foreground)]">
           Books I plan to read but haven&apos;t started yet.
         </p>
       </div>
-      
+
       {/* Reading Status Legend */}
-      <div className="mb-6 p-4 bg-muted/30 rounded-lg border border-border">
-        <h3 className="text-sm font-semibold text-foreground mb-3">Reading Status Legend</h3>
-        <div className="flex flex-wrap gap-4 text-sm">
-          <div className="flex items-center gap-2 p-2 bg-amber-800 text-white rounded font-medium dark:bg-amber-900/80 dark:text-amber-200">
-            <span className="text-lg">📚</span>
+      <div className="mb-6 p-4 bg-[var(--muted)]/30 rounded-lg border border-[var(--border)]">
+        <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3">Reading Status</h3>
+        <div className="flex flex-wrap gap-3 text-sm">
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 text-orange-700 rounded-md font-semibold dark:bg-slate-800 dark:text-orange-400 border-2 border-orange-600 dark:border-orange-500">
+            <Clock size={16} />
             <span>Waiting to Read</span>
           </div>
         </div>

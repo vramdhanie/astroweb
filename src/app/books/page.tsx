@@ -1,18 +1,18 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllBookYears, getBooksForYear } from '@/lib/books';
+import { BookOpen, CheckCircle2, Clock } from 'lucide-react';
 
 export default function BooksPage() {
   const years = getAllBookYears();
-  
+
   return (
     <>
-      <h1 className="text-3xl font-bold tracking-tight text-left mb-8 font-mono border-b pb-2 border-slate-200">Reading Lists</h1>
-      
+      <h1 className="text-3xl font-bold tracking-tight text-left mb-8 text-[var(--foreground)]">Reading Lists</h1>
+
       <div className="mb-8">
-        <p className="text-muted-foreground text-lg max-w-3xl">
-          Explore my reading lists organized by year. Each year contains books I&apos;ve read, 
-          am currently reading, or plan to read. The data is automatically populated from my reading database.
+        <p className="text-[var(--muted-foreground)] max-w-3xl">
+          Reading lists organized by year. Books I&apos;ve read, currently reading, or planning to read.
         </p>
       </div>
 
@@ -26,12 +26,12 @@ export default function BooksPage() {
             <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-200">
               Waiting to Read
             </h3>
-            <p className="text-muted-foreground text-sm mb-4">
+            <p className="text-[var(--muted-foreground)] text-sm mb-4">
               Books I plan to read but haven&apos;t started yet
             </p>
             <div className="flex items-center gap-2 text-xs">
-              <span className="inline-flex items-center gap-1 px-2 py-1 bg-amber-800 text-white rounded-full font-medium dark:bg-amber-900/80 dark:text-amber-200">
-                <span>📚</span>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 text-orange-700 rounded-full font-semibold dark:bg-slate-800 dark:text-orange-400 border-2 border-orange-600 dark:border-orange-500">
+                <Clock size={14} />
                 <span>Waiting List</span>
               </span>
             </div>
@@ -80,20 +80,20 @@ export default function BooksPage() {
                 {/* Reading Statistics */}
                 <div className="flex flex-wrap gap-2 text-xs">
                   {readingCount > 0 && (
-                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-800 text-white rounded-full font-medium dark:bg-blue-900/80 dark:text-blue-200">
-                      <span>📖</span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 text-blue-700 rounded-full font-semibold dark:bg-slate-800 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-500">
+                      <BookOpen size={14} />
                       {readingCount} reading
                     </span>
                   )}
                   {readCount > 0 && (
-                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-green-800 text-white rounded-full font-medium dark:bg-green-900/80 dark:text-green-200">
-                      <span>✅</span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 text-green-700 rounded-full font-semibold dark:bg-slate-800 dark:text-green-400 border-2 border-green-600 dark:border-green-500">
+                      <CheckCircle2 size={14} />
                       {readCount} read
                     </span>
                   )}
                   {waitCount > 0 && (
-                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-amber-800 text-white rounded-full font-medium dark:bg-amber-900/80 dark:text-amber-200">
-                      <span>📚</span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 text-orange-700 rounded-full font-semibold dark:bg-slate-800 dark:text-orange-400 border-2 border-orange-600 dark:border-orange-500">
+                      <Clock size={14} />
                       {waitCount} waiting
                     </span>
                   )}

@@ -75,10 +75,10 @@ export default function RootLayout({
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col max-w-screen-xl py-8">
               <div className="flex-1 my-8">
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+                  <SideNavigation />
                   <div className="col-span-1 md:col-span-4">
                     {children}
                   </div>
-                  <SideNavigation />
                 </div>
               </div>
             </div>
