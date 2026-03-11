@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { getAllArticles } from '@/lib/articles';
 import { ExternalLink } from 'lucide-react';
+import NavLink from '@/components/NavLink';
 
 export default function SideNavigation() {
   const articles = getAllArticles();
@@ -9,62 +9,27 @@ export default function SideNavigation() {
     <nav className="pr-8 col-span-1 md:order-first">
       {/* Main Navigation */}
       <ul className="space-y-1">
-        <li>
-          <Link
-            href="/"
-            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/articles"
-            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-          >
-            Articles
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/projects"
-            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-          >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/books"
-            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-          >
-            Books
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/podcasts"
-            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-          >
-            Podcasts
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/uses"
-            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-          >
-            Uses
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/temperature"
-            className="text-[var(--foreground)] hover:text-[var(--primary)] font-medium transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-          >
-            Temperature
-          </Link>
-        </li>
+        {[
+          { href: '/', label: 'Home', exact: true },
+          { href: '/articles', label: 'Articles' },
+          { href: '/projects', label: 'Projects' },
+          { href: '/books', label: 'Books' },
+          { href: '/podcasts', label: 'Podcasts' },
+          { href: '/uses', label: 'Uses' },
+          { href: '/temperature', label: 'Temperature' },
+        ].map(({ href, label, exact }) => (
+          <li key={href}>
+            <NavLink
+              href={href}
+              exact={exact}
+              className="transition-colors block py-2 px-3 rounded-md"
+              activeClassName="text-[var(--primary)] font-semibold bg-[var(--accent)]"
+              inactiveClassName="text-[var(--foreground)] font-medium hover:text-[var(--primary)] hover:bg-[var(--accent)]"
+            >
+              {label}
+            </NavLink>
+          </li>
+        ))}
       </ul>
 
       {/* Recent Articles */}
@@ -73,12 +38,15 @@ export default function SideNavigation() {
         <ul className="space-y-1">
           {articles.slice(0, 5).map((article) => (
             <li key={article._slug}>
-              <Link
+              <NavLink
                 href={`/articles/${article._slug}`}
-                className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors text-sm block py-2 px-3 rounded-md hover:bg-[var(--accent)] line-clamp-2"
+                exact
+                className="transition-colors text-sm block py-2 px-3 rounded-md line-clamp-2"
+                activeClassName="text-[var(--primary)] bg-[var(--accent)]"
+                inactiveClassName="text-[var(--muted-foreground)] hover:text-[var(--primary)] hover:bg-[var(--accent)]"
               >
                 {article.title}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -88,46 +56,25 @@ export default function SideNavigation() {
       <div className="mt-8">
         <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Reading Lists</h3>
         <ul className="space-y-1">
-          <li>
-            <Link
-              href="/books/2026"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-            >
-              2026
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/books/2025"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-            >
-              2025
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/books/2024"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-            >
-              2024
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/books/2023"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-            >
-              2023
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/books/waiting"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)]"
-            >
-              Waiting
-            </Link>
-          </li>
+          {[
+            { href: '/books/2026', label: '2026' },
+            { href: '/books/2025', label: '2025' },
+            { href: '/books/2024', label: '2024' },
+            { href: '/books/2023', label: '2023' },
+            { href: '/books/waiting', label: 'Waiting' },
+          ].map(({ href, label }) => (
+            <li key={href}>
+              <NavLink
+                href={href}
+                exact
+                className="transition-colors block py-2 px-3 rounded-md"
+                activeClassName="text-[var(--primary)] bg-[var(--accent)]"
+                inactiveClassName="text-[var(--muted-foreground)] hover:text-[var(--primary)] hover:bg-[var(--accent)]"
+              >
+                {label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
 
