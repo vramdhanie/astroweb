@@ -126,6 +126,17 @@ export default function SideNavigation() {
               <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
           </li>
+          <li>
+            <a
+              href="https://football.vincentramdhanie.com"
+              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Football
+              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

@@ -1,0 +1,42 @@
+---
+title: "My Football"
+slug: "football"
+description: "A fully static football tracker for favourite European teams — fixtures, results, standings, and top scorers, built with Next.js static export and football-data.org"
+abstract: "Static-site football tracker that fetches league data at build time via GitHub Actions and serves fixtures, results, standings, and top scorers with no server or database."
+githubUrl: "https://github.com/vramdhanie/football"
+liveUrl: "https://football.vincentramdhanie.com"
+techStack: ["Next.js", "TypeScript", "Tailwind CSS", "GitHub Actions", "GitHub Pages", "Static Site Generation", "football-data.org"]
+highlight: true
+featured: true
+date: "2026-07-07"
+tags: ["nextjs", "typescript", "football", "static-site", "github-actions", "frontend", "sports"]
+stars: 0
+forks: 0
+language: "TypeScript"
+---
+
+# My Football
+
+A fully static football tracker for my favourite European teams — fixtures, results, standings, and top scorers.
+
+[Live Demo](https://football.vincentramdhanie.com) | [GitHub](https://github.com/vramdhanie/football)
+
+## How it works
+
+There is no server and no database. A GitHub Actions workflow pulls data from the [football-data.org](https://www.football-data.org/) v4 API, writes it to `public/data/*.json`, builds the static site, and deploys to GitHub Pages. The browser only reads those static JSON files — the API token never leaves the build environment.
+
+## Features
+
+- **Fixtures & results** for tracked teams across major European leagues
+- **League standings** and **top scorers** from football-data.org data
+- **Fully static** — fast loads, no runtime API calls in the browser
+- **Configurable teams** via `src/config/teams.json`
+- **Automated deploys** on every push to `main` via GitHub Actions
+
+## Tech stack
+
+- Next.js 16 (static export)
+- TypeScript
+- Tailwind CSS 4
+- GitHub Actions + GitHub Pages
+- football-data.org API (build-time only)

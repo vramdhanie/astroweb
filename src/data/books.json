@@ -293,10 +293,23 @@
         "cover": "http://books.google.com/books/content?id=0oDZCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
         "description": "I've always enjoyed the Odd Thomas series. This one is no exception. Starts with the same high as the others.",
         "yearRead": "2026",
-        "readingStatus": "READING",
-        "pagesRead": 40,
+        "readingStatus": "READ",
+        "pagesRead": 480,
         "pageCount": 480,
-        "progressPercentage": "8%"
+        "progressPercentage": "100%"
+    },
+    {
+        "isbn": "9780345533029",
+        "title": "Brother Odd",
+        "author": "Dean Koontz",
+        "year": "2006",
+        "cover": "http://books.google.com/books/content?id=malTVXc8Do8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+        "description": "The third book in the Odd Thomas series. Odd Thomas seeks peace at a remote California monastery, only to find himself stalking spirits of a far darker nature.",
+        "yearRead": "2026",
+        "readingStatus": "READ",
+        "pagesRead": 464,
+        "pageCount": 464,
+        "progressPercentage": "100%"
     },
     {
         "isbn": "9780553293364",
