@@ -1,65 +1,20 @@
-import { getAllProjects, getAllProjectTags } from '@/lib/projects';
+import { getAllProjects } from '@/lib/projects';
 import ProjectCard from '@/components/ProjectCard';
 import Link from 'next/link';
 import { Github } from 'lucide-react';
 
 export default function ProjectsPage() {
   const projects = getAllProjects();
-  const allTags = getAllProjectTags();
 
   return (
     <>
       <h1 className="text-3xl font-bold tracking-tight text-left mb-8 text-[var(--foreground)]">Projects</h1>
 
       <div className="mb-8">
-        <p className="text-[var(--muted-foreground)] max-w-3xl">
+        <p className="text-[var(--muted-foreground)] max-w-prose">
           Open source projects and experiments. Each one is a learning experience.
         </p>
       </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-        <div className="bg-background border border-border rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-foreground">{projects.length}</div>
-          <div className="text-sm text-muted-foreground">Total Projects</div>
-        </div>
-        <div className="bg-background border border-border rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-foreground">
-            {projects.filter(p => p.highlight).length}
-          </div>
-          <div className="text-sm text-muted-foreground">Featured</div>
-        </div>
-        <div className="bg-background border border-border rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-foreground">
-            {projects.reduce((sum, p) => sum + (p.stars || 0), 0)}
-          </div>
-          <div className="text-sm text-muted-foreground">Total Stars</div>
-        </div>
-        <div className="bg-background border border-border rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-foreground">
-            {projects.reduce((sum, p) => sum + (p.forks || 0), 0)}
-          </div>
-          <div className="text-sm text-muted-foreground">Total Forks</div>
-        </div>
-      </div>
-
-      {/* Tags Filter */}
-      {allTags.length > 0 && (
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-foreground mb-4">Filter by Technology</h3>
-          <div className="flex flex-wrap gap-2">
-            {allTags.map((tag) => (
-              <Link
-                key={tag}
-                href={`/projects?tag=${encodeURIComponent(tag)}`}
-                className="inline-flex items-center px-3 py-2 rounded-md text-sm font-medium bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors duration-200"
-              >
-                {tag}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* Projects Grid */}
       {projects.length > 0 ? (
