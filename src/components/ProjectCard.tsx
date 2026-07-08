@@ -58,13 +58,13 @@ export default function ProjectCard({ project, showTechStack = true, showStats =
         {showStats && (
           <div className="flex items-center justify-between text-sm text-[var(--muted-foreground)]">
             <div className="flex items-center space-x-4">
-              {project.stars && (
+              {!!project.stars && (
                 <span className="flex items-center gap-1">
                   <Star size={14} />
                   {project.stars}
                 </span>
               )}
-              {project.forks && (
+              {!!project.forks && (
                 <span className="flex items-center gap-1">
                   <GitFork size={14} />
                   {project.forks}

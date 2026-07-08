@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* The theme toggle sets a .light/.dark class on <html>. Without this,
+   Tailwind v4's dark: variant follows the OS prefers-color-scheme media
+   query, so dark: utilities would fight the site toggle whenever the two
+   disagree (e.g. pale dark-mode badge text on light-mode cards). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
