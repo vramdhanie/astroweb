@@ -4,8 +4,8 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](https://github.com/yourusername/astroweb)
-[![Deployment](https://img.shields.io/badge/Deployment-Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com/)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/vramdhanie/astroweb/deploy-prod.yml?branch=main&label=Deploy&style=for-the-badge&logo=github)](https://github.com/vramdhanie/astroweb/actions/workflows/deploy-prod.yml)
+[![Deployment](https://img.shields.io/badge/Deployment-Firebase_Hosting-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/docs/hosting)
 
 A modern, responsive personal website built with Next.js 15, featuring a comprehensive blog, reading lists, and professional portfolio. This project demonstrates modern web development practices with static site generation, theme switching, and MDX content management.
 
@@ -29,7 +29,7 @@ A modern, responsive personal website built with Next.js 15, featuring a compreh
 - **Content**: [MDX](https://mdxjs.com/) with `next-mdx-remote`
 - **Build Tool**: [Turbopack](https://turbo.build/pack) for faster builds
 - **Package Manager**: [pnpm](https://pnpm.io/) for efficient dependency management
-- **Deployment**: [Vercel](https://vercel.com/) platform
+- **Deployment**: [Firebase Hosting](https://firebase.google.com/docs/hosting) via GitHub Actions
 
 ## 📁 Project Structure
 

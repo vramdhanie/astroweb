@@ -136,7 +136,7 @@ Static build output goes to `out/` directory:
 pnpm run build:ci  # Builds without Turbopack for compatibility
 ```
 
-Deploy the `out/` directory to any static hosting (Vercel, Netlify, GitHub Pages, etc.)
+The `out/` directory is deployed to Firebase Hosting by `.github/workflows/deploy-prod.yml` on push to `main`.
 
 ## Important Files
 
