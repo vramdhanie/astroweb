@@ -1,6 +1,15 @@
 import { getAllArticles } from '@/lib/articles';
 import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 import NavLink from '@/components/NavLink';
+
+const APPS = [
+  { href: 'https://words.vincentramdhanie.com', label: 'Word Assist', icon: '/images/projects/word-assist.svg' },
+  { href: 'https://boxed.vincentramdhanie.com', label: 'Boxed', icon: '/images/projects/react-boxed.svg' },
+  { href: 'https://fire.vincentramdhanie.com', label: 'Fire', icon: '/images/projects/fire.svg' },
+  { href: 'https://flood.vincentramdhanie.com', label: 'Flood', icon: '/images/projects/flood.svg' },
+  { href: 'https://football.vincentramdhanie.com', label: 'Football', icon: '/images/projects/football.svg' },
+];
 
 export default function SideNavigation() {
   const articles = getAllArticles();
@@ -82,61 +91,22 @@ export default function SideNavigation() {
       <div className="mt-8">
         <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Apps</h3>
         <ul className="space-y-1">
-          <li>
-            <a
-              href="https://words.vincentramdhanie.com"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Word Assist
-              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://boxed.vincentramdhanie.com"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Boxed
-              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://fire.vincentramdhanie.com"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Fire
-              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://flood.vincentramdhanie.com"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Flood
-              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://football.vincentramdhanie.com"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors block py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Football
-              <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-          </li>
+          {APPS.map(({ href, label, icon }) => (
+            <li key={href}>
+              <a
+                href={href}
+                className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors py-2 px-3 rounded-md hover:bg-[var(--accent)] flex items-center justify-between group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="flex items-center gap-2.5">
+                  <Image src={icon} alt="" width={20} height={20} className="w-5 h-5 rounded" />
+                  {label}
+                </span>
+                <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

@@ -1,6 +1,7 @@
 import { getProjectBySlug, getAllProjectSlugs } from '@/lib/projects';
 import { notFound } from 'next/navigation';
 import { format } from 'date-fns';
+import Image from 'next/image';
 import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 
@@ -123,7 +124,17 @@ export default async function ProjectPage({ params }: PageProps) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200"
               >
-                <span className="mr-2">🌐</span>
+                {project.icon ? (
+                  <Image
+                    src={project.icon}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="w-5 h-5 rounded mr-2"
+                  />
+                ) : (
+                  <span className="mr-2">🌐</span>
+                )}
                 Live Demo
               </Link>
             )}

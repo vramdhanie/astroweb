@@ -5,6 +5,7 @@ export interface Project {
     abstract: string
     githubUrl: string
     liveUrl?: string
+    icon?: string
     techStack: string[]
     highlight: boolean
     featured: boolean
@@ -23,6 +24,7 @@ export interface ProjectListItem {
     abstract: string
     githubUrl: string
     liveUrl?: string
+    icon?: string
     techStack: string[]
     highlight: boolean
     featured: boolean

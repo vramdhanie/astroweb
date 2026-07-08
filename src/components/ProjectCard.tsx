@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ProjectListItem } from '@/types/project';
 import { Badge } from '@/components/ui/Badge';
@@ -20,9 +21,20 @@ export default function ProjectCard({ project, showTechStack = true, showStats =
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-[var(--foreground)] mb-2 group-hover:text-[var(--primary)] transition-colors duration-200">
-              {project.title}
-            </h3>
+            <div className="flex items-center gap-3 mb-2">
+              {project.icon && (
+                <Image
+                  src={project.icon}
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 rounded-md flex-shrink-0"
+                />
+              )}
+              <h3 className="text-xl font-bold text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors duration-200">
+                {project.title}
+              </h3>
+            </div>
             <p className="text-[var(--muted-foreground)] text-sm leading-relaxed">
               {project.abstract}
             </p>
