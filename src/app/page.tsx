@@ -8,10 +8,10 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold tracking-tight text-left mb-12">Vincent Ramdhanie</h1>
+      <h1 className="text-3xl font-bold tracking-tight text-left mb-12">Hi, I&apos;m Vincent.</h1>
 
       {/* Introduction */}
-      <div className="prose prose-slate max-w-none prose-p:text-[var(--foreground)] prose-a:text-[var(--primary)]">
+      <div className="prose prose-slate max-w-prose prose-p:text-[var(--foreground)] prose-a:text-[var(--primary)]">
         <p>
           I&apos;m a <a href="https://bahai.org" className="underline hover:no-underline">Baha&apos;i</a>. Baha&apos;is work in communities worldwide to build a better society.
         </p>
@@ -25,7 +25,7 @@ export default function Home() {
       {/* AI Section */}
       <section>
         <h2 className="text-2xl font-semibold mb-4 text-[var(--foreground)]">Artificial Intelligence</h2>
-        <div className="prose prose-slate max-w-none prose-p:text-[var(--foreground)] prose-a:text-[var(--primary)]">
+        <div className="prose prose-slate max-w-prose prose-p:text-[var(--foreground)] prose-a:text-[var(--primary)]">
           <p>
             I&apos;ve been interested in AI since university. My master&apos;s thesis explored parallel algorithms on GPU architecture. These days I work on practical AI applications with language models.
           </p>
@@ -63,40 +63,9 @@ export default function Home() {
         </>
       )}
 
-      {/* Writing & Learning */}
-      <Divider />
-      <section>
-        <h2 className="text-2xl font-semibold mb-4 text-[var(--foreground)]">Writing & Reading</h2>
-        <div className="flex flex-wrap gap-3">
-          <Link href="/articles" className="text-[var(--primary)] hover:text-[var(--primary)]/80 underline">
-            Articles
-          </Link>
-          <span className="text-[var(--muted-foreground)]">•</span>
-          <Link href="/books/2026" className="text-[var(--primary)] hover:text-[var(--primary)]/80 underline">
-            2026
-          </Link>
-          <span className="text-[var(--muted-foreground)]">•</span>
-          <Link href="/books/2025" className="text-[var(--primary)] hover:text-[var(--primary)]/80 underline">
-            2025
-          </Link>
-          <span className="text-[var(--muted-foreground)]">•</span>
-          <Link href="/books/2024" className="text-[var(--primary)] hover:text-[var(--primary)]/80 underline">
-            2024
-          </Link>
-          <span className="text-[var(--muted-foreground)]">•</span>
-          <Link href="/books/2023" className="text-[var(--primary)] hover:text-[var(--primary)]/80 underline">
-            2023
-          </Link>
-          <span className="text-[var(--muted-foreground)]">•</span>
-          <Link href="/books/waiting" className="text-[var(--primary)] hover:text-[var(--primary)]/80 underline">
-            Waiting
-          </Link>
-        </div>
-      </section>
-
       {/* Quote Section */}
       <Divider />
-      <div className="prose prose-slate max-w-none prose-p:text-[var(--foreground)]">
+      <div className="prose prose-slate max-w-prose prose-p:text-[var(--foreground)]">
         <p>
           Any hope of contributing to a brighter future for mankind, rest on the fundamental acceptance of the nobility of man.
         </p>

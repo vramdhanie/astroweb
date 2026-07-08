@@ -39,14 +39,6 @@ export default function ProjectCard({ project, showTechStack = true, showStats =
               {project.abstract}
             </p>
           </div>
-          {project.highlight && (
-            <div className="flex-shrink-0 ml-4">
-              <Badge variant="primary" className="flex items-center gap-1">
-                <Star size={12} fill="currentColor" />
-                Featured
-              </Badge>
-            </div>
-          )}
         </div>
 
         {/* Tech Stack */}

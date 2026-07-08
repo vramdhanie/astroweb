@@ -3,7 +3,6 @@ import Biblio from '@/components/Biblio';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BookOpen, CheckCircle2, Clock, HelpCircle } from 'lucide-react';
 
 interface PageProps {
   params: Promise<{
@@ -60,39 +59,21 @@ export default async function BookYearPage({ params }: PageProps) {
     return priorityB - priorityA; // Higher priority first
   });
 
-  const getStatusIcon = (status: ReadingStatus, progress: string) => {
-    const baseClasses = "self-start p-3 rounded-lg transition-all duration-200 flex flex-col items-center gap-1 bg-slate-50 dark:bg-slate-800";
-
-    if (status === 'READ') {
+  const getStatusLabel = (status: ReadingStatus, progress: string) => {
+    if (status === 'READING') {
       return (
-        <div className={`${baseClasses} border-2 border-green-600 dark:border-green-500`} title="Completed">
-          <CheckCircle2 size={24} className="text-green-700 dark:text-green-400" />
-          <span className="text-green-700 dark:text-green-400 font-bold text-xs">{progress}</span>
-        </div>
-      );
-    } else if (status === 'READING') {
-      return (
-        <div className={`${baseClasses} border-2 border-blue-600 dark:border-blue-500`} title="Currently Reading">
-          <BookOpen size={24} className="text-blue-700 dark:text-blue-400" />
-          <span className="text-blue-700 dark:text-blue-400 font-bold text-xs">{progress}</span>
-        </div>
-      );
-    } else if (status === 'WAIT') {
-      return (
-        <div className={`${baseClasses} border-2 border-orange-600 dark:border-orange-500`} title="Waiting to Read">
-          <Clock size={24} className="text-orange-700 dark:text-orange-400" />
-          <span className="text-orange-700 dark:text-orange-400 font-bold text-xs">{progress}</span>
-        </div>
-      );
-    } else {
-      // Empty status or unknown status
-      return (
-        <div className={`${baseClasses} border-2 border-gray-400 dark:border-gray-600`} title="No Status Set">
-          <HelpCircle size={24} className="text-gray-700 dark:text-gray-400" />
-          <span className="text-gray-700 dark:text-gray-400 font-bold text-xs">{progress}</span>
-        </div>
+        <span className="text-xs font-medium text-blue-700 dark:text-blue-400">
+          Reading · {progress}
+        </span>
       );
     }
+    if (status === 'READ') {
+      return <span className="text-xs font-medium text-green-700 dark:text-green-400">Finished</span>;
+    }
+    if (status === 'WAIT') {
+      return <span className="text-xs font-medium text-orange-700 dark:text-orange-400">Up next</span>;
+    }
+    return null;
   };
 
   return (
@@ -125,44 +106,21 @@ export default async function BookYearPage({ params }: PageProps) {
         </div>
       </div>
       
-      {/* Reading Status Legend */}
-      <div className="mb-6 p-4 bg-[var(--muted)]/30 rounded-lg border border-[var(--border)]">
-        <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3">Reading Status</h3>
-        <div className="flex flex-wrap gap-3 text-sm">
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 text-blue-700 rounded-md font-semibold dark:bg-slate-800 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-500">
-            <BookOpen size={16} />
-            <span>Currently Reading</span>
-          </div>
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 text-green-700 rounded-md font-semibold dark:bg-slate-800 dark:text-green-400 border-2 border-green-600 dark:border-green-500">
-            <CheckCircle2 size={16} />
-            <span>Completed</span>
-          </div>
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 text-orange-700 rounded-md font-semibold dark:bg-slate-800 dark:text-orange-400 border-2 border-orange-600 dark:border-orange-500">
-            <Clock size={16} />
-            <span>Waiting to Read</span>
-          </div>
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 text-gray-700 rounded-md font-semibold dark:bg-slate-800 dark:text-gray-400 border-2 border-gray-400 dark:border-gray-600">
-            <HelpCircle size={16} />
-            <span>No Status</span>
-          </div>
-        </div>
-      </div>
-
       {sortedBooks.length === 0 ? (
         <div className="text-center py-8">
           <p className="text-muted-foreground">No books found for {bookYear.year}</p>
         </div>
       ) : (
-        <div className="py-2 w-full max-w-3xl prose prose-slate max-w-none prose-ul:text-foreground prose-li:text-foreground">
+        <div className="py-2 w-full max-w-3xl">
           <ul className="list-none">
             {sortedBooks.map((book) => (
-              <li key={book.isbn} className="flex items-center border-b border-border" data-id={book.isbn}>
-                {getStatusIcon(book.readingStatus, book.progressPercentage)}
+              <li key={book.isbn} className="border-b border-border last:border-0" data-id={book.isbn}>
                 <Biblio
                   title={book.title}
                   author={book.author}
                   year={book.year}
                   cover={book.cover}
+                  status={getStatusLabel(book.readingStatus, book.progressPercentage)}
                 >
                   {book.description}
                 </Biblio>

@@ -15,9 +15,9 @@ export default function SideNavigation() {
   const articles = getAllArticles();
 
   return (
-    <nav className="pr-8 col-span-1 md:order-first">
-      {/* Main Navigation */}
-      <ul className="space-y-1">
+    <nav className="md:pr-8 col-span-1 md:order-first">
+      {/* Main Navigation — a compact wrapping row on mobile, a column on md+ */}
+      <ul className="flex flex-wrap gap-1 md:block md:space-y-1">
         {[
           { href: '/', label: 'Home', exact: true },
           { href: '/articles', label: 'Articles' },
@@ -41,8 +41,8 @@ export default function SideNavigation() {
         ))}
       </ul>
 
-      {/* Recent Articles */}
-      <div className="mt-8">
+      {/* Recent Articles — hidden on mobile so content stays above the fold */}
+      <div className="hidden md:block mt-8">
         <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Recent Articles</h3>
         <ul className="space-y-1">
           {articles.slice(0, 5).map((article) => (
@@ -61,8 +61,8 @@ export default function SideNavigation() {
         </ul>
       </div>
 
-      {/* Reading Lists */}
-      <div className="mt-8">
+      {/* Reading Lists — hidden on mobile */}
+      <div className="hidden md:block mt-8">
         <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Reading Lists</h3>
         <ul className="space-y-1">
           {[
@@ -87,8 +87,8 @@ export default function SideNavigation() {
         </ul>
       </div>
 
-      {/* Apps */}
-      <div className="mt-8">
+      {/* Apps — hidden on mobile */}
+      <div className="hidden md:block mt-8">
         <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Apps</h3>
         <ul className="space-y-1">
           {APPS.map(({ href, label, icon }) => (

@@ -54,8 +54,6 @@ export default function ArticleCard({ article }: ArticleCardProps) {
           </p>
 
           <div className="flex items-center gap-2 text-sm text-[var(--muted-foreground)] mb-4">
-            <span>By {article.author}</span>
-            <span>•</span>
             <time dateTime={article.date}>
               {format(new Date(article.date), 'MMM dd, yyyy')}
             </time>
