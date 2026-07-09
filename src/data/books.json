@@ -200,12 +200,12 @@
     "author": "Scott Adams",
     "year": "1996",
     "cover": "http://books.google.com/books/content?id=uAblPu1lpqIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "description": "More Dilbert. Office comedy that never really goes out of date.",
-    "yearRead": "",
-    "readingStatus": "WAIT",
-    "pagesRead": 0,
+    "description": "More Dilbert. Halfway through, and the office comedy hasn't gone out of date one bit.",
+    "yearRead": "2026",
+    "readingStatus": "READING",
+    "pagesRead": 112,
     "pageCount": 224,
-    "progressPercentage": "0%"
+    "progressPercentage": "50%"
   },
   {
     "isbn": "9780836220872",
@@ -863,12 +863,12 @@
     "author": "Gary Larson",
     "year": "1986",
     "cover": "http://books.google.com/books/content?id=WyBswG5g958C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "description": "The second big collection. Queued up for the same two-pages-a-night treatment as the first.",
-    "yearRead": "",
-    "readingStatus": "WAIT",
-    "pagesRead": 0,
-    "pageCount": 0,
-    "progressPercentage": ""
+    "description": "Rationed like the first gallery, a couple of pages a night. Larson never misses.",
+    "yearRead": "2026",
+    "readingStatus": "READ",
+    "pagesRead": 192,
+    "pageCount": 192,
+    "progressPercentage": "100%"
   },
   {
     "isbn": "9780836218107",
@@ -876,12 +876,12 @@
     "author": "Gary Larson",
     "year": "1984",
     "cover": "http://books.google.com/books/content?id=zB0RAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "description": "The third collection. There's comfort in knowing more Larson is waiting.",
-    "yearRead": "",
-    "readingStatus": "WAIT",
-    "pagesRead": 0,
-    "pageCount": 0,
-    "progressPercentage": ""
+    "description": "Finished the same slow way as the others. The panels stay sharp all the way through the set.",
+    "yearRead": "2026",
+    "readingStatus": "READ",
+    "pagesRead": 192,
+    "pageCount": 192,
+    "progressPercentage": "100%"
   },
   {
     "isbn": "9781982111878",
