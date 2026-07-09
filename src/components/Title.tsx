@@ -5,9 +5,11 @@ interface TitleProps {
 
 export default function Title({ title, subtitle }: TitleProps) {
   return (
-    <div className="mb-6">
-      <h2 className="text-2xl font-bold text-foreground mb-2">{title}</h2>
-      <h3 className="text-lg text-muted-foreground">{subtitle}</h3>
-    </div>
+    <h2 className="mb-6 text-2xl font-bold text-[var(--foreground)]">
+      {title}
+      {subtitle && (
+        <span className="ml-2 font-normal text-[var(--muted-foreground)]">{subtitle}</span>
+      )}
+    </h2>
   );
 }
