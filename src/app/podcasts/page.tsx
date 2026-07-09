@@ -1,6 +1,6 @@
 import Title from '@/components/Title';
 import Podcast from '@/components/Podcast';
-import { Star } from 'lucide-react';
+import Rating from '@/components/Rating';
 
 export default function PodcastsPage() {
   return (
@@ -19,9 +19,8 @@ export default function PodcastsPage() {
           <Title title="Science" subtitle="Podcasts" />
           <ul className="space-y-4">
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Why This Universe?"
@@ -39,9 +38,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="The State of The Universe"
@@ -66,9 +64,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Daniel and Jorge Explain the Universe"
@@ -94,9 +91,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">8/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={8} />
               </div>
               <Podcast
                 title="Star Talk radio"
@@ -116,9 +112,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="The Infinite Monkey Cage"
@@ -136,9 +131,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">9/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={9} />
               </div>
               <Podcast
                 title="Science Quickly"
@@ -155,9 +149,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Science In Action"
@@ -174,9 +167,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Physics World Weekly"
@@ -204,9 +196,8 @@ export default function PodcastsPage() {
           <Title title="Comedy" subtitle="Podcasts" />
           <ul className="space-y-4">
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Friday Night Comedy"
@@ -228,9 +219,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Comedy of The Week"
@@ -251,9 +241,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Conan O&apos;Brien Needs a Friend"
@@ -271,9 +260,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Smartless"
@@ -299,9 +287,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
                               <Podcast
                   title="Working it out"
@@ -325,9 +312,8 @@ export default function PodcastsPage() {
           <Title title="Tech" subtitle="Podcasts" />
           <ul className="space-y-4">
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Soft Skills Engineering"
@@ -343,9 +329,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-orange-500" fill="currentColor" />
-                <span className="text-orange-500 font-bold text-sm mt-1">9/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={9} />
               </div>
               <Podcast
                 title="Hard Fork"
@@ -368,9 +353,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-orange-500" fill="currentColor" />
-                <span className="text-orange-500 font-bold text-sm mt-1">5/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={5} />
               </div>
               <Podcast
                 title="The Changelog"
@@ -394,9 +378,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-orange-500" fill="currentColor" />
-                <span className="text-orange-500 font-bold text-sm mt-1">5/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={5} />
               </div>
               <Podcast
                 title="Ship It!"
@@ -421,9 +404,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-orange-500" fill="currentColor" />
-                <span className="text-orange-500 font-bold text-sm mt-1">5/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={5} />
               </div>
               <Podcast
                 title="Machine Learning Guide"
@@ -444,9 +426,8 @@ export default function PodcastsPage() {
             </li>
 
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-orange-500" fill="currentColor" />
-                <span className="text-orange-500 font-bold text-sm mt-1">5/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={5} />
               </div>
               <Podcast
                 title="Syntax Web Development"
@@ -475,9 +456,8 @@ export default function PodcastsPage() {
           <Title title="Baha'i" subtitle="Podcasts" />
           <ul className="space-y-4">
             <li className="flex items-start space-x-4">
-              <div className="flex-shrink-0 p-4 flex flex-col items-center">
-                <Star size={32} className="text-yellow-500" fill="currentColor" />
-                <span className="text-yellow-500 font-bold text-sm mt-1">10/10</span>
+              <div className="flex-shrink-0 pt-1">
+                <Rating score={10} />
               </div>
               <Podcast
                 title="Baha&apos;i World News Service"
