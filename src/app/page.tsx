@@ -13,27 +13,18 @@ export default function Home() {
       {/* Introduction */}
       <div className="prose prose-slate max-w-prose prose-p:text-[var(--foreground)] prose-a:text-[var(--primary)]">
         <p>
-          I&apos;m a <a href="https://bahai.org" className="underline hover:no-underline">Baha&apos;i</a>. Baha&apos;is work in communities worldwide to build a better society.
+          My interest in AI started at university, where my master&apos;s thesis explored
+          parallel algorithms on GPU architecture — well before the current wave made
+          the field crowded. Today I build practical applications with language models,
+          turning research into tools people actually use.
         </p>
         <p>
-          I&apos;m a senior software engineer at <a href="https://sybill.ai" className="underline hover:no-underline">Sybill</a>, building AI tools for sales teams. Previously at <a href="https://lindy.ai" className="underline hover:no-underline">Lindy</a> and <a href="https://teamflowhq.com" className="underline hover:no-underline">Teamflow</a>.
+          What holds my attention isn&apos;t novelty. Technology matters most when it
+          serves people and helps build a more just and unified world. I try to hold my
+          own work to that standard: to make things that respect the intelligence and
+          dignity of the people who use them.
         </p>
       </div>
-
-      <Divider />
-
-      {/* AI Section */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4 text-[var(--foreground)]">Artificial Intelligence</h2>
-        <div className="prose prose-slate max-w-prose prose-p:text-[var(--foreground)] prose-a:text-[var(--primary)]">
-          <p>
-            I&apos;ve been interested in AI since university. My master&apos;s thesis explored parallel algorithms on GPU architecture. These days I work on practical AI applications with language models.
-          </p>
-          <p>
-            The field evolves quickly. The challenges are interesting, and there&apos;s always more to learn.
-          </p>
-        </div>
-      </section>
 
       {/* Projects Section */}
       {highlightedProjects.length > 0 && (
