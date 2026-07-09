@@ -13,6 +13,12 @@ export default function Home() {
       {/* Introduction */}
       <div className="prose prose-slate max-w-prose prose-p:text-[var(--foreground)] prose-a:text-[var(--primary)]">
         <p>
+          I&apos;m a <a href="https://bahai.org" className="underline hover:no-underline">Baha&apos;i</a>. Baha&apos;is work in communities worldwide to build a better society.
+        </p>
+        <p>
+          I&apos;m a senior software engineer at <a href="https://sybill.ai" className="underline hover:no-underline">Sybill</a>, building an intelligence platform for sales teams. Previously at <a href="https://lindy.ai" className="underline hover:no-underline">Lindy</a> and <a href="https://teamflowhq.com" className="underline hover:no-underline">Teamflow</a>.
+        </p>
+        <p>
           My interest in AI started at university, where my master&apos;s thesis explored
           parallel algorithms on GPU architecture — well before the current wave made
           the field crowded. Today I build practical applications with language models,
