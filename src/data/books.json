@@ -1064,5 +1064,18 @@
     "pagesRead": 0,
     "pageCount": 400,
     "progressPercentage": "0%"
+  },
+  {
+    "isbn": "9781524759780",
+    "title": "Recursion",
+    "author": "Blake Crouch",
+    "year": "2019",
+    "cover": "https://covers.openlibrary.org/b/isbn/9781524759780-L.jpg",
+    "description": "A science-fiction thriller where memory, not time, is the thing that can be rewritten. Just started it — the premise is exactly my kind of hook.",
+    "yearRead": "2026",
+    "readingStatus": "READING",
+    "pagesRead": 0,
+    "pageCount": 336,
+    "progressPercentage": "0%"
   }
 ]
