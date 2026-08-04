@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day trips from the Peninsula — twelve full days, forty-one stops</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#0B1A17; --ink:#142622; --paper:#EEF1EA; --paper-2:#E3E8DE;
+    --fog:#C2CCC4; --kelp:#2F6B58; --lichen:#C3D63F; --tide:#5B93A6;
+    --dim:#6E7C75; --line:rgba(20,38,34,.14);
+    --display:"Bricolage Grotesque","Helvetica Neue",sans-serif;
+    --body:"Newsreader",Georgia,serif;
+    --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--kelp);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  .hero{background:var(--deep);color:var(--paper);padding:64px 0 56px}
+  .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--lichen)}
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,6.4vw,72px);line-height:.94;letter-spacing:-.025em;margin:16px 0 0;max-width:15ch}
+  h1 em{font-style:normal;color:var(--lichen)}
+  .lede{font-size:19px;line-height:1.5;color:var(--fog);max-width:52ch;margin:22px 0 0;font-weight:300}
+  .rules{margin:26px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .rules li{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;border:1px solid rgba(238,241,234,.26);border-radius:100px;padding:6px 12px;color:var(--fog)}
+
+  .sec-head{padding:52px 0 26px}
+  .sec-head h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,42px);letter-spacing:-.025em;margin:10px 0 0;line-height:1}
+  .sec-head p{margin:14px 0 0;max-width:56ch;color:#38473f}
+
+  .days{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:20px}
+  .day{background:#fff;border:1px solid var(--line);border-radius:3px;padding:24px 24px 22px;display:flex;flex-direction:column}
+  .day-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .day-region{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--kelp)}
+  .day-num{font-family:var(--mono);font-size:10.5px;color:var(--dim);letter-spacing:.1em}
+  .day h3{font-family:var(--display);font-weight:600;font-size:26px;letter-spacing:-.022em;line-height:1.08;margin:8px 0 0}
+  .day .sub{margin:10px 0 0;font-size:16.5px;color:#2c3b36;line-height:1.45}
+  .day-stats{display:flex;margin:18px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .day-stats .stat{flex:1;padding:9px 0;border-right:1px solid var(--line)}
+  .day-stats .stat:last-child{border-right:none}
+  .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);display:block}
+  .v{font-family:var(--mono);font-size:15px;font-weight:500;display:block;margin-top:2px}
+  .v.cost{color:var(--kelp)}
+  ol.timeline{list-style:none;margin:20px 0 0;padding:0 0 0 4px;position:relative}
+  ol.timeline::before{content:"";position:absolute;left:53px;top:8px;bottom:10px;width:1px;background:var(--line)}
+  ol.timeline li{display:grid;grid-template-columns:48px 1fr;gap:18px;position:relative;padding-bottom:13px}
+  ol.timeline li .t{font-family:var(--mono);font-size:11.5px;color:var(--dim);padding-top:3px;text-align:right;letter-spacing:-.01em}
+  ol.timeline li .s{font-size:15.5px;line-height:1.42;position:relative;padding-left:14px}
+  ol.timeline li .s::before{content:"";position:absolute;left:-3.5px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--lichen);border:1.5px solid #fff}
+  ol.timeline li.meal .s::before{background:var(--tide)}
+  ol.timeline li .s b{font-family:var(--display);font-weight:600;letter-spacing:-.01em}
+  .fri{display:block;margin:14px 0 0;font-family:var(--mono);font-size:12px;line-height:1.55;padding:10px 12px;border-radius:3px}
+  .fri b{font-weight:500;letter-spacing:.04em;text-transform:uppercase;font-size:10.5px;display:block;margin-bottom:3px}
+  .fri-works{background:rgba(195,214,63,.28);color:#39471f}
+  .fri-check{background:rgba(91,147,166,.18);color:#22434f}
+  .day-foot{margin-top:auto;padding-top:16px}
+  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-right:6px}
+  .watch{border-left:2px solid var(--lichen);padding-left:11px;color:#4a5a55;font-size:14px;line-height:1.45;margin:0}
+
+  .band{background:var(--deep);color:var(--paper);padding:48px 0 44px;margin-top:56px}
+  .band-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .band h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,42px);letter-spacing:-.025em;margin:10px 0 0;line-height:1}
+  .band p{color:var(--fog);font-weight:300;margin:16px 0 0;max-width:44ch}
+  svg.dial{width:100%;height:auto;display:block;overflow:visible;max-width:460px;margin:0 auto}
+  .ring{fill:none;stroke:rgba(238,241,234,.16);stroke-width:1}
+  .ring-lbl{font-family:var(--mono);font-size:9.5px;fill:rgba(238,241,234,.42);letter-spacing:.08em}
+  .card-pt{font-family:var(--mono);font-size:11px;fill:rgba(238,241,234,.5);letter-spacing:.14em}
+  .spoke{stroke:rgba(238,241,234,.1);stroke-width:1}
+  .dot{cursor:pointer;transition:r .15s ease}
+  .dot:hover{r:7}
+  .home{fill:var(--paper)}
+  .readout{min-height:52px;margin-top:16px;font-family:var(--mono);font-size:12px;color:var(--fog);line-height:1.5}
+  .readout b{font-family:var(--display);font-weight:600;font-size:16px;color:var(--paper);letter-spacing:-.01em;display:block;margin-bottom:2px}
+  .legend{display:flex;gap:16px;margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--fog);flex-wrap:wrap}
+  .legend span{display:flex;align-items:center;gap:6px}
+  .swatch{width:9px;height:9px;border-radius:50%;display:inline-block}
+
+  .controls{position:sticky;top:0;z-index:20;background:var(--paper-2);border-bottom:1px solid var(--line);padding:16px 0 14px}
+  .ctrl-row{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end}
+  .ctrl-group{display:flex;flex-direction:column;gap:7px}
+  .ctrl-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-family:var(--mono);font-size:12px;background:transparent;border:1px solid var(--line);color:var(--ink);padding:6px 11px;border-radius:100px;cursor:pointer;transition:background .12s,border-color .12s,color .12s}
+  .chip:hover{border-color:var(--kelp)}
+  .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  select,input[type=number]{font-family:var(--mono);font-size:13px;padding:7px 9px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink)}
+  .count{font-family:var(--mono);font-size:12px;color:var(--dim);margin-left:auto;padding-bottom:8px;white-space:nowrap}
+  .reset{background:none;border:none;font-family:var(--mono);font-size:12px;color:var(--kelp);cursor:pointer;text-decoration:underline;padding:0}
+
+  main{padding:32px 0 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:3px;padding:22px 22px 20px;display:flex;flex-direction:column}
+  .card.flash{box-shadow:0 0 0 3px var(--lichen)}
+  .card-region{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--kelp)}
+  .card h3{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-.02em;line-height:1.1;margin:8px 0 0}
+  .stats{display:flex;margin:16px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats .stat{flex:1;padding:9px 0;border-right:1px solid var(--line)}
+  .stats .stat:last-child{border-right:none}
+  .blurb{margin:16px 0 0;font-size:16.5px;line-height:1.5}
+  .do-label{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin:18px 0 8px}
+  ul.do{margin:0;padding:0;list-style:none;font-size:15.5px;line-height:1.45}
+  ul.do li{padding-left:16px;position:relative;margin-bottom:7px;color:#22322e}
+  ul.do li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1.5px;background:var(--kelp)}
+  .meta{margin-top:auto;padding-top:16px}
+  .meta p{margin:0 0 7px;font-size:14.5px;line-height:1.45;color:#374a45}
+  .note{border-left:2px solid var(--lichen);padding-left:11px;margin-top:12px!important;color:#4a5a55!important;font-size:14px!important}
+
+  footer{background:var(--deep);color:var(--fog);margin-top:56px;padding:44px 0 52px;font-size:15.5px}
+  footer h2{font-family:var(--display);font-weight:600;font-size:22px;color:var(--paper);margin:0 0 14px;letter-spacing:-.01em}
+  .foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+  footer p{margin:0 0 10px;line-height:1.5;font-weight:300}
+  footer .mono{font-family:var(--mono);font-size:12.5px;line-height:1.7}
+  .empty{padding:60px 0;text-align:center;font-family:var(--mono);font-size:14px;color:var(--dim)}
+
+  @media (max-width:880px){
+    .band-grid{grid-template-columns:1fr;gap:28px}
+    .count{margin-left:0;padding-bottom:0}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    .hero{padding:38px 0 34px}
+    .grid,.days{grid-template-columns:1fr}
+    ol.timeline::before{left:45px}
+    ol.timeline li{grid-template-columns:40px 1fr;gap:14px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Ramdhanie family · five people · Friday, 7 August 2026</div>
+    <h1>Twelve <em>whole days</em>, planned end to end.</h1>
+    <p class="lede">Each one is a real morning, a real lunch and a real afternoon — timed so the free windows line up and nothing is shut when you get there. Every day is marked for whether it holds up this Friday. Underneath, forty-one individual stops if you'd rather build your own.</p>
+    <ul class="rules">
+      <li>Leave after breakfast, home before dinner</li>
+      <li>Under 2 hrs each way</li>
+      <li>Walkable once you park</li>
+      <li>Costed for five in one car</li>
+      <li>Alcohol-free by design</li>
+    </ul>
+  </div>
+</header>
+
+<div class="wrap sec-head">
+  <div class="eyebrow" style="color:var(--kelp)">Pick one and go</div>
+  <h2>The full days</h2>
+  <p>Costs are per person with all five of you in one car, including gas, tolls, parking, admission and a mid-range lunch. Change the assumptions in the controls further down and these recalculate too. The first three are the ones worth arguing over.</p>
+</div>
+
+<div class="wrap"><div class="days" id="days"></div></div>
+
+<section class="band">
+  <div class="wrap band-grid">
+    <div>
+      <div class="eyebrow">Or assemble your own</div>
+      <h2>Forty-one stops,<br>plotted by direction<br>and drive time.</h2>
+      <p>Each ring is thirty minutes further from the Peninsula. Hover a dot for the estimate; tap it to jump to the full entry below.</p>
+      <div class="readout" id="readout">Hover a dot to see the destination.</div>
+      <div class="legend">
+        <span><i class="swatch" style="background:#C3D63F"></i> nature-forward</span>
+        <span><i class="swatch" style="background:#5B93A6"></i> art, museums &amp; towns</span>
+        <span><i class="swatch" style="background:#EEF1EA"></i> you are here</span>
+      </div>
+    </div>
+    <div>
+      <svg class="dial" viewBox="-30 -30 660 660" role="img" aria-label="Radial chart plotting each destination by compass direction and driving time from the mid-Peninsula.">
+        <g id="rings"></g><g id="spokes"></g><g id="dots"></g>
+        <circle class="home" cx="300" cy="300" r="4.5"></circle>
+        <text class="card-pt" x="300" y="-6" text-anchor="middle">N</text>
+        <text class="card-pt" x="612" y="304" text-anchor="middle">E</text>
+        <text class="card-pt" x="300" y="616" text-anchor="middle">S</text>
+        <text class="card-pt" x="-12" y="304" text-anchor="middle">W</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="controls">
+  <div class="wrap ctrl-row">
+    <div class="ctrl-group"><span class="ctrl-label">Direction</span><div class="chips" id="regionChips"></div></div>
+    <div class="ctrl-group"><span class="ctrl-label">What's there</span><div class="chips" id="tagChips"></div></div>
+    <div class="ctrl-group">
+      <label class="ctrl-label" for="maxMins">Max drive</label>
+      <select id="maxMins">
+        <option value="999">Any</option><option value="45">45 min or less</option>
+        <option value="60">1 hour or less</option><option value="80">80 min or less</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <label class="ctrl-label" for="people">People per car</label>
+      <input type="number" id="people" value="5" min="1" max="8" style="width:72px">
+    </div>
+    <div class="ctrl-group">
+      <label class="ctrl-label" for="lunch">Lunch budget</label>
+      <select id="lunch">
+        <option value="12">$12 · packed / bakery</option>
+        <option value="18" selected>$18 · taqueria, deli</option>
+        <option value="30">$30 · sit-down</option>
+      </select>
+    </div>
+    <div class="count"><span id="count"></span> · <button class="reset" id="reset">reset</button></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>Nothing matches those filters. Loosen one.</div>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <h2>How the cost is worked out</h2>
+      <p class="mono">
+        gas &nbsp;= round-trip miles × $0.19<br>
+        + tolls and parking, per car<br>
+        ÷ people in the car<br>
+        + admission per person<br>
+        + your lunch budget
+      </p>
+      <p style="margin-top:14px">Planning estimates, not quotes. Admission prices drift, so confirm before you commit a group.</p>
+    </div>
+    <div>
+      <h2>A few practical notes</h2>
+      <p><strong>Tolls run homeward.</strong> Golden Gate, Bay, San Mateo and Dumbarton all charge in one direction only, and it's the one that brings you back. Roughly $7 for the East Bay, $9–11 for Marin.</p>
+      <p><strong>Call ahead on the small ones.</strong> Lick Observatory, the Nike Missile Site, Point Bonita, the Bay Model, di Rosa and Hakone all keep limited days. Muir Woods, Big Basin and Año Nuevo need reservations.</p>
+      <p><strong>Napa is here without the wine.</strong> It appears for its sculpture park, public market and river walk. Every lunch suggestion on this page works fine without a drinks order.</p>
+    </div>
+    <div>
+      <h2>The days that cost almost nothing</h2>
+      <p class="mono">
+        The Presidio land-art hunt<br>
+        The Headlands, free all day<br>
+        The seashore, all free<br>
+        Golden Gate Park free windows<br>
+        Low tide, then bluffs
+      </p>
+      <p style="margin-top:14px">All five run on gas, a toll and lunch. Nothing else to pay for.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const GAS_PER_MILE = 0.19;
+
+const DAYS = [
+{t:"Old growth at opening, harbour by noon",r:"Marin",miles:45,toll:19,adm:15,drive:"65 min",
+ sub:"Book the first Muir Woods slot of the day and you get the grove nearly to yourself. By the time the crowds arrive you're over the hill eating lunch.",
+ stops:[
+  ["7:00","Leave. It's the earliest start on this list and it's the whole trick."],
+  ["8:15","<b>Muir Woods.</b> Main boardwalk loop and Cathedral Grove first, then the Hillside Trail back for the quiet parallel route."],
+  ["10:30","<b>Muir Beach Overlook.</b> A WWII gun battery on a spur, with the coast running away in both directions."],
+  ["12:15","<b>Lunch on Caledonia Street</b>, Sausalito — a block inland from the waterfront and half the price.","meal"],
+  ["13:30","<b>The Bay Model.</b> A 1.5-acre working hydraulic model of the Bay and Delta. Free, and the rangers are the reason to go."],
+  ["15:00","<b>Bridgeway and the floating homes</b> at Issaquah Dock, then home ahead of the bridge traffic."]
+ ],
+ watch:"Muir Woods parking must be reserved and weekends sell out. The Bay Model closes Sunday and Monday — so this is a Tuesday-to-Saturday day."},
+
+{t:"The Headlands, free all day",r:"Marin",miles:42,toll:9,adm:0,drive:"55 min",
+ sub:"Cold War missile silos, a lighthouse on a sea stack, and the bridge view everyone knows — all on federal land that costs nothing to enter.",
+ stops:[
+  ["9:00","Leave. Cross the bridge before the tour buses do."],
+  ["9:50","<b>Battery Spencer</b> for the bridge view, ten minutes, then over the hill."],
+  ["10:30","<b>Nike Missile Site SF-88.</b> The only restored one in the country, guided by veterans who worked the site."],
+  ["12:00","<b>Point Bonita Lighthouse</b>, out across its little suspension bridge."],
+  ["13:00","<b>Picnic at Rodeo Beach.</b> The gravel is red and green chert. Nothing to buy out here — bring it.","meal"],
+  ["14:15","<b>The Marine Mammal Center</b>, free, above the lagoon."],
+  ["15:30","Optional: drop into Sausalito on the way out, or just go home."]
+ ],
+ watch:"Both the Nike site and Point Bonita run limited days — the reliable overlap has been Thursday to Saturday. Confirm both before committing; the day is much thinner without them."},
+
+{t:"Low tide, then bluffs",r:"Coastside",miles:30,toll:0,adm:0,drive:"40 min",
+ sub:"The cheapest good day here, and the least driving. It hinges entirely on the tide table, so check that before you pick the date.",
+ stops:[
+  ["8:30","Leave, timed to reach the reef within an hour of low tide."],
+  ["9:15","<b>Fitzgerald Marine Reserve.</b> Anemones, chitons, hermit crabs, sometimes an octopus. Free parking."],
+  ["11:00","<b>Moss Beach bluff trail</b> south along the headland, with harbour seals hauled out below."],
+  ["12:30","<b>Lunch on Main Street, Half Moon Bay.</b> Taquerias and bakeries, $12–18, free street parking.","meal"],
+  ["14:00","<b>Coastside Trail</b>, Poplar Beach to Miramar. Paved, flat, ocean the whole way."],
+  ["15:30","<b>Pillar Point Harbour</b> — fishing boats, and the trail out toward the Mavericks overlook."]
+ ],
+ watch:"You need a tide under about 1.0 ft for the pools to be exposed. Without it there's nothing to see and the morning falls apart."},
+
+{t:"Lighthouse, marsh and goats",r:"Coastside",miles:42,toll:0,adm:15,drive:"60 min",
+ sub:"The south coast at its emptiest — a farm town of one street, the tallest lighthouse on the West Coast, and sandstone the sea has eaten into honeycomb.",
+ stops:[
+  ["9:00","Leave over Highway 84, down through La Honda."],
+  ["10:15","<b>Pigeon Point Light Station.</b> The grounds are free and the bluff is the point; the tower has been closed for restoration."],
+  ["11:15","<b>Bean Hollow and Pebble Beach</b> for the tafoni — honeycombed sandstone right by the road."],
+  ["12:30","<b>Pescadero.</b> Arcangeli Grocery for the artichoke-garlic bread, then lunch on the same street.","meal"],
+  ["14:00","<b>Harley Farms goat dairy</b> — weekend tours, reserved well ahead."],
+  ["15:30","<b>Pescadero Marsh</b> boardwalk for the birds on the way out."]
+ ],
+ watch:"Harley Farms tours book out and are the reason to time the day this way. Without one, swap in Año Nuevo fifteen minutes south and save the $15."},
+
+{t:"The 17-Mile Drive, done properly",r:"Monterey",miles:80,toll:12,adm:5,drive:"1 hr 45",
+ sub:"Seventeen numbered pullouts along a private coast road, then a Victorian town for lunch. A long drive, so leave early and take the whole thing at walking pace.",
+ stops:[
+  ["7:30","Leave. Aim to be at the gate by nine-thirty, before the tour buses."],
+  ["9:30","<b>Enter at the Pacific Grove gate.</b> $12.25 a car; cyclists and walkers go free."],
+  ["9:45","<b>Spanish Bay boardwalk, Point Joe, Bird Rock.</b> Seals, sea lions and, with luck, otters in the kelp."],
+  ["11:00","<b>Fanshell Overlook, Cypress Point, the Lone Cypress.</b> Crocker Grove has the oldest trees and the fewest people."],
+  ["12:30","<b>Lunch on Lighthouse Avenue</b>, Pacific Grove — cheaper and better than anything inside the gates.","meal"],
+  ["14:00","<b>Point Pinos Lighthouse</b>, $5, the oldest continuously operating one on the West Coast."],
+  ["15:00","<b>Asilomar dune boardwalk</b>, then home."]
+ ],
+ watch:"The Drive is closed to general traffic 13–16 August 2026 for the Concours d'Elegance. Gates run sunrise to sunset; motorcycles aren't allowed. The fee is refunded against a $35 spend at a Pebble Beach restaurant, which is rarely worth chasing."},
+
+{t:"Galleries and the reserve",r:"Monterey",miles:85,toll:10,adm:0,drive:"1 hr 50",
+ sub:"Point Lobos in the morning while there's still parking, then roughly forty galleries in a square mile of Carmel — all free to walk into.",
+ stops:[
+  ["7:30","Leave early. Point Lobos fills by ten on weekends."],
+  ["9:30","<b>Point Lobos State Reserve.</b> Cypress Grove and Bird Island loops — short, level, and the best coastline in the state."],
+  ["12:15","<b>Lunch in Carmel</b> — the bakeries and delis, or buy in town and eat at the Point Lobos tables.","meal"],
+  ["13:30","<b>Gallery walk on Dolores and Sixth.</b> Most open eleven to five, and nobody pressures you to buy."],
+  ["15:00","<b>Scenic Road</b> bluff path above Carmel Beach, then home."]
+ ],
+ watch:"Point Lobos is $10 a car and the lot is small — reserve a slot, or park along Highway 1 and walk in for nothing."},
+
+{t:"Napa without the wine",r:"North Bay",miles:70,toll:8,adm:22,drive:"1 hr 25",
+ sub:"217 acres of sculpture meadow and galleries in the Carneros hills, a public market for lunch, and a river walk through town. The valley entirely on its own terms.",
+ stops:[
+  ["8:30","Leave north through Marin, or over the Benicia bridge if 101 is bad."],
+  ["10:00","<b>di Rosa Center for Contemporary Art.</b> Two galleries and a sculpture meadow across a 217-acre ranch with a 35-acre lake."],
+  ["12:30","<b>Oxbow Public Market</b>, downtown Napa. Two dozen stalls, easy for a group that wants different things.","meal"],
+  ["13:45","<b>Napa Riverfront and the Vine Trail</b> — flat, paved, straight through the middle of town."],
+  ["15:00","Optional: <b>Old Faithful Geyser</b> or the <b>Petrified Forest</b> near Calistoga, half an hour further north."]
+ ],
+ watch:"di Rosa has been Friday-to-Sunday only, around $20–25 for adults and free for under-17s. Check the day before you drive; it's the anchor of the whole trip."},
+
+{t:"The seashore, all free",r:"Marin",miles:60,toll:9,adm:0,drive:"1 hr 40",
+ sub:"The longest drive on the list, with no admission anywhere in it. A cypress tunnel, 308 steps down to a lighthouse, and the best bakery in Marin.",
+ stops:[
+  ["7:30","Leave. This one genuinely needs the early start."],
+  ["9:15","<b>Cypress Tree Tunnel</b>, five minutes off the road and free."],
+  ["9:45","<b>Point Reyes Lighthouse.</b> 308 stairs down and the same back up. Open Friday to Monday."],
+  ["12:30","<b>Point Reyes Station.</b> Bovine Bakery and Cowgirl Creamery, eaten on the shore of Tomales Bay.","meal"],
+  ["14:00","<b>Earthquake Trail</b> at Bear Valley — the fence the 1906 quake displaced by sixteen feet."],
+  ["15:00","Head home. Or Chimney Rock for elephant seals instead, December to March."]
+ ],
+ watch:"Two hours to the lighthouse itself, so this is a genuine full day. The stairs close in high wind — there's plenty else if they do."},
+
+{t:"Muir's house and a glass town",r:"East Bay",miles:50,toll:7,adm:3,drive:"1 hr",
+ sub:"The Victorian where Muir wrote most of what he published, then an old arsenal town that turned itself into a glassblowing district.",
+ stops:[
+  ["9:15","Leave over the Dumbarton or San Mateo bridge — no toll heading east."],
+  ["10:15","<b>John Muir National Historic Site.</b> Seventeen rooms, the orchards, and the 'scribble den' left as he had it. Free."],
+  ["11:30","<b>Mt. Wanda</b> trail on the hill behind the house, named for his daughter."],
+  ["12:30","<b>Lunch on Main Street, Martinez</b>, or picnic in the site's own orchard.","meal"],
+  ["14:00","<b>Benicia.</b> Old State Capitol State Historic Park, $3, restored to its 1853 fit-out."],
+  ["15:00","<b>First Street to the pier</b>, then the Arsenal artist studios — glass, ceramics and metal."]
+ ],
+ watch:"The Muir site closes Mondays and Tuesdays. The Arsenal studios keep irregular hours; time the trip to an open-studio weekend if you can."},
+
+{t:"Little Yosemite, then silent films",r:"South Bay",miles:35,toll:5,adm:13,drive:"50 min",
+ sub:"A basalt gorge where the creek drops through boulders, and a town where Chaplin actually worked — twenty minutes apart, both usually empty.",
+ stops:[
+  ["8:45","Leave early; the Sunol hills are shadeless by midday."],
+  ["9:30","<b>Sunol Regional Wilderness.</b> Canyon View and Indian Joe Creek out to Little Yosemite — three miles, mostly flat."],
+  ["12:15","<b>Lunch on Niles Boulevard</b>, or Fremont's Afghan and South Indian restaurants ten minutes on.","meal"],
+  ["13:30","<b>Niles Essanay Silent Film Museum</b> and the antique shops along the same block."],
+  ["15:00","<b>Mission San José</b>, in place since 1797, and its museum."]
+ ],
+ watch:"The Essanay museum runs Saturday screenings and limited hours otherwise. Sunol is best March to May; October brings tarantulas, which is stranger and better than it sounds."},
+
+{t:"Golden Gate Park, on the free windows",r:"San Francisco",miles:35,toll:0,adm:0,drive:"45 min",
+ sub:"Three of the park's paid attractions are free at particular hours. Line them up and a thousand-acre day costs you gas, parking and lunch.",
+ stops:[
+  ["7:30","Leave, and park near 9th and Lincoln on the south side."],
+  ["8:15","<b>San Francisco Botanical Garden</b>, in the early-morning window before the gates start charging."],
+  ["9:15","<b>Japanese Tea Garden</b>, free before 10 a.m. on Monday, Wednesday and Friday. Go straight there."],
+  ["10:30","<b>de Young Museum.</b> The Hamon Tower observation deck at the top is free to anyone who walks in."],
+  ["12:15","<b>Lunch on Irving Street</b>, Inner Sunset — dumplings, Burmese, banh mi, all under $16.","meal"],
+  ["13:45","<b>Stow Lake and Strawberry Hill</b>, then the bison paddock and the windmills at the ocean end."]
+ ],
+ watch:"The free windows only line up on Monday, Wednesday and Friday, and they open early. Any other day this becomes a $30-a-head trip."},
+
+{t:"The Presidio land-art hunt",r:"San Francisco",miles:38,toll:0,adm:0,drive:"50 min",
+ sub:"Four Andy Goldsworthy works hidden across the forest, a park built on the roof of the freeway tunnels, and a fort under the bridge. Every stop is free.",
+ stops:[
+  ["9:15","Leave. Park on the Main Post — free outside peak hours."],
+  ["10:00","<b>Wood Line</b>, a sinuous eucalyptus trunk laid through the grove, and <b>Tree Fall</b> in the old powder magazine."],
+  ["11:00","<b>Spire</b>, thirty cypress trunks standing in the replanted forest, and <b>Earth Wall</b> in a courtyard nearby."],
+  ["12:00","<b>Presidio Tunnel Tops</b> — the bridge, the bay and the city all in one view."],
+  ["12:45","<b>Lunch at the Tunnel Tops food trucks</b> on weekends, or Chestnut Street five minutes east.","meal"],
+  ["14:15","<b>Fort Point</b>, directly under the bridge, Friday to Sunday. Then <b>Lands End</b> and the Sutro Baths ruins if there's daylight."]
+ ],
+ watch:"Fort Point is Friday to Sunday only. The Goldsworthy pieces are unsigned and scattered — pull up a map before you lose signal in the trees."}
+];
+
+const DATA = [
+{n:"Purisima Creek Redwoods",r:"Peninsula",dir:265,mins:35,miles:22,toll:0,adm:0,tags:["nature"],
+ b:"Second-growth redwoods on the ocean side of Skyline, free, ten minutes off the ridge road, and almost never crowded.",
+ d:["Purisima Creek Trail from the north lot — creek, ferns, canopy, mostly shaded","Redwood Trail: a short, level, wheelchair-accessible loop off Skyline","Whittemore Gulch for a longer climb with ocean views on clear days","Pair it with a Skyline drive to Alice's Restaurant at the 84 junction"],
+ l:"Pack it. Alice's at the crossroads does big sandwiches; Half Moon Bay is 20 minutes down the hill.",
+ note:"Completely free — no entry, no parking fee. The best value redwoods within an hour."},
+
+{n:"Half Moon Bay & Pillar Point Harbour",r:"Coastside",dir:270,mins:40,miles:30,toll:0,adm:0,tags:["coast","nature","town"],
+ b:"Six miles of flat bluff-top trail, a working fishing harbour, and a Main Street you can walk end to end in twenty minutes.",
+ d:["Coastside Trail between Poplar Beach and Miramar — paved, level, ocean the entire way","Pillar Point Harbour: fishing boats, tidepools at the west end, and the trail toward the Mavericks overlook","Main Street — bookshop, bakeries, a couple of galleries","The Ritz bluff trail off Miramontes Point Road for the best cliff views (public access)"],
+ l:"Taquerias and bakeries on Main Street, $12–18. The harbour seafood shacks are faster and cheaper than the sit-down rooms.",
+ note:"State beach lots charge $10; Main Street parking is free."},
+
+{n:"Fitzgerald Marine Reserve, Moss Beach",r:"Coastside",dir:275,mins:40,miles:27,toll:0,adm:0,tags:["coast","nature"],
+ b:"One of the best tidepool reefs in California, plus a cypress bluff walk and a harbour seal haul-out you look down on.",
+ d:["Tidepools at low tide — anemones, chitons, hermit crabs, the occasional octopus","Cypress bluff trail south along the headland","Harbour seals below the bluff, especially during spring pupping","Walk north to Montara State Beach if the tide comes in"],
+ l:"A couple of cafés in Moss Beach; Half Moon Bay is ten minutes south with more choice.",
+ note:"Check a tide chart first — aim for a tide under 1.0 ft or there are no pools. Free parking."},
+
+{n:"Devil's Slide & Mori Point, Pacifica",r:"Coastside",dir:290,mins:40,miles:30,toll:0,adm:0,tags:["coast","nature"],
+ b:"A condemned stretch of old Highway 1, now a 1.3-mile paved cliff walk four hundred feet above the surf.",
+ d:["Devil's Slide Trail — park at either end, walk it out and back, benches the whole way","Mori Point loop: a short steep climb to a headland over Rockaway Beach","Pacifica Pier for pelicans and fishermen","Gray whale spotting from the overlooks, December through April"],
+ l:"Pacifica's taquerias and diners; Rockaway Beach has a small cluster of places.",
+ note:"Free parking at both trailheads. Windy year-round — bring a layer even in July."},
+
+{n:"Pescadero & Pigeon Point",r:"Coastside",dir:250,mins:60,miles:42,toll:0,adm:0,tags:["coast","nature","town"],
+ b:"A one-street farm town between marsh and ocean, with the tallest lighthouse on the West Coast five miles down the road.",
+ d:["Pigeon Point Light Station bluff — the grounds are free and the view is the point","Pescadero Marsh Natural Preserve, good birding on the boardwalk","Bean Hollow and Pebble Beach for tafoni — honeycombed sandstone formations","Harley Farms goat dairy, weekend tours by reservation","Arcangeli Grocery for the artichoke-garlic bread"],
+ l:"Arcangeli's deli plus a bluff picnic is the cheap and genuinely good option. Duarte's is the local institution.",
+ note:"Tower access has been closed for restoration for some time — check before promising anyone a climb."},
+
+{n:"Año Nuevo State Park",r:"Coastside",dir:238,mins:70,miles:52,toll:10,adm:7,tags:["nature","coast"],
+ b:"Thousands of northern elephant seals on a dune-backed beach. The walk out and back is about three miles of soft sand.",
+ d:["Guided seal walks, mid-December through March — the breeding season, and the reason to go","Self-guided permits April through August for the moulting season","Cove Beach and the bluff trail with Año Nuevo Island offshore","The old dairy barn visitor centre near the parking lot"],
+ l:"Nothing at the park. Pack a picnic, or eat in Pescadero fifteen minutes north.",
+ note:"$10 parking plus $7 a head for guided walks, which sell out weeks ahead in winter."},
+
+{n:"Davenport & Wilder Ranch",r:"Coastside",dir:215,mins:70,miles:60,toll:10,adm:0,tags:["coast","nature","history"],
+ b:"An 1890s dairy ranch preserved whole as a state park, and a cliff-top whale-watching village with one very good bakery.",
+ d:["Wilder Ranch historic complex — house, barns, and a machine shop still run by water power","Ohlone Bluff Trail from Wilder: flat, cliff-edge, pocket beaches the whole way","Shark Fin Cove, a two-minute walk from a Highway 1 pullout","Davenport bluff for gray whales, December to April"],
+ l:"Whale City Bakery in Davenport — sandwiches and pie, cheap, and the only real option out there.",
+ note:"$10 state park parking at Wilder; the Highway 1 pullouts are free."},
+
+{n:"Santa Cruz West Side",r:"Santa Cruz",dir:200,mins:55,miles:45,toll:10,adm:0,tags:["coast","nature","town"],
+ b:"Three miles of cliff-top path, a monarch grove, and a marine lab with a blue whale skeleton parked out front.",
+ d:["West Cliff Drive from the lighthouse to Natural Bridges — paved, flat, surfers below","Santa Cruz Surfing Museum inside the lighthouse (donation)","Natural Bridges State Beach and its monarch grove, October to January","Seymour Marine Discovery Center at Long Marine Lab (~$12)"],
+ l:"Westside taquerias and the Swift Street courtyard. Boardwalk food if the group wants the classic version.",
+ note:"$10 parking at Natural Bridges; free street parking along West Cliff if you arrive before eleven."},
+
+{n:"Capitola Village",r:"Santa Cruz",dir:195,mins:65,miles:55,toll:6,adm:0,tags:["coast","town"],
+ b:"Pastel Venetian-court cottages stacked at a river mouth. A fifteen-minute town you can happily spend three hours in.",
+ d:["Venetian Court — the painted 1920s beach cottages everyone photographs","Capitola Wharf and the beach","Soquel Creek footbridge and the village loop","Depot Hill bluff walk above the village for the overview"],
+ l:"Gayle's Bakery, ten minutes away in the same town, is worth the queue.",
+ note:"Village parking is metered around $2/hr; free lots up the hill on Bay Avenue."},
+
+{n:"Big Basin Redwoods",r:"Santa Cruz",dir:200,mins:75,miles:45,toll:8,adm:0,tags:["nature","history"],
+ b:"California's oldest state park, still rebuilding after the 2020 fire. The ancient trees survived; the regrowth is now the story.",
+ d:["Redwood Loop Trail through the old growth around the former headquarters","Sempervirens Falls if the creek is running","Interpretive signage on fire ecology — genuinely interesting, not filler","The drive in on Highway 236 is half the experience"],
+ l:"Pack it. Boulder Creek has a bakery and a couple of cafés on the way out.",
+ note:"Parking is $6 plus a $2 reservation fee, booked by 6 a.m.; $10 if you gamble on a first-come spot. Narrow, winding roads."},
+
+{n:"Moss Landing & Elkhorn Slough",r:"Monterey",dir:168,mins:80,miles:70,toll:0,adm:5,tags:["nature","coast"],
+ b:"The densest concentration of sea otters in California, and you can see them from a free parking lot.",
+ d:["Jetty Road: otters, harbour seals, sea lions and shorebirds within a few hundred metres","Elkhorn Slough Reserve trails and visitor centre ($5)","Moss Landing's antique shops, all on one block","Zmudowski and Salinas River state beaches for long empty sand"],
+ l:"Phil's Fish Market — enormous portions, long queue, worth it.",
+ note:"Kayak and pontoon tours run $40–60 if the group wants to get close; the free jetty walk already gets you plenty of otters."},
+
+{n:"17-Mile Drive & Pebble Beach",r:"Monterey",dir:172,mins:105,miles:80,toll:12,adm:0,tags:["coast","nature"],
+ b:"Seventeen numbered pullouts along a private coast road through cypress forest, white sand and open Pacific. You pay per car, not per person.",
+ d:["Spanish Bay boardwalk and Point Joe, where the currents collide at the Restless Sea","Bird Rock and Seal Rock — cormorants, sea lions, often otters in the kelp","Fanshell Overlook, closed each spring while harbour seals pup","Crocker Grove, the oldest and least visited cypresses on the route","The Lone Cypress, and the Ghost Trees at Pescadero Point"],
+ l:"Nothing cheap inside the gates. Exit at the Pacific Grove gate and eat on Lighthouse Avenue.",
+ note:"$12.25 per vehicle, sunrise to sunset; cyclists and walkers enter free, motorcycles not at all. Closed to general traffic 13–16 August 2026 for the Concours d'Elegance."},
+
+{n:"Pacific Grove & Monterey",r:"Monterey",dir:165,mins:100,miles:80,toll:0,adm:5,tags:["coast","town","history"],
+ b:"A Victorian town wrapped in a waterfront recreation trail, next door to Cannery Row.",
+ d:["The Recreation Trail — paved, flat, running the whole Monterey-to-Pacific Grove shoreline","Point Pinos Lighthouse ($5), the oldest continuously operating one on the West Coast","Asilomar dune boardwalk at sunset","Monarch Sanctuary, November to February, free","Cannery Row and Old Fisherman's Wharf for the tourist half-hour"],
+ l:"Lighthouse Avenue in Pacific Grove — cheaper and better than anything on Cannery Row.",
+ note:"The Pacific Grove gate to the 17-Mile Drive is five minutes away, which makes these two an easy single day."},
+
+{n:"Carmel & Point Lobos",r:"Monterey",dir:172,mins:110,miles:85,toll:10,adm:0,tags:["art","coast","nature"],
+ b:"Roughly forty art galleries in a square mile, and the most photographed coastline in the state, ten minutes apart.",
+ d:["Gallery walk around Dolores and Sixth — free, most open 11 to 5, no pressure to buy","Scenic Road bluff path above Carmel Beach","Point Lobos State Reserve: Cypress Grove and Bird Island loops","Carmel Mission Basilica ($13), the burial place of Junípero Serra"],
+ l:"Carmel bakeries and delis, or picnic tables at Point Lobos with something bought in town.",
+ note:"Point Lobos is $10 a car and fills by ten on weekends — reserve, or park along Highway 1 and walk in free."},
+
+{n:"San Juan Bautista",r:"Monterey",dir:148,mins:80,miles:65,toll:0,adm:3,tags:["history","town"],
+ b:"A Spanish mission plaza nobody ever built a modern main street over, sitting directly on the San Andreas Fault.",
+ d:["Mission San Juan Bautista, in continuous use since 1797 (donation)","State Historic Park plaza buildings — hotel, stable, adobe, blacksmith ($3)","The fault scarp walk behind the plaza; the drop-off is the fault itself","Third Street antique shops and the old Plaza Hall"],
+ l:"Family-run Mexican restaurants along Third Street, $12–16 and consistently good.",
+ note:"Vertigo was shot here, but the bell tower was a matte painting — the mission never had one."},
+
+{n:"Saratoga: Hakone & Montalvo",r:"South Bay",dir:158,mins:35,miles:22,toll:5,adm:12,tags:["nature","art"],
+ b:"A 1917 Japanese hill-and-pond garden built by a woman who studied the imperial gardens in Kyoto, plus an arts centre in a Mediterranean villa up the road.",
+ d:["Hakone Estate and Gardens — koi pond, tea house, bamboo park, moon-viewing house","Montalvo Arts Center: free galleries, outdoor sculpture, and hillside trails","Saratoga village — a short, pretty, walkable main street","Sanborn County Park redwoods, five minutes further up the hill"],
+ l:"Saratoga village, or pack a picnic for the Montalvo lawn, which is designed for exactly that.",
+ note:"Hakone closes some weekdays and Montalvo's galleries run Thursday to Sunday. Check both."},
+
+{n:"Los Gatos & Vasona",r:"South Bay",dir:162,mins:35,miles:25,toll:6,adm:0,tags:["town","nature","art"],
+ b:"A creekside downtown with a small contemporary art museum, at the end of a paved trail from a lake park.",
+ d:["Santa Cruz Avenue — bookshop, galleries, and a walkable few blocks","NUMU, the New Museum Los Gatos (~$10), small but consistently good","Los Gatos Creek Trail down to Vasona Lake, flat and shaded","Oak Meadow Park and the Billy Jones miniature railroad ($4)"],
+ l:"Downtown covers everything; the taqueria and the bakery are the value picks.",
+ note:"$6 parking at Vasona; downtown street parking is free with time limits."},
+
+{n:"Fremont: Mission, Niles & Coyote Hills",r:"South Bay",dir:75,mins:40,miles:25,toll:5,adm:13,tags:["history","nature","art"],
+ b:"A 1797 mission, a silent-film town where Chaplin worked, and a marsh full of Ohlone shellmounds — all within six miles of each other.",
+ d:["Mission San José and its museum ($5)","Niles district: antique shops and the Essanay Silent Film Museum, with Saturday screenings","Coyote Hills boardwalk over the marsh, plus docent-led shellmound tours","Ardenwood Historic Farm, still worked with horse-drawn equipment"],
+ l:"Niles Boulevard cafés, or Fremont's Afghan and South Indian restaurants — among the best in the Bay Area and cheap.",
+ note:"The shellmound tours are weekends only and worth planning the day around."},
+
+{n:"Mount Hamilton & Lick Observatory",r:"South Bay",dir:120,mins:80,miles:45,toll:0,adm:0,tags:["science","nature"],
+ b:"A 19th-century mountaintop observatory with a 36-inch refractor you can stand underneath, at the end of 365 curves.",
+ d:["The visitor gallery and the Great Refractor dome — free","The 120-inch Shane telescope viewing gallery","Summit views to the Sierra crest on clear winter days","Joseph D. Grant County Park on the way up, for the walk and the picnic tables"],
+ l:"Nothing at all on the mountain. Pack lunch; the Grant Ranch tables are the best stop.",
+ note:"Typically Thursday to Sunday afternoons — confirm hours before driving. The road is slow, narrow and hard on anyone prone to carsickness."},
+
+{n:"Sunol Regional Wilderness",r:"South Bay",dir:88,mins:50,miles:35,toll:5,adm:0,tags:["nature"],
+ b:"'Little Yosemite' — a basalt gorge where Alameda Creek drops through a jumble of boulders. Three miles round trip, mostly flat.",
+ d:["Canyon View and Indian Joe Creek loop out to Little Yosemite","The small natural history exhibit at the visitor centre","Wildflowers March to May, when the hills are still green","Tarantula season in October, which is stranger and better than it sounds"],
+ l:"Pack it — the creekside rocks are the whole point. Niles or Pleasanton on the way home.",
+ note:"$5 parking. Hot and shadeless in summer; go before noon, or save it for spring."},
+
+{n:"Oakland: Lake Merritt & OMCA",r:"East Bay",dir:20,mins:45,miles:35,toll:7,adm:20,tags:["art","nature","town"],
+ b:"A 3.4-mile loop around a tidal lagoon, and a museum that treats California itself as its subject.",
+ d:["Oakland Museum of California — art, history and natural science in one building","Lake Merritt loop, plus the Gardens at Lake Merritt (free, seven acres)","Rotary Nature Center and the bird islands, the oldest wildlife refuge in the country","Oakland Chinatown, a few blocks from the museum"],
+ l:"Grand Avenue, Chinatown dim sum, or Swan's Market food hall.",
+ note:"Closed Mondays and Tuesdays. Look for discounted evenings and free days before you buy."},
+
+{n:"Berkeley: Botanical Garden & campus",r:"East Bay",dir:15,mins:55,miles:40,toll:7,adm:15,tags:["nature","art"],
+ b:"Thirty-four acres of plants arranged by where in the world they come from, above a campus you can wander all day for nothing.",
+ d:["UC Botanical Garden in Strawberry Canyon — free on the first Wednesday of the month","Campus walk: Campanile ($5 to the top), the glade, the creek","BAMPFA galleries and film archive","Berkeley Rose Garden, free, terraced, best in May","Telegraph Avenue bookshops"],
+ l:"The Gourmet Ghetto on Shattuck, or the cheap and excellent student strip on Durant.",
+ note:"Campus parking is genuinely painful — the garden has its own lot, or park in the Rose Garden neighbourhood."},
+
+{n:"Alameda: Crab Cove & Park Street",r:"East Bay",dir:15,mins:45,miles:35,toll:7,adm:0,tags:["coast","town","history"],
+ b:"An island of Victorians and Art Deco storefronts with a warm, shallow bay beach at one end.",
+ d:["Crab Cove Visitor Center and its small aquarium — free","Crown Memorial Beach walk, the calmest swimming water in the Bay","Park Street and Webster Street: cinemas, bookshops, antique stores","USS Hornet ($25) if the group is interested in that sort of thing","Alameda Point Antiques Faire, first Sunday of the month"],
+ l:"Park Street — very good Burmese, Mexican and diner options all under $18.",
+ note:"Free street parking almost everywhere, which is rare."},
+
+{n:"Martinez: John Muir's house",r:"East Bay",dir:25,mins:60,miles:45,toll:7,adm:0,tags:["history","nature"],
+ b:"The seventeen-room Victorian where Muir wrote most of what he published, with his 'scribble den' preserved as he left it.",
+ d:["John Muir National Historic Site — house, Martinez Adobe, orchards, all free","Mt. Wanda trail on the hill behind, named for his daughter","Martinez waterfront, marina and the shoreline park","Downtown Main Street, quiet and largely unchanged"],
+ l:"Main Street Martinez, or picnic in the site's own orchard.",
+ note:"Closed Mondays and Tuesdays. Free admission — one of the best value stops on this list."},
+
+{n:"Benicia: waterfront & glass studios",r:"East Bay",dir:30,mins:70,miles:55,toll:7,adm:3,tags:["art","history","town"],
+ b:"California's capital for thirteen months in 1853, now an old arsenal town that turned into a glassblowing and sculpture district.",
+ d:["Old State Capitol State Historic Park ($3), restored to its 1853 fit-out","First Street down to the pier, with the Carquinez Strait traffic going past","Benicia Arsenal artist studios — glass, ceramics, metal, with regular open-studio weekends","Benicia State Recreation Area marsh trail for the walk"],
+ l:"First Street cafés and bakeries; nothing expensive.",
+ note:"Studios keep irregular hours. Time the trip to an Arsenal open-studio weekend if you can."},
+
+{n:"Mount Diablo",r:"East Bay",dir:45,mins:70,miles:50,toll:17,adm:0,tags:["nature","science"],
+ b:"You can drive to 3,849 feet. On a clear winter day the view takes in more square miles than almost anywhere in the hemisphere.",
+ d:["Summit Visitor Center, built into a stone observation tower","Rock City wind caves and Sentinel Rock — short scrambles, good for restless people","Mary Bowerman Trail, a level loop right around the summit","Fossil Ridge, where the seabed that became the mountain is visible"],
+ l:"Pack it — there are summit picnic tables. Danville or Walnut Creek on the way home.",
+ note:"$10 a car plus the bridge home. Go in winter a day after rain for the Sierra views; summer is hot and hazy."},
+
+{n:"Sausalito: the Bay Model",r:"Marin",dir:350,mins:50,miles:40,toll:9,adm:0,tags:["science","town","coast"],
+ b:"A 1.5-acre working hydraulic model of the entire Bay and Delta, built in 1957 to disprove a plan to fill most of the Bay in. Free.",
+ d:["Bay Model Visitor Center — the tide cycle runs in compressed time, and the rangers explain it well","The Marinship WWII shipyard exhibit in the same building","Bridgeway waterfront promenade with the city across the water","The floating homes at Issaquah and Liberty docks, ten minutes north"],
+ l:"Bridgeway is expensive. Caledonia Street, one block inland, is where locals eat and costs half as much.",
+ note:"Free parking at the Bay Model, and it's closed Sundays and Mondays. The Golden Gate toll is charged homeward only."},
+
+{n:"Marin Headlands",r:"Marin",dir:350,mins:55,miles:42,toll:9,adm:0,tags:["coast","nature","history"],
+ b:"Cold War missile silos, a lighthouse on a sea stack, and the postcard view of the bridge — all on free federal land.",
+ d:["Point Bonita Lighthouse and its little suspension bridge, free, limited open days","Nike Missile Site SF-88, the only restored one in the country, with veterans guiding the tours","Rodeo Beach and Lagoon — the beach gravel is red and green chert","Battery Spencer for the bridge view everyone knows","The Marine Mammal Center, free to visit"],
+ l:"Nothing out there. Pack lunch for Rodeo Beach, or eat in Sausalito afterwards.",
+ note:"Both Point Bonita and the Nike site run limited hours. Check them first — the trip is much thinner without them."},
+
+{n:"Tiburon & Angel Island",r:"Marin",dir:355,mins:60,miles:45,toll:9,adm:20,tags:["nature","history","coast"],
+ b:"A ten-minute ferry to a state park island with a five-mile perimeter road and the West Coast's immigration station.",
+ d:["Perimeter Road, five miles, paved and mostly level, right around the island","Immigration Station museum — the Chinese poems carved into the barracks walls","Mount Livermore summit, a two-mile climb to a 360-degree view","Ark Row in Tiburon before or after the boat"],
+ l:"Bring a picnic. The island café is limited and expensive; Tiburon has proper options on the return.",
+ note:"Ferry is about $17 return plus a $3 park fee. Weekend schedules are thin — check the last boat before you go."},
+
+{n:"Muir Woods & Muir Beach",r:"Marin",dir:345,mins:65,miles:45,toll:19,adm:15,tags:["nature"],
+ b:"The most famous old-growth grove in the Bay Area. Also the most expensive and the most tightly regulated.",
+ d:["Main boardwalk loop and Cathedral Grove, where you're asked to stay quiet","Hillside Trail for a quieter parallel route above the crowds","Muir Beach Overlook, a WWII gun battery with the coast either side","Green Gulch Farm on the road down"],
+ l:"The park café is small. Pack lunch, or eat at Muir Beach or in Mill Valley.",
+ note:"$15 per adult plus $10 parking, reservation required, weekends sell out. If cost matters, Purisima Creek gives you redwoods for nothing at all."},
+
+{n:"Stinson Beach & Bolinas",r:"Marin",dir:340,mins:85,miles:55,toll:9,adm:0,tags:["coast","nature","art"],
+ b:"A long sandy beach, a bird lagoon, and a town that keeps taking down its own road sign.",
+ d:["Stinson Beach, free national park parking, three miles of sand","Bolinas Lagoon pullouts for seals and shorebirds","Bolinas Museum — free, and a surprisingly good local art collection","Audubon Canyon Ranch egret rookery, spring weekends only","Palomarin trailhead for the coastal bluffs at the south end of Point Reyes"],
+ l:"Parkside Cafe in Stinson, or the Bolinas People's Store for picnic supplies.",
+ note:"Highway 1 over Mount Tamalpais is forty-five minutes of tight curves. Sir Francis Drake through Fairfax is gentler if anyone gets carsick."},
+
+{n:"Point Reyes Station & the Point",r:"Marin",dir:340,mins:100,miles:60,toll:9,adm:0,tags:["nature","coast","town"],
+ b:"Free national seashore, a cypress tunnel, a lighthouse down 308 steps, and a two-block town with a very good bakery.",
+ d:["Cypress Tree Tunnel, five minutes off the road and free","Point Reyes Lighthouse, Friday to Monday, 308 stairs down and back","Earthquake Trail at Bear Valley — the fence the 1906 quake displaced by sixteen feet","Point Reyes Station itself: Bovine Bakery, Cowgirl Creamery, Toby's Feed Barn","Chimney Rock for elephant seals, December to March"],
+ l:"Bovine Bakery and Cowgirl Creamery, eaten on the shore of Tomales Bay.",
+ note:"The longest drive here — closer to two hours to the lighthouse itself. Park entry is free, which offsets it."},
+
+{n:"China Camp State Park",r:"Marin",dir:355,mins:60,miles:48,toll:14,adm:0,tags:["history","nature","coast"],
+ b:"The last surviving Chinese shrimp-fishing village in California, preserved with its boats, nets and drying yard intact.",
+ d:["The village and its small free museum, on the site since the 1880s","Shoreline Trail along San Pablo Bay, flat and shaded by oaks","Turtle Back Hill loop, a short climb with a bay panorama","Bullhead Flat for picnicking and the calmest swimming around"],
+ l:"The village snack bar on weekends — run for years by a descendant of an original family — or San Rafael's Fourth Street afterwards.",
+ note:"$5 parking plus the bridge home. Very quiet midweek, and the oak shade makes it a good hot-weather choice."},
+
+{n:"Napa: di Rosa & the Oxbow",r:"North Bay",dir:20,mins:85,miles:70,toll:8,adm:22,tags:["art","nature","town"],
+ b:"217 acres of sculpture meadow and contemporary galleries in the Carneros hills, a public market for lunch, and a flat river walk through town. The valley with the wine taken out.",
+ d:["di Rosa Center for Contemporary Art — two galleries, a sculpture meadow and a 35-acre lake, holding the foremost collection of Northern California art","Oxbow Public Market in downtown Napa: two dozen stalls, easy for a group with different appetites","Napa Riverfront and the Vine Trail — paved, level, straight through the middle of town","Old Faithful Geyser of California or the Petrified Forest near Calistoga, half an hour further north"],
+ l:"Oxbow Public Market covers everything and nobody has to agree on one thing.",
+ note:"di Rosa has been Friday-to-Sunday only, roughly $20–25 for adults and free under 17. Check the day before you drive — it's the reason to go."},
+
+{n:"Petaluma",r:"North Bay",dir:345,mins:85,miles:65,toll:9,adm:3,tags:["history","town"],
+ b:"The best-preserved iron-front commercial district in Northern California, largely because the 1906 quake mostly missed it.",
+ d:["Downtown historic walking loop — cast-iron facades, free maps at the visitor centre","Petaluma Historical Library & Museum, under a free-standing stained-glass dome","Petaluma Adobe State Historic Park ($3), Vallejo's ranch headquarters","The riverwalk and turning basin","Antique shops along Kentucky Street"],
+ l:"Downtown Petaluma — bakeries, taquerias, and a very good creamery.",
+ note:"Free parking garages downtown. Ignore the Highway 101 outlet sprawl entirely."},
+
+{n:"Santa Rosa: Charles Schulz Museum",r:"North Bay",dir:345,mins:95,miles:75,toll:9,adm:14,tags:["art","history"],
+ b:"Schulz drew Peanuts in Santa Rosa for thirty years. The museum is built around the original inked strips and his studio, moved in whole.",
+ d:["Charles M. Schulz Museum — original strips, the recreated studio, and Yoshiteru Otani's ceramic tile mural","Snoopy's Home Ice and the Warm Puppy Café across the road, unchanged since the 1960s","Luther Burbank Home & Gardens; the gardens are free","Railroad Square historic district for the walk"],
+ l:"The Warm Puppy Café is cheap and charming. Railroad Square has the better food.",
+ note:"Closed Tuesdays. Ninety-five minutes and a bridge crossing — this one needs an early start."},
+
+{n:"Golden Gate Park",r:"San Francisco",dir:335,mins:45,miles:35,toll:0,adm:15,tags:["nature","art"],
+ b:"A thousand acres holding two major museums, a Japanese garden left over from the 1894 World's Fair, a bison paddock, and a Dutch windmill at the far end.",
+ d:["de Young Museum — and the Hamon Tower observation deck at the top is free to anyone who walks in","Japanese Tea Garden ($15, free before 10 a.m. on Monday, Wednesday and Friday)","San Francisco Botanical Garden, free in the early-morning window and free to city residents","Stow Lake and Strawberry Hill, with a waterfall and rowboats","The bison paddock and the windmills at the ocean end"],
+ l:"Irving Street in the Inner Sunset — dumplings, Burmese, banh mi, all under $16.",
+ note:"JFK Drive is permanently car-free, which is good for walking. Park on the south side near 9th and Lincoln."},
+
+{n:"Lands End & Sutro Baths",r:"San Francisco",dir:340,mins:50,miles:40,toll:0,adm:0,tags:["coast","history","nature"],
+ b:"The ruins of a Victorian swimming palace, and a cliff trail with shipwrecks visible at the lowest tides.",
+ d:["Sutro Baths ruins and the sea cave below them","Lands End Trail out to Eagle's Point, about two miles, with the bridge in view","Camera Obscura beside the old Cliff House, a working 1946 curiosity","Sutro Heights Park, the terraced remains of Adolph Sutro's estate","Ocean Beach and the Great Highway promenade at the south end"],
+ l:"Balboa Street and Clement Street in the Richmond: dim sum, Russian bakeries, pho.",
+ note:"Free parking at the Merrie Way lot. Expect fog; it suits the place."},
+
+{n:"Presidio: Tunnel Tops & Goldsworthy",r:"San Francisco",dir:340,mins:48,miles:38,toll:0,adm:0,tags:["art","nature","history"],
+ b:"A fourteen-acre park built on the roof of the freeway tunnels, plus four Andy Goldsworthy land-art works hidden in the forest around it.",
+ d:["Presidio Tunnel Tops — free, with the bridge, the bay and the city all in one view","Goldsworthy's Spire, Wood Line, Tree Fall and Earth Wall: a half-day walking hunt across the park","Fort Point, directly under the bridge, free, Friday to Sunday","Presidio Officers' Club and its free museum of the site's Ohlone and Spanish layers","Battery East and the coastal bluff trail"],
+ l:"Presidio Pop-Up food trucks at Tunnel Tops on weekends, or Chestnut Street five minutes east.",
+ note:"Everything listed here is free, including parking on the Main Post outside peak hours. The strongest free art-and-nature day on the list."},
+
+{n:"Mission District murals",r:"San Francisco",dir:340,mins:45,miles:35,toll:12,adm:0,tags:["art","town"],
+ b:"Hundreds of murals across two alleys and forty years of Chicano and Central American political art, all outdoors and all free.",
+ d:["Balmy Alley, the oldest concentration, started in 1972","Clarion Alley, still repainted constantly, more contemporary","Precita Eyes guided mural walk (~$20, weekends) if you want the history behind them","Mission Dolores — the 1791 adobe, the oldest building in the city ($10)","24th Street's bakeries, bookshops and produce markets"],
+ l:"The taqueria argument is the entire point. La Taqueria, El Farolito, or a sit-down room if the group prefers.",
+ note:"Street parking is hard. A garage at $10–15 is worth it rather than circling for half an hour."},
+
+{n:"Chinatown & North Beach",r:"San Francisco",dir:340,mins:47,miles:37,toll:20,adm:10,tags:["history","art","town"],
+ b:"The oldest Chinatown in North America, walked end to end into a Beat-era Italian neighbourhood, with 1934 WPA murals at the top of the hill.",
+ d:["Ross Alley fortune cookie factory, essentially unchanged","Chinese Historical Society of America ($10), in a Julia Morgan building","Waverly Place's painted balconies and temple floors","City Lights Books and Jack Kerouac Alley","Coit Tower — the WPA murals at the base are free; the elevator up is $10","Filbert Steps down the far side to Levi's Plaza"],
+ l:"Dim sum in Chinatown, or focaccia from Liguria Bakery, which closes when it sells out.",
+ note:"Park once at Portsmouth Square or the Vallejo garage and walk the whole thing. Garage parking is the real cost here."}
+];
+
+const REGIONS=["Peninsula","Coastside","Santa Cruz","Monterey","South Bay","East Bay","Marin","North Bay","San Francisco"];
+const TAGS=[["nature","Nature"],["art","Art & museums"],["coast","Coast"],["history","History"],["town","Town walk"],["science","Science"]];
+const NATURE_FIRST=t=>t[0]==="nature"||t[0]==="coast";
+let activeRegions=new Set(),activeTags=new Set();
+
+function settings(){
+  return {people:Math.max(1,+document.getElementById("people").value||1),
+          lunch:+document.getElementById("lunch").value};
+}
+function perPerson(d){
+  const s=settings();
+  return Math.round(((d.miles*2*GAS_PER_MILE)+d.toll)/s.people + d.adm + s.lunch);
+}
+
+/* The three the group liked most, pinned to the top. Everything else keeps its order. */
+const PRIORITY=[
+  "Old growth at opening, harbour by noon",
+  "Napa without the wine",
+  "The 17-Mile Drive, done properly"
+];
+
+/* Verdict for Friday, 7 August 2026 */
+const FRIDAY={
+ "Old growth at opening, harbour by noon":["works","The Bay Model runs Tuesday to Saturday, so Friday is fine. Reserve the Muir Woods parking slot today — August mornings go early."],
+ "Napa without the wine":["works","di Rosa opens Friday, and it's one of only three days a week it does. This is the right day for it."],
+ "The 17-Mile Drive, done properly":["works","Open daily, sunrise to sunset. The Concours closure is 13–16 August, so you're clear by a week."],
+ "The Headlands, free all day":["check","The Nike Missile Site has generally run Thursday to Saturday, but Point Bonita is often weekend-only. Ring ahead — the day thins out without both."],
+ "Low tide, then bluffs":["check","Turns entirely on the morning tide. Check Pillar Point on the NOAA chart; you want under 1.0 ft, and early-August ranges are modest."],
+ "Lighthouse, marsh and goats":["check","Harley Farms tours are usually weekends. The rest of the day holds up Friday — or swap the goats for Año Nuevo."],
+ "Galleries and the reserve":["works","Friday is better than Saturday here: Point Lobos parking actually exists on a weekday, and the galleries keep the same hours."],
+ "The seashore, all free":["works","The Point Reyes lighthouse runs Friday to Monday, so Friday is the first day of its week."],
+ "Muir's house and a glass town":["works","The Muir site is open Friday — it only closes Mondays and Tuesdays. The Arsenal studios are hit-and-miss midweek."],
+ "Little Yosemite, then silent films":["check","The Sunol walk is fine any day, but the Essanay museum is built around Saturday screenings."],
+ "Golden Gate Park, on the free windows":["works","The free windows are Monday, Wednesday and Friday. This day only exists on those three."],
+ "The Presidio land-art hunt":["works","Fort Point opens Friday to Sunday. The Tunnel Tops food trucks are mainly a weekend thing, so plan on Chestnut Street."]
+};
+
+function renderDays(){
+  const host=document.getElementById("days");host.innerHTML="";
+  const ordered=[...DAYS].sort((a,b)=>{
+    const ia=PRIORITY.indexOf(a.t), ib=PRIORITY.indexOf(b.t);
+    return (ia<0?99:ia)-(ib<0?99:ib);
+  });
+  ordered.forEach((day,i)=>{
+    const f=FRIDAY[day.t];
+    const friHTML = f
+      ? '<p class="fri '+(f[0]==="works"?"fri-works":"fri-check")+'"><b>Friday, 7 Aug — '+(f[0]==="works"?"works":"check first")+'</b>'+f[1]+'</p>'
+      : '';
+    const el=document.createElement("article");el.className="day";
+    el.innerHTML=
+      '<div class="day-top"><span class="day-region">'+day.r+'</span><span class="day-num">Day '+String(i+1).padStart(2,"0")+'</span></div>'+
+      '<h3>'+day.t+'</h3><p class="sub">'+day.sub+'</p>'+friHTML+
+      '<div class="day-stats">'+
+        '<div class="stat"><span class="k">Drive, each way</span><span class="v">'+day.drive+'</span></div>'+
+        '<div class="stat"><span class="k">Distance</span><span class="v">'+day.miles+' mi</span></div>'+
+        '<div class="stat"><span class="k">Per person</span><span class="v cost">~$'+perPerson(day)+'</span></div>'+
+      '</div>'+
+      '<ol class="timeline">'+day.stops.map(s=>
+        '<li'+(s[2]==="meal"?' class="meal"':'')+'><span class="t">'+s[0]+'</span><span class="s">'+s[1]+'</span></li>').join('')+
+      '</ol>'+
+      '<div class="day-foot"><p class="watch"><span class="tag">Watch for</span>'+day.watch+'</p></div>';
+    host.appendChild(el);
+  });
+}
+
+const R_MAX=250,MIN_MAX=120,NS="http://www.w3.org/2000/svg";
+function pos(d){
+  const r=Math.min(d.mins,MIN_MAX)/MIN_MAX*R_MAX;
+  const a=(d.dir-90)*Math.PI/180;
+  return [300+r*Math.cos(a),300+r*Math.sin(a)];
+}
+function buildDial(){
+  const rings=document.getElementById("rings"),spokes=document.getElementById("spokes"),dots=document.getElementById("dots");
+  [30,60,90,120].forEach(m=>{
+    const r=m/MIN_MAX*R_MAX;
+    const c=document.createElementNS(NS,"circle");
+    c.setAttribute("class","ring");c.setAttribute("cx",300);c.setAttribute("cy",300);c.setAttribute("r",r);
+    rings.appendChild(c);
+    const t=document.createElementNS(NS,"text");
+    t.setAttribute("class","ring-lbl");t.setAttribute("x",304);t.setAttribute("y",300-r+13);
+    t.textContent=m+" MIN";rings.appendChild(t);
+  });
+  [0,90,180,270].forEach(a=>{
+    const rad=(a-90)*Math.PI/180;
+    const l=document.createElementNS(NS,"line");
+    l.setAttribute("class","spoke");l.setAttribute("x1",300);l.setAttribute("y1",300);
+    l.setAttribute("x2",300+R_MAX*Math.cos(rad));l.setAttribute("y2",300+R_MAX*Math.sin(rad));
+    spokes.appendChild(l);
+  });
+  DATA.forEach((d,i)=>{
+    const [x,y]=pos(d);
+    const c=document.createElementNS(NS,"circle");
+    c.setAttribute("class","dot");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",5);
+    c.setAttribute("fill",NATURE_FIRST(d.tags)?"#C3D63F":"#5B93A6");
+    c.setAttribute("fill-opacity",".85");c.setAttribute("tabindex","0");c.setAttribute("role","button");
+    c.setAttribute("aria-label",d.n+", "+d.mins+" minutes");
+    const show=()=>{document.getElementById("readout").innerHTML=
+      "<b>"+d.n+"</b>"+d.mins+" min · "+d.miles+" mi · ~$"+perPerson(d)+" per person";};
+    c.addEventListener("mouseenter",show);
+    c.addEventListener("focus",show);
+    c.addEventListener("click",()=>jump(i));
+    c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();jump(i);}});
+    dots.appendChild(c);
+  });
+}
+function jump(i){
+  if(!document.getElementById("card-"+i)){
+    activeRegions.clear();activeTags.clear();
+    document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed","false"));
+    document.getElementById("maxMins").value="999";
+    renderStops();
+  }
+  const t=document.getElementById("card-"+i);
+  if(t){t.scrollIntoView({block:"center"});t.classList.add("flash");setTimeout(()=>t.classList.remove("flash"),1600);}
+}
+
+function chip(label,set,val){
+  const b=document.createElement("button");
+  b.className="chip";b.type="button";b.textContent=label;b.setAttribute("aria-pressed","false");
+  b.addEventListener("click",()=>{
+    set.has(val)?set.delete(val):set.add(val);
+    b.setAttribute("aria-pressed",set.has(val));
+    renderStops();
+  });
+  return b;
+}
+function buildChips(){
+  const rc=document.getElementById("regionChips"),tc=document.getElementById("tagChips");
+  REGIONS.forEach(r=>rc.appendChild(chip(r,activeRegions,r)));
+  TAGS.forEach(([v,l])=>tc.appendChild(chip(l,activeTags,v)));
+}
+
+function renderStops(){
+  const maxM=+document.getElementById("maxMins").value;
+  const grid=document.getElementById("grid");grid.innerHTML="";let shown=0;
+  DATA.forEach((d,i)=>{
+    if(activeRegions.size&&!activeRegions.has(d.r))return;
+    if(activeTags.size&&!d.tags.some(t=>activeTags.has(t)))return;
+    if(d.mins>maxM)return;
+    shown++;
+    const el=document.createElement("article");el.className="card";el.id="card-"+i;
+    el.innerHTML=
+      '<div class="card-region">'+d.r+'</div><h3>'+d.n+'</h3>'+
+      '<div class="stats">'+
+        '<div class="stat"><span class="k">Drive</span><span class="v">'+d.mins+' min</span></div>'+
+        '<div class="stat"><span class="k">Distance</span><span class="v">'+d.miles+' mi</span></div>'+
+        '<div class="stat"><span class="k">Per person</span><span class="v cost">~$'+perPerson(d)+'</span></div>'+
+      '</div>'+
+      '<p class="blurb">'+d.b+'</p><div class="do-label">What to do</div>'+
+      '<ul class="do">'+d.d.map(x=>'<li>'+x+'</li>').join('')+'</ul>'+
+      '<div class="meta"><p><span class="tag">Lunch</span>'+d.l+'</p><p class="note">'+d.note+'</p></div>';
+    grid.appendChild(el);
+  });
+  document.getElementById("count").textContent=shown+" of "+DATA.length+" showing";
+  document.getElementById("empty").hidden=shown>0;
+}
+
+function renderAll(){renderDays();renderStops();}
+document.getElementById("maxMins").addEventListener("change",renderStops);
+document.getElementById("people").addEventListener("input",renderAll);
+document.getElementById("lunch").addEventListener("change",renderAll);
+document.getElementById("reset").addEventListener("click",()=>{
+  activeRegions.clear();activeTags.clear();
+  document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed","false"));
+  document.getElementById("maxMins").value="999";
+  document.getElementById("people").value=5;
+  document.getElementById("lunch").value="18";
+  renderAll();
+});
+
+buildChips();buildDial();renderAll();
+</script>
+</body>
+</html>
