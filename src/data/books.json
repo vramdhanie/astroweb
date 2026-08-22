@@ -1071,11 +1071,24 @@
     "author": "Blake Crouch",
     "year": "2019",
     "cover": "https://covers.openlibrary.org/b/isbn/9781524759780-L.jpg",
-    "description": "A science-fiction thriller where memory, not time, is the thing that can be rewritten. Just started it — the premise is exactly my kind of hook.",
+    "description": "A science-fiction thriller where memory, not time, is the thing that gets rewritten. The rules of the premise stay consistent all the way to the end, which is rare for this kind of story, and the pacing never lets up.",
+    "yearRead": "2026",
+    "readingStatus": "READ",
+    "pagesRead": 336,
+    "pageCount": 336,
+    "progressPercentage": "100%"
+  },
+  {
+    "isbn": "9781538757987",
+    "title": "Nash Falls",
+    "author": "David Baldacci",
+    "year": "2025",
+    "cover": "https://covers.openlibrary.org/b/isbn/9781538757987-L.jpg",
+    "description": "Baldacci opening a new series — an ordinary man recruited by the FBI to help bring down a crime network. Just started; his plotting is usually reliable machinery.",
     "yearRead": "2026",
     "readingStatus": "READING",
     "pagesRead": 0,
-    "pageCount": 336,
+    "pageCount": 448,
     "progressPercentage": "0%"
   }
 ]
