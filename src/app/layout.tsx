@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   description: "Personal website of Vincent Ramdhanie, Senior Software Engineer",
   icons: {
     icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16-new.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32-new.png', sizes: '32x32', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon-new.ico',
+    apple: '/apple-touch-icon-new.png',
   },
   manifest: '/site.webmanifest',
   appleWebApp: {

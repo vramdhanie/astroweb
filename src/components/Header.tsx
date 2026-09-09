@@ -9,7 +9,7 @@ export default function Header() {
         <div className="flex flex-row justify-between items-center">
           <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-new.png"
               alt="logo"
               width={48}
               height={48}
