@@ -1084,11 +1084,24 @@
     "author": "David Baldacci",
     "year": "2025",
     "cover": "https://covers.openlibrary.org/b/isbn/9781538757987-L.jpg",
-    "description": "Baldacci opening a new series — an ordinary man recruited by the FBI to help bring down a crime network. Just started; his plotting is usually reliable machinery.",
+    "description": "Baldacci opening a new series — an ordinary man recruited by the FBI to help bring down a crime network. A simple read with a straightforward story. Enjoyable.",
+    "yearRead": "2026",
+    "readingStatus": "READ",
+    "pagesRead": 448,
+    "pageCount": 448,
+    "progressPercentage": "100%"
+  },
+  {
+    "isbn": "9781538758021",
+    "title": "Hope Rises",
+    "author": "David Baldacci",
+    "year": "2026",
+    "cover": "cover.png",
+    "description": "The sequel to Nash Falls, picking up with Walter Nash under a new name. Straight into it after finishing the first one.",
     "yearRead": "2026",
     "readingStatus": "READING",
     "pagesRead": 0,
-    "pageCount": 448,
+    "pageCount": 432,
     "progressPercentage": "0%"
   }
 ]
