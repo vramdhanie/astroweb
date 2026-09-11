@@ -118,6 +118,54 @@ My example here is the [personal finance app](https://github.com/vramdhanie) I b
 - **One serverless function, for the one thing a browser can't do**: when one of us leaves a note, a small Cloud Function fires on the database write and sends a push notification to the other person's devices. That's the entire server-side codebase — a single trigger.
 - **The AI features skip the server too.** I wanted to read receipts and issue commands like "transfer $200 from chequing to savings" and have the right updates performed. The browser calls Claude's API directly with my own key and applies the structured result to Firestore — no middleman function needed for a single-household app.
 
+Deploying to Firebase is a short checklist:
+
+**1. Create a Firebase project** at [console.firebase.google.com](https://console.firebase.google.com). Hosting and Firestore work on the free Spark plan; adding Cloud Functions requires upgrading to the pay-as-you-go Blaze plan — but the generous free allowances still apply, which is why the bill stays at cents.
+
+**2. Install the CLI and sign in:**
+
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+**3. Initialise Firebase in your project folder:**
+
+```bash
+firebase init hosting firestore functions
+```
+
+Answer the prompts (set the hosting directory to your build output), or skip the wizard and write `firebase.json` yourself. Here is the entire config from my budget app:
+
+```json
+{
+  "hosting": {
+    "public": "out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "functions"
+  }
+}
+```
+
+**4. Build, then deploy:**
+
+```bash
+npm run build      # static export into out/
+firebase deploy    # hosting + security rules + functions, all in one go
+```
+
+While iterating, `firebase deploy --only hosting` skips the slower function upload. Your app is live at `your-project.web.app` the moment the command finishes.
+
+**5. Automate it (optional).** Run `firebase init hosting:github` and the CLI wires up a GitHub Action — including the service-account secret — that deploys on every push to `main`. That is how my main site ships.
+
+**6. Custom domain (optional).** In the console under Hosting, choose *Add custom domain*, add the DNS records it shows you, and Firebase issues the TLS certificate for free.
+
 Because the user base is my household, the numbers are tiny: a few thousand database reads a day, one function invocation when someone leaves a note. The bill is literally a few cents per month — most months, nothing at all, since Firebase's free allowances absorb it.
 
 ## The point
