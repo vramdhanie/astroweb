@@ -111,7 +111,7 @@ Cost for both apps: still zero. Public repositories get free Actions minutes, Pa
 
 Eventually an app needs more — multiple users, data that changes moment to moment, communication between people. This is where most tutorials reach for a full backend. I reach for the minimal cloud pieces instead: Firebase Hosting, Firestore, and a serverless function only where truly necessary.
 
-My example here is the [personal finance app](https://github.com/vramdhanie) I built to run our household budget. My wife and I both use it, so it needed real authentication, shared live data, and the ability to notify each other. The shape of the solution:
+My example here is the personal finance app I built to run our household budget. My wife and I both use it, so it needed real authentication, shared live data, and the ability to notify each other. The shape of the solution:
 
 - **The app itself is still a static Next.js export** — same as tier 1 — just served from Firebase Hosting instead of Pages.
 - **Firestore is the database, accessed directly from the browser.** No API layer at all: Firebase's security rules plus Google sign-in (allowlisted to exactly two accounts) do the job a backend would normally do. When either of us records a transaction, the other sees it live.
