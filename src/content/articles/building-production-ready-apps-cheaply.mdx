@@ -1,0 +1,127 @@
+---
+title: Building Production Ready Apps Cheaply
+_slug: building-production-ready-apps-cheaply
+image: building_apps.jpg
+date: "2026-09-10"
+author: Vincent Ramdhanie
+level: intermediate
+tags: nextjs github-actions firebase deployment ai
+abstract: |
+  The best way to prove an idea has value is to put a working version in front of real people. With AI assistance the cost of writing the code has fallen sharply — but building an app is more than writing code. Here is how I deploy my personal apps for free, or nearly free, in three tiers of increasing complexity.
+---
+
+The best way to prove that your idea has value is to build a prototype and let real people use it. Software engineers do this all the time, and the effort required to do so is falling sharply.
+
+I've recently built several apps that I had been putting off for years. With the advent of Claude I can now spin up a full, production-ready app in a fraction of the time it would take me by hand. That part is not news to anyone — most engineers now use AI support to write code, and the gains are seductive. But building an app is more than writing the code. The part that trips people up, especially non-engineers, is what comes after: how do you make the app available to users? And does it cost a whole lot?
+
+Running a full production app for thousands of users can be costly. But a personal app, with yourself as the main user, is remarkably cheap. Most of my apps can tolerate a handful of users without costing me anything at all. This article describes how.
+
+The costly parts of running any app are compute and storage. If you genuinely need heavy computation and large amounts of data, there is only so much you can do. But most personal apps don't, and both costs can be engineered away. I think of it in three tiers:
+
+1. **No real compute** — say, a simple game
+2. **Some compute and static storage** — data that changes occasionally
+3. **Compute and dynamic storage** — multiple users, live updates
+
+## Tier 1: The pure client-side app
+
+If all the computation can happen in the user's browser, there is no server-side work to pay for. For these I build a fully static web application. My stack is Next.js, Tailwind CSS, and TypeScript — Next.js can generate a completely static site, and I deploy it to GitHub Pages, which is free.
+
+The steps:
+
+**1. Initialise the project.**
+
+```bash
+npx create-next-app@latest myapp --ts --tailwind --eslint --app --src-dir
+cd myapp
+```
+
+**2. Configure Tailwind and any other client-side libraries.** The scaffold above already wires Tailwind; add whatever else you need — just keep it client-side.
+
+**3. Ensure static site generation is configured.** In `next.config.ts`:
+
+```ts
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: "export",        // fully static — no server
+  trailingSlash: true,     // plays nicely with Pages routing
+  images: { unoptimized: true },
+};
+
+export default nextConfig;
+```
+
+**4. Build your app.** Only client-side code allowed — no API routes, no server components doing runtime work. `npm run build` produces a static site in `out/`.
+
+**5. Add a GitHub Actions workflow** at `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+**6. Push your code to GitHub.**
+
+**7. Enable GitHub Pages** for the repository: Settings → Pages → set *Source* to **GitHub Actions**.
+
+That's it. Every push to `main` now builds and deploys automatically, and your app is served at the default GitHub Pages URL. If you own a domain, add a `CNAME` file to `public/` and a DNS record, and it serves from your own subdomain instead. Total cost: zero.
+
+## Tier 2: Static storage, refreshed on a schedule
+
+Many apps need data, but not *live* data. The trick I use: keep the data as JSON files in the repository itself, generate the site from that data, and refresh it periodically with a commit that triggers a rebuild and redeploy. The "database" is git; the "backend" is a scheduled GitHub Action.
+
+I built my own [football tracker](https://football.vincentramdhanie.com) this way, to follow my favourite Champions League and European teams through the 2026–27 season. A small Node script (no dependencies) pulls fixtures, results, standings, and squads from football-data.org's free tier — throttled to respect their rate limit — and writes it all to JSON files. I only need occasional updates, so a scheduled workflow runs it twice a day, commits the fresh JSON, and a second workflow rebuilds and redeploys the site. Two useful lessons from setting that up: commits made with the workflow's own built-in token deliberately don't trigger other workflows, so the deploy listens for the fetch workflow's completion instead of the push; and GitHub's cron scheduler silently drops jobs scheduled in the congested hour around midnight UTC, so pick an odd minute in a quiet hour.
+
+I also built a [personal news feed](https://news.vincentramdhanie.com) on the same pattern, aggregating a dozen RSS feeds into a single chronological page — just factual news with no opinion pieces, similar stories consolidated into one item, and the gossipy stuff dropped. The fetching is a plain script, but the consolidating and filtering genuinely needs judgement, so this one uses AI. To avoid a cloud computing bill for that, the update runs *locally*: a scheduled Claude task on my own machine fetches the feeds three times a day, merges and summarises the stories, and pushes the result to a data branch on GitHub — which triggers the same rebuild-and-redeploy machinery. The compute I was going to be billed for happens on hardware I already own.
+
+Cost for both apps: still zero. Public repositories get free Actions minutes, Pages hosting is free, and the data sources are free tiers.
+
+## Tier 3: Dynamic storage and a little real compute
+
+Eventually an app needs more — multiple users, data that changes moment to moment, communication between people. This is where most tutorials reach for a full backend. I reach for the minimal cloud pieces instead: Firebase Hosting, Firestore, and a serverless function only where truly necessary.
+
+My example here is the [personal finance app](https://github.com/vramdhanie) I built to run our household budget. My wife and I both use it, so it needed real authentication, shared live data, and the ability to notify each other. The shape of the solution:
+
+- **The app itself is still a static Next.js export** — same as tier 1 — just served from Firebase Hosting instead of Pages.
+- **Firestore is the database, accessed directly from the browser.** No API layer at all: Firebase's security rules plus Google sign-in (allowlisted to exactly two accounts) do the job a backend would normally do. When either of us records a transaction, the other sees it live.
+- **One serverless function, for the one thing a browser can't do**: when one of us leaves a note, a small Cloud Function fires on the database write and sends a push notification to the other person's devices. That's the entire server-side codebase — a single trigger.
+- **The AI features skip the server too.** I wanted to read receipts and issue commands like "transfer $200 from chequing to savings" and have the right updates performed. The browser calls Claude's API directly with my own key and applies the structured result to Firestore — no middleman function needed for a single-household app.
+
+Because the user base is my household, the numbers are tiny: a few thousand database reads a day, one function invocation when someone leaves a note. The bill is literally a few cents per month — most months, nothing at all, since Firebase's free allowances absorb it.
+
+## The point
+
+Ten years ago, each of these apps would have meant a server to provision, patch, and pay for every month — reason enough to keep putting them off. Today the code is fast to write with AI assistance, and the deployment, done this way, rounds to free. The ladder is worth internalising: static first, scheduled data second, and only reach for cloud services when a real requirement — another user, a notification — forces the step. Every rung you don't climb is money and maintenance you never spend.
+
+The barrier between "idea I've had for years" and "app my family uses every day" has never been lower. Build the thing.
