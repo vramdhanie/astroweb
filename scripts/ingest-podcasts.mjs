@@ -22,7 +22,7 @@ const IMG_DIR = path.join(ROOT, 'public/images/podcasts')
 
 const DAY = 86_400_000
 const CURRENT_WINDOW_DAYS = 60 // played within this many days => "current"
-const RECENT_WINDOW_DAYS = 14 // episodes shown under "recent"
+const RECENT_WINDOW_DAYS = 7 // "this week" — the recent list matches the weekly count
 const WEEKLY_WEEKS = 12 // weeks in the global trend
 
 // --- helpers ---------------------------------------------------------------
@@ -88,8 +88,7 @@ const plays = sql(
 
 const now = plays.reduce((mx, p) => Math.max(mx, p.played), 0) // most recent play = "now"
 const currentCutoff = now - CURRENT_WINDOW_DAYS * DAY
-const recentCutoff = now - RECENT_WINDOW_DAYS * DAY
-const weekCutoff = now - 7 * DAY
+const weekCutoff = now - RECENT_WINDOW_DAYS * DAY
 
 // --- aggregate per podcast -------------------------------------------------
 const byPod = new Map()
@@ -104,18 +103,18 @@ for (const [pid, eps] of byPod) {
   const listenedMs = eps.reduce((t, e) => t + (e.seen ? e.durationMs : e.posMs), 0)
   const lastPlayed = eps[0].played // eps are desc by played
   const firstPlayed = eps.reduce((mn, e) => Math.min(mn, e.played), Infinity)
-  const recent = eps
-    .filter((e) => e.played >= recentCutoff)
-    .slice(0, 5)
-    .map((e) => ({
-      name: e.name,
-      season: e.season || null,
-      episode: e.episode || null,
-      released: iso(e.released),
-      played: iso(e.played),
-      durationMin: e.durationMs ? Math.round(e.durationMs / 60000) : null,
-    }))
   const weekEps = eps.filter((e) => e.played >= weekCutoff)
+  // Recent list = this week's plays; if none this week, the single latest play
+  // (so a current show that paused for a few days still shows context).
+  const recentSrc = weekEps.length ? weekEps.slice(0, 6) : eps.slice(0, 1)
+  const recent = recentSrc.map((e) => ({
+    name: e.name,
+    season: e.season || null,
+    episode: e.episode || null,
+    released: iso(e.released),
+    played: iso(e.played),
+    durationMin: e.durationMs ? Math.round(e.durationMs / 60000) : null,
+  }))
   podcasts.push({
     id: pid,
     title: m.title ?? `Podcast ${pid}`,
@@ -155,12 +154,17 @@ const weekly = [...weekBuckets.values()]
   .map((b) => ({ week: b.week, episodes: b.episodes, hours: hours(b.ms) }))
   .reverse()
 
+const weekPlays = plays.filter((p) => p.played >= weekCutoff)
 const summary = {
   episodesPlayed: plays.length,
   hoursListened: hours(plays.reduce((t, e) => t + (e.seen ? e.durationMs : e.posMs), 0)),
   since: iso(plays.reduce((mn, e) => Math.min(mn, e.played), Infinity)),
   activePodcasts: podcasts.filter((p) => p.status === 'current').length,
   totalPodcasts: podcasts.length,
+  thisWeek: {
+    episodes: weekPlays.length,
+    hours: hours(weekPlays.reduce((t, e) => t + (e.seen ? e.durationMs : e.posMs), 0)),
+  },
   weekly,
 }
 

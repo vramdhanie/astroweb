@@ -53,6 +53,7 @@ export interface PodcastData {
     since: string | null
     activePodcasts: number
     totalPodcasts: number
+    thisWeek: { episodes: number; hours: number }
     weekly: WeeklyPoint[]
   }
   podcasts: PodcastEntry[]

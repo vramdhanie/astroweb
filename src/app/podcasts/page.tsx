@@ -113,10 +113,17 @@ export default function PodcastsPage() {
       <div className="mb-8 rounded-xl p-4" style={{ background: 'var(--card, var(--background))', border: '1px solid var(--border)' }}>
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="text-sm text-[var(--muted-foreground)]">
-            <span className="text-2xl font-bold text-[var(--foreground)]">{summary.hoursListened.toLocaleString()}h</span> across{' '}
-            <span className="font-medium text-[var(--foreground)]">{summary.episodesPlayed.toLocaleString()}</span> episodes
-            {summary.since && <> since {fmtDate(summary.since)}</>} ·{' '}
-            <span className="font-medium text-[var(--foreground)]">{summary.activePodcasts}</span> shows in rotation
+            <div>
+              <span className="text-lg font-semibold text-[var(--foreground)]">This week:</span>{' '}
+              <span className="font-medium text-[var(--foreground)]">{summary.thisWeek.episodes}</span> episodes ·{' '}
+              <span className="font-medium text-[var(--foreground)]">{summary.thisWeek.hours}h</span>
+            </div>
+            <div className="mt-1">
+              <span className="font-medium text-[var(--foreground)]">{summary.hoursListened.toLocaleString()}h</span> across{' '}
+              <span className="font-medium text-[var(--foreground)]">{summary.episodesPlayed.toLocaleString()}</span> episodes
+              {summary.since && <> since {fmtDate(summary.since)}</>} ·{' '}
+              <span className="font-medium text-[var(--foreground)]">{summary.activePodcasts}</span> shows in rotation
+            </div>
           </div>
           <div className="min-w-[160px] flex-1" style={{ maxWidth: 260 }}>
             <WeeklyTrend weekly={summary.weekly} />

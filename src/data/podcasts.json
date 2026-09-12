@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T22:40:52.763Z",
+  "generatedAt": "2026-09-12T22:53:03.842Z",
   "backup": "PodcastAddict_autoBackup_20260911_020304.backup",
   "summary": {
     "episodesPlayed": 1405,
@@ -7,6 +7,10 @@
     "since": "2024-12-23",
     "activePodcasts": 16,
     "totalPodcasts": 17,
+    "thisWeek": {
+      "episodes": 20,
+      "hours": 15.1
+    },
     "weekly": [
       {
         "week": "2026-06-22",
@@ -158,22 +162,6 @@
           "released": "2026-08-21",
           "played": "2026-09-07",
           "durationMin": 24
-        },
-        {
-          "name": "Is AI making the creativity crisis worse?",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-19",
-          "played": "2026-09-03",
-          "durationMin": 16
-        },
-        {
-          "name": "A stunning solar eclipse, a vaccine shake-up and coffee’s big win",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-17",
-          "played": "2026-09-02",
-          "durationMin": 12
         }
       ],
       "rating": 9,
@@ -262,14 +250,6 @@
           "released": "2021-11-15",
           "played": "2026-09-04",
           "durationMin": 62
-        },
-        {
-          "name": "119. World Cup of Kings & Queens preview",
-          "season": -1,
-          "episode": 119,
-          "released": "2021-11-12",
-          "played": "2026-08-28",
-          "durationMin": 49
         }
       ],
       "rating": null,
@@ -325,22 +305,6 @@
           "released": "2026-08-21",
           "played": "2026-09-07",
           "durationMin": 70
-        },
-        {
-          "name": "George Takei and the Legacy of Star Trek",
-          "season": 6,
-          "episode": 15,
-          "released": "2015-04-26",
-          "played": "2026-09-04",
-          "durationMin": 57
-        },
-        {
-          "name": "It’s Bugs’ World and We’re Just Living In It with Jessica Ware",
-          "season": 17,
-          "episode": 49,
-          "released": "2026-08-18",
-          "played": "2026-09-03",
-          "durationMin": 63
         }
       ],
       "rating": 8,
@@ -380,14 +344,6 @@
           "released": "2020-04-16",
           "played": "2026-09-10",
           "durationMin": 55
-        },
-        {
-          "name": "What is the tallest mountain in the solar system?",
-          "season": -1,
-          "episode": -1,
-          "released": "2020-04-14",
-          "played": "2026-09-03",
-          "durationMin": 49
         }
       ],
       "rating": 10,
@@ -466,14 +422,6 @@
           "released": "2026-08-24",
           "played": "2026-09-09",
           "durationMin": 73
-        },
-        {
-          "name": "364 | Stuart Firestein on How Science Relies on Ignorance and Failure",
-          "season": -1,
-          "episode": 364,
-          "released": "2026-08-17",
-          "played": "2026-09-03",
-          "durationMin": 83
         }
       ],
       "rating": null,
@@ -515,14 +463,6 @@
           "released": "2026-08-24",
           "played": "2026-09-09",
           "durationMin": 67
-        },
-        {
-          "name": "\"Tim Robbins\"",
-          "season": -1,
-          "episode": 319,
-          "released": "2026-08-17",
-          "played": "2026-09-02",
-          "durationMin": 66
         }
       ],
       "rating": 10,
@@ -571,22 +511,6 @@
           "released": "2026-08-20",
           "played": "2026-09-04",
           "durationMin": 27
-        },
-        {
-          "name": "Gillian Anderson",
-          "season": -1,
-          "episode": 412,
-          "released": "2026-08-17",
-          "played": "2026-09-02",
-          "durationMin": 72
-        },
-        {
-          "name": "Summer S’pouses Episode 3: Tak Boroyan",
-          "season": -1,
-          "episode": 10308,
-          "released": "2026-08-13",
-          "played": "2026-08-29",
-          "durationMin": 27
         }
       ],
       "rating": 10,
@@ -625,14 +549,6 @@
           "episode": -1,
           "released": "2026-08-24",
           "played": "2026-09-09",
-          "durationMin": 29
-        },
-        {
-          "name": "Paul Sinha's Perfect Pub Quiz",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-17",
-          "played": "2026-09-01",
           "durationMin": 29
         }
       ],
@@ -673,14 +589,6 @@
           "released": "2026-08-21",
           "played": "2026-09-08",
           "durationMin": 32
-        },
-        {
-          "name": "Current-ish Ep3. Exam results, early release, and the possible end of two marriages",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-14",
-          "played": "2026-09-01",
-          "durationMin": 32
         }
       ],
       "rating": 10,
@@ -719,14 +627,6 @@
           "episode": 209,
           "released": "2026-08-21",
           "played": "2026-09-08",
-          "durationMin": 69
-        },
-        {
-          "name": "Zuckerberg’s Anti-Doom Fantasy + Finally an A.I. Detector That Works + A.I. Math",
-          "season": -1,
-          "episode": 208,
-          "released": "2026-08-14",
-          "played": "2026-09-01",
           "durationMin": 69
         }
       ],
@@ -839,7 +739,16 @@
         "episodes": 0,
         "hours": 0
       },
-      "recent": [],
+      "recent": [
+        {
+          "name": "In Conversation: Studies, work, and service brought together in the life of communities",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-06",
+          "played": "2026-08-21",
+          "durationMin": 14
+        }
+      ],
       "rating": 10,
       "opinion": "Reports on major developments in the worldwide Bahá'í community, with interviews from people working in the field.",
       "statusOverride": null,
@@ -869,7 +778,16 @@
         "episodes": 0,
         "hours": 0
       },
-      "recent": [],
+      "recent": [
+        {
+          "name": "Introducing... Life Without",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-03-06",
+          "played": "2026-03-28",
+          "durationMin": 23
+        }
+      ],
       "rating": 10,
       "opinion": "Very funny and insightful. Brian Cox and Robin Ince plus a panel of experts on a wide range of science topics — always entertaining and informative.",
       "statusOverride": null,
