@@ -205,8 +205,8 @@
           "durationMin": 57
         }
       ],
-      "rating": null,
-      "opinion": "",
+      "rating": 10,
+      "opinion": "Funny repartee around science news.",
       "statusOverride": null,
       "categoryOverride": null
     },
