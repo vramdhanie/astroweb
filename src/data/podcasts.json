@@ -252,8 +252,8 @@
           "durationMin": 62
         }
       ],
-      "rating": null,
-      "opinion": "",
+      "rating": 10,
+      "opinion": "In-depth discussions on a wide variety of historical events, places, people, nations and empires.",
       "statusOverride": null,
       "categoryOverride": null
     },
