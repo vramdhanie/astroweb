@@ -43,3 +43,8 @@ node_modules
 
 # full-resolution photo originals (web versions live in public/images)
 assets/*_original.*
+
+# Podcast Addict backups (dropped in weekly, not committed)
+/src/raw/*
+!/src/raw/.gitkeep
+*.backup

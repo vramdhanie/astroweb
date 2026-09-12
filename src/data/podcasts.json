@@ -1,0 +1,1186 @@
+{
+  "generatedAt": "2026-09-12T22:40:52.763Z",
+  "backup": "PodcastAddict_autoBackup_20260911_020304.backup",
+  "summary": {
+    "episodesPlayed": 1405,
+    "hoursListened": 1262.8,
+    "since": "2024-12-23",
+    "activePodcasts": 16,
+    "totalPodcasts": 17,
+    "weekly": [
+      {
+        "week": "2026-06-22",
+        "episodes": 15,
+        "hours": 13.1
+      },
+      {
+        "week": "2026-06-29",
+        "episodes": 9,
+        "hours": 8.4
+      },
+      {
+        "week": "2026-07-06",
+        "episodes": 7,
+        "hours": 9.3
+      },
+      {
+        "week": "2026-07-13",
+        "episodes": 12,
+        "hours": 15.1
+      },
+      {
+        "week": "2026-07-20",
+        "episodes": 13,
+        "hours": 15.6
+      },
+      {
+        "week": "2026-07-27",
+        "episodes": 14,
+        "hours": 11.8
+      },
+      {
+        "week": "2026-08-03",
+        "episodes": 14,
+        "hours": 11.9
+      },
+      {
+        "week": "2026-08-10",
+        "episodes": 16,
+        "hours": 15.1
+      },
+      {
+        "week": "2026-08-17",
+        "episodes": 15,
+        "hours": 14.9
+      },
+      {
+        "week": "2026-08-24",
+        "episodes": 13,
+        "hours": 14
+      },
+      {
+        "week": "2026-08-31",
+        "episodes": 16,
+        "hours": 16.6
+      },
+      {
+        "week": "2026-09-07",
+        "episodes": 17,
+        "hours": 12.8
+      }
+    ]
+  },
+  "podcasts": [
+    {
+      "id": 303,
+      "title": "Lex Fridman Podcast",
+      "presenters": [
+        "Lex Fridman"
+      ],
+      "cover": "/images/podcasts/pa-303.jpg",
+      "artworkUrl": "https://lexfridman.com/wordpress/wp-content/uploads/powerpress/artwork_3000-230.png",
+      "feedUrl": "https://lexfridman.com/feed/podcast/",
+      "homepage": "https://lexfridman.com/",
+      "category": "Technology, Science, Society & Culture/Philosophy",
+      "availableEpisodes": 502,
+      "status": "current",
+      "lastPlayed": "2026-09-11",
+      "firstPlayed": "2025-07-22",
+      "stats": {
+        "episodesPlayed": 25,
+        "hoursListened": 82.3,
+        "since": "2025-07-22"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.2
+      },
+      "recent": [
+        {
+          "name": "#501 – DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-26",
+          "played": "2026-09-11",
+          "durationMin": 322
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 803,
+      "title": "Science Quickly",
+      "presenters": [
+        "Scientific American"
+      ],
+      "cover": "/images/podcasts/pa-803.jpg",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/9e578524-a403-11ee-a6cf-cbcdcc0e11fb/image/ec5ff1c72de2a19d67bc6425661674b1.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=science-quickly",
+      "homepage": "https://www.sciencequickly.com",
+      "category": "Science",
+      "availableEpisodes": 1964,
+      "status": "current",
+      "lastPlayed": "2026-09-11",
+      "firstPlayed": "2024-12-24",
+      "stats": {
+        "episodesPlayed": 236,
+        "hoursListened": 59.5,
+        "since": "2024-12-24"
+      },
+      "lastWeek": {
+        "episodes": 3,
+        "hours": 0.8
+      },
+      "recent": [
+        {
+          "name": "Could damaged sperm be causing miscarriages?",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-26",
+          "played": "2026-09-11",
+          "durationMin": 12
+        },
+        {
+          "name": "What happens when Arctic ice melts and forests lose protection?",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-24",
+          "played": "2026-09-09",
+          "durationMin": 11
+        },
+        {
+          "name": "Can magic mushrooms help treat anorexia?",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-21",
+          "played": "2026-09-07",
+          "durationMin": 24
+        },
+        {
+          "name": "Is AI making the creativity crisis worse?",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-19",
+          "played": "2026-09-03",
+          "durationMin": 16
+        },
+        {
+          "name": "A stunning solar eclipse, a vaccine shake-up and coffee’s big win",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-17",
+          "played": "2026-09-02",
+          "durationMin": 12
+        }
+      ],
+      "rating": 9,
+      "opinion": "Short snippets on the latest science news from Scientific American.",
+      "statusOverride": null,
+      "categoryOverride": "Science"
+    },
+    {
+      "id": 6209,
+      "title": "Probably Science",
+      "presenters": [
+        "Andy Wood",
+        "Matt Kirshen",
+        "Jesse Case"
+      ],
+      "cover": "/images/podcasts/pa-6209.jpg",
+      "artworkUrl": "https://static.libsyn.com/p/assets/e/d/1/4/ed14d1d63c8773b4/ProbablyScienceSallyArt.jpg",
+      "feedUrl": "https://probablyscience.libsyn.com/rss",
+      "homepage": "http://probablyscience.com",
+      "category": "Comedy",
+      "availableEpisodes": 628,
+      "status": "current",
+      "lastPlayed": "2026-09-11",
+      "firstPlayed": "2026-05-22",
+      "stats": {
+        "episodesPlayed": 14,
+        "hoursListened": 16.3,
+        "since": "2026-05-22"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1
+      },
+      "recent": [
+        {
+          "name": "Episode 614 - Jon Bennett",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-25",
+          "played": "2026-09-11",
+          "durationMin": 57
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 123,
+      "title": "The Rest Is History",
+      "presenters": [
+        "Goalhanger"
+      ],
+      "cover": "/images/podcasts/pa-123.jpg",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/00c0a118-2426-11ee-b258-73d331d0123b/image/db3295fcd9d3a7113e8000e931f0541d.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://feeds.megaphone.fm/GLT4787413333",
+      "homepage": "http://therestishistory.com",
+      "category": "History",
+      "availableEpisodes": 742,
+      "status": "current",
+      "lastPlayed": "2026-09-10",
+      "firstPlayed": "2024-12-24",
+      "stats": {
+        "episodesPlayed": 107,
+        "hoursListened": 95.7,
+        "since": "2024-12-24"
+      },
+      "lastWeek": {
+        "episodes": 2,
+        "hours": 2
+      },
+      "recent": [
+        {
+          "name": "121. Australia Before Cook",
+          "season": 1,
+          "episode": 121,
+          "released": "2021-11-18",
+          "played": "2026-09-10",
+          "durationMin": 55
+        },
+        {
+          "name": "120. The Oil Weapon",
+          "season": -1,
+          "episode": 120,
+          "released": "2021-11-15",
+          "played": "2026-09-04",
+          "durationMin": 62
+        },
+        {
+          "name": "119. World Cup of Kings & Queens preview",
+          "season": -1,
+          "episode": 119,
+          "released": "2021-11-12",
+          "played": "2026-08-28",
+          "durationMin": 49
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 343,
+      "title": "StarTalk Radio",
+      "presenters": [
+        "Neil deGrasse Tyson"
+      ],
+      "cover": "/images/podcasts/pa-343.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/5b7d8c77-15ba-4eff-a999-2e725db21db5/2b201827-3634-43a1-aa2d-394a4304280f/3000x3000/ii-lpimppkh1.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/4T39_jAj",
+      "homepage": "siriusxm.com",
+      "category": "Science",
+      "availableEpisodes": 1129,
+      "status": "current",
+      "lastPlayed": "2026-09-10",
+      "firstPlayed": "2025-01-04",
+      "stats": {
+        "episodesPlayed": 224,
+        "hoursListened": 200.6,
+        "since": "2025-01-04"
+      },
+      "lastWeek": {
+        "episodes": 3,
+        "hours": 3
+      },
+      "recent": [
+        {
+          "name": "The Science of Interstellar with Christopher Nolan",
+          "season": 6,
+          "episode": 16,
+          "released": "2015-05-03",
+          "played": "2026-09-10",
+          "durationMin": 57
+        },
+        {
+          "name": "The Hunt for Dark Energy with Jason Rhodes",
+          "season": 17,
+          "episode": 51,
+          "released": "2026-08-25",
+          "played": "2026-09-10",
+          "durationMin": 54
+        },
+        {
+          "name": "Your Inner Cosmos with David Eagleman",
+          "season": 17,
+          "episode": 109,
+          "released": "2026-08-21",
+          "played": "2026-09-07",
+          "durationMin": 70
+        },
+        {
+          "name": "George Takei and the Legacy of Star Trek",
+          "season": 6,
+          "episode": 15,
+          "released": "2015-04-26",
+          "played": "2026-09-04",
+          "durationMin": 57
+        },
+        {
+          "name": "It’s Bugs’ World and We’re Just Living In It with Jessica Ware",
+          "season": 17,
+          "episode": 49,
+          "released": "2026-08-18",
+          "played": "2026-09-03",
+          "durationMin": 63
+        }
+      ],
+      "rating": 8,
+      "opinion": "An excellent podcast from Neil deGrasse Tyson, ranging from the origin of life to dark matter, plus pop culture and science's impact on society. A bit commercial-radio in that it never digs as deep as I'd like, but it's funny and introduces many luminaries in the field.",
+      "statusOverride": null,
+      "categoryOverride": "Science"
+    },
+    {
+      "id": 899,
+      "title": "Daniel and Jorge Explain the Universe",
+      "presenters": [
+        "iHeartPodcasts"
+      ],
+      "cover": "/images/podcasts/pa-899.jpg",
+      "artworkUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/56cec8f5-8977-4ae9-99c6-b1ed00fe8598/f9937580-972b-4006-b6ca-b1ed00feb864/image.jpg?t=1726500479&size=Large",
+      "feedUrl": "https://omny.fm/shows/daniel-and-jorge-explain-the-universe/playlists/podcast.rss",
+      "homepage": "https://www.iheart.com/podcast/105-daniel-and-jorge-explain-t-29862087/",
+      "category": "Science",
+      "availableEpisodes": 642,
+      "status": "current",
+      "lastPlayed": "2026-09-10",
+      "firstPlayed": "2024-12-23",
+      "stats": {
+        "episodesPlayed": 117,
+        "hoursListened": 101.7,
+        "since": "2024-12-23"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.9
+      },
+      "recent": [
+        {
+          "name": "How quarks were discovered?",
+          "season": -1,
+          "episode": -1,
+          "released": "2020-04-16",
+          "played": "2026-09-10",
+          "durationMin": 55
+        },
+        {
+          "name": "What is the tallest mountain in the solar system?",
+          "season": -1,
+          "episode": -1,
+          "released": "2020-04-14",
+          "played": "2026-09-03",
+          "durationMin": 49
+        }
+      ],
+      "rating": 10,
+      "opinion": "Daniel and Jorge cover the biggest ideas in physics — time, the origin of the universe, the search for dark matter — and how scientists think. I've listened consistently for over a year; the humour and explanations are great.",
+      "statusOverride": null,
+      "categoryOverride": "Science"
+    },
+    {
+      "id": 7126,
+      "title": "Reuters World News",
+      "presenters": [
+        "Reuters"
+      ],
+      "cover": "/images/podcasts/pa-7126.jpg",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/e3c7d1b2-8c45-11ed-80a2-172771c99810/image/83ac533ea52b6279d96d26ecc1b9cea4.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://feeds.megaphone.fm/reutersworldnews",
+      "homepage": "https://www.reuters.com/podcasts/",
+      "category": "News/Daily News/Business News",
+      "availableEpisodes": 1163,
+      "status": "current",
+      "lastPlayed": "2026-09-09",
+      "firstPlayed": "2026-09-09",
+      "stats": {
+        "episodesPlayed": 1,
+        "hoursListened": 0.2,
+        "since": "2026-09-09"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.2
+      },
+      "recent": [
+        {
+          "name": "'Economic D-Day', Canada tariffs and Tesla recall",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-24",
+          "played": "2026-09-09",
+          "durationMin": 11
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 806,
+      "title": "Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas",
+      "presenters": [
+        "Sean Carroll"
+      ],
+      "cover": "/images/podcasts/pa-806.jpg",
+      "artworkUrl": "https://static.libsyn.com/p/assets/b/0/6/d/b06d098337897af116c3140a3186d450/21d641ef836c48dff270cbede4360d187bdd6c56cb126be7d6f51078db34d4675527fa72e13c86bb573ec42c5d4fc493e18e7d95fec734ec77168fc379baefcf.jpeg",
+      "feedUrl": "https://feeds.libsyn.com/604590/rss",
+      "homepage": "https://www.preposterousuniverse.com/podcast/",
+      "category": "Science, Science/Physics",
+      "availableEpisodes": 443,
+      "status": "current",
+      "lastPlayed": "2026-09-09",
+      "firstPlayed": "2025-07-23",
+      "stats": {
+        "episodesPlayed": 56,
+        "hoursListened": 111.3,
+        "since": "2025-07-23"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1.2
+      },
+      "recent": [
+        {
+          "name": "365 | Vitor Cardoso on Why Black Holes Are Special",
+          "season": -1,
+          "episode": 365,
+          "released": "2026-08-24",
+          "played": "2026-09-09",
+          "durationMin": 73
+        },
+        {
+          "name": "364 | Stuart Firestein on How Science Relies on Ignorance and Failure",
+          "season": -1,
+          "episode": 364,
+          "released": "2026-08-17",
+          "played": "2026-09-03",
+          "durationMin": 83
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 297,
+      "title": "SmartLess",
+      "presenters": [
+        "Jason Bateman",
+        "Sean Hayes",
+        "Will Arnett"
+      ],
+      "cover": "/images/podcasts/pa-297.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/8436e3c1-2479-4466-ac48-fa58259960bb/0156216b-cc03-4f2c-9fcc-03fd38a2f4e0/3000x3000/sxm-cover-smartless-r2025-3000x3000-final.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/hNaFxXpO",
+      "homepage": "https://www.smartless.com/",
+      "category": "Comedy",
+      "availableEpisodes": 373,
+      "status": "current",
+      "lastPlayed": "2026-09-09",
+      "firstPlayed": "2025-01-17",
+      "stats": {
+        "episodesPlayed": 47,
+        "hoursListened": 54,
+        "since": "2025-01-17"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1.1
+      },
+      "recent": [
+        {
+          "name": "\"Sandra Bullock\"",
+          "season": -1,
+          "episode": 320,
+          "released": "2026-08-24",
+          "played": "2026-09-09",
+          "durationMin": 67
+        },
+        {
+          "name": "\"Tim Robbins\"",
+          "season": -1,
+          "episode": 319,
+          "released": "2026-08-17",
+          "played": "2026-09-02",
+          "durationMin": 66
+        }
+      ],
+      "rating": 10,
+      "opinion": "Three hosts spring a surprise guest on each other each week for an in-depth, funny conversation. Definitely worth it, though I'm picky about which episodes I pick.",
+      "statusOverride": null,
+      "categoryOverride": "Comedy"
+    },
+    {
+      "id": 288,
+      "title": "Conan O’Brien Needs A Friend",
+      "presenters": [
+        "Team Coco",
+        "Earwolf"
+      ],
+      "cover": "/images/podcasts/pa-288.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/8436e3c1-2479-4466-ac48-fa58259960bb/371e5714-91ee-4e31-9ef3-cdd31ebfb9f5/3000x3000/conanobrienneedsafriend-keyart-sxm-3000x3000.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/dHoohVNH",
+      "homepage": "https://www.siriusxm.com",
+      "category": "Comedy",
+      "availableEpisodes": 730,
+      "status": "current",
+      "lastPlayed": "2026-09-09",
+      "firstPlayed": "2024-12-23",
+      "stats": {
+        "episodesPlayed": 187,
+        "hoursListened": 154.9,
+        "since": "2024-12-23"
+      },
+      "lastWeek": {
+        "episodes": 2,
+        "hours": 1.7
+      },
+      "recent": [
+        {
+          "name": "John Cena",
+          "season": -1,
+          "episode": 413,
+          "released": "2026-08-24",
+          "played": "2026-09-09",
+          "durationMin": 78
+        },
+        {
+          "name": "Summer S’pouses Episode 4: Liza Powel O'Brien",
+          "season": -1,
+          "episode": 10309,
+          "released": "2026-08-20",
+          "played": "2026-09-04",
+          "durationMin": 27
+        },
+        {
+          "name": "Gillian Anderson",
+          "season": -1,
+          "episode": 412,
+          "released": "2026-08-17",
+          "played": "2026-09-02",
+          "durationMin": 72
+        },
+        {
+          "name": "Summer S’pouses Episode 3: Tak Boroyan",
+          "season": -1,
+          "episode": 10308,
+          "released": "2026-08-13",
+          "played": "2026-08-29",
+          "durationMin": 27
+        }
+      ],
+      "rating": 10,
+      "opinion": "Wacky but brilliant, and laugh-out-loud funny — even the ads. Conan's humour is both self-deprecating and insightful.",
+      "statusOverride": null,
+      "categoryOverride": "Comedy"
+    },
+    {
+      "id": 799,
+      "title": "Comedy of the Week",
+      "presenters": [
+        "BBC Radio 4"
+      ],
+      "cover": "/images/podcasts/pa-799.jpg",
+      "artworkUrl": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0m71cq2.jpg",
+      "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9x6.rss",
+      "homepage": "http://www.bbc.co.uk/programmes/p02pc9x6",
+      "category": "Comedy",
+      "availableEpisodes": 99,
+      "status": "current",
+      "lastPlayed": "2026-09-09",
+      "firstPlayed": "2024-12-23",
+      "stats": {
+        "episodesPlayed": 92,
+        "hoursListened": 40.7,
+        "since": "2024-12-23"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.5
+      },
+      "recent": [
+        {
+          "name": "The People Have Spoken",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-24",
+          "played": "2026-09-09",
+          "durationMin": 29
+        },
+        {
+          "name": "Paul Sinha's Perfect Pub Quiz",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-17",
+          "played": "2026-09-01",
+          "durationMin": 29
+        }
+      ],
+      "rating": 10,
+      "opinion": "Brilliant UK comedy: a weekly variety show of stand-up and sketch.",
+      "statusOverride": null,
+      "categoryOverride": "Comedy"
+    },
+    {
+      "id": 307,
+      "title": "Friday Night Comedy from BBC Radio 4",
+      "presenters": [
+        "BBC Radio 4"
+      ],
+      "cover": "/images/podcasts/pa-307.jpg",
+      "artworkUrl": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0p4c71q.jpg",
+      "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9pj.rss",
+      "homepage": "http://www.bbc.co.uk/programmes/p02pc9pj",
+      "category": "Comedy",
+      "availableEpisodes": 340,
+      "status": "current",
+      "lastPlayed": "2026-09-08",
+      "firstPlayed": "2025-01-04",
+      "stats": {
+        "episodesPlayed": 91,
+        "hoursListened": 48.2,
+        "since": "2025-01-04"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.5
+      },
+      "recent": [
+        {
+          "name": "The People Have Spoken Ep1. Andy Cool'em Down'em",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-21",
+          "played": "2026-09-08",
+          "durationMin": 32
+        },
+        {
+          "name": "Current-ish Ep3. Exam results, early release, and the possible end of two marriages",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-14",
+          "played": "2026-09-01",
+          "durationMin": 32
+        }
+      ],
+      "rating": 10,
+      "opinion": "Alternates between The Now Show, The News Quiz and Dead Ringers — top-notch comedy from a wide variety of British comedians.",
+      "statusOverride": null,
+      "categoryOverride": "Comedy"
+    },
+    {
+      "id": 361,
+      "title": "Hard Fork",
+      "presenters": [
+        "The New York Times"
+      ],
+      "cover": "/images/podcasts/pa-361.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/4105a47a-42e5-4ccc-887a-832af7989986/23965394-f5e4-4fdb-b150-639f4910353e/3000x3000/nyt-hf-album-art-3000-2.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/l2i9YnTd",
+      "homepage": "https://www.nytimes.com/column/hard-fork",
+      "category": "Tech",
+      "availableEpisodes": 213,
+      "status": "current",
+      "lastPlayed": "2026-09-08",
+      "firstPlayed": "2025-01-03",
+      "stats": {
+        "episodesPlayed": 96,
+        "hoursListened": 109.7,
+        "since": "2025-01-03"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1.1
+      },
+      "recent": [
+        {
+          "name": "OpenAI’s Two-Week Pause + Jill Lepore on the Threat of the “Artificial State” + Train of Thought",
+          "season": -1,
+          "episode": 209,
+          "released": "2026-08-21",
+          "played": "2026-09-08",
+          "durationMin": 69
+        },
+        {
+          "name": "Zuckerberg’s Anti-Doom Fantasy + Finally an A.I. Detector That Works + A.I. Math",
+          "season": -1,
+          "episode": 208,
+          "released": "2026-08-14",
+          "played": "2026-09-01",
+          "durationMin": 69
+        }
+      ],
+      "rating": 9,
+      "opinion": "Discussions of the latest in tech. Great presenters, great pace.",
+      "statusOverride": null,
+      "categoryOverride": "Tech"
+    },
+    {
+      "id": 6202,
+      "title": "The Joy of Why",
+      "presenters": [
+        "Steven Strogatz",
+        "Janna Levin",
+        "Quanta Magazine"
+      ],
+      "cover": "/images/podcasts/pa-6202.jpg",
+      "artworkUrl": "https://f.prxu.org/5340/images/cdcaf67c-ba92-42a8-99f8-455adba8be93/JoY-S5-Cover_JoY-S5-Cover-3000.jpg",
+      "feedUrl": "https://joy.quantamagazine.org/",
+      "homepage": "https://quantamagazine.org/tag/the-joy-of-why",
+      "category": "Science/Life Sciences",
+      "availableEpisodes": 74,
+      "status": "current",
+      "lastPlayed": "2026-09-04",
+      "firstPlayed": "2026-05-23",
+      "stats": {
+        "episodesPlayed": 9,
+        "hoursListened": 6.8,
+        "since": "2026-05-23"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.9
+      },
+      "recent": [
+        {
+          "name": "Are We Thinking Correctly about AI Intelligence?",
+          "season": 5,
+          "episode": -1,
+          "released": "2026-08-20",
+          "played": "2026-09-04",
+          "durationMin": 53
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 292,
+      "title": "The Joe Rogan Experience",
+      "presenters": [
+        "Joe Rogan"
+      ],
+      "cover": "/images/podcasts/pa-292.jpg",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/8e5bcebc-ca16-11ee-89f0-0fa0b9bdfc7c/image/44a67bcc8eafc1e9e5a834234176f4c4.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://feeds.megaphone.fm/GLT1412515089",
+      "homepage": null,
+      "category": "Comedy",
+      "availableEpisodes": 2750,
+      "status": "current",
+      "lastPlayed": "2026-08-31",
+      "firstPlayed": "2025-01-07",
+      "stats": {
+        "episodesPlayed": 53,
+        "hoursListened": 154.5,
+        "since": "2025-01-07"
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [
+        {
+          "name": "#2539 - Protect Our Parks 17",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-08-13",
+          "played": "2026-08-31",
+          "durationMin": 281
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 798,
+      "title": "Bahá’í World News Service (BWNS)",
+      "presenters": [
+        "Bahá’í World News Service (BWNS)"
+      ],
+      "cover": "/images/podcasts/pa-798.jpg",
+      "artworkUrl": "https://i1.sndcdn.com/avatars-000439197492-gh7m0g-original.jpg",
+      "feedUrl": "https://feeds.soundcloud.com/users/soundcloud:users:443314644/sounds.rss",
+      "homepage": "http://news.bahai.org/",
+      "category": "Bahá'í",
+      "availableEpisodes": 75,
+      "status": "current",
+      "lastPlayed": "2026-08-21",
+      "firstPlayed": "2025-01-06",
+      "stats": {
+        "episodesPlayed": 27,
+        "hoursListened": 9.5,
+        "since": "2025-01-06"
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 10,
+      "opinion": "Reports on major developments in the worldwide Bahá'í community, with interviews from people working in the field.",
+      "statusOverride": null,
+      "categoryOverride": "Bahá'í"
+    },
+    {
+      "id": 254,
+      "title": "The Infinite Monkey Cage",
+      "presenters": [
+        "BBC Radio 4"
+      ],
+      "cover": "/images/podcasts/pa-254.jpg",
+      "artworkUrl": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0m1q7wg.jpg",
+      "feedUrl": "https://podcasts.files.bbci.co.uk/b00snr0w.rss",
+      "homepage": "http://www.bbc.co.uk/programmes/b00snr0w",
+      "category": "Science",
+      "availableEpisodes": 242,
+      "status": "retired",
+      "lastPlayed": "2026-03-28",
+      "firstPlayed": "2025-01-03",
+      "stats": {
+        "episodesPlayed": 23,
+        "hoursListened": 17,
+        "since": "2025-01-03"
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 10,
+      "opinion": "Very funny and insightful. Brian Cox and Robin Ince plus a panel of experts on a wide range of science topics — always entertaining and informative.",
+      "statusOverride": null,
+      "categoryOverride": "Science"
+    },
+    {
+      "id": "manual-why-this-universe",
+      "title": "Why This Universe?",
+      "presenters": [
+        "Dan Hooper",
+        "Shalma Wegsman"
+      ],
+      "cover": "/images/podcasts/why_this_universe.png",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Science",
+      "availableEpisodes": 85,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 10,
+      "opinion": "Dan and Shalma break down some of the biggest ideas in physics — the universe, black holes, quantum mechanics. Always informative and entertaining.",
+      "statusOverride": "retired",
+      "categoryOverride": "Science"
+    },
+    {
+      "id": "manual-state-of-the-universe",
+      "title": "The State of The Universe",
+      "presenters": [
+        "Brendan Drachler"
+      ],
+      "cover": "/images/podcasts/state_of_the_universe.webp",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Science",
+      "availableEpisodes": 81,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 10,
+      "opinion": "Brendan talks to scientists about their research, the origin of life and dark matter, and how scientists think. Great podcast — I listened to every available episode.",
+      "statusOverride": "retired",
+      "categoryOverride": "Science"
+    },
+    {
+      "id": "manual-science-in-action",
+      "title": "Science In Action",
+      "presenters": [
+        "Roland Pease"
+      ],
+      "cover": "/images/podcasts/science_in_action.webp",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Science",
+      "availableEpisodes": 1373,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 10,
+      "opinion": "BBC's science podcast — the week's science news with interviews from the scientists involved.",
+      "statusOverride": "retired",
+      "categoryOverride": "Science"
+    },
+    {
+      "id": "manual-physics-world-weekly",
+      "title": "Physics World Weekly",
+      "presenters": [
+        "Hamish Johnston",
+        "Margaret Harris",
+        "Tami Freeman",
+        "James Dacey"
+      ],
+      "cover": "/images/podcasts/physics_world.jpeg",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Science",
+      "availableEpisodes": 281,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 10,
+      "opinion": "Insight into the latest physics news and the business of physics — a good way to keep abreast of developments.",
+      "statusOverride": "retired",
+      "categoryOverride": "Science"
+    },
+    {
+      "id": "manual-working-it-out",
+      "title": "Working It Out",
+      "presenters": [
+        "Mike Birbiglia"
+      ],
+      "cover": "/images/podcasts/mike_birbiglia.webp",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Comedy",
+      "availableEpisodes": 130,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 10,
+      "opinion": "Mike Birbiglia — a favourite of mine — invites a comedian each week to dig into joke-writing, delivering great jokes along the way. I've stopped listening; it was good, but I couldn't spare the time.",
+      "statusOverride": "retired",
+      "categoryOverride": "Comedy"
+    },
+    {
+      "id": "manual-soft-skills-engineering",
+      "title": "Soft Skills Engineering",
+      "presenters": [
+        "Jamison Dance",
+        "Dave Smith"
+      ],
+      "cover": "/images/podcasts/soft_skills_engineering.webp",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Tech",
+      "availableEpisodes": 387,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 10,
+      "opinion": "It takes more than great code to be a software engineer.",
+      "statusOverride": "retired",
+      "categoryOverride": "Tech"
+    },
+    {
+      "id": "manual-the-changelog",
+      "title": "The Changelog",
+      "presenters": [
+        "Adam Stacoviak",
+        "Jerod Santo"
+      ],
+      "cover": "/images/podcasts/the_changelog.webp",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Tech",
+      "availableEpisodes": 678,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 5,
+      "opinion": "Technical interviews and news about the software world. Paused — not bad, just too many to keep up with.",
+      "statusOverride": "retired",
+      "categoryOverride": "Tech"
+    },
+    {
+      "id": "manual-ship-it",
+      "title": "Ship It!",
+      "presenters": [
+        "Gerhard Lazu"
+      ],
+      "cover": "/images/podcasts/ship_it.webp",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Tech",
+      "availableEpisodes": 91,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 5,
+      "opinion": "All about shipping software to production, with interviews from devops and infrastructure folks. Paused for now.",
+      "statusOverride": "retired",
+      "categoryOverride": "Tech"
+    },
+    {
+      "id": "manual-machine-learning-guide",
+      "title": "Machine Learning Guide",
+      "presenters": [
+        "OCDevel"
+      ],
+      "cover": "/images/podcasts/machine_learning_guide.jpg",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Tech",
+      "availableEpisodes": 20,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 5,
+      "opinion": "ML fundamentals and expert interviews. In the end, not worth it.",
+      "statusOverride": "retired",
+      "categoryOverride": "Tech"
+    },
+    {
+      "id": "manual-syntax",
+      "title": "Syntax Web Development",
+      "presenters": [
+        "Wes Bos",
+        "Scott Tolinski"
+      ],
+      "cover": "/images/podcasts/syntax.webp",
+      "artworkUrl": null,
+      "feedUrl": null,
+      "homepage": null,
+      "category": "Tech",
+      "availableEpisodes": 704,
+      "status": "retired",
+      "lastPlayed": null,
+      "firstPlayed": null,
+      "stats": {
+        "episodesPlayed": 0,
+        "hoursListened": 0,
+        "since": null
+      },
+      "lastWeek": {
+        "episodes": 0,
+        "hours": 0
+      },
+      "recent": [],
+      "rating": 5,
+      "opinion": "Front-end technologies with expert interviews. Paused — not bad, just too many to keep up with.",
+      "statusOverride": "retired",
+      "categoryOverride": "Tech"
+    }
+  ]
+}
