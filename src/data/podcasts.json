@@ -109,8 +109,8 @@
           "durationMin": 322
         }
       ],
-      "rating": null,
-      "opinion": "",
+      "rating": 10,
+      "opinion": "Excellent in-depth conversations.",
       "statusOverride": null,
       "categoryOverride": null
     },
