@@ -1,38 +1,156 @@
-import Link from "next/link";
-import { getHighlightedProjects } from '@/lib/projects';
+import fs from 'fs';
+import path from 'path';
+
+import { format } from 'date-fns';
+import Link from 'next/link';
+
 import ProjectCard from '@/components/ProjectCard';
 import { Divider } from '@/components/ui/Divider';
+import { getAllArticles } from '@/lib/articles';
+import { getAllProjects, getHighlightedProjects } from '@/lib/projects';
+
+/** The book furthest along among those marked READING — the one actually
+ * on the nightstand — read straight from the book database at build time. */
+function getCurrentlyReading(): { title: string; author: string } | null {
+  try {
+    const raw = fs.readFileSync(path.join(process.cwd(), 'src/data/books.json'), 'utf8');
+    const books: { title: string; author: string; readingStatus: string; progressPercentage?: string }[] =
+      JSON.parse(raw);
+    const reading = books
+      .filter((b) => b.readingStatus === 'READING')
+      .sort(
+        (a, b) =>
+          parseInt(b.progressPercentage ?? '0') - parseInt(a.progressPercentage ?? '0'),
+      );
+    return reading[0] ? { title: reading[0].title, author: reading[0].author } : null;
+  } catch {
+    return null;
+  }
+}
 
 export default function Home() {
   const highlightedProjects = getHighlightedProjects();
+  const latestArticles = getAllArticles().slice(0, 3);
+  const currentlyReading = getCurrentlyReading();
+  const latestProject = getAllProjects()[0];
 
   return (
     <>
-      <h1 className="text-3xl font-bold tracking-tight text-left mb-12">Hi, I&apos;m Vincent.</h1>
+      {/* Thesis, not greeting — the name is already in the header */}
+      <h1 className="text-3xl font-bold tracking-tight text-left mb-8">
+        Software in service of people.
+      </h1>
 
       {/* Introduction */}
       <div className="prose prose-slate max-w-prose prose-p:text-[var(--foreground)] prose-a:text-[var(--primary)]">
         <p>
-          I&apos;m a <a href="https://bahai.org" className="underline hover:no-underline">Baha&apos;i</a>. Baha&apos;is work in communities worldwide to build a better society.
+          I&apos;m a software engineer and a{' '}
+          <a href="https://bahai.org" className="underline hover:no-underline">
+            Bahá&apos;í
+          </a>
+          , and the second fact shapes the first. Bahá&apos;ís work alongside their
+          neighbours to build communities worth belonging to; I try to write software
+          in the same spirit — tools that respect the intelligence and dignity of the
+          people who use them.
         </p>
         <p>
-          I&apos;m a senior software engineer at <a href="https://sybill.ai" className="underline hover:no-underline">Sybill</a>, building an intelligence platform for sales teams. Previously at <a href="https://lindy.ai" className="underline hover:no-underline">Lindy</a> and <a href="https://teamflowhq.com" className="underline hover:no-underline">Teamflow</a>.
-        </p>
-        <p>
-          My interest in AI started at university, where my master&apos;s thesis explored
-          parallel algorithms on GPU architecture — well before the current wave made
-          the field crowded. Today I build practical applications with language models,
-          turning research into tools people actually use.
-        </p>
-        <p>
-          What holds my attention isn&apos;t novelty. Technology matters most when it
-          serves people and helps build a more just and unified world. I try to hold my
-          own work to that standard: to make things that respect the intelligence and
-          dignity of the people who use them.
+          By day I build an intelligence platform for sales teams at{' '}
+          <a href="https://sybill.ai" className="underline hover:no-underline">
+            Sybill
+          </a>
+          ; before that,{' '}
+          <a href="https://lindy.ai" className="underline hover:no-underline">
+            Lindy
+          </a>{' '}
+          and{' '}
+          <a href="https://teamflowhq.com" className="underline hover:no-underline">
+            Teamflow
+          </a>
+          . My interest in AI is older than the crowd&apos;s — my master&apos;s thesis
+          explored parallel algorithms on GPU architecture — and these days it goes
+          into practical things: language models turned into working tools, and a
+          constellation of small applications I build and run for my family and
+          myself.
         </p>
       </div>
 
-      {/* Projects Section */}
+      {/* Now — live facts, regenerated on every build */}
+      <div className="mt-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-[var(--muted-foreground)]">
+        <span className="font-semibold uppercase tracking-widest text-xs">Now</span>
+        <span aria-hidden>—</span>
+        <span>
+          engineering at{' '}
+          <a href="https://sybill.ai" className="text-[var(--primary)] hover:underline">
+            Sybill
+          </a>
+        </span>
+        {currentlyReading && (
+          <>
+            <span aria-hidden>·</span>
+            <span>
+              reading{' '}
+              <Link href="/books" className="text-[var(--primary)] hover:underline">
+                {currentlyReading.title}
+              </Link>{' '}
+              by {currentlyReading.author}
+            </span>
+          </>
+        )}
+        {latestProject && (
+          <>
+            <span aria-hidden>·</span>
+            <span>
+              lately building{' '}
+              <Link
+                href={`/projects/${latestProject.slug}`}
+                className="text-[var(--primary)] hover:underline"
+              >
+                {latestProject.title}
+              </Link>
+            </span>
+          </>
+        )}
+      </div>
+
+      {/* Writing */}
+      {latestArticles.length > 0 && (
+        <>
+          <Divider />
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-semibold text-[var(--foreground)]">Writing</h2>
+              <Link
+                href="/articles"
+                className="text-[var(--primary)] hover:text-[var(--primary)]/80 transition-colors text-sm"
+              >
+                All articles →
+              </Link>
+            </div>
+            <div className="space-y-6">
+              {latestArticles.map((article) => (
+                <article key={article._slug}>
+                  <Link
+                    href={`/articles/${article._slug}`}
+                    className="group block"
+                  >
+                    <h3 className="text-lg font-medium text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-[var(--muted-foreground)] line-clamp-2 max-w-prose">
+                      {article.abstract}
+                    </p>
+                    <p className="mt-1 text-xs text-[var(--muted-foreground)]">
+                      {format(new Date(article.date), 'd MMMM yyyy')}
+                    </p>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
+
+      {/* Projects */}
       {highlightedProjects.length > 0 && (
         <>
           <Divider />
