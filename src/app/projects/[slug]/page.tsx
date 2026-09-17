@@ -68,8 +68,8 @@ export default async function ProjectPage({ params }: PageProps) {
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
               <span>📅 {format(new Date(project.date), 'MMMM yyyy')}</span>
               {project.language && <span>💻 {project.language}</span>}
-              {project.stars && <span>⭐ {project.stars} stars</span>}
-              {project.forks && <span>🔀 {project.forks} forks</span>}
+              {(project.stars ?? 0) > 0 && <span>⭐ {project.stars} stars</span>}
+              {(project.forks ?? 0) > 0 && <span>🔀 {project.forks} forks</span>}
             </div>
 
             {/* Tech Stack */}

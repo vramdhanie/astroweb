@@ -15,29 +15,12 @@ stars: 0
 forks: 0
 language: "TypeScript"
 ---
+I follow a handful of European clubs across the Premier League, Serie A, La Liga, and the Champions League, and I wanted a single quiet page with their fixtures, results, standings, and top scorers — no adverts, no app, no account.
 
-# My Football
+![The dashboard at football.vincentramdhanie.com](/images/projects/shots/football.png)
 
-A fully static football tracker for my favourite European teams — fixtures, results, standings, and top scorers.
+There is no server behind it. A scheduled GitHub Actions workflow pulls data from football-data.org twice a day, commits the JSON into the repository, and redeploys the static site. The browser only ever reads those committed files, so the API token never leaves the build environment and the site costs nothing to run. Which teams to track is a one-line change in a config file.
 
-[Live Demo](https://football.vincentramdhanie.com) | [GitHub](https://github.com/vramdhanie/football)
+Two small touches I use constantly: each match carries a badge showing which US streaming service holds the rights to that competition, and a **My Schedule** page filters the upcoming fixtures down to the services I actually subscribe to — the matches I can really watch.
 
-## How it works
-
-There is no server and no database. A GitHub Actions workflow pulls data from the [football-data.org](https://www.football-data.org/) v4 API, writes it to `public/data/*.json`, builds the static site, and deploys to GitHub Pages. The browser only reads those static JSON files — the API token never leaves the build environment.
-
-## Features
-
-- **Fixtures & results** for tracked teams across major European leagues
-- **League standings** and **top scorers** from football-data.org data
-- **Fully static** — fast loads, no runtime API calls in the browser
-- **Configurable teams** via `src/config/teams.json`
-- **Automated deploys** on every push to `main` via GitHub Actions
-
-## Tech stack
-
-- Next.js 16 (static export)
-- TypeScript
-- Tailwind CSS 4
-- GitHub Actions + GitHub Pages
-- football-data.org API (build-time only)
+The repository has the full setup, including the scheduling details that only reveal themselves in production — like GitHub quietly dropping cron jobs scheduled in the congested hour around midnight UTC.
