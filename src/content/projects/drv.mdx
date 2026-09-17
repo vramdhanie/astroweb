@@ -1,0 +1,31 @@
+---
+title: "drv"
+slug: "drv"
+description: "A fast Rust CLI for Google Drive — file operations, an interactive browser, on-device semantic search, and natural-language tasks planned by Claude"
+abstract: "Command-line Google Drive manager in Rust: ls/mv/cp/rm/cat/vim on Drive paths, a local semantic index with offline search, Claude-answered questions with citations, and plan-then-confirm natural-language tasks."
+githubUrl: "https://github.com/vramdhanie/drv"
+liveUrl: ""
+techStack: ["Rust", "Google Drive API", "SQLite", "Local Embeddings", "Claude", "Homebrew"]
+highlight: true
+featured: true
+date: "2026-09-17"
+tags: ["rust", "cli", "google-drive", "semantic-search", "ai", "claude", "embeddings", "homebrew"]
+stars: 0
+forks: 0
+language: "Rust"
+---
+A command-line manager for Google Drive, written in Rust. It began with a simple itch — I wanted `ls`, `mv`, and `cat` to work on my Drive the way they work on my filesystem — and grew into something more interesting.
+
+```
+$ drv search "the contract that mentions early termination fees"
+$ drv prompt --in MSc "what did the CUDA papers propose for FDTD?"
+$ drv do "find all empty files in this folder and delete them" --in Projects
+```
+
+The filesystem layer does what you would expect: paths resolve from the Drive root, `vim` opens a file in your editor and writes it back only if it changed, `rm` only ever means the recoverable Trash, and an interactive browser marks which items are shared and which are merely shortcuts to content stored elsewhere.
+
+The layer I use most is the semantic index. `drv index` extracts the text of documents and PDFs in folders you name, chunks it, and embeds it with a small model running entirely on your own machine — nothing leaves it, and `drv search` then works offline, finding files by meaning rather than by keyword. `drv prompt` builds on that: it retrieves the most relevant passages and has Claude answer your question with citations linking back to the source files. If you have Claude Code installed, it rides your existing subscription — no API key required.
+
+The most recent layer is `drv do`, which accepts an instruction in plain language — *"consolidate these two folders"*, *"prefix each file with its created date"* — explores the folders it needs to see, and produces a concrete plan over a deliberately small vocabulary of operations. The plan is printed in full and nothing executes until you confirm it. Designing the guard rails — plans can only touch listed items, deletion only means Trash, no invented email addresses — was as interesting as making it work at all.
+
+Tokens live in the macOS Keychain, multiple Google accounts each keep their own credentials and index, and it installs with `brew install vramdhanie/tap/drv`.
