@@ -28,17 +28,32 @@ function getCurrentlyReading(): { title: string; author: string } | null {
   }
 }
 
+/** The podcast played most recently, from the listening-stats database. */
+function getListeningTo(): { title: string } | null {
+  try {
+    const raw = fs.readFileSync(path.join(process.cwd(), 'src/data/podcasts.json'), 'utf8');
+    const data: { podcasts: { title: string; lastPlayed?: string | null }[] } = JSON.parse(raw);
+    const played = data.podcasts
+      .filter((p) => p.lastPlayed)
+      .sort((a, b) => (b.lastPlayed ?? '').localeCompare(a.lastPlayed ?? ''));
+    return played[0] ? { title: played[0].title } : null;
+  } catch {
+    return null;
+  }
+}
+
 export default function Home() {
   const highlightedProjects = getHighlightedProjects();
   const latestArticles = getAllArticles().slice(0, 3);
   const currentlyReading = getCurrentlyReading();
+  const listeningTo = getListeningTo();
   const latestProject = getAllProjects()[0];
 
   return (
     <>
       {/* Thesis, not greeting — the name is already in the header */}
       <h1 className="text-3xl font-bold tracking-tight text-left mb-8">
-        Software in service of people.
+        Software in service of humanity.
       </h1>
 
       {/* Introduction */}
@@ -49,8 +64,8 @@ export default function Home() {
             Bahá&apos;í
           </a>
           , and the second fact shapes the first. Bahá&apos;ís work alongside their
-          neighbours to build communities worth belonging to; I try to write software
-          in the same spirit — tools that respect the intelligence and dignity of the
+          neighbours to build resilient communities capable of meeting the challenges of the current age ; 
+          I try to write software in the same spirit — tools that respect the intelligence and dignity of the
           people who use them.
         </p>
         <p>
@@ -66,8 +81,8 @@ export default function Home() {
           <a href="https://teamflowhq.com" className="underline hover:no-underline">
             Teamflow
           </a>
-          . My interest in AI is older than the crowd&apos;s — my master&apos;s thesis
-          explored parallel algorithms on GPU architecture — and these days it goes
+          . My interest in AI is far older -  my master&apos;s thesis
+          explored parallel algorithms on GPU architecture - and these days it goes
           into practical things: language models turned into working tools, and a
           constellation of small applications I build and run for my family and
           myself.
@@ -83,6 +98,7 @@ export default function Home() {
           <a href="https://sybill.ai" className="text-[var(--primary)] hover:underline">
             Sybill
           </a>
+          
         </span>
         {currentlyReading && (
           <>
@@ -93,6 +109,17 @@ export default function Home() {
                 {currentlyReading.title}
               </Link>{' '}
               by {currentlyReading.author}
+            </span>
+          </>
+        )}
+        {listeningTo && (
+          <>
+            <span aria-hidden>·</span>
+            <span>
+              listening to{' '}
+              <Link href="/podcasts" className="text-[var(--primary)] hover:underline">
+                {listeningTo.title}
+              </Link>
             </span>
           </>
         )}
