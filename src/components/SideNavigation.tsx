@@ -11,6 +11,7 @@ const APPS = [
   { href: 'https://football.vincentramdhanie.com', label: 'Football', icon: '/images/projects/football.svg' },
   { href: 'https://news.vincentramdhanie.com', label: 'News', icon: '/images/projects/news.svg' },
   { href: 'https://space.vincentramdhanie.com', label: 'Space', icon: '/images/projects/space.svg' },
+  { href: 'https://lander.vincentramdhanie.com', label: 'Lander', icon: '/images/projects/lander.svg' },
 ];
 
 export default function SideNavigation() {

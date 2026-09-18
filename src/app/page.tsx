@@ -4,6 +4,8 @@ import path from 'path';
 import { format } from 'date-fns';
 import Link from 'next/link';
 
+import Image from 'next/image';
+
 import ProjectCard from '@/components/ProjectCard';
 import { Divider } from '@/components/ui/Divider';
 import { getAllArticles } from '@/lib/articles';
@@ -41,6 +43,28 @@ function getListeningTo(): { title: string } | null {
     return null;
   }
 }
+
+/** Hand-picked recent apps for the homepage strip. */
+const LATEST_APPS = [
+  {
+    href: 'https://lander.vincentramdhanie.com',
+    label: 'Lander',
+    blurb: 'Lunar Lander homage — Mars or Moon gravity, one tank of fuel',
+    icon: '/images/projects/lander.svg',
+  },
+  {
+    href: 'https://flood.vincentramdhanie.com',
+    label: 'Flood',
+    blurb: 'Colour-flooding puzzle with move budgets and a shared daily board',
+    icon: '/images/projects/flood.svg',
+  },
+  {
+    href: 'https://football.vincentramdhanie.com',
+    label: 'Football',
+    blurb: 'Fixtures, standings, and what I can actually watch this week',
+    icon: '/images/projects/football.svg',
+  },
+];
 
 export default function Home() {
   const highlightedProjects = getHighlightedProjects();
@@ -172,6 +196,40 @@ export default function Home() {
                   </Link>
                 </article>
               ))}
+            </div>
+
+            {/* Latest apps */}
+            <div className="mt-8">
+              <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3">
+                Latest apps
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {LATEST_APPS.map((app) => (
+                  <a
+                    key={app.href}
+                    href={app.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group rounded-lg border border-[var(--border)] p-3 transition-colors hover:border-[var(--primary)]/50 hover:bg-[var(--accent)]"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Image
+                        src={app.icon}
+                        alt=""
+                        width={20}
+                        height={20}
+                        className="w-5 h-5 rounded"
+                      />
+                      <span className="font-medium text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
+                        {app.label}
+                      </span>
+                    </span>
+                    <span className="mt-1.5 block text-xs leading-relaxed text-[var(--muted-foreground)]">
+                      {app.blurb}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
           </section>
         </>

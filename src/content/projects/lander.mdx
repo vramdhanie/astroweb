@@ -1,0 +1,24 @@
+---
+title: "Lander"
+slug: "lander"
+description: "A Lunar Lander homage in the browser — Mars or Moon gravity, one tank of fuel, and narrow pads that pay more"
+abstract: "Canvas Lunar Lander clone with real scaled gravities for Mars and the Moon, procedurally generated terrain, a persistent fuel tank across flights, and per-world best scores in localStorage."
+githubUrl: "https://github.com/vramdhanie/lander"
+liveUrl: "https://lander.vincentramdhanie.com"
+icon: "/images/projects/lander.svg"
+techStack: ["Next.js", "TypeScript", "Canvas", "Tailwind CSS", "GitHub Pages"]
+highlight: true
+featured: true
+date: "2026-09-18"
+tags: ["nextjs", "typescript", "game", "canvas", "physics", "static-site"]
+stars: 0
+forks: 0
+language: "TypeScript"
+---
+An homage to the 1979 arcade classic. Gravity pulls, you rotate and burn precious fuel, and only a slow, upright touchdown on a flat pad counts — the narrower the pad, the higher the multiplier.
+
+![A flight beginning over Mars](/images/projects/shots/lander.png)
+
+Two worlds share one engine: Mars at 3.71 m/s² is the real test, and the Moon at 1.62 m/s² is the floatier training ground — the gravities are true to scale, so the Moon genuinely gives you more than twice the thrust authority. The terrain is generated fresh for every flight by midpoint displacement, with three pads carved in, and the classic's real tension is preserved: one tank of fuel persists across flights, and the game ends when it runs dry. Best scores are kept per world, in the browser, and nowhere else.
+
+The structure follows a pattern I keep returning to for these small games: the entire game — physics integration, terrain, touchdown resolution, scoring — is a pure TypeScript module with no React or canvas imports, and the interface is a thin requestAnimationFrame loop that feeds inputs in and paints the state out. The purity paid for itself the same afternoon: I could prove the landing, crash, and out-of-fuel paths deterministically in Node, after two of my autopilots had crashed repeatedly trying. The tolerances are honest; flying it well takes practice.
