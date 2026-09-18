@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
 
 import Image from 'next/image';
@@ -191,7 +191,7 @@ export default function Home() {
                       {article.abstract}
                     </p>
                     <p className="mt-1 text-xs text-[var(--muted-foreground)]">
-                      {format(new Date(article.date), 'd MMMM yyyy')}
+                      {format(parseISO(article.date), 'd MMMM yyyy')}
                     </p>
                   </Link>
                 </article>

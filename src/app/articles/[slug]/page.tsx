@@ -1,6 +1,6 @@
 import { getArticleBySlug, getAllArticleSlugs } from '@/lib/articles';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -83,7 +83,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <span>By {article.author}</span>
               <span>•</span>
               <time dateTime={article.date}>
-                {format(new Date(article.date), 'MMMM dd, yyyy')}
+                {format(parseISO(article.date), 'MMMM dd, yyyy')}
               </time>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <div className="flex items-center justify-between">
           <div className="text-muted-foreground">
             <p>Written by {article.author}</p>
-            <p>Published on {format(new Date(article.date), 'MMMM dd, yyyy')}</p>
+            <p>Published on {format(parseISO(article.date), 'MMMM dd, yyyy')}</p>
           </div>
           
           <Link 

@@ -1,6 +1,6 @@
 import { getProjectBySlug, getAllProjectSlugs } from '@/lib/projects';
 import { notFound } from 'next/navigation';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -66,7 +66,7 @@ export default async function ProjectPage({ params }: PageProps) {
             
             {/* Project Meta */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
-              <span>📅 {format(new Date(project.date), 'MMMM yyyy')}</span>
+              <span>📅 {format(parseISO(project.date), 'MMMM yyyy')}</span>
               {project.language && <span>💻 {project.language}</span>}
               {(project.stars ?? 0) > 0 && <span>⭐ {project.stars} stars</span>}
               {(project.forks ?? 0) > 0 && <span>🔀 {project.forks} forks</span>}

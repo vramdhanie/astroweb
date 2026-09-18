@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { ArticleListItem } from '@/types/article';
 import { Badge } from '@/components/ui/Badge';
 import { Clock } from 'lucide-react';
@@ -55,7 +55,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
 
           <div className="flex items-center gap-2 text-sm text-[var(--muted-foreground)] mb-4">
             <time dateTime={article.date}>
-              {format(new Date(article.date), 'MMM dd, yyyy')}
+              {format(parseISO(article.date), 'MMM dd, yyyy')}
             </time>
           </div>
 
