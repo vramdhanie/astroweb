@@ -1,22 +1,17 @@
 {
-  "generatedAt": "2026-09-21T16:49:04.201Z",
-  "backup": "PodcastAddict_autoBackup_20260921_020303.backup",
+  "generatedAt": "2026-09-21T17:43:32.604Z",
+  "backup": "PodcastAddict_20260921_104009.backup",
   "summary": {
-    "episodesPlayed": 1448,
-    "hoursListened": 1292.7,
+    "episodesPlayed": 1452,
+    "hoursListened": 1294.2,
     "since": "2024-12-23",
     "activePodcasts": 18,
     "totalPodcasts": 19,
     "thisWeek": {
-      "episodes": 44,
-      "hours": 30.1
+      "episodes": 42,
+      "hours": 23.9
     },
     "weekly": [
-      {
-        "week": "2026-06-29",
-        "episodes": 9,
-        "hours": 8.4
-      },
       {
         "week": "2026-07-06",
         "episodes": 7,
@@ -69,38 +64,23 @@
       },
       {
         "week": "2026-09-14",
-        "episodes": 43,
-        "hours": 24.8
+        "episodes": 42,
+        "hours": 24.2
+      },
+      {
+        "week": "2026-09-21",
+        "episodes": 5,
+        "hours": 2.2
       }
     ]
   },
   "queue": {
-    "count": 66,
+    "count": 62,
     "upNext": [
-      {
-        "episode": "Episode 615 with Luca Ferro!",
-        "podcast": "Probably Science",
-        "durationMin": 70
-      },
-      {
-        "episode": "How to Build an AI-Native Company Today",
-        "podcast": "The AI Daily Brief: Artificial Intelligence News and Analysis",
-        "durationMin": 28
-      },
-      {
-        "episode": "Ukraine talks, Huckabee, space wars and French butter",
-        "podcast": "Reuters World News",
-        "durationMin": 12
-      },
-      {
-        "episode": "The Skewer",
-        "podcast": "Comedy of the Week",
-        "durationMin": 15
-      },
       {
         "episode": "Matt Groening",
         "podcast": "Conan O’Brien Needs A Friend",
-        "durationMin": 65
+        "durationMin": 70
       },
       {
         "episode": "\"Andrew Garfield\"",
@@ -116,50 +96,132 @@
         "episode": "367 | Jared Diamond on the Course of History and the Role of leaders",
         "podcast": "Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas",
         "durationMin": 77
+      },
+      {
+        "episode": "The Multiplayer AI Sprint: Build Your Team’s First Shared Agent",
+        "podcast": "The AI Daily Brief: Artificial Intelligence News and Analysis",
+        "durationMin": 26
+      },
+      {
+        "episode": "Why Craters Are Round, Size of Life, The Real Length of Day – TYTYK",
+        "podcast": "StarTalk with Neil deGrasse Tyson",
+        "durationMin": 46
+      },
+      {
+        "episode": "Houthi attacks, Canada tariffs and foldable phones (Updated)",
+        "podcast": "Reuters World News",
+        "durationMin": 13
+      },
+      {
+        "episode": "#2550 - Rick Springfield",
+        "podcast": "The Joe Rogan Experience",
+        "durationMin": 146
       }
     ]
   },
   "podcasts": [
     {
-      "id": 6209,
-      "title": "Probably Science",
+      "id": 288,
+      "title": "Conan O’Brien Needs A Friend",
       "presenters": [
-        "Andy Wood",
-        "Matt Kirshen",
-        "Jesse Case"
+        "Team Coco",
+        "Earwolf"
       ],
-      "cover": "/images/podcasts/pa-6209.jpg",
-      "artworkUrl": "https://static.libsyn.com/p/assets/e/d/1/4/ed14d1d63c8773b4/ProbablyScienceSallyArt.jpg",
-      "feedUrl": "https://probablyscience.libsyn.com/rss",
-      "homepage": "http://probablyscience.com",
+      "cover": "/images/podcasts/pa-288.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/8436e3c1-2479-4466-ac48-fa58259960bb/371e5714-91ee-4e31-9ef3-cdd31ebfb9f5/3000x3000/conanobrienneedsafriend-keyart-sxm-3000x3000.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/dHoohVNH",
+      "homepage": "https://www.siriusxm.com",
       "category": "Comedy",
-      "availableEpisodes": 630,
+      "availableEpisodes": 733,
       "status": "current",
-      "lastPlayed": "2026-09-20",
-      "firstPlayed": "2026-05-22",
+      "lastPlayed": "2026-09-21",
+      "firstPlayed": "2024-12-23",
       "stats": {
-        "episodesPlayed": 15,
-        "hoursListened": 16.8,
-        "since": "2026-05-22"
+        "episodesPlayed": 191,
+        "hoursListened": 157.3,
+        "since": "2024-12-23"
       },
       "lastWeek": {
-        "episodes": 1,
-        "hours": 0.6
+        "episodes": 3,
+        "hours": 1.8
       },
       "recent": [
         {
-          "name": "Episode 615 with Luca Ferro!",
+          "name": "Matt Groening",
           "season": -1,
-          "episode": -1,
-          "released": "2026-09-05",
-          "played": "2026-09-20",
+          "episode": 415,
+          "released": "2026-09-07",
+          "played": "2026-09-21",
           "durationMin": 70
+        },
+        {
+          "name": "Summer S’pouses Episode 6: The Spouses Reunited",
+          "season": -1,
+          "episode": 10311,
+          "released": "2026-09-03",
+          "played": "2026-09-17",
+          "durationMin": 27
+        },
+        {
+          "name": "Andy Daly Returns",
+          "season": -1,
+          "episode": 414,
+          "released": "2026-08-31",
+          "played": "2026-09-15",
+          "durationMin": 76
         }
       ],
       "rating": 10,
-      "opinion": "Funny repartee around science news.",
+      "opinion": "Wacky but brilliant, and laugh-out-loud funny — even the ads. Conan's humour is both self-deprecating and insightful.",
       "statusOverride": null,
-      "categoryOverride": null
+      "categoryOverride": "Comedy"
+    },
+    {
+      "id": 799,
+      "title": "Comedy of the Week",
+      "presenters": [
+        "BBC Radio 4"
+      ],
+      "cover": "/images/podcasts/pa-799.jpg",
+      "artworkUrl": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0m71cq2.jpg",
+      "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9x6.rss",
+      "homepage": "http://www.bbc.co.uk/programmes/p02pc9x6",
+      "category": "Comedy",
+      "availableEpisodes": 101,
+      "status": "current",
+      "lastPlayed": "2026-09-21",
+      "firstPlayed": "2024-12-23",
+      "stats": {
+        "episodesPlayed": 94,
+        "hoursListened": 41.9,
+        "since": "2024-12-23"
+      },
+      "lastWeek": {
+        "episodes": 2,
+        "hours": 1.2
+      },
+      "recent": [
+        {
+          "name": "The Skewer",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-07",
+          "played": "2026-09-21",
+          "durationMin": 15
+        },
+        {
+          "name": "Edinburgh Comedy Awards Gala 2026",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-01",
+          "played": "2026-09-16",
+          "durationMin": 56
+        }
+      ],
+      "rating": 10,
+      "opinion": "Brilliant UK comedy: a weekly variety show of stand-up and sketch.",
+      "statusOverride": null,
+      "categoryOverride": "Comedy"
     },
     {
       "id": 7126,
@@ -172,13 +234,13 @@
       "feedUrl": "https://feeds.megaphone.fm/reutersworldnews",
       "homepage": "https://www.reuters.com/podcasts/",
       "category": "News/Daily News/Business News",
-      "availableEpisodes": 1173,
+      "availableEpisodes": 1174,
       "status": "current",
-      "lastPlayed": "2026-09-20",
+      "lastPlayed": "2026-09-21",
       "firstPlayed": "2026-09-09",
       "stats": {
-        "episodesPlayed": 11,
-        "hoursListened": 2,
+        "episodesPlayed": 12,
+        "hoursListened": 2.1,
         "since": "2026-09-09"
       },
       "lastWeek": {
@@ -186,6 +248,14 @@
         "hours": 1.8
       },
       "recent": [
+        {
+          "name": "Ukraine talks, Huckabee, space wars and French butter",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-06",
+          "played": "2026-09-21",
+          "durationMin": 10
+        },
         {
           "name": "Kharg Island, OpenAI agents, Germany's election and the return of CDs",
           "season": -1,
@@ -225,14 +295,6 @@
           "released": "2026-09-01",
           "played": "2026-09-16",
           "durationMin": 11
-        },
-        {
-          "name": "US-Iran strikes, Meta's AI layoff plan, and bear break-ins",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-31",
-          "played": "2026-09-15",
-          "durationMin": 11
         }
       ],
       "rating": null,
@@ -253,11 +315,11 @@
       "category": "Technology",
       "availableEpisodes": 1091,
       "status": "current",
-      "lastPlayed": "2026-09-20",
+      "lastPlayed": "2026-09-21",
       "firstPlayed": "2026-09-14",
       "stats": {
-        "episodesPlayed": 8,
-        "hoursListened": 4.3,
+        "episodesPlayed": 9,
+        "hoursListened": 4.8,
         "since": "2026-09-14"
       },
       "lastWeek": {
@@ -265,6 +327,14 @@
         "hours": 4.3
       },
       "recent": [
+        {
+          "name": "How to Build an AI-Native Company Today",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-06",
+          "played": "2026-09-21",
+          "durationMin": 28
+        },
         {
           "name": "How AI Changed This Summer",
           "season": -1,
@@ -304,18 +374,51 @@
           "released": "2026-08-31",
           "played": "2026-09-16",
           "durationMin": 29
-        },
-        {
-          "name": "How to Start AI Coding If You Haven’t Yet",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-29",
-          "played": "2026-09-15",
-          "durationMin": 29
         }
       ],
       "rating": null,
       "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 6209,
+      "title": "Probably Science",
+      "presenters": [
+        "Andy Wood",
+        "Matt Kirshen",
+        "Jesse Case"
+      ],
+      "cover": "/images/podcasts/pa-6209.jpg",
+      "artworkUrl": "https://static.libsyn.com/p/assets/e/d/1/4/ed14d1d63c8773b4/ProbablyScienceSallyArt.jpg",
+      "feedUrl": "https://probablyscience.libsyn.com/rss",
+      "homepage": "http://probablyscience.com",
+      "category": "Comedy",
+      "availableEpisodes": 630,
+      "status": "current",
+      "lastPlayed": "2026-09-21",
+      "firstPlayed": "2026-05-22",
+      "stats": {
+        "episodesPlayed": 15,
+        "hoursListened": 17.4,
+        "since": "2026-05-22"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1.2
+      },
+      "recent": [
+        {
+          "name": "Episode 615 with Luca Ferro!",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-05",
+          "played": "2026-09-21",
+          "durationMin": 70
+        }
+      ],
+      "rating": 10,
+      "opinion": "Funny repartee around science news.",
       "statusOverride": null,
       "categoryOverride": null
     },
@@ -424,7 +527,7 @@
       "feedUrl": "https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=science-quickly",
       "homepage": "https://www.sciencequickly.com",
       "category": "Science",
-      "availableEpisodes": 1968,
+      "availableEpisodes": 1969,
       "status": "current",
       "lastPlayed": "2026-09-18",
       "firstPlayed": "2024-12-24",
@@ -497,8 +600,8 @@
         "since": "2026-09-14"
       },
       "lastWeek": {
-        "episodes": 3,
-        "hours": 0.8
+        "episodes": 2,
+        "hours": 0.6
       },
       "recent": [
         {
@@ -516,14 +619,6 @@
           "released": "2026-09-03",
           "played": "2026-09-17",
           "durationMin": 16
-        },
-        {
-          "name": "Weekly Roundup: ChatGPT vs. Claude",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-27",
-          "played": "2026-09-14",
-          "durationMin": 12
         }
       ],
       "rating": null,
@@ -552,8 +647,8 @@
         "since": "2025-01-04"
       },
       "lastWeek": {
-        "episodes": 4,
-        "hours": 4.2
+        "episodes": 3,
+        "hours": 3.2
       },
       "recent": [
         {
@@ -579,14 +674,6 @@
           "released": "2026-09-01",
           "played": "2026-09-16",
           "durationMin": 59
-        },
-        {
-          "name": "Solving AI’s Energy Problem with Kathryn Huff",
-          "season": 17,
-          "episode": 109,
-          "released": "2026-08-28",
-          "played": "2026-09-14",
-          "durationMin": 60
         }
       ],
       "rating": 8,
@@ -636,62 +723,6 @@
       "categoryOverride": null
     },
     {
-      "id": 288,
-      "title": "Conan O’Brien Needs A Friend",
-      "presenters": [
-        "Team Coco",
-        "Earwolf"
-      ],
-      "cover": "/images/podcasts/pa-288.jpg",
-      "artworkUrl": "https://image.simplecastcdn.com/images/8436e3c1-2479-4466-ac48-fa58259960bb/371e5714-91ee-4e31-9ef3-cdd31ebfb9f5/3000x3000/conanobrienneedsafriend-keyart-sxm-3000x3000.jpg?aid=rss_feed",
-      "feedUrl": "https://feeds.simplecast.com/dHoohVNH",
-      "homepage": "https://www.siriusxm.com",
-      "category": "Comedy",
-      "availableEpisodes": 732,
-      "status": "current",
-      "lastPlayed": "2026-09-17",
-      "firstPlayed": "2024-12-23",
-      "stats": {
-        "episodesPlayed": 190,
-        "hoursListened": 157.2,
-        "since": "2024-12-23"
-      },
-      "lastWeek": {
-        "episodes": 3,
-        "hours": 2.3
-      },
-      "recent": [
-        {
-          "name": "Summer S’pouses Episode 6: The Spouses Reunited",
-          "season": -1,
-          "episode": 10311,
-          "released": "2026-09-03",
-          "played": "2026-09-17",
-          "durationMin": 27
-        },
-        {
-          "name": "Andy Daly Returns",
-          "season": -1,
-          "episode": 414,
-          "released": "2026-08-31",
-          "played": "2026-09-15",
-          "durationMin": 76
-        },
-        {
-          "name": "Summer S’pouses Episode 5: The Spouses Alone",
-          "season": -1,
-          "episode": 10310,
-          "released": "2026-08-27",
-          "played": "2026-09-14",
-          "durationMin": 33
-        }
-      ],
-      "rating": 10,
-      "opinion": "Wacky but brilliant, and laugh-out-loud funny — even the ads. Conan's humour is both self-deprecating and insightful.",
-      "statusOverride": null,
-      "categoryOverride": "Comedy"
-    },
-    {
       "id": 123,
       "title": "The Rest Is History",
       "presenters": [
@@ -702,7 +733,7 @@
       "feedUrl": "https://feeds.megaphone.fm/GLT4787413333",
       "homepage": "http://therestishistory.com",
       "category": "History",
-      "availableEpisodes": 744,
+      "availableEpisodes": 745,
       "status": "current",
       "lastPlayed": "2026-09-17",
       "firstPlayed": "2024-12-24",
@@ -770,45 +801,6 @@
       "categoryOverride": "Science"
     },
     {
-      "id": 799,
-      "title": "Comedy of the Week",
-      "presenters": [
-        "BBC Radio 4"
-      ],
-      "cover": "/images/podcasts/pa-799.jpg",
-      "artworkUrl": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0m71cq2.jpg",
-      "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9x6.rss",
-      "homepage": "http://www.bbc.co.uk/programmes/p02pc9x6",
-      "category": "Comedy",
-      "availableEpisodes": 100,
-      "status": "current",
-      "lastPlayed": "2026-09-16",
-      "firstPlayed": "2024-12-23",
-      "stats": {
-        "episodesPlayed": 93,
-        "hoursListened": 41.6,
-        "since": "2024-12-23"
-      },
-      "lastWeek": {
-        "episodes": 1,
-        "hours": 0.9
-      },
-      "recent": [
-        {
-          "name": "Edinburgh Comedy Awards Gala 2026",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-01",
-          "played": "2026-09-16",
-          "durationMin": 56
-        }
-      ],
-      "rating": 10,
-      "opinion": "Brilliant UK comedy: a weekly variety show of stand-up and sketch.",
-      "statusOverride": null,
-      "categoryOverride": "Comedy"
-    },
-    {
       "id": 806,
       "title": "Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas",
       "presenters": [
@@ -819,7 +811,7 @@
       "feedUrl": "https://feeds.libsyn.com/604590/rss",
       "homepage": "https://www.preposterousuniverse.com/podcast/",
       "category": "Science, Science/Physics",
-      "availableEpisodes": 444,
+      "availableEpisodes": 445,
       "status": "current",
       "lastPlayed": "2026-09-16",
       "firstPlayed": "2025-07-23",
@@ -860,7 +852,7 @@
       "feedUrl": "https://feeds.simplecast.com/hNaFxXpO",
       "homepage": "https://www.smartless.com/",
       "category": "Comedy",
-      "availableEpisodes": 375,
+      "availableEpisodes": 376,
       "status": "current",
       "lastPlayed": "2026-09-15",
       "firstPlayed": "2025-01-17",
@@ -909,8 +901,8 @@
         "since": "2025-07-22"
       },
       "lastWeek": {
-        "episodes": 1,
-        "hours": 5.4
+        "episodes": 0,
+        "hours": 0
       },
       "recent": [
         {
