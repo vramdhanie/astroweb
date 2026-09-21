@@ -390,19 +390,6 @@
     "progressPercentage": "0%"
   },
   {
-    "isbn": "9780393355628",
-    "title": "Surely You're Joking, Mr. Feynman!",
-    "author": "Richard P Feynman",
-    "year": "2018",
-    "cover": "http://books.google.com/books/content?id=Dl2NEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "description": "Feynman telling stories on himself. Everyone I trust says it's as much fun as science books get.",
-    "yearRead": "",
-    "readingStatus": "WAIT",
-    "pagesRead": 0,
-    "pageCount": 352,
-    "progressPercentage": "0%"
-  },
-  {
     "isbn": "9780425195482",
     "title": "The Bad Place",
     "author": "Dean Koontz",
@@ -685,8 +672,8 @@
     "yearRead": "",
     "readingStatus": "WAIT",
     "pagesRead": 0,
-    "pageCount": 0,
-    "progressPercentage": ""
+    "pageCount": 352,
+    "progressPercentage": "0%"
   },
   {
     "isbn": "9781942788355",
@@ -993,12 +980,12 @@
     "author": "Elena Maria Marsella",
     "year": "1966",
     "cover": "cover.png",
-    "description": "An interesting exploration of the stories that we tell through the eyes of an Anthropologist. Re-interprets the myths of the past with new light. I'm probably not going to complete this book. It is brilliantly written and quite compelling but the last few chapters feel like a chore.",
-    "yearRead": "",
-    "readingStatus": "WAIT",
-    "pagesRead": 0,
-    "pageCount": 0,
-    "progressPercentage": ""
+    "description": "An interesting exploration of the stories that we tell through the eyes of an Anthropologist. Re-interprets the myths of the past with new light. Brilliantly written and quite compelling, though the last few chapters felt like a chore.",
+    "yearRead": "2024",
+    "readingStatus": "READ",
+    "pagesRead": 275,
+    "pageCount": 275,
+    "progressPercentage": "100%"
   },
   {
     "isbn": "9781098118693",
