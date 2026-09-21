@@ -39,6 +39,19 @@
     "progressPercentage": "0%"
   },
   {
+    "isbn": "",
+    "title": "Attack of the Deranged Mutant Killer Monster Snow Goons",
+    "author": "Bill Watterson",
+    "year": "1992",
+    "cover": "https://covers.openlibrary.org/b/id/636156-L.jpg",
+    "description": "Calvin and Hobbes. No justification required.",
+    "yearRead": "",
+    "readingStatus": "WAIT",
+    "pagesRead": 0,
+    "pageCount": 128,
+    "progressPercentage": "0%"
+  },
+  {
     "isbn": "9780684853505",
     "title": "Bag of Bones",
     "author": "Stephen King",
@@ -234,6 +247,19 @@
     "progressPercentage": "0%"
   },
   {
+    "isbn": "",
+    "title": "It's Obvious You Won't Survive by Your Wits Alone",
+    "author": "Scott Adams",
+    "year": "1995",
+    "cover": "https://covers.openlibrary.org/b/id/10770439-L.jpg",
+    "description": "More early Dilbert for the office-humour shelf.",
+    "yearRead": "",
+    "readingStatus": "WAIT",
+    "pagesRead": 0,
+    "pageCount": 255,
+    "progressPercentage": "0%"
+  },
+  {
     "isbn": "9781416584087",
     "title": "Just After Sunset",
     "author": "Stephen King",
@@ -270,6 +296,19 @@
     "readingStatus": "WAIT",
     "pagesRead": 0,
     "pageCount": 512,
+    "progressPercentage": "0%"
+  },
+  {
+    "isbn": "",
+    "title": "Rendezvous with Rama",
+    "author": "Arthur C. Clarke",
+    "year": "1973",
+    "cover": "https://covers.openlibrary.org/b/id/13472608-L.jpg",
+    "description": "A classic I somehow never got to. First contact done as pure engineering: a survey mission through a vast, silent alien cylinder.",
+    "yearRead": "",
+    "readingStatus": "WAIT",
+    "pagesRead": 0,
+    "pageCount": 256,
     "progressPercentage": "0%"
   },
   {
@@ -338,6 +377,19 @@
     "progressPercentage": "0%"
   },
   {
+    "isbn": "",
+    "title": "Starship Troopers",
+    "author": "Robert A. Heinlein",
+    "year": "1959",
+    "cover": "https://covers.openlibrary.org/b/id/14630746-L.jpg",
+    "description": "Heinlein's most argued-about book. I want to read what he actually wrote rather than the arguments about it.",
+    "yearRead": "",
+    "readingStatus": "WAIT",
+    "pagesRead": 0,
+    "pageCount": 233,
+    "progressPercentage": "0%"
+  },
+  {
     "isbn": "9780393355628",
     "title": "Surely You're Joking, Mr. Feynman!",
     "author": "Richard P Feynman",
@@ -387,6 +439,32 @@
     "readingStatus": "WAIT",
     "pagesRead": 0,
     "pageCount": 224,
+    "progressPercentage": "0%"
+  },
+  {
+    "isbn": "",
+    "title": "The Calvin and Hobbes Tenth Anniversary Book",
+    "author": "Bill Watterson",
+    "year": "1995",
+    "cover": "https://covers.openlibrary.org/b/id/3823098-L.jpg",
+    "description": "The strips plus Watterson's own commentary on them — the commentary being the part I am really buying it for.",
+    "yearRead": "",
+    "readingStatus": "WAIT",
+    "pagesRead": 0,
+    "pageCount": 208,
+    "progressPercentage": "0%"
+  },
+  {
+    "isbn": "",
+    "title": "The Cat Who Walks Through Walls",
+    "author": "Robert A. Heinlein",
+    "year": "1985",
+    "cover": "https://covers.openlibrary.org/b/id/14631476-L.jpg",
+    "description": "Late Heinlein, reportedly starting as a comedy of manners before swerving into his multiverse. We shall see.",
+    "yearRead": "",
+    "readingStatus": "WAIT",
+    "pagesRead": 0,
+    "pageCount": 388,
     "progressPercentage": "0%"
   },
   {
@@ -543,6 +621,19 @@
     "readingStatus": "WAIT",
     "pagesRead": 0,
     "pageCount": 0,
+    "progressPercentage": "0%"
+  },
+  {
+    "isbn": "",
+    "title": "True Blue",
+    "author": "David Baldacci",
+    "year": "2009",
+    "cover": "https://covers.openlibrary.org/b/id/9296957-L.jpg",
+    "description": "Picked up while on a Baldacci streak. A Washington thriller about a cop just out of prison, trying to claw her way back onto the force.",
+    "yearRead": "",
+    "readingStatus": "WAIT",
+    "pagesRead": 0,
+    "pageCount": 456,
     "progressPercentage": "0%"
   },
   {
@@ -1007,8 +1098,8 @@
     "year": "2022",
     "cover": "http://books.google.com/books/content?id=05Cj67qkoaoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
     "description": "The Silmarillion was one of my favourite books growing up because it felt like reading the history of Middle-earth rather than a typical fantasy story. I really enjoyed how deep the lore goes and how serious the tone is, especially the creation stories and the long conflict over the Silmarils. The tragedy around Fëanor and the Elves made the world feel heavy and real. It’s not the easiest book to get through, but if you like detailed world-building, it’s worth the effort.",
-    "yearRead": "2026",
-    "readingStatus": "READING",
+    "yearRead": "",
+    "readingStatus": "WAIT",
     "pagesRead": 159,
     "pageCount": 432,
     "progressPercentage": "37%"
