@@ -44,7 +44,19 @@ export interface WeeklyPoint {
   hours: number
 }
 
+export interface QueueEpisode {
+    episode: string
+    podcast: string
+    durationMin: number
+}
+
+export interface PodcastQueue {
+    count: number
+    upNext: QueueEpisode[]
+}
+
 export interface PodcastData {
+    queue?: PodcastQueue
   generatedAt: string
   backup: string
   summary: {

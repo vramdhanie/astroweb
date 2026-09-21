@@ -101,7 +101,7 @@ function PodcastCard({ p }: { p: PodcastEntry }) {
 }
 
 export default function PodcastsPage() {
-  const { summary, podcasts } = getPodcastData()
+  const { summary, podcasts, queue } = getPodcastData()
   const current = podcasts.filter((p) => p.status === 'current')
   const retired = podcasts.filter((p) => p.status === 'retired')
 
@@ -131,6 +131,28 @@ export default function PodcastsPage() {
           </div>
         </div>
       </div>
+
+      {/* Planned listening — the play queue from the last ingest */}
+      {queue && queue.upNext.length > 0 && (
+        <div className="mb-8 rounded-xl p-4" style={{ background: 'var(--card, var(--background))', border: '1px solid var(--border)' }}>
+          <h2 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted-foreground)]">
+            Planned listening
+          </h2>
+          <ul className="mt-2 space-y-1.5">
+            {queue.upNext.map((e, i) => (
+              <li key={i} className="text-sm text-[var(--foreground)]">
+                {e.episode}
+                <span className="text-[var(--muted-foreground)]"> — {e.podcast} · {e.durationMin} min</span>
+              </li>
+            ))}
+          </ul>
+          {queue.count > queue.upNext.length && (
+            <p className="mt-2 text-xs text-[var(--muted-foreground)]">
+              …and {queue.count - queue.upNext.length} more in the queue
+            </p>
+          )}
+        </div>
+      )}
 
       {/* Current */}
       <ul>

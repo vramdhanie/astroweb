@@ -139,6 +139,27 @@ for (const [pid, eps] of byPod) {
   })
 }
 
+// --- play queue ------------------------------------------------------------
+// ordered_list type=1 is Podcast Addict's continuous-playback queue: the
+// episodes lined up to listen to next, in rank order.
+const queueRows = sql(
+  dbPath,
+  `SELECT e.name AS episode, p.name AS podcast, e.duration_ms AS durationMs
+   FROM ordered_list ol
+   JOIN episodes e ON e._id = ol.id
+   JOIN podcasts p ON p._id = e.podcast_id
+   WHERE ol.type = 1
+   ORDER BY ol.rank`,
+)
+const queue = {
+  count: queueRows.length,
+  upNext: queueRows.slice(0, 8).map((r) => ({
+    episode: r.episode,
+    podcast: r.podcast,
+    durationMin: Math.round((r.durationMs ?? 0) / 60000),
+  })),
+}
+
 // --- global summary --------------------------------------------------------
 const weekBuckets = new Map()
 for (const p of plays) {
@@ -233,6 +254,7 @@ const output = {
   generatedAt: new Date().toISOString(),
   backup: backupName,
   summary,
+  queue,
   podcasts,
 }
 fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true })
@@ -241,6 +263,6 @@ fs.rmSync(tmp, { recursive: true, force: true })
 
 console.log(
   `✓ Wrote ${podcasts.length} podcasts (${summary.activePodcasts} current) · ` +
-    `${summary.episodesPlayed} eps · ${summary.hoursListened}h since ${summary.since} · artwork ${imgOk}`,
+    `${summary.episodesPlayed} eps · ${summary.hoursListened}h since ${summary.since} · queue ${queue.count} · artwork ${imgOk}`,
 )
 if (newlyAdded.length) console.log(`  + new (need an opinion): ${newlyAdded.join(', ')}`)
