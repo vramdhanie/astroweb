@@ -1,22 +1,17 @@
 {
-  "generatedAt": "2026-09-21T17:43:32.604Z",
-  "backup": "PodcastAddict_20260921_104009.backup",
+  "generatedAt": "2026-09-28T17:32:19.205Z",
+  "backup": "PodcastAddict_20260928_102609.backup",
   "summary": {
-    "episodesPlayed": 1452,
-    "hoursListened": 1294.2,
+    "episodesPlayed": 1484,
+    "hoursListened": 1315.3,
     "since": "2024-12-23",
     "activePodcasts": 18,
     "totalPodcasts": 19,
     "thisWeek": {
-      "episodes": 42,
-      "hours": 23.9
+      "episodes": 33,
+      "hours": 21.2
     },
     "weekly": [
-      {
-        "week": "2026-07-06",
-        "episodes": 7,
-        "hours": 9.3
-      },
       {
         "week": "2026-07-13",
         "episodes": 12,
@@ -69,57 +64,243 @@
       },
       {
         "week": "2026-09-21",
-        "episodes": 5,
-        "hours": 2.2
+        "episodes": 34,
+        "hours": 21.7
+      },
+      {
+        "week": "2026-09-28",
+        "episodes": 3,
+        "hours": 1.6
       }
     ]
   },
   "queue": {
-    "count": 62,
+    "count": 70,
     "upNext": [
       {
-        "episode": "Matt Groening",
-        "podcast": "Conan O’Brien Needs A Friend",
-        "durationMin": 70
-      },
-      {
-        "episode": "\"Andrew Garfield\"",
-        "podcast": "SmartLess",
-        "durationMin": 63
-      },
-      {
-        "episode": "AfD win, Ukraine, glacier blankets and horse smuggling",
-        "podcast": "Reuters World News",
-        "durationMin": 13
-      },
-      {
-        "episode": "367 | Jared Diamond on the Course of History and the Role of leaders",
+        "episode": "Mindscape Ask Me Anything, Sean Carroll | September 2026",
         "podcast": "Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas",
-        "durationMin": 77
+        "durationMin": 251
       },
       {
-        "episode": "The Multiplayer AI Sprint: Build Your Team’s First Shared Agent",
+        "episode": "The Open Source AI Debate: Insights from Experts",
+        "podcast": "Last Week in AI",
+        "durationMin": 16
+      },
+      {
+        "episode": "Even Other AI Labs Are Rallying Around Anthropic’s Slowdown Proposal",
+        "podcast": "The AI Daily Brief: Artificial Intelligence News and Analysis",
+        "durationMin": 37
+      },
+      {
+        "episode": "Why Do We Exist with Hakeem Oluseyi",
+        "podcast": "StarTalk with Neil deGrasse Tyson",
+        "durationMin": 48
+      },
+      {
+        "episode": "Trump's mail-in voting loss, self-improving AI and possible rate hike",
+        "podcast": "Reuters World News",
+        "durationMin": 14
+      },
+      {
+        "episode": "Trump Rails Against AI Slowdown \"Hoax\"",
         "podcast": "The AI Daily Brief: Artificial Intelligence News and Analysis",
         "durationMin": 26
       },
       {
-        "episode": "Why Craters Are Round, Size of Life, The Real Length of Day – TYTYK",
-        "podcast": "StarTalk with Neil deGrasse Tyson",
-        "durationMin": 46
+        "episode": "Microsoft Introduces AI Code of Conduct",
+        "podcast": "Last Week in AI",
+        "durationMin": 11
       },
       {
-        "episode": "Houthi attacks, Canada tariffs and foldable phones (Updated)",
-        "podcast": "Reuters World News",
-        "durationMin": 13
-      },
-      {
-        "episode": "#2550 - Rick Springfield",
-        "podcast": "The Joe Rogan Experience",
-        "durationMin": 146
+        "episode": "Episode 617 - Paul Jay",
+        "podcast": "Probably Science",
+        "durationMin": 84
       }
     ]
   },
   "podcasts": [
+    {
+      "id": 806,
+      "title": "Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas",
+      "presenters": [
+        "Sean Carroll"
+      ],
+      "cover": "/images/podcasts/pa-806.jpg",
+      "artworkUrl": "https://static.libsyn.com/p/assets/b/0/6/d/b06d098337897af116c3140a3186d450/21d641ef836c48dff270cbede4360d187bdd6c56cb126be7d6f51078db34d4675527fa72e13c86bb573ec42c5d4fc493e18e7d95fec734ec77168fc379baefcf.jpeg",
+      "feedUrl": "https://feeds.libsyn.com/604590/rss",
+      "homepage": "https://www.preposterousuniverse.com/podcast/",
+      "category": "Science, Science/Physics",
+      "availableEpisodes": 446,
+      "status": "current",
+      "lastPlayed": "2026-09-28",
+      "firstPlayed": "2025-07-23",
+      "stats": {
+        "episodesPlayed": 59,
+        "hoursListened": 115.3,
+        "since": "2025-07-23"
+      },
+      "lastWeek": {
+        "episodes": 2,
+        "hours": 2.6
+      },
+      "recent": [
+        {
+          "name": "Mindscape Ask Me Anything, Sean Carroll | September 2026",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-14",
+          "played": "2026-09-28",
+          "durationMin": 251
+        },
+        {
+          "name": "367 | Jared Diamond on the Course of History and the Role of leaders",
+          "season": -1,
+          "episode": 367,
+          "released": "2026-09-07",
+          "played": "2026-09-22",
+          "durationMin": 85
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 7126,
+      "title": "Reuters World News",
+      "presenters": [
+        "Reuters"
+      ],
+      "cover": "/images/podcasts/pa-7126.jpg",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/e3c7d1b2-8c45-11ed-80a2-172771c99810/image/83ac533ea52b6279d96d26ecc1b9cea4.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://feeds.megaphone.fm/reutersworldnews",
+      "homepage": "https://www.reuters.com/podcasts/",
+      "category": "News/Daily News/Business News",
+      "availableEpisodes": 1182,
+      "status": "current",
+      "lastPlayed": "2026-09-28",
+      "firstPlayed": "2026-09-09",
+      "stats": {
+        "episodesPlayed": 20,
+        "hoursListened": 3.6,
+        "since": "2026-09-09"
+      },
+      "lastWeek": {
+        "episodes": 8,
+        "hours": 1.5
+      },
+      "recent": [
+        {
+          "name": "Slowing AI, Reform UK donations and Sweden's election",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-14",
+          "played": "2026-09-28",
+          "durationMin": 11
+        },
+        {
+          "name": "AI slowdown, Trump's Houthi problem, Irish unity and the US Open",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-13",
+          "played": "2026-09-25",
+          "durationMin": 11
+        },
+        {
+          "name": "Saudi pipeline, Trump in Ireland and Celine in Paris",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-12",
+          "played": "2026-09-25",
+          "durationMin": 10
+        },
+        {
+          "name": "America remembers 9/11, inflation ticks up, Vance takes center stage (Updated)",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-11",
+          "played": "2026-09-25",
+          "durationMin": 12
+        },
+        {
+          "name": "AI's doomsday warning, Houthi's Red Sea advance and Missouri's midterm map (Update)",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-10",
+          "played": "2026-09-24",
+          "durationMin": 11
+        },
+        {
+          "name": "Pricey oil, GOP convention and a folding iPhone (Update)",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-09",
+          "played": "2026-09-23",
+          "durationMin": 11
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 803,
+      "title": "Science Quickly",
+      "presenters": [
+        "Scientific American"
+      ],
+      "cover": "/images/podcasts/pa-803.jpg",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/9e578524-a403-11ee-a6cf-cbcdcc0e11fb/image/ec5ff1c72de2a19d67bc6425661674b1.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=science-quickly",
+      "homepage": "https://www.sciencequickly.com",
+      "category": "Science",
+      "availableEpisodes": 1973,
+      "status": "current",
+      "lastPlayed": "2026-09-28",
+      "firstPlayed": "2024-12-24",
+      "stats": {
+        "episodesPlayed": 243,
+        "hoursListened": 61.5,
+        "since": "2024-12-24"
+      },
+      "lastWeek": {
+        "episodes": 3,
+        "hours": 0.9
+      },
+      "recent": [
+        {
+          "name": "From 9/11’s lasting legacy to AI’s disruptive future",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-14",
+          "played": "2026-09-28",
+          "durationMin": 12
+        },
+        {
+          "name": "Is AI making us less human?",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-11",
+          "played": "2026-09-24",
+          "durationMin": 26
+        },
+        {
+          "name": "The surprising science of friendship",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-09",
+          "played": "2026-09-23",
+          "durationMin": 18
+        }
+      ],
+      "rating": 9,
+      "opinion": "Short snippets on the latest science news from Scientific American.",
+      "statusOverride": null,
+      "categoryOverride": "Science"
+    },
     {
       "id": 288,
       "title": "Conan O’Brien Needs A Friend",
@@ -132,20 +313,36 @@
       "feedUrl": "https://feeds.simplecast.com/dHoohVNH",
       "homepage": "https://www.siriusxm.com",
       "category": "Comedy",
-      "availableEpisodes": 733,
+      "availableEpisodes": 735,
       "status": "current",
-      "lastPlayed": "2026-09-21",
+      "lastPlayed": "2026-09-26",
       "firstPlayed": "2024-12-23",
       "stats": {
-        "episodesPlayed": 191,
-        "hoursListened": 157.3,
+        "episodesPlayed": 193,
+        "hoursListened": 160,
         "since": "2024-12-23"
       },
       "lastWeek": {
         "episodes": 3,
-        "hours": 1.8
+        "hours": 2.9
       },
       "recent": [
+        {
+          "name": "Taylor Tomlinson Returns Again",
+          "season": -1,
+          "episode": 416,
+          "released": "2026-09-14",
+          "played": "2026-09-26",
+          "durationMin": 71
+        },
+        {
+          "name": "Comedy Crimes with Andy Daly",
+          "season": -1,
+          "episode": 10312,
+          "released": "2026-09-10",
+          "played": "2026-09-24",
+          "durationMin": 31
+        },
         {
           "name": "Matt Groening",
           "season": -1,
@@ -153,22 +350,6 @@
           "released": "2026-09-07",
           "played": "2026-09-21",
           "durationMin": 70
-        },
-        {
-          "name": "Summer S’pouses Episode 6: The Spouses Reunited",
-          "season": -1,
-          "episode": 10311,
-          "released": "2026-09-03",
-          "played": "2026-09-17",
-          "durationMin": 27
-        },
-        {
-          "name": "Andy Daly Returns",
-          "season": -1,
-          "episode": 414,
-          "released": "2026-08-31",
-          "played": "2026-09-15",
-          "durationMin": 76
         }
       ],
       "rating": 10,
@@ -187,120 +368,33 @@
       "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9x6.rss",
       "homepage": "http://www.bbc.co.uk/programmes/p02pc9x6",
       "category": "Comedy",
-      "availableEpisodes": 101,
+      "availableEpisodes": 102,
       "status": "current",
-      "lastPlayed": "2026-09-21",
+      "lastPlayed": "2026-09-26",
       "firstPlayed": "2024-12-23",
       "stats": {
-        "episodesPlayed": 94,
-        "hoursListened": 41.9,
+        "episodesPlayed": 95,
+        "hoursListened": 42.4,
         "since": "2024-12-23"
       },
       "lastWeek": {
-        "episodes": 2,
-        "hours": 1.2
+        "episodes": 1,
+        "hours": 0.5
       },
       "recent": [
         {
-          "name": "The Skewer",
+          "name": "Unspeakable",
           "season": -1,
           "episode": -1,
-          "released": "2026-09-07",
-          "played": "2026-09-21",
-          "durationMin": 15
-        },
-        {
-          "name": "Edinburgh Comedy Awards Gala 2026",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-01",
-          "played": "2026-09-16",
-          "durationMin": 56
+          "released": "2026-09-14",
+          "played": "2026-09-26",
+          "durationMin": 29
         }
       ],
       "rating": 10,
       "opinion": "Brilliant UK comedy: a weekly variety show of stand-up and sketch.",
       "statusOverride": null,
       "categoryOverride": "Comedy"
-    },
-    {
-      "id": 7126,
-      "title": "Reuters World News",
-      "presenters": [
-        "Reuters"
-      ],
-      "cover": "/images/podcasts/pa-7126.jpg",
-      "artworkUrl": "https://megaphone.imgix.net/podcasts/e3c7d1b2-8c45-11ed-80a2-172771c99810/image/83ac533ea52b6279d96d26ecc1b9cea4.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-      "feedUrl": "https://feeds.megaphone.fm/reutersworldnews",
-      "homepage": "https://www.reuters.com/podcasts/",
-      "category": "News/Daily News/Business News",
-      "availableEpisodes": 1174,
-      "status": "current",
-      "lastPlayed": "2026-09-21",
-      "firstPlayed": "2026-09-09",
-      "stats": {
-        "episodesPlayed": 12,
-        "hoursListened": 2.1,
-        "since": "2026-09-09"
-      },
-      "lastWeek": {
-        "episodes": 10,
-        "hours": 1.8
-      },
-      "recent": [
-        {
-          "name": "Ukraine talks, Huckabee, space wars and French butter",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-06",
-          "played": "2026-09-21",
-          "durationMin": 10
-        },
-        {
-          "name": "Kharg Island, OpenAI agents, Germany's election and the return of CDs",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-05",
-          "played": "2026-09-20",
-          "durationMin": 10
-        },
-        {
-          "name": "Nepal rescue, Nvidia's bet and Texas vs big tech",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-04",
-          "played": "2026-09-18",
-          "durationMin": 11
-        },
-        {
-          "name": "Iran and the midterms, Xi in Egypt and conscripts in Greenland",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-03",
-          "played": "2026-09-18",
-          "durationMin": 11
-        },
-        {
-          "name": "UPDATE: US-Iran escalation, Google antitrust and Tiger Woods",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-02",
-          "played": "2026-09-17",
-          "durationMin": 10
-        },
-        {
-          "name": "Driscoll out, Trump's Iran post, Shein and the left's Black voter hurdle",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-01",
-          "played": "2026-09-16",
-          "durationMin": 11
-        }
-      ],
-      "rating": null,
-      "opinion": "",
-      "statusOverride": null,
-      "categoryOverride": null
     },
     {
       "id": 7131,
@@ -313,73 +407,434 @@
       "feedUrl": "https://anchor.fm/s/f7cac464/podcast/rss",
       "homepage": "https://aidailybrief.ai/",
       "category": "Technology",
-      "availableEpisodes": 1091,
+      "availableEpisodes": 1097,
       "status": "current",
-      "lastPlayed": "2026-09-21",
+      "lastPlayed": "2026-09-25",
       "firstPlayed": "2026-09-14",
       "stats": {
-        "episodesPlayed": 9,
-        "hoursListened": 4.8,
+        "episodesPlayed": 15,
+        "hoursListened": 7.9,
         "since": "2026-09-14"
       },
       "lastWeek": {
-        "episodes": 8,
-        "hours": 4.3
+        "episodes": 6,
+        "hours": 3.1
       },
       "recent": [
         {
-          "name": "How to Build an AI-Native Company Today",
+          "name": "10 Ways to Think Bigger with Opportunity AI",
           "season": -1,
           "episode": -1,
-          "released": "2026-09-06",
-          "played": "2026-09-21",
+          "released": "2026-09-13",
+          "played": "2026-09-25",
           "durationMin": 28
         },
         {
-          "name": "How AI Changed This Summer",
+          "name": "What to Use the Latest AI Tools For",
           "season": -1,
           "episode": -1,
-          "released": "2026-09-04",
-          "played": "2026-09-20",
-          "durationMin": 24
+          "released": "2026-09-11",
+          "played": "2026-09-25",
+          "durationMin": 32
         },
         {
-          "name": "Agentic Loops for Knowledge Workers",
+          "name": "Anthropic Researcher Says AI Has Over a 10% Chance of Killing All Humans",
           "season": -1,
           "episode": -1,
-          "released": "2026-09-03",
-          "played": "2026-09-18",
-          "durationMin": 57
+          "released": "2026-09-10",
+          "played": "2026-09-24",
+          "durationMin": 36
         },
         {
-          "name": "Why Fable 5.1 Is Worth the Upgrade",
+          "name": "AI Model Month Is Off to a Blistering Start",
           "season": -1,
           "episode": -1,
-          "released": "2026-09-02",
-          "played": "2026-09-17",
-          "durationMin": 31
+          "released": "2026-09-09",
+          "played": "2026-09-24",
+          "durationMin": 34
         },
         {
-          "name": "OpenClaw 2.0 Shows Where AI Agents Are Going Next",
+          "name": "Why GPT-6 Astra Is So Significant and So Confounding",
           "season": -1,
           "episode": -1,
-          "released": "2026-09-01",
-          "played": "2026-09-16",
-          "durationMin": 26
-        },
-        {
-          "name": "How to Navigate the Next Wave of AI Competition",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-31",
-          "played": "2026-09-16",
+          "released": "2026-09-08",
+          "played": "2026-09-23",
           "durationMin": 29
+        },
+        {
+          "name": "The Multiplayer AI Sprint: Build Your Team’s First Shared Agent",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-07",
+          "played": "2026-09-22",
+          "durationMin": 26
         }
       ],
       "rating": null,
       "opinion": "",
       "statusOverride": null,
       "categoryOverride": null
+    },
+    {
+      "id": 307,
+      "title": "Friday Night Comedy from BBC Radio 4",
+      "presenters": [
+        "BBC Radio 4"
+      ],
+      "cover": "/images/podcasts/pa-307.jpg",
+      "artworkUrl": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0lbr5kr.jpg",
+      "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9pj.rss",
+      "homepage": "http://www.bbc.co.uk/programmes/p02pc9pj",
+      "category": "Comedy",
+      "availableEpisodes": 343,
+      "status": "current",
+      "lastPlayed": "2026-09-25",
+      "firstPlayed": "2025-01-04",
+      "stats": {
+        "episodesPlayed": 94,
+        "hoursListened": 49.7,
+        "since": "2025-01-04"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.5
+      },
+      "recent": [
+        {
+          "name": "The News Quiz: Ep1. The Burnham bounce?",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-11",
+          "played": "2026-09-25",
+          "durationMin": 31
+        }
+      ],
+      "rating": 10,
+      "opinion": "Alternates between The Now Show, The News Quiz and Dead Ringers — top-notch comedy from a wide variety of British comedians.",
+      "statusOverride": null,
+      "categoryOverride": "Comedy"
+    },
+    {
+      "id": 361,
+      "title": "Hard Fork",
+      "presenters": [
+        "The New York Times"
+      ],
+      "cover": "/images/podcasts/pa-361.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/4105a47a-42e5-4ccc-887a-832af7989986/23965394-f5e4-4fdb-b150-639f4910353e/3000x3000/nyt-hf-album-art-3000-2.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/l2i9YnTd",
+      "homepage": "https://www.nytimes.com/column/hard-fork",
+      "category": "Tech",
+      "availableEpisodes": 216,
+      "status": "current",
+      "lastPlayed": "2026-09-24",
+      "firstPlayed": "2025-01-03",
+      "stats": {
+        "episodesPlayed": 99,
+        "hoursListened": 113.7,
+        "since": "2025-01-03"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1.4
+      },
+      "recent": [
+        {
+          "name": "The Ezra Klein Show: The A.I. Revolt Is Here",
+          "season": -1,
+          "episode": 212,
+          "released": "2026-09-11",
+          "played": "2026-09-24",
+          "durationMin": 86
+        }
+      ],
+      "rating": 9,
+      "opinion": "Discussions of the latest in tech. Great presenters, great pace.",
+      "statusOverride": null,
+      "categoryOverride": "Tech"
+    },
+    {
+      "id": 798,
+      "title": "Bahá’í World News Service (BWNS)",
+      "presenters": [
+        "Bahá’í World News Service (BWNS)"
+      ],
+      "cover": "/images/podcasts/pa-798.jpg",
+      "artworkUrl": "https://i1.sndcdn.com/avatars-000439197492-gh7m0g-original.jpg",
+      "feedUrl": "https://feeds.soundcloud.com/users/soundcloud:users:443314644/sounds.rss",
+      "homepage": "http://news.bahai.org/",
+      "category": "Bahá'í",
+      "availableEpisodes": 76,
+      "status": "current",
+      "lastPlayed": "2026-09-24",
+      "firstPlayed": "2025-01-06",
+      "stats": {
+        "episodesPlayed": 28,
+        "hoursListened": 9.7,
+        "since": "2025-01-06"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.2
+      },
+      "recent": [
+        {
+          "name": "In Conversation: Across Papua New Guinea, prayer and consultation shape everyday life",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-11",
+          "played": "2026-09-24",
+          "durationMin": 14
+        }
+      ],
+      "rating": 10,
+      "opinion": "Reports on major developments in the worldwide Bahá'í community, with interviews from people working in the field.",
+      "statusOverride": null,
+      "categoryOverride": "Bahá'í"
+    },
+    {
+      "id": 7172,
+      "title": "Last Week in AI",
+      "presenters": [
+        "AI Weekly"
+      ],
+      "cover": "/images/podcasts/pa-7172.jpg",
+      "artworkUrl": "https://content.production.cdn.art19.com/images/88/1d/b0/34/881db034-6bc2-4136-a81e-a39e7ef61552/7736bd11f2d7637ec1a6e1c999b078ae45e722a3868bdd5b032ab623869bd24d4680474b04795df7d26581f7edd7a815438c82dbf0ad995ff87db38b48ae5c0e.jpeg",
+      "feedUrl": "https://rss.art19.com/last-week-in-ai-podcast",
+      "homepage": "https://art19.com/shows/last-week-in-ai-podcast",
+      "category": "Education/Self-Improvement/News/Technology",
+      "availableEpisodes": 780,
+      "status": "current",
+      "lastPlayed": "2026-09-24",
+      "firstPlayed": "2026-09-14",
+      "stats": {
+        "episodesPlayed": 4,
+        "hoursListened": 1.2,
+        "since": "2026-09-14"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.4
+      },
+      "recent": [
+        {
+          "name": "Anthropic Researcher's Alarming AI Risks Insights",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-09-10",
+          "played": "2026-09-24",
+          "durationMin": 23
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 123,
+      "title": "The Rest Is History",
+      "presenters": [
+        "Goalhanger"
+      ],
+      "cover": "/images/podcasts/pa-123.jpg",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/00c0a118-2426-11ee-b258-73d331d0123b/image/db3295fcd9d3a7113e8000e931f0541d.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://feeds.megaphone.fm/GLT4787413333",
+      "homepage": "http://therestishistory.com",
+      "category": "History",
+      "availableEpisodes": 747,
+      "status": "current",
+      "lastPlayed": "2026-09-23",
+      "firstPlayed": "2024-12-24",
+      "stats": {
+        "episodesPlayed": 109,
+        "hoursListened": 97.6,
+        "since": "2024-12-24"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1
+      },
+      "recent": [
+        {
+          "name": "123. World Cup of Kings and Queens part 1",
+          "season": -1,
+          "episode": 123,
+          "released": "2021-11-22",
+          "played": "2026-09-23",
+          "durationMin": 58
+        }
+      ],
+      "rating": 10,
+      "opinion": "In-depth discussions on a wide variety of historical events, places, people, nations and empires.",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 343,
+      "title": "StarTalk with Neil deGrasse Tyson",
+      "presenters": [
+        "Neil deGrasse Tyson"
+      ],
+      "cover": "/images/podcasts/pa-343.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/5b7d8c77-15ba-4eff-a999-2e725db21db5/2b201827-3634-43a1-aa2d-394a4304280f/3000x3000/ii-lpimppkh1.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/4T39_jAj",
+      "homepage": "siriusxm.com",
+      "category": "Science",
+      "availableEpisodes": 1133,
+      "status": "current",
+      "lastPlayed": "2026-09-23",
+      "firstPlayed": "2025-01-04",
+      "stats": {
+        "episodesPlayed": 230,
+        "hoursListened": 206.6,
+        "since": "2025-01-04"
+      },
+      "lastWeek": {
+        "episodes": 2,
+        "hours": 1.7
+      },
+      "recent": [
+        {
+          "name": "Cosmic Queries Potpourri",
+          "season": 6,
+          "episode": 18,
+          "released": "2015-05-17",
+          "played": "2026-09-23",
+          "durationMin": 52
+        },
+        {
+          "name": "Why Craters Are Round, Size of Life, The Real Length of Day – TYTYK",
+          "season": 17,
+          "episode": 54,
+          "released": "2026-09-08",
+          "played": "2026-09-22",
+          "durationMin": 52
+        }
+      ],
+      "rating": 8,
+      "opinion": "An excellent podcast from Neil deGrasse Tyson, ranging from the origin of life to dark matter, plus pop culture and science's impact on society. A bit commercial-radio in that it never digs as deep as I'd like, but it's funny and introduces many luminaries in the field.",
+      "statusOverride": null,
+      "categoryOverride": "Science"
+    },
+    {
+      "id": 899,
+      "title": "Daniel and Jorge Explain the Universe",
+      "presenters": [
+        "iHeartPodcasts"
+      ],
+      "cover": "/images/podcasts/pa-899.jpg",
+      "artworkUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/56cec8f5-8977-4ae9-99c6-b1ed00fe8598/f9937580-972b-4006-b6ca-b1ed00feb864/image.jpg?t=1726500479&size=Large",
+      "feedUrl": "https://omny.fm/shows/daniel-and-jorge-explain-the-universe/playlists/podcast.rss",
+      "homepage": "https://www.iheart.com/podcast/105-daniel-and-jorge-explain-t-29862087/",
+      "category": "Science",
+      "availableEpisodes": 642,
+      "status": "current",
+      "lastPlayed": "2026-09-23",
+      "firstPlayed": "2024-12-23",
+      "stats": {
+        "episodesPlayed": 119,
+        "hoursListened": 103.4,
+        "since": "2024-12-23"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 0.8
+      },
+      "recent": [
+        {
+          "name": "Can planets lose their atmospheres?",
+          "season": -1,
+          "episode": -1,
+          "released": "2020-04-23",
+          "played": "2026-09-23",
+          "durationMin": 50
+        }
+      ],
+      "rating": 10,
+      "opinion": "Daniel and Jorge cover the biggest ideas in physics — time, the origin of the universe, the search for dark matter — and how scientists think. I've listened consistently for over a year; the humour and explanations are great.",
+      "statusOverride": null,
+      "categoryOverride": "Science"
+    },
+    {
+      "id": 292,
+      "title": "The Joe Rogan Experience",
+      "presenters": [
+        "Joe Rogan"
+      ],
+      "cover": "/images/podcasts/pa-292.jpg",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/8e5bcebc-ca16-11ee-89f0-0fa0b9bdfc7c/image/5fcd0c14dce017c1f915e2e9f2bd50f7.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://feeds.megaphone.fm/GLT1412515089",
+      "homepage": null,
+      "category": "Comedy",
+      "availableEpisodes": 2756,
+      "status": "current",
+      "lastPlayed": "2026-09-23",
+      "firstPlayed": "2025-01-07",
+      "stats": {
+        "episodesPlayed": 54,
+        "hoursListened": 157,
+        "since": "2025-01-07"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 2.5
+      },
+      "recent": [
+        {
+          "name": "#2550 - Rick Springfield",
+          "season": -1,
+          "episode": 2550,
+          "released": "2026-09-08",
+          "played": "2026-09-23",
+          "durationMin": 149
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
+    },
+    {
+      "id": 297,
+      "title": "SmartLess",
+      "presenters": [
+        "Jason Bateman",
+        "Sean Hayes",
+        "Will Arnett"
+      ],
+      "cover": "/images/podcasts/pa-297.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/8436e3c1-2479-4466-ac48-fa58259960bb/0156216b-cc03-4f2c-9fcc-03fd38a2f4e0/3000x3000/sxm-cover-smartless-r2025-3000x3000-final.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/hNaFxXpO",
+      "homepage": "https://www.smartless.com/",
+      "category": "Comedy",
+      "availableEpisodes": 377,
+      "status": "current",
+      "lastPlayed": "2026-09-22",
+      "firstPlayed": "2025-01-17",
+      "stats": {
+        "episodesPlayed": 49,
+        "hoursListened": 56.2,
+        "since": "2025-01-17"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1.2
+      },
+      "recent": [
+        {
+          "name": "\"Andrew Garfield\"",
+          "season": -1,
+          "episode": 322,
+          "released": "2026-09-07",
+          "played": "2026-09-22",
+          "durationMin": 72
+        }
+      ],
+      "rating": 10,
+      "opinion": "Three hosts spring a surprise guest on each other each week for an in-depth, funny conversation. Definitely worth it, though I'm picky about which episodes I pick.",
+      "statusOverride": null,
+      "categoryOverride": "Comedy"
     },
     {
       "id": 6209,
@@ -404,8 +859,8 @@
         "since": "2026-05-22"
       },
       "lastWeek": {
-        "episodes": 1,
-        "hours": 1.2
+        "episodes": 0,
+        "hours": 0
       },
       "recent": [
         {
@@ -421,265 +876,6 @@
       "opinion": "Funny repartee around science news.",
       "statusOverride": null,
       "categoryOverride": null
-    },
-    {
-      "id": 307,
-      "title": "Friday Night Comedy from BBC Radio 4",
-      "presenters": [
-        "BBC Radio 4"
-      ],
-      "cover": "/images/podcasts/pa-307.jpg",
-      "artworkUrl": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0lbr5kr.jpg",
-      "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9pj.rss",
-      "homepage": "http://www.bbc.co.uk/programmes/p02pc9pj",
-      "category": "Comedy",
-      "availableEpisodes": 342,
-      "status": "current",
-      "lastPlayed": "2026-09-20",
-      "firstPlayed": "2025-01-04",
-      "stats": {
-        "episodesPlayed": 93,
-        "hoursListened": 49.2,
-        "since": "2025-01-04"
-      },
-      "lastWeek": {
-        "episodes": 2,
-        "hours": 1.1
-      },
-      "recent": [
-        {
-          "name": "The People Have Spoken Ep3. British Maple Syrup",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-04",
-          "played": "2026-09-20",
-          "durationMin": 32
-        },
-        {
-          "name": "The People Have Spoken Ep2. Fed Up With War!",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-28",
-          "played": "2026-09-15",
-          "durationMin": 31
-        }
-      ],
-      "rating": 10,
-      "opinion": "Alternates between The Now Show, The News Quiz and Dead Ringers — top-notch comedy from a wide variety of British comedians.",
-      "statusOverride": null,
-      "categoryOverride": "Comedy"
-    },
-    {
-      "id": 361,
-      "title": "Hard Fork",
-      "presenters": [
-        "The New York Times"
-      ],
-      "cover": "/images/podcasts/pa-361.jpg",
-      "artworkUrl": "https://image.simplecastcdn.com/images/4105a47a-42e5-4ccc-887a-832af7989986/23965394-f5e4-4fdb-b150-639f4910353e/3000x3000/nyt-hf-album-art-3000-2.jpg?aid=rss_feed",
-      "feedUrl": "https://feeds.simplecast.com/l2i9YnTd",
-      "homepage": "https://www.nytimes.com/column/hard-fork",
-      "category": "Tech",
-      "availableEpisodes": 215,
-      "status": "current",
-      "lastPlayed": "2026-09-19",
-      "firstPlayed": "2025-01-03",
-      "stats": {
-        "episodesPlayed": 98,
-        "hoursListened": 112.3,
-        "since": "2025-01-03"
-      },
-      "lastWeek": {
-        "episodes": 2,
-        "hours": 2.5
-      },
-      "recent": [
-        {
-          "name": "The A.I. Mob That Attacked Hugging Face + METR’s Ajeya Cotra",
-          "season": -1,
-          "episode": 211,
-          "released": "2026-09-04",
-          "played": "2026-09-19",
-          "durationMin": 84
-        },
-        {
-          "name": "Meta Shifts the Blame + Do Data Center Bans Work? + The Final HatGPT",
-          "season": -1,
-          "episode": 210,
-          "released": "2026-08-28",
-          "played": "2026-09-15",
-          "durationMin": 69
-        }
-      ],
-      "rating": 9,
-      "opinion": "Discussions of the latest in tech. Great presenters, great pace.",
-      "statusOverride": null,
-      "categoryOverride": "Tech"
-    },
-    {
-      "id": 803,
-      "title": "Science Quickly",
-      "presenters": [
-        "Scientific American"
-      ],
-      "cover": "/images/podcasts/pa-803.jpg",
-      "artworkUrl": "https://megaphone.imgix.net/podcasts/9e578524-a403-11ee-a6cf-cbcdcc0e11fb/image/ec5ff1c72de2a19d67bc6425661674b1.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-      "feedUrl": "https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=science-quickly",
-      "homepage": "https://www.sciencequickly.com",
-      "category": "Science",
-      "availableEpisodes": 1969,
-      "status": "current",
-      "lastPlayed": "2026-09-18",
-      "firstPlayed": "2024-12-24",
-      "stats": {
-        "episodesPlayed": 240,
-        "hoursListened": 60.5,
-        "since": "2024-12-24"
-      },
-      "lastWeek": {
-        "episodes": 4,
-        "hours": 1.1
-      },
-      "recent": [
-        {
-          "name": "What if a dating app matched you with a dead body?",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-04",
-          "played": "2026-09-18",
-          "durationMin": 14
-        },
-        {
-          "name": "The hackers fighting to keep our water safe",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-02",
-          "played": "2026-09-16",
-          "durationMin": 15
-        },
-        {
-          "name": "NASA’s Roman Space Telescope launches",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-31",
-          "played": "2026-09-15",
-          "durationMin": 14
-        },
-        {
-          "name": "Is Trump abandoning endangered species?",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-28",
-          "played": "2026-09-14",
-          "durationMin": 19
-        }
-      ],
-      "rating": 9,
-      "opinion": "Short snippets on the latest science news from Scientific American.",
-      "statusOverride": null,
-      "categoryOverride": "Science"
-    },
-    {
-      "id": 7172,
-      "title": "Last Week in AI",
-      "presenters": [
-        "AI Weekly"
-      ],
-      "cover": "/images/podcasts/pa-7172.jpg",
-      "artworkUrl": "https://content.production.cdn.art19.com/images/22/86/cd/1b/2286cd1b-82fa-4b51-9365-8fb6cc62f7d4/a49d75f7f84ceb5e7c55c821815014ce89b8e32cadbdbc08fc06ee8bb367a8fa280bd43a5890e5ba5df3a593c19dcdbfc7acb3aadef6626a83ae3b54a0f726db.jpeg",
-      "feedUrl": "https://rss.art19.com/last-week-in-ai-podcast",
-      "homepage": "https://art19.com/shows/last-week-in-ai-podcast",
-      "category": "Education/Self-Improvement/News/Technology",
-      "availableEpisodes": 776,
-      "status": "current",
-      "lastPlayed": "2026-09-18",
-      "firstPlayed": "2026-09-14",
-      "stats": {
-        "episodesPlayed": 3,
-        "hoursListened": 0.8,
-        "since": "2026-09-14"
-      },
-      "lastWeek": {
-        "episodes": 2,
-        "hours": 0.6
-      },
-      "recent": [
-        {
-          "name": "GPT-6 and AI Service Disruptions",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-04",
-          "played": "2026-09-18",
-          "durationMin": 20
-        },
-        {
-          "name": "Fable 5.1 and OpenAI Astra",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-09-03",
-          "played": "2026-09-17",
-          "durationMin": 16
-        }
-      ],
-      "rating": null,
-      "opinion": "",
-      "statusOverride": null,
-      "categoryOverride": null
-    },
-    {
-      "id": 343,
-      "title": "StarTalk with Neil deGrasse Tyson",
-      "presenters": [
-        "Neil deGrasse Tyson"
-      ],
-      "cover": "/images/podcasts/pa-343.jpg",
-      "artworkUrl": "https://image.simplecastcdn.com/images/5b7d8c77-15ba-4eff-a999-2e725db21db5/2b201827-3634-43a1-aa2d-394a4304280f/3000x3000/ii-lpimppkh1.jpg?aid=rss_feed",
-      "feedUrl": "https://feeds.simplecast.com/4T39_jAj",
-      "homepage": "siriusxm.com",
-      "category": "Science",
-      "availableEpisodes": 1131,
-      "status": "current",
-      "lastPlayed": "2026-09-18",
-      "firstPlayed": "2025-01-04",
-      "stats": {
-        "episodesPlayed": 228,
-        "hoursListened": 204.8,
-        "since": "2025-01-04"
-      },
-      "lastWeek": {
-        "episodes": 3,
-        "hours": 3.2
-      },
-      "recent": [
-        {
-          "name": "This Is Your Brain on Psychedelics",
-          "season": 17,
-          "episode": 53,
-          "released": "2026-09-04",
-          "played": "2026-09-18",
-          "durationMin": 84
-        },
-        {
-          "name": "The Evolution of Love and Sex with Dan Savage",
-          "season": 6,
-          "episode": 17,
-          "released": "2015-05-10",
-          "played": "2026-09-17",
-          "durationMin": 52
-        },
-        {
-          "name": "Rogue Planets & Exomoons with David Kipping",
-          "season": 17,
-          "episode": 52,
-          "released": "2026-09-01",
-          "played": "2026-09-16",
-          "durationMin": 59
-        }
-      ],
-      "rating": 8,
-      "opinion": "An excellent podcast from Neil deGrasse Tyson, ranging from the origin of life to dark matter, plus pop culture and science's impact on society. A bit commercial-radio in that it never digs as deep as I'd like, but it's funny and introduces many luminaries in the field.",
-      "statusOverride": null,
-      "categoryOverride": "Science"
     },
     {
       "id": 6202,
@@ -704,8 +900,8 @@
         "since": "2026-05-23"
       },
       "lastWeek": {
-        "episodes": 1,
-        "hours": 0.9
+        "episodes": 0,
+        "hours": 0
       },
       "recent": [
         {
@@ -721,164 +917,6 @@
       "opinion": "",
       "statusOverride": null,
       "categoryOverride": null
-    },
-    {
-      "id": 123,
-      "title": "The Rest Is History",
-      "presenters": [
-        "Goalhanger"
-      ],
-      "cover": "/images/podcasts/pa-123.jpg",
-      "artworkUrl": "https://megaphone.imgix.net/podcasts/00c0a118-2426-11ee-b258-73d331d0123b/image/db3295fcd9d3a7113e8000e931f0541d.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-      "feedUrl": "https://feeds.megaphone.fm/GLT4787413333",
-      "homepage": "http://therestishistory.com",
-      "category": "History",
-      "availableEpisodes": 745,
-      "status": "current",
-      "lastPlayed": "2026-09-17",
-      "firstPlayed": "2024-12-24",
-      "stats": {
-        "episodesPlayed": 108,
-        "hoursListened": 96.6,
-        "since": "2024-12-24"
-      },
-      "lastWeek": {
-        "episodes": 1,
-        "hours": 0.9
-      },
-      "recent": [
-        {
-          "name": "122. Æthelstan: OFFICIALLY England's greatest monarch",
-          "season": -1,
-          "episode": 122,
-          "released": "2021-11-19",
-          "played": "2026-09-17",
-          "durationMin": 57
-        }
-      ],
-      "rating": 10,
-      "opinion": "In-depth discussions on a wide variety of historical events, places, people, nations and empires.",
-      "statusOverride": null,
-      "categoryOverride": null
-    },
-    {
-      "id": 899,
-      "title": "Daniel and Jorge Explain the Universe",
-      "presenters": [
-        "iHeartPodcasts"
-      ],
-      "cover": "/images/podcasts/pa-899.jpg",
-      "artworkUrl": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/56cec8f5-8977-4ae9-99c6-b1ed00fe8598/f9937580-972b-4006-b6ca-b1ed00feb864/image.jpg?t=1726500479&size=Large",
-      "feedUrl": "https://omny.fm/shows/daniel-and-jorge-explain-the-universe/playlists/podcast.rss",
-      "homepage": "https://www.iheart.com/podcast/105-daniel-and-jorge-explain-t-29862087/",
-      "category": "Science",
-      "availableEpisodes": 642,
-      "status": "current",
-      "lastPlayed": "2026-09-17",
-      "firstPlayed": "2024-12-23",
-      "stats": {
-        "episodesPlayed": 118,
-        "hoursListened": 102.6,
-        "since": "2024-12-23"
-      },
-      "lastWeek": {
-        "episodes": 1,
-        "hours": 0.9
-      },
-      "recent": [
-        {
-          "name": "What is the Cosmological Constant?",
-          "season": -1,
-          "episode": -1,
-          "released": "2020-04-21",
-          "played": "2026-09-17",
-          "durationMin": 53
-        }
-      ],
-      "rating": 10,
-      "opinion": "Daniel and Jorge cover the biggest ideas in physics — time, the origin of the universe, the search for dark matter — and how scientists think. I've listened consistently for over a year; the humour and explanations are great.",
-      "statusOverride": null,
-      "categoryOverride": "Science"
-    },
-    {
-      "id": 806,
-      "title": "Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas",
-      "presenters": [
-        "Sean Carroll"
-      ],
-      "cover": "/images/podcasts/pa-806.jpg",
-      "artworkUrl": "https://static.libsyn.com/p/assets/b/0/6/d/b06d098337897af116c3140a3186d450/21d641ef836c48dff270cbede4360d187bdd6c56cb126be7d6f51078db34d4675527fa72e13c86bb573ec42c5d4fc493e18e7d95fec734ec77168fc379baefcf.jpeg",
-      "feedUrl": "https://feeds.libsyn.com/604590/rss",
-      "homepage": "https://www.preposterousuniverse.com/podcast/",
-      "category": "Science, Science/Physics",
-      "availableEpisodes": 445,
-      "status": "current",
-      "lastPlayed": "2026-09-16",
-      "firstPlayed": "2025-07-23",
-      "stats": {
-        "episodesPlayed": 57,
-        "hoursListened": 112.7,
-        "since": "2025-07-23"
-      },
-      "lastWeek": {
-        "episodes": 1,
-        "hours": 1.4
-      },
-      "recent": [
-        {
-          "name": "366 | Jim Al-Khalili on Time, Quantum, Biology, and Cosmology",
-          "season": -1,
-          "episode": 366,
-          "released": "2026-08-31",
-          "played": "2026-09-16",
-          "durationMin": 82
-        }
-      ],
-      "rating": null,
-      "opinion": "",
-      "statusOverride": null,
-      "categoryOverride": null
-    },
-    {
-      "id": 297,
-      "title": "SmartLess",
-      "presenters": [
-        "Jason Bateman",
-        "Sean Hayes",
-        "Will Arnett"
-      ],
-      "cover": "/images/podcasts/pa-297.jpg",
-      "artworkUrl": "https://image.simplecastcdn.com/images/8436e3c1-2479-4466-ac48-fa58259960bb/0156216b-cc03-4f2c-9fcc-03fd38a2f4e0/3000x3000/sxm-cover-smartless-r2025-3000x3000-final.jpg?aid=rss_feed",
-      "feedUrl": "https://feeds.simplecast.com/hNaFxXpO",
-      "homepage": "https://www.smartless.com/",
-      "category": "Comedy",
-      "availableEpisodes": 376,
-      "status": "current",
-      "lastPlayed": "2026-09-15",
-      "firstPlayed": "2025-01-17",
-      "stats": {
-        "episodesPlayed": 48,
-        "hoursListened": 55,
-        "since": "2025-01-17"
-      },
-      "lastWeek": {
-        "episodes": 1,
-        "hours": 1
-      },
-      "recent": [
-        {
-          "name": "\"Steve Zahn\"",
-          "season": -1,
-          "episode": 321,
-          "released": "2026-08-31",
-          "played": "2026-09-15",
-          "durationMin": 63
-        }
-      ],
-      "rating": 10,
-      "opinion": "Three hosts spring a surprise guest on each other each week for an in-depth, funny conversation. Definitely worth it, though I'm picky about which episodes I pick.",
-      "statusOverride": null,
-      "categoryOverride": "Comedy"
     },
     {
       "id": 303,
@@ -918,84 +956,6 @@
       "opinion": "Excellent in-depth conversations.",
       "statusOverride": null,
       "categoryOverride": null
-    },
-    {
-      "id": 292,
-      "title": "The Joe Rogan Experience",
-      "presenters": [
-        "Joe Rogan"
-      ],
-      "cover": "/images/podcasts/pa-292.jpg",
-      "artworkUrl": "https://megaphone.imgix.net/podcasts/8e5bcebc-ca16-11ee-89f0-0fa0b9bdfc7c/image/44a67bcc8eafc1e9e5a834234176f4c4.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-      "feedUrl": "https://feeds.megaphone.fm/GLT1412515089",
-      "homepage": null,
-      "category": "Comedy",
-      "availableEpisodes": 2753,
-      "status": "current",
-      "lastPlayed": "2026-08-31",
-      "firstPlayed": "2025-01-07",
-      "stats": {
-        "episodesPlayed": 53,
-        "hoursListened": 154.5,
-        "since": "2025-01-07"
-      },
-      "lastWeek": {
-        "episodes": 0,
-        "hours": 0
-      },
-      "recent": [
-        {
-          "name": "#2539 - Protect Our Parks 17",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-13",
-          "played": "2026-08-31",
-          "durationMin": 281
-        }
-      ],
-      "rating": null,
-      "opinion": "",
-      "statusOverride": null,
-      "categoryOverride": null
-    },
-    {
-      "id": 798,
-      "title": "Bahá’í World News Service (BWNS)",
-      "presenters": [
-        "Bahá’í World News Service (BWNS)"
-      ],
-      "cover": "/images/podcasts/pa-798.jpg",
-      "artworkUrl": "https://i1.sndcdn.com/avatars-000439197492-gh7m0g-original.jpg",
-      "feedUrl": "https://feeds.soundcloud.com/users/soundcloud:users:443314644/sounds.rss",
-      "homepage": "http://news.bahai.org/",
-      "category": "Bahá'í",
-      "availableEpisodes": 76,
-      "status": "current",
-      "lastPlayed": "2026-08-21",
-      "firstPlayed": "2025-01-06",
-      "stats": {
-        "episodesPlayed": 27,
-        "hoursListened": 9.5,
-        "since": "2025-01-06"
-      },
-      "lastWeek": {
-        "episodes": 0,
-        "hours": 0
-      },
-      "recent": [
-        {
-          "name": "In Conversation: Studies, work, and service brought together in the life of communities",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-08-06",
-          "played": "2026-08-21",
-          "durationMin": 14
-        }
-      ],
-      "rating": 10,
-      "opinion": "Reports on major developments in the worldwide Bahá'í community, with interviews from people working in the field.",
-      "statusOverride": null,
-      "categoryOverride": "Bahá'í"
     },
     {
       "id": 254,
