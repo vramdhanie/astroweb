@@ -17,7 +17,7 @@ export default function Header() {
             />
             <div>
               <div className="text-lg font-semibold text-[var(--foreground)]">Vincent Ramdhanie</div>
-              <div className="text-sm text-[var(--muted-foreground)]">Senior Software Engineer</div>
+              <div className="text-sm text-[var(--muted-foreground)]">Software Engineer</div>
             </div>
           </Link>
 

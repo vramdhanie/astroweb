@@ -100,6 +100,8 @@ function PodcastCard({ p }: { p: PodcastEntry }) {
   )
 }
 
+export const metadata = { title: 'Podcasts' };
+
 export default function PodcastsPage() {
   const { summary, podcasts, queue } = getPodcastData()
   const current = podcasts.filter((p) => p.status === 'current')

@@ -32,12 +32,18 @@ export function getAllProjects(): ProjectListItem[] {
                 featured: data.featured || false,
                 date: data.date,
                 tags: data.tags || [],
+                priority: data.priority,
+                playground: data.playground || false,
                 stars: data.stars,
                 forks: data.forks,
                 language: data.language,
             }
         })
-        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+        .sort(
+            (a, b) =>
+                (a.priority ?? 999) - (b.priority ?? 999) ||
+                new Date(b.date).getTime() - new Date(a.date).getTime(),
+        )
 
     return projects
 }

@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { getAllBookYears, getBooksForYear } from '@/lib/books';
 import { BookOpen, CheckCircle2, Clock } from 'lucide-react';
 
+export const metadata = { title: 'Books' };
+
 export default function BooksPage() {
   const years = getAllBookYears();
 

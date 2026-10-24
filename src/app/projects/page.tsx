@@ -1,4 +1,6 @@
 import { getAllProjects } from '@/lib/projects';
+
+export const metadata = { title: 'Projects' };
 import ProjectCard from '@/components/ProjectCard';
 import Link from 'next/link';
 import { Github } from 'lucide-react';
@@ -12,17 +14,32 @@ export default function ProjectsPage() {
 
       <div className="mb-8">
         <p className="text-[var(--muted-foreground)] max-w-prose">
-          Open source projects and experiments. Each one is a learning experience.
+          Open-source projects and experiments.
         </p>
       </div>
 
       {/* Projects Grid */}
       {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.filter((p) => !p.playground).map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+          {projects.some((p) => p.playground) && (
+            <>
+              <h2 className="text-xl font-semibold mt-12 mb-2 text-[var(--foreground)]">Playground</h2>
+              <p className="text-[var(--muted-foreground)] max-w-prose mb-6">
+                Games and small experiments — built for fun, kept because they get played.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {projects.filter((p) => p.playground).map((project) => (
+                  <ProjectCard key={project.slug} project={project} />
+                ))}
+              </div>
+            </>
+          )}
+        </>
       ) : (
         <div className="text-center py-12">
           <p className="text-muted-foreground text-lg">No projects found.</p>

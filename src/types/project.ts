@@ -11,6 +11,8 @@ export interface Project {
     featured: boolean
     date: string
     tags: string[]
+    priority?: number
+    playground?: boolean
     readme: string
     stars?: number
     forks?: number
@@ -30,6 +32,8 @@ export interface ProjectListItem {
     featured: boolean
     date: string
     tags: string[]
+    priority?: number
+    playground?: boolean
     stars?: number
     forks?: number
     language?: string

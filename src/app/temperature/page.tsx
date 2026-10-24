@@ -1,3 +1,5 @@
+export const metadata = { title: 'Temperature' };
+
 export default function Temperature() {
   return (
     <div className="min-h-screen flex items-center justify-center dark:bg-gradient-to-br dark:from-black dark:to-blue-600 p-4">

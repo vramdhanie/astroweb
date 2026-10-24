@@ -1,6 +1,8 @@
 import { getAllArticles } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 
+export const metadata = { title: 'Articles' };
+
 export default function ArticlesPage() {
   const articles = getAllArticles();
 
@@ -9,7 +11,7 @@ export default function ArticlesPage() {
       <h1 className="text-3xl font-bold tracking-tight text-left mb-8 text-[var(--foreground)]">Articles</h1>
       <div className="mb-8">
         <p className="text-[var(--muted-foreground)] max-w-prose">
-          Technical writing on React, Firebase, AI, and software engineering.
+          Essays and technical notes — software, AI, and how to think about both.
         </p>
       </div>
 

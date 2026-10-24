@@ -19,8 +19,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vincentramdhanie.com'),
-  title: "Vincent Ramdhanie - Senior Software Engineer",
-  description: "Personal website of Vincent Ramdhanie, Senior Software Engineer",
+  title: {
+    default: "Vincent Ramdhanie",
+    template: "%s · Vincent Ramdhanie",
+  },
+  description:
+    "Personal website of Vincent Ramdhanie — software engineer, writer, and builder of small apps.",
   icons: {
     icon: [
       { url: '/favicon-16x16-new.png', sizes: '16x16', type: 'image/png' },
@@ -40,14 +44,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://vincentramdhanie.com',
-    title: 'Vincent Ramdhanie - Senior Software Engineer',
-    description: 'Personal website of Vincent Ramdhanie, Senior Software Engineer',
+    title: 'Vincent Ramdhanie',
+    description: 'Personal website of Vincent Ramdhanie — software engineer, writer, and builder of small apps.',
     siteName: 'Vincent Ramdhanie',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vincent Ramdhanie - Senior Software Engineer',
-    description: 'Personal website of Vincent Ramdhanie, Senior Software Engineer',
+    title: 'Vincent Ramdhanie',
+    description: 'Personal website of Vincent Ramdhanie — software engineer, writer, and builder of small apps.',
   },
 };
 

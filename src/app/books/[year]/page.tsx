@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ year: str
   }
 
   return {
-    title: `${bookYear.title} - Vincent Ramdhanie`,
+    title: bookYear.title,
     description: bookYear.description,
   };
 }

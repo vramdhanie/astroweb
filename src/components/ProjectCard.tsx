@@ -45,7 +45,7 @@ export default function ProjectCard({ project, showTechStack = true, showStats =
         {showTechStack && project.techStack.length > 0 && (
           <div className="mb-4">
             <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech, index) => (
+              {project.techStack.slice(0, 4).map((tech, index) => (
                 <Badge key={index} variant="default">
                   {tech}
                 </Badge>
@@ -92,23 +92,6 @@ export default function ProjectCard({ project, showTechStack = true, showStats =
           </div>
         )}
 
-        {/* Tags */}
-        {project.tags.length > 0 && (
-          <div className="mt-4 pt-4 border-t border-[var(--border)]">
-            <div className="flex flex-wrap gap-2">
-              {project.tags.slice(0, 3).map((tag, index) => (
-                <Badge key={index} variant="info">
-                  {tag}
-                </Badge>
-              ))}
-              {project.tags.length > 3 && (
-                <Badge variant="default">
-                  +{project.tags.length - 3} more
-                </Badge>
-              )}
-            </div>
-          </div>
-        )}
       </div>
     </Link>
   );

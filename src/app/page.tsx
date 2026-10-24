@@ -88,7 +88,7 @@ export default function Home() {
             Bahá&apos;í
           </a>
           , and the second fact shapes the first. Bahá&apos;ís work alongside their
-          neighbours to build resilient communities capable of meeting the challenges of the current age ; 
+          neighbours to build resilient communities capable of meeting the challenges of the current age;
           I try to write software in the same spirit — tools that respect the intelligence and dignity of the
           people who use them.
         </p>
@@ -105,8 +105,8 @@ export default function Home() {
           <a href="https://teamflowhq.com" className="underline hover:no-underline">
             Teamflow
           </a>
-          . My interest in AI is far older -  my master&apos;s thesis
-          explored parallel algorithms on GPU architecture - and these days it goes
+          . My interest in AI is far older — my master&apos;s thesis
+          explored parallel algorithms on GPU architecture — and these days it goes
           into practical things: language models turned into working tools, and a
           constellation of small applications I build and run for my family and
           myself.
@@ -267,7 +267,7 @@ export default function Home() {
       <Divider />
       <div className="prose prose-slate max-w-prose prose-p:text-[var(--foreground)]">
         <p>
-          Any hope of contributing to a brighter future for mankind, rest on the fundamental acceptance of the nobility of man.
+          Any hope of contributing to a brighter future for mankind rests on the fundamental acceptance of the nobility of man.
         </p>
         <blockquote className="border-l-4 border-[var(--primary)] pl-4 my-6 italic text-[var(--foreground)]">
           <span className="font-semibold">O SON OF SPIRIT!</span>

@@ -187,6 +187,8 @@ const SECTIONS: UsesSection[] = [
   },
 ];
 
+export const metadata = { title: 'Uses' };
+
 export default function UsesPage() {
   return (
     <>

@@ -2,6 +2,8 @@ import { getWaitingBooks } from '@/lib/books';
 import Biblio from '@/components/Biblio';
 import Link from 'next/link';
 
+export const metadata = { title: 'Waiting to Read' };
+
 export default function WaitingBooksPage() {
   const waitingBooks = getWaitingBooks();
 

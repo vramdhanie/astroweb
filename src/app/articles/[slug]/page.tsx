@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${article.title} - Vincent Ramdhanie`,
+    title: article.title,
     description: article.abstract,
     openGraph: {
       title: article.title,

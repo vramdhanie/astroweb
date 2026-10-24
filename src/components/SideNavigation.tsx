@@ -1,4 +1,3 @@
-import { getAllArticles } from '@/lib/articles';
 import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import NavLink from '@/components/NavLink';
@@ -15,8 +14,6 @@ const APPS = [
 ];
 
 export default function SideNavigation() {
-  const articles = getAllArticles();
-
   return (
     <nav className="md:pr-8 col-span-1 md:order-first">
       {/* Main Navigation — a compact wrapping row on mobile, a column on md+ */}
@@ -28,7 +25,6 @@ export default function SideNavigation() {
           { href: '/books', label: 'Books' },
           { href: '/podcasts', label: 'Podcasts' },
           { href: '/uses', label: 'Uses' },
-          { href: '/temperature', label: 'Temperature' },
         ].map(({ href, label, exact }) => (
           <li key={href}>
             <NavLink
@@ -43,52 +39,6 @@ export default function SideNavigation() {
           </li>
         ))}
       </ul>
-
-      {/* Recent Articles — hidden on mobile so content stays above the fold */}
-      <div className="hidden md:block mt-8">
-        <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Recent Articles</h3>
-        <ul className="space-y-1">
-          {articles.slice(0, 5).map((article) => (
-            <li key={article._slug}>
-              <NavLink
-                href={`/articles/${article._slug}`}
-                exact
-                className="transition-colors text-sm block py-2 px-3 rounded-md line-clamp-2"
-                activeClassName="text-[var(--primary)] bg-[var(--accent)]"
-                inactiveClassName="text-[var(--muted-foreground)] hover:text-[var(--primary)] hover:bg-[var(--accent)]"
-              >
-                {article.title}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Reading Lists — hidden on mobile */}
-      <div className="hidden md:block mt-8">
-        <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 px-3">Reading Lists</h3>
-        <ul className="space-y-1">
-          {[
-            { href: '/books/2026', label: '2026' },
-            { href: '/books/2025', label: '2025' },
-            { href: '/books/2024', label: '2024' },
-            { href: '/books/2023', label: '2023' },
-            { href: '/books/waiting', label: 'Waiting' },
-          ].map(({ href, label }) => (
-            <li key={href}>
-              <NavLink
-                href={href}
-                exact
-                className="transition-colors block py-2 px-3 rounded-md"
-                activeClassName="text-[var(--primary)] bg-[var(--accent)]"
-                inactiveClassName="text-[var(--muted-foreground)] hover:text-[var(--primary)] hover:bg-[var(--accent)]"
-              >
-                {label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </div>
 
       {/* Apps — hidden on mobile */}
       <div className="hidden md:block mt-8">
@@ -110,6 +60,17 @@ export default function SideNavigation() {
               </a>
             </li>
           ))}
+          <li>
+            <NavLink
+              href="/temperature"
+              exact
+              className="transition-colors block py-2 px-3 rounded-md"
+              activeClassName="text-[var(--primary)] bg-[var(--accent)]"
+              inactiveClassName="text-[var(--muted-foreground)] hover:text-[var(--primary)] hover:bg-[var(--accent)]"
+            >
+              Temperature
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>

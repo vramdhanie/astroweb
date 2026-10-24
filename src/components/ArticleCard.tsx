@@ -11,12 +11,6 @@ interface ArticleCardProps {
   article: ArticleListItem;
 }
 
-const getLevelVariant = (level: string): "success" | "warning" | "info" => {
-  if (level === 'beginner') return 'success';
-  if (level === 'intermediate') return 'warning';
-  return 'info';
-};
-
 export default function ArticleCard({ article }: ArticleCardProps) {
   const imagePath = `/images/articles/${article.image}`;
 
@@ -36,9 +30,6 @@ export default function ArticleCard({ article }: ArticleCardProps) {
 
         <div className="p-6">
           <div className="flex items-center gap-2 mb-3">
-            <Badge variant={getLevelVariant(article.level)}>
-              {article.level}
-            </Badge>
             <span className="text-sm text-[var(--muted-foreground)] flex items-center gap-1">
               <Clock size={14} />
               {article.readingTime} min
