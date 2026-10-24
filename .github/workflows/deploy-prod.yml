@@ -37,6 +37,7 @@ jobs:
       # Deploy to Firebase
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          firebaseToolsVersion: 15.31.0 # 15.34 adds a serviceusage check our SA lacks
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_GATSBYWEB }}'
           projectId: ${{ secrets.PROJECT_ID }}
           channelId: live
