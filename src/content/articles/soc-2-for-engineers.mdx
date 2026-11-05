@@ -1,0 +1,39 @@
+---
+title: SOC 2 for Engineers
+_slug: soc-2-for-engineers
+image: gate_shrine.jpg
+date: "2026-11-05"
+author: Vincent Ramdhanie
+level: beginner
+tags: compliance security engineering practice
+abstract: |
+  My CTO asked me to own our SOC 2 audit. I expected a few weeks of forwarding documents to auditors and got something that quietly rewired how I work — chiefly the discovery that proving a control operated is a different discipline from operating it. I wrote up seven lessons for the Sybill engineering blog; this is why I think they generalise.
+---
+
+A few months ago my CTO asked me to own our SOC 2 audit. I write software for a living, and my mental model of compliance was a folder of PDFs nobody reads and a checkbox in a sales deck. I said yes because it looked like a chance to learn something adjacent to my work, and I assumed it would be a few weeks of forwarding documents to auditors.
+
+It was not. It turned out to be one of the more useful things I have done as an engineer, and not because I now enjoy compliance. I don't. It was useful because it changed how I think about work I was already doing.
+
+I wrote the whole thing up for the Sybill engineering blog, as seven lessons: [SOC 2 for Engineers: 7 Lessons From Owning My First Audit](https://www.sybill.ai/blogs/soc-2-audit). Rather than repeat it here, let me say why I think it generalises beyond audits.
+
+## Proving it worked is a different discipline from making it work
+
+As engineers we are trained to care whether something works. An auditor cares whether you can prove it worked — after the fact, to a stranger, without you in the room. Those are not the same thing, and the gap between them is wider than I expected.
+
+We had controls that genuinely happened every day and that I could not, at first, prove happened at all. Not through sloppiness. The proof lived in people's heads, in Slack threads that scroll away, in *yeah, we always do that*. An auditor cannot accept "we always do that." They can accept a ticket with a timestamp, an approval, and a name.
+
+If I had to compress the experience into one sentence: **if it isn't written down, logged, or linked, it didn't happen.**
+
+## Documentation drift is invisible until someone checks
+
+One of my first tasks was our system description — the document that says how the whole system is built and secured. I inherited a version that sounded plausible and was wrong in a dozen small ways: infrastructure we had migrated off, integrations we no longer used, a posture that didn't quite match production.
+
+Nobody had lied. The document had drifted while the system kept moving.
+
+That is not only an audit problem. When something breaks at two in the morning, the document everyone reaches for had better be true. Verifying it line by line against what was actually running was tedious, and one of the most valuable things I did all year.
+
+## Why I think this matters for AI work
+
+I spend most of my time building agent systems — things that take actions in production rather than answer questions. The audit gave me vocabulary I didn't have for a problem I was already facing: an agent that does the right thing is not the same as an agent you can *demonstrate* did the right thing, six months later, to someone who wasn't there.
+
+Evidence, it turns out, is a design concern. The full seven lessons are [over on the Sybill blog](https://www.sybill.ai/blogs/soc-2-audit).
