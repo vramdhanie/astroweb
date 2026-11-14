@@ -201,11 +201,12 @@
     "year": "1997",
     "cover": "http://books.google.com/books/content?id=cBSqzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "description": "Heinlein's late-career spy story. He's a favourite from way back, so this one has been on the list a while.",
-    "yearRead": "",
-    "readingStatus": "WAIT",
+    "yearRead": "2026",
+    "readingStatus": "READING",
     "pagesRead": 0,
     "pageCount": 384,
-    "progressPercentage": "0%"
+    "progressPercentage": "0%",
+    "dateStarted": "2026-11-14"
   },
   {
     "isbn": "9780836221190",
