@@ -11,19 +11,27 @@ import { Divider } from '@/components/ui/Divider';
 import { getAllArticles } from '@/lib/articles';
 import { getAllProjects, getHighlightedProjects } from '@/lib/projects';
 
-/** The book furthest along among those marked READING — the one actually
- * on the nightstand — read straight from the book database at build time. */
+/** The book most recently started among those marked READING — the one
+ * actually on the nightstand. Books carrying a dateStarted win (newest
+ * first); those without fall back to furthest along. Read straight from
+ * the book database at build time. */
 function getCurrentlyReading(): { title: string; author: string } | null {
   try {
     const raw = fs.readFileSync(path.join(process.cwd(), 'src/data/books.json'), 'utf8');
-    const books: { title: string; author: string; readingStatus: string; progressPercentage?: string }[] =
-      JSON.parse(raw);
+    const books: {
+      title: string;
+      author: string;
+      readingStatus: string;
+      progressPercentage?: string;
+      dateStarted?: string;
+    }[] = JSON.parse(raw);
     const reading = books
       .filter((b) => b.readingStatus === 'READING')
-      .sort(
-        (a, b) =>
-          parseInt(b.progressPercentage ?? '0') - parseInt(a.progressPercentage ?? '0'),
-      );
+      .sort((a, b) => {
+        if (a.dateStarted || b.dateStarted)
+          return (b.dateStarted ?? '').localeCompare(a.dateStarted ?? '');
+        return parseInt(b.progressPercentage ?? '0') - parseInt(a.progressPercentage ?? '0');
+      });
     return reading[0] ? { title: reading[0].title, author: reading[0].author } : null;
   } catch {
     return null;
