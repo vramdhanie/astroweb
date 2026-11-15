@@ -22,7 +22,7 @@ export default function SideNavigation() {
           { href: '/', label: 'Home', exact: true },
           { href: '/articles', label: 'Articles' },
           { href: '/projects', label: 'Projects' },
-          { href: '/books', label: 'Books' },
+          { href: '/books', label: 'Reading List' },
           { href: '/podcasts', label: 'Podcasts' },
           { href: '/uses', label: 'Uses' },
         ].map(({ href, label, exact }) => (
