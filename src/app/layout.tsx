@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GraphPaper from "@/components/GraphPaper";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import ThemeScript from "@/components/ThemeScript";
 import SideNavigation from "@/components/SideNavigation";
@@ -85,6 +86,7 @@ gtag('js', new Date());
 gtag('config', 'G-GE3S0VC6P6');`}
         </Script>
         <ThemeScript />
+        <GraphPaper />
         <ThemeProvider>
           <Header />
           <main className="flex-1">

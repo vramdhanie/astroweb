@@ -1,22 +1,22 @@
 ---
 title: "Compliance Document Management System"
 slug: "compliance"
-description: "A powerful document management system designed for regulatory compliance, using MongoDB for document storage and Azure OpenAI for intelligent document analysis and question answering"
-abstract: "AI-powered compliance document management with semantic search, document Q&A, and intelligent analysis using MongoDB and Azure OpenAI."
+description: "Answers vendor due-diligence and compliance questionnaires from a folder of policy PDFs, using the Anthropic API with the whole corpus prompt-cached"
+abstract: "Answers compliance questionnaires straight from policy PDFs — Claude with the whole corpus prompt-cached, no retrieval pipeline at all."
 githubUrl: "https://github.com/vramdhanie/compliance"
 liveUrl: ""
-techStack: ["Python", "MongoDB", "Azure OpenAI", "Vector Embeddings", "Semantic Search", "Document Processing", "MyPy", "Black", "pytest"]
+techStack: ["Python", "Anthropic API", "Prompt Caching", "pypdf", "openpyxl", "uv"]
 highlight: true
 featured: true
 priority: 2
 date: "2024-01-20"
-tags: ["python", "ai", "compliance", "document-management", "mongodb", "azure-openai", "semantic-search", "enterprise"]
+tags: ["python", "ai", "compliance", "claude", "prompt-caching", "document-qa"]
 stars: 0
 forks: 0
 language: "Python"
 ---
-An experiment in document intelligence for regulatory compliance work. Compliance teams live inside large, slow-moving documents — policies, standards, regulations — and the questions they ask ("what does this require of us?", "where is data retention addressed?") are semantic, not lexical. Keyword search does badly at this.
+An experiment in document intelligence for regulatory compliance work — specifically the questionnaires. Vendor due-diligence spreadsheets ask dozens of questions whose answers live in policy PDFs ("what does this require of us?", "where is data retention addressed?"), and answering them by hand means hours of searching documents you already know.
 
-The system stores documents in MongoDB with their metadata, embeds their contents as vectors, and offers two things on top: semantic search, which finds the relevant sections even when the wording differs from the query, and question answering, where responses are grounded in citations back to the exact passages they came from. The citation part matters most — in compliance work an unsourced answer is worthless.
+The first version was a full RAG pipeline: MongoDB for storage, chromadb for vectors, langchain for orchestration, Azure OpenAI for embeddings and the model. Then context windows grew past the size of any policy corpus, and the honest conclusion was that none of that machinery was earning its keep. The rewrite is a single Python script on the Anthropic API: it reads every PDF whole into the prompt, caches the corpus with prompt caching so it is paid for once per run, and answers each spreadsheet row in turn — writing answers back to the sheet, skipping rows it already answered so interrupted runs resume, and leaving blank anything the documents don't actually address. In compliance work an invented answer is worse than none.
 
-It is Python throughout, with Azure OpenAI providing the embeddings and the language model, and the codebase kept honest by MyPy, Black, and pytest. There is no public deployment — it is a working exploration of the pattern rather than a product.
+It is Python throughout, kept deliberately small — four dependencies, one file — and the git history preserves the whole arc from pipeline to script, which may be the most instructive part.
