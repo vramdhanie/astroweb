@@ -1,22 +1,17 @@
 {
-  "generatedAt": "2026-11-16T17:50:39.806Z",
-  "backup": "PodcastAddict_20261116_094823.backup",
+  "generatedAt": "2026-11-23T19:44:21.671Z",
+  "backup": "PodcastAddict_20261123_113421.backup",
   "summary": {
-    "episodesPlayed": 1593,
-    "hoursListened": 1344.1,
+    "episodesPlayed": 1624,
+    "hoursListened": 1366.2,
     "since": "2024-12-23",
     "activePodcasts": 18,
     "totalPodcasts": 18,
     "thisWeek": {
-      "episodes": 35,
-      "hours": 24.9
+      "episodes": 32,
+      "hours": 22.6
     },
     "weekly": [
-      {
-        "week": "2026-08-31",
-        "episodes": 15,
-        "hours": 15.4
-      },
       {
         "week": "2026-09-07",
         "episodes": 16,
@@ -69,207 +64,62 @@
       },
       {
         "week": "2026-11-16",
-        "episodes": 2,
-        "hours": 3.6
+        "episodes": 30,
+        "hours": 24.2
+      },
+      {
+        "week": "2026-11-23",
+        "episodes": 3,
+        "hours": 1.4
       }
     ]
   },
   "queue": {
-    "count": 28,
+    "count": 29,
     "upNext": [
       {
-        "episode": "Dustin Hoffman Part II",
-        "podcast": "Conan O’Brien Needs A Friend",
-        "durationMin": 43
+        "episode": "China's AI chip access, hoax bomb threats and nuclear alarm",
+        "podcast": "Reuters World News",
+        "durationMin": 10
       },
       {
-        "episode": "Could this be the strongest El Niño in 1,000 years?",
+        "episode": "AI Website Side Hustles",
+        "podcast": "Last Week in AI",
+        "durationMin": 9
+      },
+      {
+        "episode": "We started a book club. Naturally, we picked a book on fungi",
         "podcast": "Science Quickly",
-        "durationMin": 13
+        "durationMin": 12
       },
       {
-        "episode": "Hegseth impeachment blocked, Nvidia's board and fridge hack",
+        "episode": "Nvidia snubs Huang, Chinese AI, and GTA VI",
         "podcast": "Reuters World News",
         "durationMin": 13
       },
       {
-        "episode": "Jensen Huang’s Nvidiotic Spy Scandal + Can Dems Pass AI Regulation?",
+        "episode": "How Big A Deal Is Chinese Chip Smuggling Anyway?",
         "podcast": "Machine Gods",
         "durationMin": 46
       },
       {
-        "episode": "What is the real charge of the electron?",
+        "episode": "Can we see the surface of exoplanets?",
         "podcast": "Daniel and Jorge Explain the Universe",
-        "durationMin": 48
+        "durationMin": 50
       },
       {
-        "episode": "Cosmic Queries: GMOs with Bill Nye (Part 2)",
+        "episode": "Exploring Science and Religion with Richard Dawkins",
         "podcast": "StarTalk with Neil deGrasse Tyson",
-        "durationMin": 49
+        "durationMin": 44
       },
       {
-        "episode": "131. Burgundy: Europe's forgotten superpower",
+        "episode": "132. A Christmas Carol",
         "podcast": "The Rest Is History",
-        "durationMin": 64
-      },
-      {
-        "episode": "Taps with Andy Richter",
-        "podcast": "Conan O’Brien Needs A Friend",
-        "durationMin": 28
+        "durationMin": 51
       }
     ]
   },
   "podcasts": [
-    {
-      "id": 288,
-      "title": "Conan O’Brien Needs A Friend",
-      "presenters": [
-        "Team Coco",
-        "Earwolf"
-      ],
-      "cover": "/images/podcasts/pa-288.jpg",
-      "artworkUrl": "https://image.simplecastcdn.com/images/8436e3c1-2479-4466-ac48-fa58259960bb/371e5714-91ee-4e31-9ef3-cdd31ebfb9f5/3000x3000/conanobrienneedsafriend-keyart-sxm-3000x3000.jpg?aid=rss_feed",
-      "feedUrl": "https://feeds.simplecast.com/dHoohVNH",
-      "homepage": "https://www.siriusxm.com",
-      "category": "Comedy",
-      "availableEpisodes": 750,
-      "status": "current",
-      "lastPlayed": "2026-11-16",
-      "firstPlayed": "2024-12-23",
-      "stats": {
-        "episodesPlayed": 210,
-        "hoursListened": 174.9,
-        "since": "2024-12-23"
-      },
-      "lastWeek": {
-        "episodes": 3,
-        "hours": 2.4
-      },
-      "recent": [
-        {
-          "name": "Dustin Hoffman Part II",
-          "season": -1,
-          "episode": 426,
-          "released": "2026-11-11",
-          "played": "2026-11-16",
-          "durationMin": 43
-        },
-        {
-          "name": "Dustin Hoffman Part I",
-          "season": -1,
-          "episode": 425,
-          "released": "2026-11-09",
-          "played": "2026-11-12",
-          "durationMin": 75
-        },
-        {
-          "name": "For the Love of Butts",
-          "season": -1,
-          "episode": 10319,
-          "released": "2026-11-05",
-          "played": "2026-11-11",
-          "durationMin": 35
-        }
-      ],
-      "rating": 10,
-      "opinion": "Wacky but brilliant, and laugh-out-loud funny — even the ads. Conan's humour is both self-deprecating and insightful.",
-      "statusOverride": null,
-      "categoryOverride": "Comedy"
-    },
-    {
-      "id": 303,
-      "title": "Lex Fridman Podcast",
-      "presenters": [
-        "Lex Fridman"
-      ],
-      "cover": "/images/podcasts/pa-303.jpg",
-      "artworkUrl": "https://lexfridman.com/wordpress/wp-content/uploads/powerpress/lex_fridman_podcast_cover_3000.jpg",
-      "feedUrl": "https://lexfridman.com/feed/podcast/",
-      "homepage": "https://lexfridman.com/",
-      "category": "Technology, Science, Society & Culture/Philosophy",
-      "availableEpisodes": 505,
-      "status": "current",
-      "lastPlayed": "2026-11-16",
-      "firstPlayed": "2025-07-22",
-      "stats": {
-        "episodesPlayed": 28,
-        "hoursListened": 97.9,
-        "since": "2025-07-22"
-      },
-      "lastWeek": {
-        "episodes": 1,
-        "hours": 3
-      },
-      "recent": [
-        {
-          "name": "#504 – Russia-Ukraine War: Putin, Zelenskyy, Drones and the Future of Warfare",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-11-10",
-          "played": "2026-11-16",
-          "durationMin": 181
-        }
-      ],
-      "rating": 10,
-      "opinion": "Excellent in-depth conversations.",
-      "statusOverride": null,
-      "categoryOverride": null
-    },
-    {
-      "id": 7172,
-      "title": "Last Week in AI",
-      "presenters": [
-        "AI Weekly"
-      ],
-      "cover": "/images/podcasts/pa-7172.jpg",
-      "artworkUrl": "https://content.production.cdn.art19.com/images/88/1d/b0/34/881db034-6bc2-4136-a81e-a39e7ef61552/7736bd11f2d7637ec1a6e1c999b078ae45e722a3868bdd5b032ab623869bd24d4680474b04795df7d26581f7edd7a815438c82dbf0ad995ff87db38b48ae5c0e.jpeg",
-      "feedUrl": "https://rss.art19.com/last-week-in-ai-podcast",
-      "homepage": "https://art19.com/shows/last-week-in-ai-podcast",
-      "category": "Education/Self-Improvement/News/Technology",
-      "availableEpisodes": 793,
-      "status": "current",
-      "lastPlayed": "2026-11-15",
-      "firstPlayed": "2026-09-14",
-      "stats": {
-        "episodesPlayed": 24,
-        "hoursListened": 6.7,
-        "since": "2026-09-14"
-      },
-      "lastWeek": {
-        "episodes": 3,
-        "hours": 0.9
-      },
-      "recent": [
-        {
-          "name": "Claude Fable 5.2 Is Here — Plus NVIDIA's Jensen Huang Investigation and Amazon's Home Robot",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-11-10",
-          "played": "2026-11-15",
-          "durationMin": 17
-        },
-        {
-          "name": "The AI Agent Race: Perplexity Teammates, Meta Muse & GPT-6 Cyber",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-11-06",
-          "played": "2026-11-12",
-          "durationMin": 14
-        },
-        {
-          "name": "AI After the Midterms: Data Center Pressure & ChatGPT’s Next Move",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-11-05",
-          "played": "2026-11-11",
-          "durationMin": 20
-        }
-      ],
-      "rating": null,
-      "opinion": "",
-      "statusOverride": null,
-      "categoryOverride": null
-    },
     {
       "id": 7126,
       "title": "Reuters World News",
@@ -277,71 +127,71 @@
         "Reuters"
       ],
       "cover": "/images/podcasts/pa-7126.jpg",
-      "artworkUrl": "https://megaphone.imgix.net/podcasts/e3c7d1b2-8c45-11ed-80a2-172771c99810/image/83ac533ea52b6279d96d26ecc1b9cea4.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "artworkUrl": "https://megaphone-images.spotifycdn.com/podcasts/e3c7d1b2-8c45-11ed-80a2-172771c99810/image/83ac533ea52b6279d96d26ecc1b9cea4.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
       "feedUrl": "https://feeds.megaphone.fm/reutersworldnews",
       "homepage": "https://www.reuters.com/podcasts/",
       "category": "News/Daily News/Business News",
-      "availableEpisodes": 1233,
+      "availableEpisodes": 1240,
       "status": "current",
-      "lastPlayed": "2026-11-14",
+      "lastPlayed": "2026-11-23",
       "firstPlayed": "2026-09-09",
       "stats": {
-        "episodesPlayed": 80,
-        "hoursListened": 14.8,
+        "episodesPlayed": 87,
+        "hoursListened": 15.9,
         "since": "2026-09-09"
       },
       "lastWeek": {
-        "episodes": 10,
-        "hours": 1.8
+        "episodes": 7,
+        "hours": 1.1
       },
       "recent": [
         {
-          "name": "Hegseth, FBI Nvidia probe, Anthropic valuation (Updated)",
+          "name": "China's AI chip access, hoax bomb threats and nuclear alarm",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-10",
-          "played": "2026-11-14",
-          "durationMin": 11
-        },
-        {
-          "name": "Nvidia spy probe, Black Sea tensions and COP31",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-11-09",
-          "played": "2026-11-13",
+          "released": "2026-11-17",
+          "played": "2026-11-23",
           "durationMin": 10
         },
         {
-          "name": "Israel government talks, Poland shooting and AI shopping",
+          "name": "Trump in Asia, Bahrain and Ukraine's fading EU accession hopes",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-08",
-          "played": "2026-11-12",
-          "durationMin": 11
+          "released": "2026-11-16",
+          "played": "2026-11-20",
+          "durationMin": 10
         },
         {
-          "name": "Stephen Miller, Paraguay's new president and Apple's hidden word list",
+          "name": "Aviation routers, SpaceX, COP31 and young male voters",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-07",
-          "played": "2026-11-12",
-          "durationMin": 11
+          "released": "2026-11-15",
+          "played": "2026-11-19",
+          "durationMin": 10
         },
         {
-          "name": "Wall Street's AI reckoning, Europe's hoax bomb scares and Paraguay",
+          "name": "FAA restores flights, Trump plans nuclear talks in China and SS United States' final voyage",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-06",
-          "played": "2026-11-12",
+          "released": "2026-11-14",
+          "played": "2026-11-19",
           "durationMin": 12
         },
         {
-          "name": "Republican pressure, Iran and the Supreme Court",
+          "name": "Microsoft outage, Nvidia fallout and Ukraine drone evacuations",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-05",
-          "played": "2026-11-11",
+          "released": "2026-11-13",
+          "played": "2026-11-18",
           "durationMin": 12
+        },
+        {
+          "name": "Nvidia CEO Jensen Huang resigns, Machester United and Mississippi (updated)",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-11-12",
+          "played": "2026-11-18",
+          "durationMin": 8
         }
       ],
       "rating": null,
@@ -356,63 +206,55 @@
         "Scientific American"
       ],
       "cover": "/images/podcasts/pa-803.jpg",
-      "artworkUrl": "https://megaphone.imgix.net/podcasts/9e578524-a403-11ee-a6cf-cbcdcc0e11fb/image/ec5ff1c72de2a19d67bc6425661674b1.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "artworkUrl": "https://megaphone-images.spotifycdn.com/podcasts/9e578524-a403-11ee-a6cf-cbcdcc0e11fb/image/ec5ff1c72de2a19d67bc6425661674b1.png?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
       "feedUrl": "https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=science-quickly",
       "homepage": "https://www.sciencequickly.com",
       "category": "Science",
-      "availableEpisodes": 2001,
+      "availableEpisodes": 2005,
       "status": "current",
-      "lastPlayed": "2026-11-14",
+      "lastPlayed": "2026-11-23",
       "firstPlayed": "2024-12-24",
       "stats": {
-        "episodesPlayed": 275,
-        "hoursListened": 71.1,
+        "episodesPlayed": 279,
+        "hoursListened": 72.3,
         "since": "2024-12-24"
       },
       "lastWeek": {
-        "episodes": 5,
-        "hours": 1.4
+        "episodes": 4,
+        "hours": 1.2
       },
       "recent": [
         {
-          "name": "From Farm Myths to Modern Agriculture [Sponsored]",
+          "name": "Cover Story: The End of Math as We Know It",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-10",
-          "played": "2026-11-14",
+          "released": "2026-11-17",
+          "played": "2026-11-23",
+          "durationMin": 25
+        },
+        {
+          "name": "A Roman-era frog whodunit and more science surprises",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-11-16",
+          "played": "2026-11-20",
           "durationMin": 13
         },
         {
-          "name": "Mystery cat farts, measles and malicious cyberattacks",
+          "name": "Did I stutter?",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-09",
-          "played": "2026-11-13",
-          "durationMin": 13
+          "released": "2026-11-13",
+          "played": "2026-11-18",
+          "durationMin": 20
         },
         {
-          "name": "What scares the people making AI",
+          "name": "Could this be the strongest El Niño in 1,000 years?",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-06",
-          "played": "2026-11-12",
-          "durationMin": 28
-        },
-        {
-          "name": "Could ultrasound interrupt the brain’s addiction loop? [Sponsored]",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-11-05",
-          "played": "2026-11-11",
-          "durationMin": 16
-        },
-        {
-          "name": "From tofu to biodiesel: How soybeans dominate America",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-11-04",
-          "played": "2026-11-09",
-          "durationMin": 15
+          "released": "2026-11-11",
+          "played": "2026-11-16",
+          "durationMin": 12
         }
       ],
       "rating": 9,
@@ -431,49 +273,90 @@
       "feedUrl": "https://feeds.simplecast.com/4T39_jAj",
       "homepage": "siriusxm.com",
       "category": "Science",
-      "availableEpisodes": 1145,
+      "availableEpisodes": 1147,
       "status": "current",
-      "lastPlayed": "2026-11-14",
+      "lastPlayed": "2026-11-23",
       "firstPlayed": "2025-01-04",
       "stats": {
-        "episodesPlayed": 253,
-        "hoursListened": 229.4,
+        "episodesPlayed": 256,
+        "hoursListened": 232.4,
         "since": "2025-01-04"
       },
       "lastWeek": {
         "episodes": 3,
-        "hours": 3.3
+        "hours": 3.1
       },
       "recent": [
         {
-          "name": "Cosmic Queries – Curiosity, Conspiracies & the God Particle with Jordan Klepper",
+          "name": "Facts for Navigating the Universe with Charles Liu",
           "season": 17,
-          "episode": 67,
-          "released": "2026-11-10",
-          "played": "2026-11-14",
-          "durationMin": 84
+          "episode": 69,
+          "released": "2026-11-17",
+          "played": "2026-11-23",
+          "durationMin": 59
         },
         {
-          "name": "Cosmic Queries: GMOs with Bill Nye (Part 1)",
+          "name": "The Longevity Playbook with Rhonda Patrick",
+          "season": 17,
+          "episode": 68,
+          "released": "2026-11-13",
+          "played": "2026-11-18",
+          "durationMin": 69
+        },
+        {
+          "name": "Cosmic Queries: GMOs with Bill Nye (Part 2)",
           "season": 6,
-          "episode": 26,
-          "released": "2015-07-12",
-          "played": "2026-11-10",
+          "episode": 27,
+          "released": "2015-07-19",
+          "played": "2026-11-17",
           "durationMin": 56
-        },
-        {
-          "name": "The Habitable Worlds Observatory with Evgenya Shkolnik",
-          "season": 17,
-          "episode": 66,
-          "released": "2026-11-03",
-          "played": "2026-11-09",
-          "durationMin": 60
         }
       ],
       "rating": 8,
       "opinion": "An excellent podcast from Neil deGrasse Tyson, ranging from the origin of life to dark matter, plus pop culture and science's impact on society. A bit commercial-radio in that it never digs as deep as I'd like, but it's funny and introduces many luminaries in the field.",
       "statusOverride": null,
       "categoryOverride": "Science"
+    },
+    {
+      "id": 6209,
+      "title": "Probably Science",
+      "presenters": [
+        "Andy Wood",
+        "Matt Kirshen",
+        "Jesse Case"
+      ],
+      "cover": "/images/podcasts/pa-6209.jpg",
+      "artworkUrl": "https://static.libsyn.com/p/assets/e/d/1/4/ed14d1d63c8773b4/ProbablyScienceSallyArt.jpg",
+      "feedUrl": "https://probablyscience.libsyn.com/rss",
+      "homepage": "http://probablyscience.com",
+      "category": "Comedy",
+      "availableEpisodes": 635,
+      "status": "current",
+      "lastPlayed": "2026-11-20",
+      "firstPlayed": "2026-05-22",
+      "stats": {
+        "episodesPlayed": 21,
+        "hoursListened": 24.9,
+        "since": "2026-05-22"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 1.3
+      },
+      "recent": [
+        {
+          "name": "Episode 622 - Joe Praino",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-11-16",
+          "played": "2026-11-20",
+          "durationMin": 78
+        }
+      ],
+      "rating": 10,
+      "opinion": "Funny repartee around science news.",
+      "statusOverride": null,
+      "categoryOverride": null
     },
     {
       "id": 806,
@@ -486,27 +369,27 @@
       "feedUrl": "https://feeds.libsyn.com/604590/rss",
       "homepage": "https://www.preposterousuniverse.com/podcast/",
       "category": "Science, Science/Physics",
-      "availableEpisodes": 453,
+      "availableEpisodes": 454,
       "status": "current",
-      "lastPlayed": "2026-11-13",
+      "lastPlayed": "2026-11-20",
       "firstPlayed": "2025-07-23",
       "stats": {
-        "episodesPlayed": 67,
-        "hoursListened": 134.9,
+        "episodesPlayed": 68,
+        "hoursListened": 136.2,
         "since": "2025-07-23"
       },
       "lastWeek": {
         "episodes": 1,
-        "hours": 4.3
+        "hours": 1.4
       },
       "recent": [
         {
-          "name": "Aak Me Anything | November 2026",
+          "name": "374 | Lindsey Fitzharris on Forensic Pathology, Reconstructive Surgery, and Sherlock Holmes",
           "season": -1,
-          "episode": -1,
-          "released": "2026-11-09",
-          "played": "2026-11-13",
-          "durationMin": 256
+          "episode": 374,
+          "released": "2026-11-16",
+          "played": "2026-11-20",
+          "durationMin": 81
         }
       ],
       "rating": null,
@@ -527,27 +410,27 @@
       "feedUrl": "https://feeds.simplecast.com/hNaFxXpO",
       "homepage": "https://www.smartless.com/",
       "category": "Comedy",
-      "availableEpisodes": 388,
+      "availableEpisodes": 390,
       "status": "current",
-      "lastPlayed": "2026-11-13",
+      "lastPlayed": "2026-11-20",
       "firstPlayed": "2025-01-17",
       "stats": {
-        "episodesPlayed": 52,
-        "hoursListened": 59.9,
+        "episodesPlayed": 53,
+        "hoursListened": 61.1,
         "since": "2025-01-17"
       },
       "lastWeek": {
         "episodes": 1,
-        "hours": 1.3
+        "hours": 1.2
       },
       "recent": [
         {
-          "name": "\"Dustin Hoffman\"",
+          "name": "\"Beastie Boys\"",
           "season": -1,
-          "episode": 331,
-          "released": "2026-11-09",
-          "played": "2026-11-13",
-          "durationMin": 80
+          "episode": 332,
+          "released": "2026-11-16",
+          "played": "2026-11-20",
+          "durationMin": 70
         }
       ],
       "rating": 10,
@@ -566,13 +449,13 @@
       "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9x6.rss",
       "homepage": "http://www.bbc.co.uk/programmes/p02pc9x6",
       "category": "Comedy",
-      "availableEpisodes": 109,
+      "availableEpisodes": 110,
       "status": "current",
-      "lastPlayed": "2026-11-12",
+      "lastPlayed": "2026-11-19",
       "firstPlayed": "2024-12-23",
       "stats": {
-        "episodesPlayed": 103,
-        "hoursListened": 46.2,
+        "episodesPlayed": 104,
+        "hoursListened": 46.7,
         "since": "2024-12-23"
       },
       "lastWeek": {
@@ -581,11 +464,11 @@
       },
       "recent": [
         {
-          "name": "The Matt Forde Focus Group",
+          "name": "Live from the UK",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-09",
-          "played": "2026-11-12",
+          "released": "2026-11-16",
+          "played": "2026-11-19",
           "durationMin": 29
         }
       ],
@@ -593,6 +476,109 @@
       "opinion": "Brilliant UK comedy: a weekly variety show of stand-up and sketch.",
       "statusOverride": null,
       "categoryOverride": "Comedy"
+    },
+    {
+      "id": 288,
+      "title": "Conan O’Brien Needs A Friend",
+      "presenters": [
+        "Team Coco",
+        "Earwolf"
+      ],
+      "cover": "/images/podcasts/pa-288.jpg",
+      "artworkUrl": "https://image.simplecastcdn.com/images/8436e3c1-2479-4466-ac48-fa58259960bb/371e5714-91ee-4e31-9ef3-cdd31ebfb9f5/3000x3000/conanobrienneedsafriend-keyart-sxm-3000x3000.jpg?aid=rss_feed",
+      "feedUrl": "https://feeds.simplecast.com/dHoohVNH",
+      "homepage": "https://www.siriusxm.com",
+      "category": "Comedy",
+      "availableEpisodes": 752,
+      "status": "current",
+      "lastPlayed": "2026-11-19",
+      "firstPlayed": "2024-12-23",
+      "stats": {
+        "episodesPlayed": 212,
+        "hoursListened": 176.8,
+        "since": "2024-12-23"
+      },
+      "lastWeek": {
+        "episodes": 3,
+        "hours": 2.4
+      },
+      "recent": [
+        {
+          "name": "Adam Brody",
+          "season": -1,
+          "episode": 427,
+          "released": "2026-11-16",
+          "played": "2026-11-19",
+          "durationMin": 64
+        },
+        {
+          "name": "Taps with Andy Richter",
+          "season": -1,
+          "episode": 10320,
+          "released": "2026-11-12",
+          "played": "2026-11-18",
+          "durationMin": 36
+        },
+        {
+          "name": "Dustin Hoffman Part II",
+          "season": -1,
+          "episode": 426,
+          "released": "2026-11-11",
+          "played": "2026-11-16",
+          "durationMin": 43
+        }
+      ],
+      "rating": 10,
+      "opinion": "Wacky but brilliant, and laugh-out-loud funny — even the ads. Conan's humour is both self-deprecating and insightful.",
+      "statusOverride": null,
+      "categoryOverride": "Comedy"
+    },
+    {
+      "id": 7172,
+      "title": "Last Week in AI",
+      "presenters": [
+        "AI Weekly"
+      ],
+      "cover": "/images/podcasts/pa-7172.jpg",
+      "artworkUrl": "https://content.production.cdn.art19.com/images/88/1d/b0/34/881db034-6bc2-4136-a81e-a39e7ef61552/7736bd11f2d7637ec1a6e1c999b078ae45e722a3868bdd5b032ab623869bd24d4680474b04795df7d26581f7edd7a815438c82dbf0ad995ff87db38b48ae5c0e.jpeg",
+      "feedUrl": "https://rss.art19.com/last-week-in-ai-podcast",
+      "homepage": "https://art19.com/shows/last-week-in-ai-podcast",
+      "category": "Education/Self-Improvement/News/Technology",
+      "availableEpisodes": 798,
+      "status": "current",
+      "lastPlayed": "2026-11-19",
+      "firstPlayed": "2026-09-14",
+      "stats": {
+        "episodesPlayed": 26,
+        "hoursListened": 7.2,
+        "since": "2026-09-14"
+      },
+      "lastWeek": {
+        "episodes": 2,
+        "hours": 0.4
+      },
+      "recent": [
+        {
+          "name": "Anthropic Launches Claude Fable 5.2 and Mythos 5.2",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-11-15",
+          "played": "2026-11-19",
+          "durationMin": 10
+        },
+        {
+          "name": "OpenAI Launches ChatGPT Wallet and More AI News",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-11-13",
+          "played": "2026-11-19",
+          "durationMin": 15
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
     },
     {
       "id": 307,
@@ -605,13 +591,13 @@
       "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9pj.rss",
       "homepage": "http://www.bbc.co.uk/programmes/p02pc9pj",
       "category": "Comedy",
-      "availableEpisodes": 350,
+      "availableEpisodes": 351,
       "status": "current",
-      "lastPlayed": "2026-11-12",
+      "lastPlayed": "2026-11-19",
       "firstPlayed": "2025-01-04",
       "stats": {
-        "episodesPlayed": 102,
-        "hoursListened": 53.9,
+        "episodesPlayed": 103,
+        "hoursListened": 54.5,
         "since": "2025-01-04"
       },
       "lastWeek": {
@@ -620,18 +606,57 @@
       },
       "recent": [
         {
-          "name": "The Matt Forde Focus Group: The Politics of Trick-or-Treat (Halloween Special)",
+          "name": "The Naked Week 1. Up The Injunction",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-06",
-          "played": "2026-11-12",
-          "durationMin": 32
+          "released": "2026-11-13",
+          "played": "2026-11-19",
+          "durationMin": 31
         }
       ],
       "rating": 10,
       "opinion": "Alternates between The Now Show, The News Quiz and Dead Ringers — top-notch comedy from a wide variety of British comedians.",
       "statusOverride": null,
       "categoryOverride": "Comedy"
+    },
+    {
+      "id": 292,
+      "title": "The Joe Rogan Experience",
+      "presenters": [
+        "Joe Rogan"
+      ],
+      "cover": "/images/podcasts/pa-292.jpg",
+      "artworkUrl": "https://megaphone-images.spotifycdn.com/podcasts/8e5bcebc-ca16-11ee-89f0-0fa0b9bdfc7c/image/8be4c98f6aff9e407c1257ce3c35beea.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "feedUrl": "https://feeds.megaphone.fm/GLT1412515089",
+      "homepage": null,
+      "category": "Comedy",
+      "availableEpisodes": 2786,
+      "status": "current",
+      "lastPlayed": "2026-11-19",
+      "firstPlayed": "2025-01-07",
+      "stats": {
+        "episodesPlayed": 59,
+        "hoursListened": 171.7,
+        "since": "2025-01-07"
+      },
+      "lastWeek": {
+        "episodes": 1,
+        "hours": 3.8
+      },
+      "recent": [
+        {
+          "name": "#2581 - Protect Our Parks 18",
+          "season": -1,
+          "episode": 2581,
+          "released": "2026-11-13",
+          "played": "2026-11-19",
+          "durationMin": 228
+        }
+      ],
+      "rating": null,
+      "opinion": "",
+      "statusOverride": null,
+      "categoryOverride": null
     },
     {
       "id": 7260,
@@ -644,35 +669,43 @@
       "feedUrl": "https://feeds.npr.org/g-s1-143588/podcast.xml",
       "homepage": "https://www.npr.org/podcasts/g-s1-143588/machine-gods",
       "category": "Technology",
-      "availableEpisodes": 10,
+      "availableEpisodes": 12,
       "status": "current",
-      "lastPlayed": "2026-11-12",
+      "lastPlayed": "2026-11-18",
       "firstPlayed": "2026-10-29",
       "stats": {
-        "episodesPlayed": 6,
-        "hoursListened": 5.4,
+        "episodesPlayed": 9,
+        "hoursListened": 7.7,
         "since": "2026-10-29"
       },
       "lastWeek": {
-        "episodes": 2,
-        "hours": 1.6
+        "episodes": 3,
+        "hours": 2.3
       },
       "recent": [
         {
-          "name": "The Purple Tsunami Against Data Centers",
+          "name": "The 10 Biggest Losers from Jensen Huang’s Fall + The METR Report That Scared Us",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-06",
-          "played": "2026-11-12",
-          "durationMin": 44
+          "released": "2026-11-13",
+          "played": "2026-11-18",
+          "durationMin": 65
         },
         {
-          "name": "Crypto’s Biggest Heist Ever + The Spy Who Loved Nvidia + Hacktober’s Unsolved Mysteries",
+          "name": "Why the AI World Will Never Be the Same",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-04",
-          "played": "2026-11-09",
-          "durationMin": 55
+          "released": "2026-11-13",
+          "played": "2026-11-18",
+          "durationMin": 19
+        },
+        {
+          "name": "Jensen Huang’s Nvidiotic Spy Scandal + Can Dems Pass AI Regulation?",
+          "season": -1,
+          "episode": -1,
+          "released": "2026-11-11",
+          "played": "2026-11-16",
+          "durationMin": 52
         }
       ],
       "rating": null,
@@ -681,43 +714,43 @@
       "categoryOverride": null
     },
     {
-      "id": 6209,
-      "title": "Probably Science",
+      "id": 6202,
+      "title": "The Joy of Why",
       "presenters": [
-        "Andy Wood",
-        "Matt Kirshen",
-        "Jesse Case"
+        "Steven Strogatz",
+        "Janna Levin",
+        "Quanta Magazine"
       ],
-      "cover": "/images/podcasts/pa-6209.jpg",
-      "artworkUrl": "https://static.libsyn.com/p/assets/e/d/1/4/ed14d1d63c8773b4/ProbablyScienceSallyArt.jpg",
-      "feedUrl": "https://probablyscience.libsyn.com/rss",
-      "homepage": "http://probablyscience.com",
-      "category": "Comedy",
-      "availableEpisodes": 634,
+      "cover": "/images/podcasts/pa-6202.jpg",
+      "artworkUrl": "https://f.prxu.org/5340/images/cdcaf67c-ba92-42a8-99f8-455adba8be93/JoY-S5-Cover_JoY-S5-Cover-3000.jpg",
+      "feedUrl": "https://joy.quantamagazine.org/",
+      "homepage": "https://quantamagazine.org/tag/the-joy-of-why",
+      "category": "Science/Life Sciences",
+      "availableEpisodes": 79,
       "status": "current",
-      "lastPlayed": "2026-11-11",
-      "firstPlayed": "2026-05-22",
+      "lastPlayed": "2026-11-18",
+      "firstPlayed": "2026-05-23",
       "stats": {
-        "episodesPlayed": 20,
-        "hoursListened": 23.6,
-        "since": "2026-05-22"
+        "episodesPlayed": 15,
+        "hoursListened": 12.2,
+        "since": "2026-05-23"
       },
       "lastWeek": {
         "episodes": 1,
-        "hours": 1.2
+        "hours": 0.9
       },
       "recent": [
         {
-          "name": "Episode 621 with Ben Acker",
-          "season": -1,
-          "episode": -1,
-          "released": "2026-11-06",
-          "played": "2026-11-11",
-          "durationMin": 74
+          "name": "Can Network Science Transform Health and Nutrition?",
+          "season": 5,
+          "episode": 12,
+          "released": "2026-11-12",
+          "played": "2026-11-18",
+          "durationMin": 52
         }
       ],
-      "rating": 10,
-      "opinion": "Funny repartee around science news.",
+      "rating": null,
+      "opinion": "",
       "statusOverride": null,
       "categoryOverride": null
     },
@@ -732,13 +765,13 @@
       "feedUrl": "https://podcasts.files.bbci.co.uk/b00snr0w.rss",
       "homepage": "http://www.bbc.co.uk/programmes/b00snr0w",
       "category": "Science",
-      "availableEpisodes": 248,
+      "availableEpisodes": 249,
       "status": "current",
-      "lastPlayed": "2026-11-11",
+      "lastPlayed": "2026-11-18",
       "firstPlayed": "2025-01-03",
       "stats": {
-        "episodesPlayed": 28,
-        "hoursListened": 20.1,
+        "episodesPlayed": 29,
+        "hoursListened": 20.9,
         "since": "2025-01-03"
       },
       "lastWeek": {
@@ -747,12 +780,12 @@
       },
       "recent": [
         {
-          "name": "Leaf it to Nature",
+          "name": "Guano: Liquid Gold - Zoe Lyons, Tim Birkhead and Kate Jones",
           "season": -1,
           "episode": -1,
-          "released": "2026-11-05",
-          "played": "2026-11-11",
-          "durationMin": 47
+          "released": "2026-11-12",
+          "played": "2026-11-18",
+          "durationMin": 48
         }
       ],
       "rating": 10,
@@ -767,17 +800,17 @@
         "Goalhanger"
       ],
       "cover": "/images/podcasts/pa-123.jpg",
-      "artworkUrl": "https://megaphone.imgix.net/podcasts/00c0a118-2426-11ee-b258-73d331d0123b/image/fc1621e5c07895ac8ebabab7c8e2e40d.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "artworkUrl": "https://megaphone-images.spotifycdn.com/podcasts/00c0a118-2426-11ee-b258-73d331d0123b/image/fc1621e5c07895ac8ebabab7c8e2e40d.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
       "feedUrl": "https://feeds.megaphone.fm/GLT4787413333",
       "homepage": "http://therestishistory.com",
       "category": "History",
-      "availableEpisodes": 761,
+      "availableEpisodes": 763,
       "status": "current",
-      "lastPlayed": "2026-11-11",
+      "lastPlayed": "2026-11-18",
       "firstPlayed": "2024-12-24",
       "stats": {
-        "episodesPlayed": 116,
-        "hoursListened": 104.8,
+        "episodesPlayed": 117,
+        "hoursListened": 105.8,
         "since": "2024-12-24"
       },
       "lastWeek": {
@@ -786,12 +819,12 @@
       },
       "recent": [
         {
-          "name": "130. Superheroes",
+          "name": "131. Burgundy: Europe's forgotten superpower",
           "season": -1,
-          "episode": 130,
-          "released": "2021-12-13",
-          "played": "2026-11-11",
-          "durationMin": 60
+          "episode": 131,
+          "released": "2021-12-16",
+          "played": "2026-11-18",
+          "durationMin": 61
         }
       ],
       "rating": 10,
@@ -812,25 +845,25 @@
       "category": "Science",
       "availableEpisodes": 642,
       "status": "current",
-      "lastPlayed": "2026-11-10",
+      "lastPlayed": "2026-11-17",
       "firstPlayed": "2024-12-23",
       "stats": {
-        "episodesPlayed": 127,
-        "hoursListened": 110.9,
+        "episodesPlayed": 128,
+        "hoursListened": 111.7,
         "since": "2024-12-23"
       },
       "lastWeek": {
         "episodes": 1,
-        "hours": 0.8
+        "hours": 0.9
       },
       "recent": [
         {
-          "name": "Could Jupiter turn into a star?",
+          "name": "What is the real charge of the electron?",
           "season": -1,
           "episode": -1,
-          "released": "2020-05-21",
-          "played": "2026-11-10",
-          "durationMin": 49
+          "released": "2020-05-26",
+          "played": "2026-11-17",
+          "durationMin": 51
         }
       ],
       "rating": 10,
@@ -839,26 +872,24 @@
       "categoryOverride": "Science"
     },
     {
-      "id": 6202,
-      "title": "The Joy of Why",
+      "id": 303,
+      "title": "Lex Fridman Podcast",
       "presenters": [
-        "Steven Strogatz",
-        "Janna Levin",
-        "Quanta Magazine"
+        "Lex Fridman"
       ],
-      "cover": "/images/podcasts/pa-6202.jpg",
-      "artworkUrl": "https://f.prxu.org/5340/images/cdcaf67c-ba92-42a8-99f8-455adba8be93/JoY-S5-Cover_JoY-S5-Cover-3000.jpg",
-      "feedUrl": "https://joy.quantamagazine.org/",
-      "homepage": "https://quantamagazine.org/tag/the-joy-of-why",
-      "category": "Science/Life Sciences",
-      "availableEpisodes": 79,
+      "cover": "/images/podcasts/pa-303.jpg",
+      "artworkUrl": "https://lexfridman.com/wordpress/wp-content/uploads/powerpress/lex_fridman_podcast_cover_3000.jpg",
+      "feedUrl": "https://lexfridman.com/feed/podcast/",
+      "homepage": "https://lexfridman.com/",
+      "category": "Technology, Science, Society & Culture/Philosophy",
+      "availableEpisodes": 506,
       "status": "current",
-      "lastPlayed": "2026-11-06",
-      "firstPlayed": "2026-05-23",
+      "lastPlayed": "2026-11-16",
+      "firstPlayed": "2025-07-22",
       "stats": {
-        "episodesPlayed": 14,
-        "hoursListened": 11.3,
-        "since": "2026-05-23"
+        "episodesPlayed": 28,
+        "hoursListened": 97.9,
+        "since": "2025-07-22"
       },
       "lastWeek": {
         "episodes": 0,
@@ -866,55 +897,16 @@
       },
       "recent": [
         {
-          "name": "How Do You Take a Picture of a Black Hole?",
-          "season": 5,
-          "episode": 11,
-          "released": "2026-10-29",
-          "played": "2026-11-06",
-          "durationMin": 60
-        }
-      ],
-      "rating": null,
-      "opinion": "",
-      "statusOverride": null,
-      "categoryOverride": null
-    },
-    {
-      "id": 292,
-      "title": "The Joe Rogan Experience",
-      "presenters": [
-        "Joe Rogan"
-      ],
-      "cover": "/images/podcasts/pa-292.jpg",
-      "artworkUrl": "https://megaphone.imgix.net/podcasts/8e5bcebc-ca16-11ee-89f0-0fa0b9bdfc7c/image/9dcaedf424ec3888e0c3056037a2d4c7.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
-      "feedUrl": "https://feeds.megaphone.fm/GLT1412515089",
-      "homepage": null,
-      "category": "Comedy",
-      "availableEpisodes": 2782,
-      "status": "current",
-      "lastPlayed": "2026-11-05",
-      "firstPlayed": "2025-01-07",
-      "stats": {
-        "episodesPlayed": 58,
-        "hoursListened": 167.9,
-        "since": "2025-01-07"
-      },
-      "lastWeek": {
-        "episodes": 0,
-        "hours": 0
-      },
-      "recent": [
-        {
-          "name": "#2571 - Jimmy Carr",
+          "name": "#504 – Russia-Ukraine War: Putin, Zelenskyy, Drones and the Future of Warfare",
           "season": -1,
-          "episode": 2571,
-          "released": "2026-10-28",
-          "played": "2026-11-05",
-          "durationMin": 182
+          "episode": -1,
+          "released": "2026-11-10",
+          "played": "2026-11-16",
+          "durationMin": 181
         }
       ],
-      "rating": null,
-      "opinion": "",
+      "rating": 10,
+      "opinion": "Excellent in-depth conversations.",
       "statusOverride": null,
       "categoryOverride": null
     },
